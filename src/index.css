@@ -61,6 +61,10 @@ button {
   cursor: pointer;
 }
 
+.import-file-trigger {
+  cursor: pointer;
+}
+
 button:disabled {
   opacity: 0.55;
   cursor: not-allowed;
@@ -262,6 +266,15 @@ button:disabled {
   outline: 0;
   background: transparent;
   color: var(--text);
+}
+
+.file-input-visually-hidden {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-100vw, -100vh);
 }
 
 .topbar-actions,
@@ -1110,6 +1123,7 @@ button:disabled {
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
+.import-file-trigger:focus-visible,
 .nav-item:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;

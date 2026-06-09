@@ -41,3 +41,15 @@ npm run preview
 - [React](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
+
+## Deploy Vercel
+
+Project đã có `vercel.json` để deploy static Vite app.
+
+- Root Directory: `memu-app`
+- Framework Preset: `Vite`
+- Install Command: `npm ci`
+- Build Command: `npm run build`
+- Output Directory: `dist`
+
+App dùng localStorage và hash route nên không cần server/database.

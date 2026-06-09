@@ -20,7 +20,7 @@ import {
   Trash2,
   Upload,
 } from 'lucide-react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { NavLink, Navigate, Route, Routes, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { parseImportFile } from './importers'
@@ -247,7 +247,6 @@ function TopBar({
   onExport: () => void
 }) {
   const { t } = useTranslation()
-  const inputRef = useRef<HTMLInputElement>(null)
 
   return (
     <header className="topbar">
@@ -257,10 +256,21 @@ function TopBar({
       </label>
 
       <div className="topbar-actions">
-        <button className="ghost-button" onClick={() => inputRef.current?.click()}>
+        <label
+          className="ghost-button import-file-trigger"
+          htmlFor="deck-import-input"
+          role="button"
+          tabIndex={0}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault()
+              document.getElementById('deck-import-input')?.click()
+            }
+          }}
+        >
           <Upload size={16} />
           {t('actions.importDeck')}
-        </button>
+        </label>
         <button className="ghost-button" onClick={onExport}>
           <Download size={16} />
           {t('actions.exportData')}
@@ -293,10 +303,11 @@ function TopBar({
       </div>
 
       <input
-        ref={inputRef}
-        hidden
+        id="deck-import-input"
+        className="file-input-visually-hidden"
         type="file"
-        accept=".json,.apkg"
+        aria-hidden="true"
+        tabIndex={-1}
         onChange={(event) => {
           const file = event.target.files?.[0]
           if (file) {
