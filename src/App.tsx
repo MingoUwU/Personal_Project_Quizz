@@ -574,8 +574,14 @@ function StudyPage({
   const [revealed, setRevealed] = useState(false)
   const [expanded, setExpanded] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [sessionProgress, setSessionProgress] = useState({ deckId: deck?.id ?? '', total: dueCards.length, reviewed: 0 })
   const activeIndex = dueCards.length > 0 ? Math.min(currentIndex, dueCards.length - 1) : 0
   const activeCard = dueCards[activeIndex]
+  const sessionTotal =
+    sessionProgress.deckId === deck?.id
+      ? Math.max(sessionProgress.total, sessionProgress.reviewed + dueCards.length)
+      : dueCards.length
+  const sessionCurrent = activeCard ? Math.min(sessionProgress.reviewed + activeIndex + 1, Math.max(sessionTotal, 1)) : sessionTotal
   const formattedFront = useMemo(() => formatStudyText(activeCard?.front ?? ''), [activeCard?.front])
   const formattedBack = useMemo(() => formatAnswerText(activeCard?.back ?? ''), [activeCard?.back])
   const frontHasHtml = useMemo(() => hasRichMarkup(activeCard?.front ?? ''), [activeCard?.front])
@@ -586,6 +592,38 @@ function StudyPage({
     setCurrentIndex(Math.min(Math.max(nextIndex, 0), dueCards.length - 1))
   }
 
+  const handleRateCard = (rating: ReviewRating) => {
+    if (!activeCard || !deck) return
+
+    const nextRemaining = dueCards.length - 1
+    const nextIndex = Math.min(activeIndex, Math.max(nextRemaining - 1, 0))
+
+    onReview(activeCard.id, rating)
+    setSessionProgress((current) => {
+      const reviewedBase = current.deckId === deck.id ? current.reviewed : 0
+      const baseTotal = current.deckId === deck.id ? current.total : dueCards.length
+      const total = Math.max(baseTotal, reviewedBase + dueCards.length)
+      const reviewed = Math.min(reviewedBase + 1, Math.max(total, 1))
+
+      return {
+        deckId: deck.id,
+        total,
+        reviewed,
+      }
+    })
+    setCurrentIndex(nextIndex)
+    setRevealed(false)
+  }
+
+  const handleResetDeckClick = () => {
+    if (!deck) return
+
+    onResetDeck()
+    setSessionProgress({ deckId: deck.id, total: deck.cards.length, reviewed: 0 })
+    setCurrentIndex(0)
+    setRevealed(false)
+  }
+
   useEffect(() => {
     setRevealed(false)
     setExpanded(false)
@@ -593,6 +631,7 @@ function StudyPage({
 
   useEffect(() => {
     setCurrentIndex(0)
+    setSessionProgress({ deckId: deck?.id ?? '', total: getDueCards(deck).length, reviewed: 0 })
   }, [deck?.id])
 
   useEffect(() => {
@@ -679,7 +718,7 @@ function StudyPage({
           <button className="ghost-button" onClick={() => navigate('/decks')}>
             {t('actions.changeDeck')}
           </button>
-          <button className="ghost-button" onClick={onResetDeck}>
+          <button className="ghost-button" onClick={handleResetDeckClick}>
             {t('actions.resetDeck')}
           </button>
           <button className="ghost-button danger-button" onClick={onDeleteDeck}>
@@ -770,7 +809,7 @@ function StudyPage({
                   {expanded ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
                 </button>
                 <span className="question-counter">
-                  {t('study.cardCounter', { current: activeIndex + 1, total: dueCards.length })}
+                  {t('study.cardCounter', { current: sessionCurrent, total: sessionTotal })}
                 </span>
               </div>
             </div>
@@ -810,7 +849,7 @@ function StudyPage({
             ) : (
               <div className="rating-row">
                 {(['again', 'hard', 'good', 'easy'] as const).map((rating) => (
-                  <button key={rating} className="rate-button" onClick={() => onReview(activeCard.id, rating)}>
+                  <button key={rating} className="rate-button" onClick={() => handleRateCard(rating)}>
                     {t(`study.${rating}`)}
                   </button>
                 ))}
