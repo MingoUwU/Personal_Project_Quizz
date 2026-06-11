@@ -635,11 +635,11 @@ function StudyPage({
     }
   }
 
-  const handleRateCard = (rating: ReviewRating) => {
+  const reviewCurrentCard = (rating: ReviewRating, nextIndex: number) => {
     if (!activeCard || !deck) return
 
     const nextRemaining = dueCards.length - 1
-    const nextIndex = Math.min(activeIndex, Math.max(nextRemaining - 1, 0))
+    const clampedNextIndex = Math.min(Math.max(nextIndex, 0), Math.max(nextRemaining - 1, 0))
 
     onReview(activeCard.id, rating)
     setSessionProgress((current) => {
@@ -652,15 +652,34 @@ function StudyPage({
         deckId: deck.id,
         total,
         reviewed,
-        currentIndex: nextIndex,
+        currentIndex: clampedNextIndex,
         updatedAt: new Date().toISOString(),
       }
 
       onStudySessionChange(deck.id, nextSession)
       return nextSession
     })
-    setCurrentIndex(nextIndex)
+    setCurrentIndex(clampedNextIndex)
     setRevealed(false)
+  }
+
+  const handleNavigateWithReview = (targetIndex: number, rating: ReviewRating) => {
+    if (!activeCard || !deck) {
+      moveToCard(targetIndex)
+      return
+    }
+
+    const shiftedTargetIndex = targetIndex > activeIndex ? targetIndex - 1 : targetIndex
+    reviewCurrentCard(rating, shiftedTargetIndex)
+  }
+
+  const handleRateCard = (rating: ReviewRating) => {
+    if (!activeCard || !deck) return
+
+    const nextRemaining = dueCards.length - 1
+    const nextIndex = Math.min(activeIndex, Math.max(nextRemaining - 1, 0))
+
+    reviewCurrentCard(rating, nextIndex)
   }
 
   const handleResetDeckClick = () => {
@@ -727,22 +746,22 @@ function StudyPage({
 
       if (event.key === 'ArrowLeft') {
         event.preventDefault()
-        moveToCard(activeIndex - 1)
+        handleNavigateWithReview(activeIndex - 1, 'hard')
       }
 
       if (event.key === 'ArrowRight') {
         event.preventDefault()
-        moveToCard(activeIndex + 1)
+        handleNavigateWithReview(activeIndex + 1, 'easy')
       }
 
       if (event.key === 'ArrowUp') {
         event.preventDefault()
-        moveToCard(0)
+        handleNavigateWithReview(0, 'hard')
       }
 
       if (event.key === 'ArrowDown') {
         event.preventDefault()
-        moveToCard(dueCards.length - 1)
+        handleNavigateWithReview(dueCards.length - 1, 'easy')
       }
     }
 
@@ -847,7 +866,7 @@ function StudyPage({
                 <div className="study-card-nav">
                   <button
                     className="ghost-button icon-only compact"
-                    onClick={() => moveToCard(0)}
+                    onClick={() => handleNavigateWithReview(0, 'hard')}
                     disabled={activeIndex === 0}
                     aria-label={t('actions.firstCard')}
                     title={t('actions.firstCard')}
@@ -856,7 +875,7 @@ function StudyPage({
                   </button>
                   <button
                     className="ghost-button icon-only compact"
-                    onClick={() => moveToCard(activeIndex - 1)}
+                    onClick={() => handleNavigateWithReview(activeIndex - 1, 'hard')}
                     disabled={activeIndex === 0}
                     aria-label={t('actions.previousCard')}
                     title={t('actions.previousCard')}
@@ -865,7 +884,7 @@ function StudyPage({
                   </button>
                   <button
                     className="ghost-button icon-only compact"
-                    onClick={() => moveToCard(activeIndex + 1)}
+                    onClick={() => handleNavigateWithReview(activeIndex + 1, 'easy')}
                     disabled={activeIndex >= dueCards.length - 1}
                     aria-label={t('actions.nextCard')}
                     title={t('actions.nextCard')}
@@ -874,7 +893,7 @@ function StudyPage({
                   </button>
                   <button
                     className="ghost-button icon-only compact"
-                    onClick={() => moveToCard(dueCards.length - 1)}
+                    onClick={() => handleNavigateWithReview(dueCards.length - 1, 'easy')}
                     disabled={activeIndex >= dueCards.length - 1}
                     aria-label={t('actions.lastCard')}
                     title={t('actions.lastCard')}
