@@ -16,6 +16,14 @@ const sanitizeState = (state: AppState): AppState => {
   const decks = state.decks
     .filter((deck) => !starterDeckIds.has(deck.id))
     .map(normalizeDeck)
+  const deckIds = new Set(decks.map((deck) => deck.id))
+  const studySessions = Object.fromEntries(
+    Object.entries(state.studySessions ?? {}).filter(([deckId, session]) => {
+      if (!deckIds.has(deckId)) return false
+      if (!session || typeof session !== 'object') return false
+      return session.deckId === deckId
+    }),
+  )
 
   const selectedDeckId =
     decks.find((deck) => deck.id === state.selectedDeckId)?.id ??
@@ -26,6 +34,7 @@ const sanitizeState = (state: AppState): AppState => {
     ...state,
     decks,
     selectedDeckId,
+    studySessions,
   }
 }
 
@@ -95,6 +104,7 @@ export const importDecks = (state: AppState, payload: Deck[] | AppState): AppSta
       ...state,
       decks: [...decks, ...state.decks],
       selectedDeckId: decks[0]?.id ?? state.selectedDeckId,
+      studySessions: state.studySessions ?? {},
     })
   }
 
@@ -102,6 +112,7 @@ export const importDecks = (state: AppState, payload: Deck[] | AppState): AppSta
     ...payload,
     decks: Array.isArray(payload.decks) ? payload.decks.map(normalizeDeck) : state.decks,
     selectedDeckId: payload.selectedDeckId || payload.decks[0]?.id || state.selectedDeckId,
+    studySessions: payload.studySessions ?? state.studySessions ?? {},
   })
 }
 
@@ -172,6 +183,16 @@ export const resetDeckProgress = (state: AppState, deckId: string): AppState => 
   return {
     ...state,
     decks,
+    studySessions: {
+      ...state.studySessions,
+      [deckId]: {
+        deckId,
+        total: decks.find((deck) => deck.id === deckId)?.cards.length ?? 0,
+        reviewed: 0,
+        currentIndex: 0,
+        updatedAt: new Date().toISOString(),
+      },
+    },
   }
 }
 
@@ -179,4 +200,5 @@ export const deleteDeck = (state: AppState, deckId: string): AppState =>
   sanitizeState({
     ...state,
     decks: state.decks.filter((deck) => deck.id !== deckId),
+    studySessions: Object.fromEntries(Object.entries(state.studySessions ?? {}).filter(([id]) => id !== deckId)),
   })

@@ -25,7 +25,7 @@ import { NavLink, Navigate, Route, Routes, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { parseImportFile } from './importers'
 import { createDeck, deleteDeck, importDecks, loadState, resetDeckProgress, resetState, reviewCard, saveState } from './storage'
-import type { AppState, Card, Deck, ReviewRating, ThemeMode } from './types'
+import type { AppState, Card, Deck, ReviewRating, StudySession, ThemeMode } from './types'
 
 const navItems = [
   { key: 'home', icon: Home },
@@ -88,6 +88,16 @@ function App() {
   const handleReview = (cardId: string, rating: ReviewRating) => {
     if (!selectedDeck) return
     setState((current) => reviewCard(current, selectedDeck.id, cardId, rating))
+  }
+
+  const handleStudySessionChange = (deckId: string, session: StudySession) => {
+    setState((current) => ({
+      ...current,
+      studySessions: {
+        ...current.studySessions,
+        [deckId]: session,
+      },
+    }))
   }
 
   const handleResetDeck = () => {
@@ -207,6 +217,8 @@ function App() {
                 onReview={handleReview}
                 onDeleteDeck={() => selectedDeck && handleDeleteDeck(selectedDeck)}
                 onResetDeck={handleResetDeck}
+                studySession={selectedDeck ? state.studySessions[selectedDeck.id] : undefined}
+                onStudySessionChange={handleStudySessionChange}
               />
             }
           />
@@ -561,20 +573,35 @@ function StudyPage({
   onReview,
   onDeleteDeck,
   onResetDeck,
+  studySession,
+  onStudySessionChange,
 }: {
   deck?: Deck
   stats: AppState['stats']
   onReview: (cardId: string, rating: ReviewRating) => void
   onDeleteDeck: () => void
   onResetDeck: () => void
+  studySession?: StudySession
+  onStudySessionChange: (deckId: string, session: StudySession) => void
 }) {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const dueCards = getDueCards(deck)
+  const savedStudySession = studySession?.deckId === deck?.id ? studySession : undefined
   const [revealed, setRevealed] = useState(false)
   const [expanded, setExpanded] = useState(false)
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [sessionProgress, setSessionProgress] = useState({ deckId: deck?.id ?? '', total: dueCards.length, reviewed: 0 })
+  const [currentIndex, setCurrentIndex] = useState(() =>
+    Math.min(savedStudySession?.currentIndex ?? 0, Math.max(dueCards.length - 1, 0)),
+  )
+  const [sessionProgress, setSessionProgress] = useState<StudySession>(() =>
+    savedStudySession ?? {
+      deckId: deck?.id ?? '',
+      total: dueCards.length,
+      reviewed: 0,
+      currentIndex: 0,
+      updatedAt: new Date().toISOString(),
+    },
+  )
   const activeIndex = dueCards.length > 0 ? Math.min(currentIndex, dueCards.length - 1) : 0
   const activeCard = dueCards[activeIndex]
   const sessionTotal =
@@ -589,7 +616,21 @@ function StudyPage({
 
   const moveToCard = (nextIndex: number) => {
     if (dueCards.length === 0) return
-    setCurrentIndex(Math.min(Math.max(nextIndex, 0), dueCards.length - 1))
+    const clampedIndex = Math.min(Math.max(nextIndex, 0), dueCards.length - 1)
+    setCurrentIndex(clampedIndex)
+
+    if (deck) {
+      const nextSession = {
+        ...sessionProgress,
+        deckId: deck.id,
+        total: sessionTotal,
+        currentIndex: clampedIndex,
+        updatedAt: new Date().toISOString(),
+      }
+
+      setSessionProgress(nextSession)
+      onStudySessionChange(deck.id, nextSession)
+    }
   }
 
   const handleRateCard = (rating: ReviewRating) => {
@@ -605,11 +646,16 @@ function StudyPage({
       const total = Math.max(baseTotal, reviewedBase + dueCards.length)
       const reviewed = Math.min(reviewedBase + 1, Math.max(total, 1))
 
-      return {
+      const nextSession = {
         deckId: deck.id,
         total,
         reviewed,
+        currentIndex: nextIndex,
+        updatedAt: new Date().toISOString(),
       }
+
+      onStudySessionChange(deck.id, nextSession)
+      return nextSession
     })
     setCurrentIndex(nextIndex)
     setRevealed(false)
@@ -619,7 +665,16 @@ function StudyPage({
     if (!deck) return
 
     onResetDeck()
-    setSessionProgress({ deckId: deck.id, total: deck.cards.length, reviewed: 0 })
+    const nextSession = {
+      deckId: deck.id,
+      total: deck.cards.length,
+      reviewed: 0,
+      currentIndex: 0,
+      updatedAt: new Date().toISOString(),
+    }
+
+    setSessionProgress(nextSession)
+    onStudySessionChange(deck.id, nextSession)
     setCurrentIndex(0)
     setRevealed(false)
   }
@@ -630,8 +685,19 @@ function StudyPage({
   }, [activeCard?.id, deck?.id])
 
   useEffect(() => {
-    setCurrentIndex(0)
-    setSessionProgress({ deckId: deck?.id ?? '', total: getDueCards(deck).length, reviewed: 0 })
+    const restoredSession =
+      deck && studySession?.deckId === deck.id
+        ? studySession
+        : {
+            deckId: deck?.id ?? '',
+            total: getDueCards(deck).length,
+            reviewed: 0,
+            currentIndex: 0,
+            updatedAt: new Date().toISOString(),
+          }
+
+    setCurrentIndex(Math.min(restoredSession.currentIndex, Math.max(getDueCards(deck).length - 1, 0)))
+    setSessionProgress(restoredSession)
   }, [deck?.id])
 
   useEffect(() => {

@@ -17,4 +17,5 @@ export const defaultState: AppState = {
     minutesToday: 0,
     totalReviews: 0,
   },
+  studySessions: {},
 }

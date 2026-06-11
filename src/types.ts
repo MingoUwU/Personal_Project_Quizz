@@ -34,6 +34,14 @@ export interface StudyStats {
   totalReviews: number
 }
 
+export interface StudySession {
+  deckId: string
+  total: number
+  reviewed: number
+  currentIndex: number
+  updatedAt: string
+}
+
 export interface AppSettings {
   theme: ThemeMode
   locale: Locale
@@ -46,4 +54,5 @@ export interface AppState {
   decks: Deck[]
   selectedDeckId: string
   stats: StudyStats
+  studySessions: Record<string, StudySession>
 }
