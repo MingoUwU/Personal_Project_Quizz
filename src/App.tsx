@@ -746,7 +746,7 @@ function StudyPage({
 
       if (event.key === 'ArrowLeft') {
         event.preventDefault()
-        handleNavigateWithReview(activeIndex - 1, 'hard')
+        moveToCard(activeIndex - 1)
       }
 
       if (event.key === 'ArrowRight') {
@@ -756,7 +756,7 @@ function StudyPage({
 
       if (event.key === 'ArrowUp') {
         event.preventDefault()
-        handleNavigateWithReview(0, 'hard')
+        moveToCard(0)
       }
 
       if (event.key === 'ArrowDown') {
@@ -866,7 +866,7 @@ function StudyPage({
                 <div className="study-card-nav">
                   <button
                     className="ghost-button icon-only compact"
-                    onClick={() => handleNavigateWithReview(0, 'hard')}
+                    onClick={() => moveToCard(0)}
                     disabled={activeIndex === 0}
                     aria-label={t('actions.firstCard')}
                     title={t('actions.firstCard')}
@@ -875,7 +875,7 @@ function StudyPage({
                   </button>
                   <button
                     className="ghost-button icon-only compact"
-                    onClick={() => handleNavigateWithReview(activeIndex - 1, 'hard')}
+                    onClick={() => moveToCard(activeIndex - 1)}
                     disabled={activeIndex === 0}
                     aria-label={t('actions.previousCard')}
                     title={t('actions.previousCard')}
@@ -984,19 +984,33 @@ function ExamPage({ deck }: { deck?: Deck }) {
   const questionBank = useMemo(() => buildExamQuestions(deck), [deck])
   const [questionLimit, setQuestionLimit] = useState<number | 'all'>(10)
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [answers, setAnswers] = useState<Record<string, string>>({})
+  const [answers, setAnswers] = useState<Record<string, string[]>>({})
   const questions = useMemo(() => {
     if (questionLimit === 'all') return questionBank
     return questionBank.slice(0, Math.min(questionLimit, questionBank.length))
   }, [questionBank, questionLimit])
   const activeIndex = questions.length > 0 ? Math.min(currentIndex, questions.length - 1) : 0
   const currentQuestion = questions[activeIndex]
-  const answeredCount = questions.filter((question) => answers[question.id]).length
-  const score = questions.filter((question) => answers[question.id] === question.correctLabel).length
+  const answeredCount = questions.filter((question) => (answers[question.id]?.length ?? 0) >= question.requiredAnswerCount).length
+  const score = questions.filter((question) => areLabelSetsEqual(answers[question.id], question.correctLabels)).length
 
   const chooseAnswer = (label: string) => {
     if (!currentQuestion) return
-    setAnswers((current) => ({ ...current, [currentQuestion.id]: label }))
+    setAnswers((current) => {
+      const selectedLabels = current[currentQuestion.id] ?? []
+      const isSelected = selectedLabels.includes(label)
+      const requiredCount = Math.max(currentQuestion.requiredAnswerCount, 1)
+      const nextLabels = isSelected
+        ? selectedLabels.filter((selectedLabel) => selectedLabel !== label)
+        : selectedLabels.length >= requiredCount
+          ? [...selectedLabels.slice(1), label]
+          : [...selectedLabels, label]
+
+      return {
+        ...current,
+        [currentQuestion.id]: nextLabels,
+      }
+    })
   }
 
   const moveToQuestion = (nextIndex: number) => {
@@ -1123,7 +1137,11 @@ function ExamPage({ deck }: { deck?: Deck }) {
         <article className="study-card exam-card">
           <div className="study-card-header">
             <div className="study-card-meta">
-              <span className="pill">{t('exam.chooseAnswer')}</span>
+              <span className="pill">
+                {currentQuestion.requiredAnswerCount > 1
+                  ? `${t('exam.chooseAnswer')} (${currentQuestion.requiredAnswerCount})`
+                  : t('exam.chooseAnswer')}
+              </span>
               <span>{t('exam.questionCounter', { current: activeIndex + 1, total: questions.length })}</span>
             </div>
             <div className="study-card-actions">
@@ -1161,10 +1179,10 @@ function ExamPage({ deck }: { deck?: Deck }) {
           <div className="exam-options">
             {currentQuestion.options.map((option) => {
               const label = option.label.replace('.', '')
-              const selected = answers[currentQuestion.id]
-              const isSelected = selected === label
-              const isCorrect = currentQuestion.correctLabel === label
-              const showResult = Boolean(selected)
+              const selectedLabels = answers[currentQuestion.id] ?? []
+              const isSelected = selectedLabels.includes(label)
+              const isCorrect = currentQuestion.correctLabels.includes(label)
+              const showResult = selectedLabels.length >= currentQuestion.requiredAnswerCount
 
               return (
                 <button
@@ -1181,12 +1199,12 @@ function ExamPage({ deck }: { deck?: Deck }) {
             })}
           </div>
 
-          {answers[currentQuestion.id] && (
-            <div className={`exam-result ${answers[currentQuestion.id] === currentQuestion.correctLabel ? 'correct' : 'incorrect'}`}>
+          {(answers[currentQuestion.id]?.length ?? 0) >= currentQuestion.requiredAnswerCount && (
+            <div className={`exam-result ${areLabelSetsEqual(answers[currentQuestion.id], currentQuestion.correctLabels) ? 'correct' : 'incorrect'}`}>
               <strong>
-                {answers[currentQuestion.id] === currentQuestion.correctLabel ? t('exam.correct') : t('exam.incorrect')}
+                {areLabelSetsEqual(answers[currentQuestion.id], currentQuestion.correctLabels) ? t('exam.correct') : t('exam.incorrect')}
               </strong>
-              <span>{t('exam.correctAnswer', { answer: currentQuestion.correctLabel })}</span>
+              <span>{t('exam.correctAnswer', { answer: currentQuestion.correctLabels.join(', ') })}</span>
             </div>
           )}
 
@@ -1412,11 +1430,15 @@ function QuestionPreview({
   formatted,
   paper = false,
   highlightLabel,
+  highlightLabels,
 }: {
   formatted: ChoiceContent
   paper?: boolean
   highlightLabel?: string | null
+  highlightLabels?: string[]
 }) {
+  const labelsToHighlight = new Set(highlightLabels ?? (highlightLabel ? [highlightLabel] : []))
+
   return (
     <div className={`question-preview ${paper ? 'paper' : ''}`}>
       <div className="question-stem">{formatted.stem}</div>
@@ -1425,7 +1447,7 @@ function QuestionPreview({
           {formatted.options.map((option) => (
             <div
               key={`${option.label}-${option.text}`}
-              className={`question-option ${highlightLabel === option.label.replace('.', '') ? 'correct' : ''}`}
+              className={`question-option ${labelsToHighlight.has(option.label.replace('.', '')) ? 'correct' : ''}`}
             >
               <span className="question-option-label">{option.label}</span>
               <span>{option.text}</span>
@@ -1444,12 +1466,12 @@ function AnswerPreview({ formatted }: { formatted: AnswerContent }) {
     <div className={`answer-preview ${formatted.correctLabel ? 'has-key' : ''}`}>
       {formatted.correctLabel && (
         <div className="answer-key-line">
-          <strong>{formatted.correctLabel.toLowerCase()}</strong>
+          <strong>{formatted.correctLabel}</strong>
         </div>
       )}
 
       {formatted.content.options.length > 0 ? (
-        <QuestionPreview formatted={formatted.content} paper highlightLabel={formatted.correctLabel} />
+        <QuestionPreview formatted={formatted.content} paper highlightLabels={formatted.correctLabels} />
       ) : (
         <p className="answer-text">{plainAnswerText}</p>
       )}
@@ -1469,6 +1491,7 @@ type ChoiceContent = {
 
 type AnswerContent = {
   correctLabel: string | null
+  correctLabels: string[]
   content: ChoiceContent
 }
 
@@ -1479,10 +1502,76 @@ type ExamQuestion = {
   formattedFront: ChoiceContent
   stem: string
   options: ChoiceOption[]
-  correctLabel: string
+  correctLabels: string[]
+  requiredAnswerCount: number
 }
 
 const examChoiceOrder = ['a', 'b', 'c', 'd'] as const
+
+function normalizeAnswerLabels(labels: string[]) {
+  return [...new Set(labels.map((label) => label.toLowerCase()).filter((label) => examChoiceOrder.includes(label as (typeof examChoiceOrder)[number])))]
+}
+
+function areLabelSetsEqual(selectedLabels: string[] | undefined, correctLabels: string[]) {
+  const selectedSet = normalizeAnswerLabels(selectedLabels ?? [])
+  const correctSet = normalizeAnswerLabels(correctLabels)
+
+  return selectedSet.length === correctSet.length && selectedSet.every((label) => correctSet.includes(label))
+}
+
+function getRequiredAnswerCount(questionText: string, correctLabels: string[]) {
+  const explicitCountMatch = questionText.match(/chọn\s*(\d+)/iu)
+  const explicitCount = explicitCountMatch ? Number(explicitCountMatch[1]) : 0
+
+  return Math.max(correctLabels.length, Number.isFinite(explicitCount) ? explicitCount : 0, 1)
+}
+
+function parseLeadingAnswerLabels(normalized: string) {
+  const compactLabelsMatch = normalized.match(/^\s*([A-Da-d]{2,4})(?=\s*[\.\)\(:-])/u)
+  if (compactLabelsMatch) {
+    const matchedText = compactLabelsMatch[0]
+    const labels = normalizeAnswerLabels([...compactLabelsMatch[1]])
+    return {
+      labels,
+      contentText: normalized.slice(matchedText.length).replace(/^\s*[\.\)\(:-]?\s*/u, '').replace(/^\)\s*/, '').trim(),
+    }
+  }
+
+  const separatedLabelsMatch = normalized.match(/^\s*([A-Da-d](?:\s*[,;/&+]\s*[A-Da-d]){1,3})(?=\s*[\.\)\(:-]|\s|$)/u)
+  if (separatedLabelsMatch) {
+    const matchedText = separatedLabelsMatch[0]
+    const labels = normalizeAnswerLabels(separatedLabelsMatch[1].match(/[A-Da-d]/gu) ?? [])
+    return {
+      labels,
+      contentText: normalized.slice(matchedText.length).replace(/^\s*[\.\)\(:-]?\s*/u, '').replace(/^\)\s*/, '').trim(),
+    }
+  }
+
+  const spacedLabelsMatch = normalized.match(/^\s*([A-Da-d](?:\s+[A-Da-d]){1,3})(?=\s*[\.\)\(:-]|\s*$)/u)
+  if (spacedLabelsMatch) {
+    const matchedText = spacedLabelsMatch[0]
+    const labels = normalizeAnswerLabels(spacedLabelsMatch[1].match(/[A-Da-d]/gu) ?? [])
+    return {
+      labels,
+      contentText: normalized.slice(matchedText.length).replace(/^\s*[\.\)\(:-]?\s*/u, '').replace(/^\)\s*/, '').trim(),
+    }
+  }
+
+  const singleLabelMatch = normalized.match(/^\s*([A-Da-d])(?=\s*[\.\)\(:-]|$)/u)
+  if (singleLabelMatch) {
+    const matchedText = singleLabelMatch[0]
+    const labels = normalizeAnswerLabels([singleLabelMatch[1]])
+    return {
+      labels,
+      contentText: normalized.slice(matchedText.length).replace(/^\s*[\.\)\(:-]?\s*/u, '').replace(/^\)\s*/, '').trim(),
+    }
+  }
+
+  return {
+    labels: [],
+    contentText: normalized,
+  }
+}
 
 function hasRichMarkup(text: string) {
   return /<\/?[a-z][\s\S]*>/iu.test(text) || /&(?:nbsp|[a-z]{2,}|#\d+);/iu.test(text)
@@ -1548,11 +1637,12 @@ function buildExamQuestions(deck?: Deck): ExamQuestion[] {
       const frontHasHtml = hasRichMarkup(rawFront)
       const front = parseChoiceContent(fieldToPlainText(rawFront))
       const answer = formatAnswerText(fieldToPlainText(card.back))
-      const correctLabel = answer.correctLabel
+      const correctLabels = answer.correctLabels
       const options = normalizeExamOptions(front.options)
+      const optionLabels = options.map((option) => option.label.replace('.', ''))
 
-      if (!correctLabel || options.length < 2) return null
-      if (!options.some((option) => option.label.replace('.', '') === correctLabel)) return null
+      if (correctLabels.length === 0 || options.length < 2) return null
+      if (!correctLabels.every((label) => optionLabels.includes(label))) return null
 
       return {
         id: card.id,
@@ -1564,7 +1654,8 @@ function buildExamQuestions(deck?: Deck): ExamQuestion[] {
         },
         stem: front.stem,
         options,
-        correctLabel,
+        correctLabels,
+        requiredAnswerCount: getRequiredAnswerCount(front.stem, correctLabels),
       }
     })
     .filter((question): question is ExamQuestion => Boolean(question))
@@ -1680,17 +1771,15 @@ function formatStudyText(text: string) {
 
 function formatAnswerText(text: string): AnswerContent {
   const normalized = normalizeChoiceMarkers(text)
-  const leadingAnswerMatch = normalized.match(/^\s*([A-Da-d])(?=\s*[\.\)\(:-]|$)/u)
-  const correctLabel = leadingAnswerMatch?.[1]?.toLowerCase() ?? null
-  const contentText = correctLabel
-    ? normalized.replace(/^\s*[A-Da-d]\s*[\.\)\(:-]?\s*/u, '').replace(/^\)\s*/, '').trim()
-    : normalized
+  const { labels: correctLabels, contentText } = parseLeadingAnswerLabels(normalized)
+  const correctLabel = correctLabels.length > 0 ? correctLabels.join(', ') : null
   const parsedContent = parseChoiceContent(contentText)
   const markerCount = countChoiceMarkers(contentText)
   const shouldUsePlainText = /kiểu hỏi khác/iu.test(contentText) || markerCount > 4 || parsedContent.options.length > 4
 
   return {
     correctLabel,
+    correctLabels,
     content: shouldUsePlainText ? { stem: contentText, options: [] } : parsedContent,
   }
 }
