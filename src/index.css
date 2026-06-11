@@ -437,6 +437,49 @@ button:disabled {
   grid-template-columns: 1fr;
 }
 
+.study-progress-card {
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--surface), color-mix(in srgb, var(--surface) 88%, var(--text)));
+}
+
+.study-progress-copy,
+.study-progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.study-progress-copy span,
+.study-progress-meta {
+  color: var(--muted);
+}
+
+.study-progress-copy strong {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.study-progress-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+.study-progress-fill {
+  height: 100%;
+  min-width: 0;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 220ms ease;
+}
+
 .panel {
   padding: 22px;
 }
@@ -1456,6 +1499,19 @@ select:focus-visible,
 
   .study-card {
     gap: 16px;
+  }
+
+  .study-progress-card {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .study-progress-copy strong {
+    font-size: 1.25rem;
+  }
+
+  .study-progress-meta {
+    font-size: 0.85rem;
   }
 
   .study-card-header {

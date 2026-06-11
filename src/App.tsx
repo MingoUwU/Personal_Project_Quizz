@@ -609,6 +609,8 @@ function StudyPage({
       ? Math.max(sessionProgress.total, sessionProgress.reviewed + dueCards.length)
       : dueCards.length
   const sessionCurrent = activeCard ? Math.min(sessionProgress.reviewed + activeIndex + 1, Math.max(sessionTotal, 1)) : sessionTotal
+  const completedCards = Math.min(sessionProgress.reviewed, Math.max(sessionTotal, 0))
+  const progressPercent = sessionTotal > 0 ? Math.round((completedCards / sessionTotal) * 100) : 0
   const formattedFront = useMemo(() => formatStudyText(activeCard?.front ?? ''), [activeCard?.front])
   const formattedBack = useMemo(() => formatAnswerText(activeCard?.back ?? ''), [activeCard?.back])
   const frontHasHtml = useMemo(() => hasRichMarkup(activeCard?.front ?? ''), [activeCard?.front])
@@ -803,6 +805,20 @@ function StudyPage({
         <div>
           <h2>{t('study.title')}</h2>
           <p>{deck.name}</p>
+        </div>
+      </div>
+
+      <div className="study-progress-card" aria-label={`Tiến trình học ${progressPercent}%`}>
+        <div className="study-progress-copy">
+          <span>Tiến trình học</span>
+          <strong>{progressPercent}%</strong>
+        </div>
+        <div className="study-progress-track">
+          <div className="study-progress-fill" style={{ width: `${progressPercent}%` }} />
+        </div>
+        <div className="study-progress-meta">
+          <span>{completedCards} đã chấm</span>
+          <span>{Math.max(sessionTotal - completedCards, 0)} còn lại</span>
         </div>
       </div>
 
