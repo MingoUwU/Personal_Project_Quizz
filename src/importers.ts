@@ -9,6 +9,12 @@ interface AnkiDeckMeta {
   name: string
 }
 
+interface AnkiNote {
+  fields: string[]
+  fieldNames: string[]
+  tags: string[]
+}
+
 interface ImportResult {
   format: 'json' | 'apkg'
   payload: Deck[] | AppState
@@ -33,6 +39,26 @@ const getSql = () => {
 }
 
 const normalizeImportedField = (value: string) => value.replace(/\r\n/g, '\n').trim()
+
+const htmlTextFallbacks: Record<string, string> = {
+  '&nbsp;': ' ',
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+  '&quot;': '"',
+  '&#39;': "'",
+}
+
+const getVisibleText = (value: string) =>
+  value
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/(div|p|li|tr|h[1-6])>/gi, '\n')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&(nbsp|amp|lt|gt|quot);|&#39;/g, (entity) => htmlTextFallbacks[entity] ?? entity)
+    .replace(/\s+/g, ' ')
+    .trim()
+
+const hasVisibleContent = (value: string) => getVisibleText(value).length > 0
 
 const unsupportedAnkiPlaceholderPattern =
   /please update to the latest anki version, then import the \.colpkg\/\.apkg file again\./i
@@ -140,6 +166,116 @@ const getTableRows = (db: { exec: (sql: string) => SqlResult[] }, sql: string): 
   )
 }
 
+const tableExists = (db: { exec: (sql: string) => SqlResult[] }, tableName: string) =>
+  getTableRows(
+    db,
+    `SELECT name FROM sqlite_master WHERE type='table' AND name='${tableName.replace(/'/g, "''")}' LIMIT 1`,
+  ).length > 0
+
+const safeJsonRecord = (value: unknown): Record<string, unknown> => {
+  if (typeof value !== 'string' || value.trim().length === 0) return {}
+
+  try {
+    const parsed = JSON.parse(value) as unknown
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed)
+      ? (parsed as Record<string, unknown>)
+      : {}
+  } catch {
+    return {}
+  }
+}
+
+const getCollectionCrt = (database: initSqlJs.Database) => {
+  const colRow = getTableRows(database, 'SELECT crt FROM col LIMIT 1')[0] as { crt?: number } | undefined
+  return Number(colRow?.crt ?? 0)
+}
+
+const getDeckMeta = (database: initSqlJs.Database) => {
+  const deckMeta: Record<string, AnkiDeckMeta> = {}
+
+  const colRow = getTableRows(database, 'SELECT decks FROM col LIMIT 1')[0] as { decks?: string } | undefined
+  const legacyDecks = safeJsonRecord(colRow?.decks)
+
+  for (const [id, value] of Object.entries(legacyDecks)) {
+    const entry = value as { name?: string }
+    deckMeta[id] = {
+      id,
+      name: entry.name?.trim() || `Imported deck ${id}`,
+    }
+  }
+
+  if (tableExists(database, 'decks')) {
+    for (const row of getTableRows(database, 'SELECT id, name FROM decks')) {
+      const id = String(row.id)
+      const name = String(row.name ?? '').trim()
+      if (!name) continue
+
+      deckMeta[id] = {
+        id,
+        name,
+      }
+    }
+  }
+
+  return deckMeta
+}
+
+const getFieldNamesByNoteType = (database: initSqlJs.Database) => {
+  const fieldNamesByNoteType: Record<string, string[]> = {}
+
+  if (tableExists(database, 'fields')) {
+    for (const row of getTableRows(database, 'SELECT ntid, ord, name FROM fields ORDER BY ntid, ord')) {
+      const noteTypeId = String(row.ntid)
+      const order = Number(row.ord ?? 0)
+      fieldNamesByNoteType[noteTypeId] ??= []
+      fieldNamesByNoteType[noteTypeId][order] = String(row.name ?? '').trim()
+    }
+  }
+
+  const colRow = getTableRows(database, 'SELECT models FROM col LIMIT 1')[0] as { models?: string } | undefined
+  const legacyModels = safeJsonRecord(colRow?.models)
+
+  for (const [id, value] of Object.entries(legacyModels)) {
+    const model = value as { flds?: Array<{ name?: string }> }
+    if (!Array.isArray(model.flds)) continue
+
+    fieldNamesByNoteType[id] = model.flds.map((field) => field.name?.trim() || '')
+  }
+
+  return fieldNamesByNoteType
+}
+
+const preferredFrontFieldPattern = /^(front|question|q|câu hỏi|cau hoi|mặt trước|mat truoc|term|prompt)$/i
+const preferredBackFieldPattern = /^(back|answer|a|đáp án|dap an|mặt sau|mat sau|definition|response)$/i
+
+const chooseFieldIndex = (fields: string[], fieldNames: string[], pattern: RegExp, excludedIndex?: number) => {
+  const namedIndex = fieldNames.findIndex(
+    (name, index) => index !== excludedIndex && pattern.test(name) && hasVisibleContent(fields[index] ?? ''),
+  )
+
+  if (namedIndex >= 0) return namedIndex
+
+  return fields.findIndex((field, index) => index !== excludedIndex && hasVisibleContent(field))
+}
+
+const selectApkgCardContent = (fields: string[], fieldNames: string[]) => {
+  const frontIndex = chooseFieldIndex(fields, fieldNames, preferredFrontFieldPattern)
+  const backIndex = chooseFieldIndex(fields, fieldNames, preferredBackFieldPattern, frontIndex)
+
+  const front = frontIndex >= 0 ? fields[frontIndex] : ''
+  const back =
+    backIndex >= 0
+      ? fields[backIndex]
+      : fields
+          .filter((field, index) => index !== frontIndex && hasVisibleContent(field))
+          .join('<br /><br />')
+
+  return {
+    front,
+    back,
+  }
+}
+
 const buildDueDate = (queue: number, due: number, interval: number, collectionCrt: number) => {
   const now = Date.now()
 
@@ -196,25 +332,16 @@ const parseApkgImport = async (file: File): Promise<ImportResult> => {
     )
   }
 
-  const colRow = getTableRows(database, 'SELECT crt, decks FROM col LIMIT 1')[0] as
-    | { crt?: number; decks?: string }
-    | undefined
+  const collectionCrt = getCollectionCrt(database)
+  const deckMeta = getDeckMeta(database)
+  const fieldNamesByNoteType = getFieldNamesByNoteType(database)
 
-  const collectionCrt = Number(colRow?.crt ?? 0)
-  const deckMetaRaw = typeof colRow?.decks === 'string' ? JSON.parse(colRow.decks) : {}
-  const deckMeta = Object.entries(deckMetaRaw).reduce<Record<string, AnkiDeckMeta>>((accumulator, [id, value]) => {
-    const entry = value as { name?: string }
-    accumulator[id] = {
-      id,
-      name: entry.name?.trim() || `Imported deck ${id}`,
-    }
-    return accumulator
-  }, {})
-
-  const notes = getTableRows(database, 'SELECT id, flds, tags FROM notes').reduce<Record<string, { fields: string[]; tags: string[] }>>(
-    (accumulator: Record<string, { fields: string[]; tags: string[] }>, row: Record<string, unknown>) => {
+  const notes = getTableRows(database, 'SELECT id, mid, flds, tags FROM notes').reduce<Record<string, AnkiNote>>(
+    (accumulator: Record<string, AnkiNote>, row: Record<string, unknown>) => {
+      const noteTypeId = String(row.mid)
       accumulator[String(row.id)] = {
         fields: String(row.flds ?? '').split('\u001f'),
+        fieldNames: fieldNamesByNoteType[noteTypeId] ?? [],
         tags: String(row.tags ?? '')
           .split(' ')
           .map((tag) => tag.trim())
@@ -232,15 +359,14 @@ const parseApkgImport = async (file: File): Promise<ImportResult> => {
     if (!note) continue
 
     const fields = note.fields.map((field: string) => normalizeImportedField(field))
-    const front = fields[0] || ''
-    const back = fields[1] || fields.slice(1).filter(Boolean).join('<br /><br />')
+    const { front, back } = selectApkgCardContent(fields, note.fieldNames)
 
     if (isUnsupportedAnkiPlaceholder(front, back)) {
       skippedUnsupportedPlaceholderCards += 1
       continue
     }
 
-    if (!front && !back) continue
+    if (!hasVisibleContent(front) && !hasVisibleContent(back)) continue
 
     const did = String(row.did)
     const meta = deckMeta[did]
