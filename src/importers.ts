@@ -1,4 +1,5 @@
 import JSZip from 'jszip'
+import { decompress } from 'fzstd'
 import initSqlJs from 'sql.js'
 import sqlWasmUrl from 'sql.js/dist/sql-wasm.wasm?url'
 import type { AppState, Deck } from './types'
@@ -32,6 +33,21 @@ const getSql = () => {
 }
 
 const normalizeImportedField = (value: string) => value.replace(/\r\n/g, '\n').trim()
+
+const unsupportedAnkiPlaceholderPattern =
+  /please update to the latest anki version, then import the \.colpkg\/\.apkg file again\./i
+
+const isUnsupportedAnkiPlaceholder = (front: string, back: string) =>
+  unsupportedAnkiPlaceholderPattern.test(`${front} ${back}`)
+
+const isZstdCompressed = (bytes: Uint8Array) =>
+  bytes[0] === 0x28 && bytes[1] === 0xb5 && bytes[2] === 0x2f && bytes[3] === 0xfd
+
+const readCollectionDatabaseBytes = async (collectionFile: JSZip.JSZipObject) => {
+  const bytes = await collectionFile.async('uint8array')
+
+  return isZstdCompressed(bytes) ? decompress(bytes) : bytes
+}
 
 const makeDeckId = (prefix: string) => `${prefix}-${crypto.randomUUID()}`
 
@@ -100,15 +116,16 @@ const parseJsonImport = async (file: File): Promise<ImportResult> => {
   throw new Error('Unsupported JSON structure.')
 }
 
-const findCollectionFile = (zip: JSZip) => {
-  const preferred = ['collection.anki21', 'collection.anki2', 'collection.anki21b']
+const findCollectionFiles = (zip: JSZip) => {
+  const preferred = ['collection.anki21b', 'collection.anki21', 'collection.anki2']
+  const files = []
 
   for (const name of preferred) {
     const file = zip.file(name)
-    if (file) return file
+    if (file) files.push(file)
   }
 
-  return zip.file(/collection\.anki2.*/i)[0] ?? null
+  return files.length > 0 ? files : zip.file(/collection\.anki2.*/i)
 }
 
 const getTableRows = (db: { exec: (sql: string) => SqlResult[] }, sql: string): Record<string, unknown>[] => {
@@ -147,14 +164,37 @@ const buildDueDate = (queue: number, due: number, interval: number, collectionCr
 
 const parseApkgImport = async (file: File): Promise<ImportResult> => {
   const zip = await JSZip.loadAsync(await file.arrayBuffer())
-  const collectionFile = findCollectionFile(zip)
+  const collectionFiles = findCollectionFiles(zip)
 
-  if (!collectionFile) {
+  if (collectionFiles.length === 0) {
     throw new Error('APKG is missing collection database.')
   }
 
   const SQL = await getSql()
-  const database = new SQL.Database(new Uint8Array(await collectionFile.async('uint8array')))
+  let database: initSqlJs.Database | null = null
+  let skippedUnsupportedPlaceholderCards = 0
+
+  for (const collectionFile of collectionFiles) {
+    const candidateDatabase = new SQL.Database(new Uint8Array(await readCollectionDatabaseBytes(collectionFile)))
+    const placeholderCount = getTableRows(candidateDatabase, 'SELECT flds FROM notes')
+      .filter((row) => isUnsupportedAnkiPlaceholder(String(row.flds ?? ''), '')).length
+    const cardCount = getTableRows(candidateDatabase, 'SELECT id FROM cards LIMIT 2').length
+
+    if (placeholderCount > 0 && cardCount <= placeholderCount && collectionFile.name !== 'collection.anki21b') {
+      skippedUnsupportedPlaceholderCards += placeholderCount
+      candidateDatabase.close()
+      continue
+    }
+
+    database = candidateDatabase
+    break
+  }
+
+  if (!database) {
+    throw new Error(
+      'Tệp này chỉ chứa trình giữ chỗ tương thích với Anki. Hãy xuất lại bộ thẻ từ Anki mới nhất dạng .apkg hoặc .colpkg rồi nhập lại.',
+    )
+  }
 
   const colRow = getTableRows(database, 'SELECT crt, decks FROM col LIMIT 1')[0] as
     | { crt?: number; decks?: string }
@@ -195,6 +235,11 @@ const parseApkgImport = async (file: File): Promise<ImportResult> => {
     const front = fields[0] || ''
     const back = fields[1] || fields.slice(1).filter(Boolean).join('<br /><br />')
 
+    if (isUnsupportedAnkiPlaceholder(front, back)) {
+      skippedUnsupportedPlaceholderCards += 1
+      continue
+    }
+
     if (!front && !back) continue
 
     const did = String(row.did)
@@ -234,6 +279,12 @@ const parseApkgImport = async (file: File): Promise<ImportResult> => {
   const decks = [...deckMap.values()].filter((deck) => deck.cards.length > 0)
 
   if (decks.length === 0) {
+    if (skippedUnsupportedPlaceholderCards > 0) {
+      throw new Error(
+        'Tệp này chỉ chứa trình giữ chỗ tương thích với Anki. Hãy xuất lại bộ thẻ từ Anki mới nhất dạng .apkg hoặc .colpkg rồi nhập lại.',
+      )
+    }
+
     throw new Error('APKG parsed but no supported cards were found.')
   }
 
@@ -251,9 +302,9 @@ export const parseImportFile = async (file: File): Promise<ImportResult> => {
     return parseJsonImport(file)
   }
 
-  if (extension === 'apkg') {
+  if (extension === 'apkg' || extension === 'colpkg') {
     return parseApkgImport(file)
   }
 
-  throw new Error('Unsupported file type. Use JSON or APKG.')
+  throw new Error('Unsupported file type. Use JSON, APKG, or COLPKG.')
 }

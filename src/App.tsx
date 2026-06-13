@@ -1578,7 +1578,8 @@ function hasRichMarkup(text: string) {
 }
 
 function countChoiceMarkers(text: string) {
-  return [...normalizeChoiceMarkers(text).matchAll(/(^|[\s"'â€œâ€â€˜â€™(<{\[]|[?!:;])([A-Da-d])[\.\)]\s*/gu)].length
+  const normalized = normalizeChoiceMarkers(text)
+  return selectOrderedChoiceMarkers(collectChoiceMarkers(normalized)).length
 }
 
 function prettifyPlainAnswerText(text: string) {
@@ -1717,7 +1718,21 @@ function collectChoiceMarkers(normalized: string) {
     const tail = normalized.slice(index + 2)
     const spacingLength = tail.match(/^\s*/u)?.[0]?.length ?? 0
     const nextChar = normalized[index + 2 + spacingLength]
-    if (nextChar && !/[\p{L}\p{N}(]/u.test(nextChar)) continue
+    const nextCodePoint = nextChar?.codePointAt(0)
+    const nextIsCurlyQuote =
+      nextCodePoint === 0x2018 ||
+      nextCodePoint === 0x2019 ||
+      nextCodePoint === 0x201c ||
+      nextCodePoint === 0x201d
+
+    if (
+      nextChar &&
+      !/[\p{L}\p{N}]/u.test(nextChar) &&
+      !new Set(['(', '"', "'"]).has(nextChar) &&
+      !nextIsCurlyQuote
+    ) {
+      continue
+    }
 
     markers.push({
       index,
@@ -1729,9 +1744,52 @@ function collectChoiceMarkers(normalized: string) {
   return markers
 }
 
+function getChoiceLabelIndex(label: string) {
+  return examChoiceOrder.indexOf(label.replace('.', '').toLowerCase() as (typeof examChoiceOrder)[number])
+}
+
+function selectOrderedChoiceMarkers(markers: Array<{ index: number; end: number; label: string }>) {
+  const firstAIndex = markers.findIndex((marker) => marker.label.replace('.', '') === 'a')
+
+  if (firstAIndex >= 0) {
+    const sequence: Array<{ index: number; end: number; label: string }> = []
+    let expectedLabelIndex = 0
+
+    for (const marker of markers.slice(firstAIndex)) {
+      const markerLabelIndex = getChoiceLabelIndex(marker.label)
+
+      if (markerLabelIndex === expectedLabelIndex) {
+        sequence.push(marker)
+        expectedLabelIndex += 1
+      }
+    }
+
+    if (sequence.length >= 2) return sequence
+  }
+
+  return markers.reduce<Array<{ index: number; end: number; label: string }>>((best, marker, markerIndex) => {
+    let expectedLabelIndex = getChoiceLabelIndex(marker.label)
+
+    if (expectedLabelIndex < 0) return best
+
+    const sequence = [marker]
+
+    for (const candidate of markers.slice(markerIndex + 1)) {
+      const candidateLabelIndex = getChoiceLabelIndex(candidate.label)
+
+      if (candidateLabelIndex === expectedLabelIndex + 1) {
+        sequence.push(candidate)
+        expectedLabelIndex = candidateLabelIndex
+      }
+    }
+
+    return sequence.length > best.length ? sequence : best
+  }, [])
+}
+
 function parseChoiceContent(text: string): ChoiceContent {
   const normalized = normalizeChoiceMarkers(text)
-  const markers = collectChoiceMarkers(normalized)
+  const markers = selectOrderedChoiceMarkers(collectChoiceMarkers(normalized))
 
   if (markers.length < 2) {
     return { stem: normalized, options: [] }
