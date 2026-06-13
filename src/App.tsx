@@ -21,6 +21,7 @@ import {
   Upload,
 } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
+import type { FormEvent } from 'react'
 import { NavLink, Navigate, Route, Routes, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { parseImportFile } from './importers'
@@ -593,6 +594,7 @@ function StudyPage({
   const [currentIndex, setCurrentIndex] = useState(() =>
     Math.min(savedStudySession?.currentIndex ?? 0, Math.max(dueCards.length - 1, 0)),
   )
+  const [jumpValue, setJumpValue] = useState('')
   const [sessionProgress, setSessionProgress] = useState<StudySession>(() =>
     savedStudySession ?? {
       deckId: deck?.id ?? '',
@@ -633,6 +635,15 @@ function StudyPage({
       setSessionProgress(nextSession)
       onStudySessionChange(deck.id, nextSession)
     }
+  }
+
+  const handleJumpToCard = (value: string) => {
+    const targetNumber = Number(value)
+
+    if (!Number.isFinite(targetNumber)) return
+
+    moveToCard(Math.trunc(targetNumber) - 1)
+    setJumpValue('')
   }
 
   const reviewCurrentCard = (rating: ReviewRating, nextIndex: number) => {
@@ -901,6 +912,14 @@ function StudyPage({
                     <ChevronsRight size={16} />
                   </button>
                 </div>
+                <JumpToControl
+                  value={jumpValue}
+                  total={dueCards.length}
+                  placeholder={t('study.jumpPlaceholder')}
+                  buttonLabel={t('actions.goto')}
+                  onChange={setJumpValue}
+                  onJump={handleJumpToCard}
+                />
                 <button
                   className="ghost-button icon-only"
                   onClick={() => setExpanded((current) => !current)}
@@ -984,6 +1003,7 @@ function ExamPage({ deck }: { deck?: Deck }) {
   const questionBank = useMemo(() => buildExamQuestions(deck), [deck])
   const [questionLimit, setQuestionLimit] = useState<number | 'all'>(10)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [jumpValue, setJumpValue] = useState('')
   const [answers, setAnswers] = useState<Record<string, string[]>>({})
   const questions = useMemo(() => {
     if (questionLimit === 'all') return questionBank
@@ -1018,9 +1038,19 @@ function ExamPage({ deck }: { deck?: Deck }) {
     setCurrentIndex(Math.min(Math.max(nextIndex, 0), questions.length - 1))
   }
 
+  const handleJumpToQuestion = (value: string) => {
+    const targetNumber = Number(value)
+
+    if (!Number.isFinite(targetNumber)) return
+
+    moveToQuestion(Math.trunc(targetNumber) - 1)
+    setJumpValue('')
+  }
+
   const restartExam = () => {
     setAnswers({})
     setCurrentIndex(0)
+    setJumpValue('')
   }
 
   useEffect(() => {
@@ -1163,6 +1193,14 @@ function ExamPage({ deck }: { deck?: Deck }) {
               >
                 <ChevronRight size={16} />
               </button>
+              <JumpToControl
+                value={jumpValue}
+                total={questions.length}
+                placeholder={t('exam.jumpPlaceholder')}
+                buttonLabel={t('actions.goto')}
+                onChange={setJumpValue}
+                onJump={handleJumpToQuestion}
+              />
             </div>
           </div>
 
@@ -1396,6 +1434,45 @@ function SettingsPage({
         </article>
       </div>
     </section>
+  )
+}
+
+function JumpToControl({
+  value,
+  total,
+  placeholder,
+  buttonLabel,
+  onChange,
+  onJump,
+}: {
+  value: string
+  total: number
+  placeholder: string
+  buttonLabel: string
+  onChange: (value: string) => void
+  onJump: (value: string) => void
+}) {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    onJump(value)
+  }
+
+  return (
+    <form className="jump-control" onSubmit={handleSubmit}>
+      <input
+        type="number"
+        min={1}
+        max={Math.max(total, 1)}
+        inputMode="numeric"
+        value={value}
+        placeholder={placeholder}
+        aria-label={placeholder}
+        onChange={(event) => onChange(event.target.value)}
+      />
+      <button className="ghost-button compact" type="submit" disabled={!value.trim() || total <= 0}>
+        {buttonLabel}
+      </button>
+    </form>
   )
 }
 

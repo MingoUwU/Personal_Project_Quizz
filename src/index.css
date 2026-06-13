@@ -695,6 +695,36 @@ button:disabled {
   gap: 6px;
 }
 
+.jump-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.jump-control input {
+  width: 92px;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  text-align: center;
+  font: inherit;
+}
+
+.jump-control input:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 42%, transparent);
+  outline-offset: 2px;
+}
+
+.jump-control .ghost-button.compact {
+  min-height: 40px;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
 .question-block {
   display: grid;
   gap: 10px;
@@ -1521,7 +1551,7 @@ select:focus-visible,
 
   .study-card-actions {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto;
     gap: 8px;
   }
 
@@ -1529,11 +1559,22 @@ select:focus-visible,
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
+    grid-column: 1 / -1;
   }
 
   .study-card-nav .icon-only.compact {
     width: 100%;
     min-width: 0;
+  }
+
+  .jump-control {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .jump-control input {
+    flex: 1;
+    width: 100%;
   }
 
   .question-stem {
