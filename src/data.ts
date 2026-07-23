@@ -8,6 +8,12 @@ export const defaultState: AppState = {
     locale: 'vi',
     showLibrary: true,
     dailyGoal: 30,
+    ai: {
+      enabled: false,
+      apiKey: '',
+      endpoint: 'https://api.openai.com/v1/chat/completions',
+      model: 'gpt-4o-mini',
+    },
   },
   decks: [],
   selectedDeckId: '',

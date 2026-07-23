@@ -47,6 +47,14 @@ export interface AppSettings {
   locale: Locale
   showLibrary: boolean
   dailyGoal: number
+  ai: AiSettings
+}
+
+export interface AiSettings {
+  enabled: boolean
+  apiKey: string
+  endpoint: string
+  model: string
 }
 
 export interface AppState {

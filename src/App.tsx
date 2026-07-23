@@ -16,6 +16,7 @@ import {
   MoonStar,
   Search,
   Settings,
+  Sparkles,
   SunMedium,
   Trash2,
   Upload,
@@ -24,9 +25,10 @@ import { useEffect, useMemo, useState } from 'react'
 import type { FormEvent } from 'react'
 import { NavLink, Navigate, Route, Routes, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { canUseAi, requestAnswerFeedback } from './ai'
 import { parseImportFile } from './importers'
 import { createDeck, deleteDeck, importDecks, loadState, resetDeckProgress, resetState, reviewCard, saveState } from './storage'
-import type { AppState, Card, Deck, ReviewRating, StudySession, ThemeMode } from './types'
+import type { AiSettings, AppState, Card, Deck, ReviewRating, StudySession, ThemeMode } from './types'
 
 const navItems = [
   { key: 'home', icon: Home },
@@ -79,6 +81,9 @@ function App() {
 
   const updateDailyGoal = (dailyGoal: number) =>
     setState((current) => ({ ...current, settings: { ...current.settings, dailyGoal } }))
+
+  const updateAiSettings = (ai: AiSettings) =>
+    setState((current) => ({ ...current, settings: { ...current.settings, ai } }))
 
   const addDeck = (deck: Pick<Deck, 'name' | 'description' | 'language' | 'category'>) =>
     setState((current) => createDeck(current, deck))
@@ -220,6 +225,7 @@ function App() {
                 onResetDeck={handleResetDeck}
                 studySession={selectedDeck ? state.studySessions[selectedDeck.id] : undefined}
                 onStudySessionChange={handleStudySessionChange}
+                aiSettings={state.settings.ai}
               />
             }
           />
@@ -235,6 +241,7 @@ function App() {
                 onLocaleChange={updateLocale}
                 onToggleLibrary={updateLibrary}
                 onDailyGoalChange={updateDailyGoal}
+                onAiSettingsChange={updateAiSettings}
                 onReset={handleReset}
               />
             }
@@ -576,6 +583,7 @@ function StudyPage({
   onResetDeck,
   studySession,
   onStudySessionChange,
+  aiSettings,
 }: {
   deck?: Deck
   stats: AppState['stats']
@@ -584,6 +592,7 @@ function StudyPage({
   onResetDeck: () => void
   studySession?: StudySession
   onStudySessionChange: (deckId: string, session: StudySession) => void
+  aiSettings: AiSettings
 }) {
   const { t } = useTranslation()
   const navigate = useNavigate()
@@ -591,6 +600,8 @@ function StudyPage({
   const savedStudySession = studySession?.deckId === deck?.id ? studySession : undefined
   const [revealed, setRevealed] = useState(false)
   const [expanded, setExpanded] = useState(false)
+  const [aiFeedback, setAiFeedback] = useState('')
+  const [aiFeedbackStatus, setAiFeedbackStatus] = useState<'idle' | 'loading' | 'error'>('idle')
   const [currentIndex, setCurrentIndex] = useState(() =>
     Math.min(savedStudySession?.currentIndex ?? 0, Math.max(dueCards.length - 1, 0)),
   )
@@ -711,9 +722,27 @@ function StudyPage({
     setRevealed(false)
   }
 
+  const handleRequestAiFeedback = async () => {
+    if (!activeCard) return
+
+    setAiFeedbackStatus('loading')
+    setAiFeedback('')
+
+    try {
+      const feedback = await requestAnswerFeedback(aiSettings, activeCard)
+      setAiFeedback(feedback)
+      setAiFeedbackStatus('idle')
+    } catch (error) {
+      setAiFeedback(error instanceof Error ? error.message : t('ai.error'))
+      setAiFeedbackStatus('error')
+    }
+  }
+
   useEffect(() => {
     setRevealed(false)
     setExpanded(false)
+    setAiFeedback('')
+    setAiFeedbackStatus('idle')
   }, [activeCard?.id, deck?.id])
 
   useEffect(() => {
@@ -961,6 +990,28 @@ function StudyPage({
                 )}
               </div>
             </div>
+
+            {revealed && (
+              <div className="ai-feedback-panel">
+                <div className="ai-feedback-actions">
+                  <button
+                    className="ghost-button"
+                    onClick={() => void handleRequestAiFeedback()}
+                    disabled={!canUseAi(aiSettings) || aiFeedbackStatus === 'loading'}
+                    title={!canUseAi(aiSettings) ? t('ai.needSetup') : t('ai.explain')}
+                  >
+                    <Sparkles size={16} />
+                    {aiFeedbackStatus === 'loading' ? t('ai.loading') : t('ai.explain')}
+                  </button>
+                  {!canUseAi(aiSettings) && <span>{t('ai.needSetup')}</span>}
+                </div>
+                {aiFeedback && (
+                  <div className={`ai-feedback-result ${aiFeedbackStatus === 'error' ? 'error' : ''}`}>
+                    {aiFeedback}
+                  </div>
+                )}
+              </div>
+            )}
 
             {!revealed ? (
               <button className="primary-button full-width" onClick={() => setRevealed(true)}>
@@ -1340,6 +1391,7 @@ function SettingsPage({
   onLocaleChange,
   onToggleLibrary,
   onDailyGoalChange,
+  onAiSettingsChange,
   onReset,
 }: {
   state: AppState
@@ -1347,9 +1399,12 @@ function SettingsPage({
   onLocaleChange: (locale: AppState['settings']['locale']) => void
   onToggleLibrary: (value: boolean) => void
   onDailyGoalChange: (value: number) => void
+  onAiSettingsChange: (settings: AiSettings) => void
   onReset: () => void
 }) {
   const { t } = useTranslation()
+  const aiSettings = state.settings.ai
+  const updateAi = (partial: Partial<AiSettings>) => onAiSettingsChange({ ...aiSettings, ...partial })
 
   return (
     <section className="page-grid">
@@ -1419,6 +1474,50 @@ function SettingsPage({
                 onChange={(event) => onToggleLibrary(event.target.checked)}
               />
               <span />
+            </label>
+          </div>
+
+          <div className="setting-row stacked">
+            <div>
+              <strong>{t('ai.title')}</strong>
+              <p>{t('ai.privacyHint')}</p>
+            </div>
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={aiSettings.enabled}
+                onChange={(event) => updateAi({ enabled: event.target.checked })}
+              />
+              <span />
+            </label>
+          </div>
+
+          <div className="ai-settings-grid">
+            <label>
+              <span>{t('ai.apiKey')}</span>
+              <input
+                type="password"
+                value={aiSettings.apiKey}
+                placeholder="sk-..."
+                autoComplete="off"
+                onChange={(event) => updateAi({ apiKey: event.target.value })}
+              />
+            </label>
+            <label>
+              <span>{t('ai.endpoint')}</span>
+              <input
+                value={aiSettings.endpoint}
+                placeholder="https://api.openai.com/v1/chat/completions"
+                onChange={(event) => updateAi({ endpoint: event.target.value })}
+              />
+            </label>
+            <label>
+              <span>{t('ai.model')}</span>
+              <input
+                value={aiSettings.model}
+                placeholder="gpt-4o-mini"
+                onChange={(event) => updateAi({ model: event.target.value })}
+              />
             </label>
           </div>
         </article>

@@ -32,6 +32,14 @@ const sanitizeState = (state: AppState): AppState => {
 
   return {
     ...state,
+    settings: {
+      ...defaultState.settings,
+      ...state.settings,
+      ai: {
+        ...defaultState.settings.ai,
+        ...(state.settings?.ai ?? {}),
+      },
+    },
     decks,
     selectedDeckId,
     studySessions,
