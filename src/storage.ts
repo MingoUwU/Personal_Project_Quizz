@@ -1,7 +1,9 @@
 import { defaultState, STARTER_DECK_IDS } from './data'
+import { FLUTTER_QUIZ_DECK_ID, flutterQuizDeck } from './flutterQuizDeck'
 import type { AppState, Deck, ReviewRating } from './types'
 
 const STORAGE_KEY = 'memu-local-app-state'
+const FLUTTER_QUIZ_MIGRATION_KEY = 'memu-content-flutter-fundamentals-v1'
 const starterDeckIds = new Set<string>(STARTER_DECK_IDS)
 
 const safeJsonParse = (value: string): AppState | null => {
@@ -48,9 +50,26 @@ const sanitizeState = (state: AppState): AppState => {
 
 export const loadState = (): AppState => {
   const stored = localStorage.getItem(STORAGE_KEY)
-  if (!stored) return defaultState
-  const parsed = safeJsonParse(stored)
-  return parsed ? sanitizeState(parsed) : defaultState
+  const parsed = stored ? safeJsonParse(stored) : null
+  const state = parsed ? sanitizeState(parsed) : defaultState
+
+  if (localStorage.getItem(FLUTTER_QUIZ_MIGRATION_KEY) === 'complete') {
+    return state
+  }
+
+  const hasFlutterQuizDeck = state.decks.some((deck) => deck.id === FLUTTER_QUIZ_DECK_ID)
+  const migratedState = hasFlutterQuizDeck
+    ? state
+    : {
+        ...state,
+        decks: [flutterQuizDeck, ...state.decks],
+        selectedDeckId: state.selectedDeckId || FLUTTER_QUIZ_DECK_ID,
+      }
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(migratedState))
+  localStorage.setItem(FLUTTER_QUIZ_MIGRATION_KEY, 'complete')
+
+  return migratedState
 }
 
 export const saveState = (state: AppState) => {

@@ -1,4 +1,5 @@
 import type { AppState } from './types'
+import { FLUTTER_QUIZ_DECK_ID, flutterQuizDeck } from './flutterQuizDeck'
 
 export const STARTER_DECK_IDS = ['deck-ux', 'deck-jp', 'deck-dev'] as const
 
@@ -15,8 +16,8 @@ export const defaultState: AppState = {
       model: 'gpt-4o-mini',
     },
   },
-  decks: [],
-  selectedDeckId: '',
+  decks: [flutterQuizDeck],
+  selectedDeckId: FLUTTER_QUIZ_DECK_ID,
   stats: {
     streakDays: 0,
     reviewsToday: 0,
