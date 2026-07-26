@@ -3,7 +3,7 @@ import { PRM393_DECK_ID, prm393Deck } from './prm393Deck'
 import type { AppState, Deck, ReviewRating } from './types'
 
 const STORAGE_KEY = 'memu-local-app-state'
-const PRM393_MIGRATION_KEY = 'memu-content-prm393-v2'
+const PRM393_MIGRATION_KEY = 'memu-content-prm393-v3'
 const starterDeckIds = new Set<string>(STARTER_DECK_IDS)
 
 const safeJsonParse = (value: string): AppState | null => {

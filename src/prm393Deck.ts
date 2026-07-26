@@ -1,5 +1,6 @@
 import type { Deck } from './types'
 import prm393QuizSource from './prm393QuizBank.txt?raw'
+import prm393ModuleQuizSource from './prm393ModuleQuizBank.txt?raw'
 
 export const PRM393_DECK_ID = 'deck-flutter-fundamentals'
 
@@ -458,9 +459,24 @@ const parseQuizSource = (source: string): QuizItem[] =>
       }
     })
 
-const normalizeQuestion = (question: string) => question.toLowerCase().replace(/[^a-z0-9]+/gu, '')
+const normalizeQuestion = (question: string) =>
+  question
+    .toLowerCase()
+    .replace(/^\[m\d+\]\s*/u, '')
+    .replace(/[^a-z0-9]+/gu, '')
 
-const quizItems = [...flutterQuizItems, ...parseQuizSource(prm393QuizSource)].filter(
+// These blocks ask for facts already covered by the existing PRM393 bank,
+// even when their wording or answer choices differ.
+const duplicateModuleQuizBlocks = new Set([
+  1, 2, 3, 5, 12, 13, 14, 15, 16, 18, 23, 24, 25, 26, 31, 32, 34, 35, 36, 38, 40, 41, 43, 44, 45, 47, 48, 49,
+  50, 54, 60, 72, 78, 81, 82, 83, 84, 88, 102, 103, 115,
+])
+
+const moduleQuizItems = parseQuizSource(prm393ModuleQuizSource).filter(
+  (_item, index) => !duplicateModuleQuizBlocks.has(index + 1),
+)
+
+const quizItems = [...flutterQuizItems, ...parseQuizSource(prm393QuizSource), ...moduleQuizItems].filter(
   (item, index, items) =>
     items.findIndex((candidate) => normalizeQuestion(candidate.question) === normalizeQuestion(item.question)) === index,
 )

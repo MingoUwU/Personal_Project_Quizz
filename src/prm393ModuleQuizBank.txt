@@ -1,0 +1,478 @@
+[M1] What best describes Flutter? A. A database engine B. A cross-platform UI toolkit by Google C. A backend framework D. A Linux distribution
+B. A cross-platform UI toolkit by Google
+
+
+[M1] Which language is used to build Flutter apps? A. Kotlin B. Swift C. Dart D. JavaScript
+C. Dart
+
+
+[M1] Which Flutter advantage is emphasized in the slides? A. One codebase for multiple platforms B. It replaces all native APIs C. It requires no SDK installation D. It only works offline
+A. One codebase for multiple platforms
+
+
+[M1] When is Flutter usually a good choice? A. When you want separate iOS and Android codebases B. When you need quick cross-platform UI development C. When you only build kernel drivers D. When you avoid reusable widgets
+B. When you need quick cross-platform UI development
+
+
+[M1] In Flutter architecture, which layer provides ready-to-use UI components? A. Framework layer B. Engine layer C. Embedder layer D. BIOS layer
+A. Framework layer
+
+
+[M1] Which Flutter layer is responsible for rendering and low-level graphics support? A. Widget layer B. Engine layer C. Business layer D. Routing layer
+B. Engine layer
+
+
+[M1] What is DartPad mainly used for? A. Publishing apps to stores B. Running Dart or Flutter examples in the browser C. Replacing Android Studio completely D. Managing SQLite databases
+B. Running Dart or Flutter examples in the browser
+
+
+[M1] Which folder usually contains app source code in a Flutter project? A. build B. lib C. ios_assets D. cache
+B. lib
+
+
+[M1] What is the main purpose of an emulator in Flutter development? A. To encrypt source code B. To test the app on a virtual device C. To generate REST APIs D. To store app preferences
+B. To test the app on a virtual device
+
+
+[M1] Which IDE is highlighted in the slides as a lightweight choice for Flutter development? A. Eclipse B. VS Code C. NetBeans D. IntelliJ Community without plugins
+B. VS Code
+
+
+[M2] Which Dart type is used for whole numbers? A. double B. String C. int D. bool
+C. int
+
+
+[M2] Which collection stores unique values without duplicates? A. List B. Set C. Map D. Queue
+B. Set
+
+
+[M2] What does string interpolation in Dart commonly use? A. #variable B. @variable C. $variable D. %variable
+C. $variable
+
+
+[M2] Which control structure is best for multiple conditional branches by value? A. try B. while C. switch D. await
+C. switch
+
+
+[M2] Which loop is commonly used to iterate directly over items in a collection? A. do-catch B. for-in C. switch-case D. try-finally
+B. for-in
+
+
+[M2] Which syntax defines a short single-expression function in Dart? A. => B. <- C. :: D. ##
+A. =>
+
+
+[M2] What is a constructor used for in Dart? A. Handling exceptions B. Initializing an object C. Rendering widgets D. Parsing JSON automatically
+B. Initializing an object
+
+
+[M2] Which null-safety operator provides a fallback value when the left side is null? A. ? B. ! C. ?? D. =>
+C. ??
+
+
+[M2] Which block is always executed whether an exception occurs or not? A. save B. await C. finally D. async
+C. finally
+
+
+[M2] Why is async/await important in Dart? A. It makes all code synchronous B. It helps handle future results without blocking the UI C. It removes the need for functions D. It replaces classes
+B. It helps handle future results without blocking the UI
+
+
+[M3] What is the main purpose of an abstract class in Dart? A. To create objects directly B. To define a contract for subclasses C. To replace all interfaces automatically D. To store key-value data
+B. To define a contract for subclasses
+
+
+[M3] In Dart, every class can act as what? A. A database B. An implicit interface C. A FutureBuilder D. A widget tree
+B. An implicit interface
+
+
+[M3] What is the key difference between extends and implements? A. extends uses inheritance; implements forces you to define the interface members B. extends is only for widgets C. implements creates SQL tables D. There is no difference
+A. extends uses inheritance; implements forces you to define the interface members
+
+
+[M3] Why are mixins useful in Dart? A. They add reusable behavior to classes without traditional inheritance chains B. They store shared preferences C. They only work for HTTP requests D. They replace constructors
+A. They add reusable behavior to classes without traditional inheritance chains
+
+
+[M3] When is a factory constructor especially useful? A. When you always want a new identical object B. When creation logic may return cached or subtype instances C. When you cannot use classes D. When you only write UI code
+B. When creation logic may return cached or subtype instances
+
+
+[M3] What do generics improve in Dart? A. UI color themes B. Type safety and code reuse C. File compression D. Device emulation
+B. Type safety and code reuse
+
+
+[M3] Which collection feature lets you conditionally include items inside a list literal? A. collection-if B. late-final C. mixin-on D. widget-key
+A. collection-if
+
+
+[M3] Which queue runs before regular event-queue tasks in Dart? A. Animation queue B. Microtask queue C. Render queue D. SQL queue
+B. Microtask queue
+
+
+[M3] What is scheduleMicrotask() used for? A. Scheduling a task in the microtask queue B. Building release APKs C. Managing navigation stacks D. Writing to SQLite
+A. Scheduling a task in the microtask queue
+
+
+[M3] What is the repository pattern mainly used for? A. Styling widgets B. Abstracting data access from the UI layer C. Creating splash screens only D. Replacing Futures with loops
+B. Abstracting data access from the UI layer
+
+
+[M4] According to Flutter fundamentals, what is everything in Flutter? A. A file B. A route C. A widget D. A plugin
+C. A widget
+
+
+[M4] Which widget provides the basic Material Design visual structure for a screen? A. Scaffold B. Expanded C. Hero D. InkWell
+A. Scaffold
+
+
+[M4] Which widget is most suitable for selecting one option from a small set? A. RadioListTile B. Slider C. GridView D. SnackBar
+A. RadioListTile
+
+
+[M4] Which widget is best for a continuous numeric value such as volume? A. Switch B. Slider C. CheckboxListTile D. IconButton
+B. Slider
+
+
+[M4] Which widget represents a true/false toggle? A. TimePicker B. Switch C. Card D. Divider
+B. Switch
+
+
+[M4] Which component is commonly used for bottom tab navigation in a basic Flutter UI? A. DrawerHeader B. BottomNavigationBar C. CircleAvatar D. AppLifecycleState
+B. BottomNavigationBar
+
+
+[M4] Which widget pair is highlighted for clean list items in the slides? A. Future + Stream B. Card + ListTile C. Column + Hero D. Ink + Tween
+B. Card + ListTile
+
+
+[M4] Which widget is commonly used to display a scrollable vertical list of items? A. Stack B. ListView C. AspectRatio D. AlertDialog
+B. ListView
+
+
+[M4] Which two widgets are commonly used for simple spacing and layout polish? A. SizedBox and Padding B. Future and Map C. Route and Key D. Form and ThemeData
+A. SizedBox and Padding
+
+
+[M4] What is a common use of a DatePicker in Flutter? A. Handling SQL joins B. Letting users select a date from a dialog C. Encrypting tokens D. Navigating between named routes
+B. Letting users select a date from a dialog
+
+
+[M5] What is navigation in Flutter mainly about? A. Managing local files B. Moving between screens/routes C. Running unit tests D. Parsing JSON
+B. Moving between screens/routes
+
+
+[M5] Which API style is associated with imperative push/pop navigation? A. Navigator 1.0 B. Navigator 2.0 only C. SQL Navigator D. StreamBuilder
+A. Navigator 1.0
+
+
+[M5] What is a route in Flutter? A. A stored preference B. A screen/page in the navigation stack C. A JSON parser D. A unit test file
+B. A screen/page in the navigation stack
+
+
+[M5] What is a key benefit of named routes? A. They remove the need for widgets B. They simplify navigation by mapping route names to screens C. They replace state management D. They automatically create APIs
+B. They simplify navigation by mapping route names to screens
+
+
+[M5] Navigator 2.0 is best described as what? A. Purely database-driven B. A declarative way to describe the navigation stack C. A color theme system D. A testing package
+B. A declarative way to describe the navigation stack
+
+
+[M5] What is deep linking? A. Compressing app size B. Opening a specific app screen from a URL or external link C. Storing data in SQLite D. Running code in DartPad
+B. Opening a specific app screen from a URL or external link
+
+
+[M5] Which widget type can hold mutable state that changes over time? A. StatelessWidget B. StatefulWidget C. InheritedTheme D. const Widget
+B. StatefulWidget
+
+
+[M5] What does setState() do? A. Sends an HTTP request B. Marks a widget to rebuild with updated state C. Deletes a route D. Caches images
+B. Marks a widget to rebuild with updated state
+
+
+[M5] What is InheritedWidget primarily used for? A. Sharing data efficiently down the widget tree B. Creating SQLite tables C. Scheduling microtasks D. Building APK files
+A. Sharing data efficiently down the widget tree
+
+
+[M5] Why is Provider commonly used in Flutter? A. To replace all widgets B. To make state management and dependency access cleaner C. To run only integration tests D. To configure Android emulators
+B. To make state management and dependency access cleaner
+
+
+[M6] Why does responsive UI matter in Flutter? A. It reduces all app logic B. It helps layouts work well across different screen sizes C. It removes the need for testing D. It guarantees offline storage
+B. It helps layouts work well across different screen sizes
+
+
+[M6] What is the main idea of responsive UI? A. Layout changes based on available space B. Layout never changes C. Code only works on tablets D. Only colors change
+A. Layout changes based on available space
+
+
+[M6] What is the main idea of adaptive UI? A. It ignores device type B. It changes design patterns depending on device type or platform C. It only uses GridView D. It stores data locally
+B. It changes design patterns depending on device type or platform
+
+
+[M6] Which class is commonly used to read screen width and height? A. ThemeData B. MediaQuery C. SharedPreferences D. NavigatorObserver
+B. MediaQuery
+
+
+[M6] What is a breakpoint in responsive design? A. A runtime exception B. A width threshold that changes layout behavior C. A database rollback D. An app store warning
+B. A width threshold that changes layout behavior
+
+
+[M6] How is LayoutBuilder different from MediaQuery? A. LayoutBuilder gives parent constraints; MediaQuery gives overall screen data B. They are identical C. MediaQuery is only for web D. LayoutBuilder is only for databases
+A. LayoutBuilder gives parent constraints; MediaQuery gives overall screen data
+
+
+[M6] What does OrientationBuilder help detect? A. Network latency B. Device orientation changes C. JWT expiration D. SQL syntax errors
+B. Device orientation changes
+
+
+[M6] Which widget helps avoid content being hidden by notches or system UI areas? A. SafeArea B. Hero C. Expanded D. SnackBar
+A. SafeArea
+
+
+[M6] Which widget is specifically useful for multi-column responsive content? A. AlertDialog B. GridView C. FutureBuilder D. Visibility
+B. GridView
+
+
+[M6] Which widget can automatically wrap children onto multiple lines when space is limited? A. Wrap B. ClipRect C. Positioned D. PageView
+A. Wrap
+
+
+[M7] Why are forms important in mobile apps? A. They are only for colors and themes B. They collect and validate user input C. They replace navigation D. They generate release builds
+B. They collect and validate user input
+
+
+[M7] Which widget is preferred when you need validation inside a form? A. TextField B. TextFormField C. TextPainter D. RichText
+B. TextFormField
+
+
+[M7] What does a Form widget do? A. It groups multiple input fields and manages validation/state B. It stores data permanently C. It performs navigation only D. It creates push notifications
+A. It groups multiple input fields and manages validation/state
+
+
+[M7] Which object is commonly used to control and validate a Form? A. RouteSettings B. GlobalKey<FormState> C. Future<void> D. ThemeExtension
+B. GlobalKey<FormState>
+
+
+[M7] In a validator function, what should be returned when input is valid? A. true B. An empty widget C. null D. 0
+C. null
+
+
+[M7] What does formKey.currentState!.validate() do? A. Sends the form to the server immediately B. Runs all validators and returns whether the form is valid C. Resets every field automatically D. Opens the keyboard
+B. Runs all validators and returns whether the form is valid
+
+
+[M7] What is the purpose of confirm-password validation? A. To shorten the password B. To ensure two password inputs match C. To encrypt the password locally D. To create a JWT
+B. To ensure two password inputs match
+
+
+[M7] What does AutovalidateMode.onUserInteraction provide? A. Validation after every app restart B. Validation feedback after the user interacts with the field C. Automatic SQL migration D. Silent form submission
+B. Validation feedback after the user interacts with the field
+
+
+[M7] Why is focus management important in forms? A. It helps keyboard flow and accessibility B. It changes app icons C. It replaces state management D. It is only needed for web apps
+A. It helps keyboard flow and accessibility
+
+
+[M7] What is an async email check used for? A. Testing screen orientation B. Validating information that requires a delayed or server-like check C. Drawing widgets faster D. Building APKs
+B. Validating information that requires a delayed or server-like check
+
+
+[M8] What is an API in the context of mobile apps? A. A design color palette B. A contract that lets a client communicate with a server C. A local database format D. A widget inspector
+B. A contract that lets a client communicate with a server
+
+
+[M8] Which HTTP method is typically used to retrieve data? A. GET B. POST C. DELETE D. PATCH
+A. GET
+
+
+[M8] Which HTTP method is commonly used to create/send new data? A. TRACE B. GET C. POST D. HEAD
+C. POST
+
+
+[M8] Which status-code range generally indicates success? A. 100-199 B. 200-299 C. 400-499 D. 500-599
+B. 200-299
+
+
+[M8] What is JSON mainly used for in APIs? A. Compiling Flutter code B. Exchanging structured text data C. Creating native emulators D. Managing keyboard focus
+B. Exchanging structured text data
+
+
+[M8] In Dart, decoded JSON objects commonly map to what? A. Color and Theme B. Map<String, dynamic> and List<dynamic> C. Route and WidgetRef D. int and bool only
+B. Map<String, dynamic> and List<dynamic>
+
+
+[M8] Why is async/await required for HTTP operations? A. Because all network code must run in build() B. To avoid freezing the UI while waiting for responses C. To store responses in SharedPreferences automatically D. To convert routes into widgets
+B. To avoid freezing the UI while waiting for responses
+
+
+[M8] What is the main purpose of FutureBuilder? A. To build UI based on the state of a Future B. To define SQL tables C. To replace all services D. To schedule microtasks
+A. To build UI based on the state of a Future
+
+
+[M8] Why should JSON be parsed into model classes? A. To make code more structured and type-safe B. To remove all errors automatically C. To avoid using lists D. To make routes shorter
+A. To make code more structured and type-safe
+
+
+[M8] What is a recommended networking practice from the slides? A. Put all API code directly inside build() B. Organize networking code in a service layer C. Ignore loading and error states D. Use only synchronous requests
+B. Organize networking code in a service layer
+
+
+[M9] Why is local storage useful in mobile apps? A. It only improves animations B. It keeps data available offline and across restarts C. It replaces all APIs forever D. It removes the need for widgets
+B. It keeps data available offline and across restarts
+
+
+[M9] Which storage option is best for simple settings and flags? A. SharedPreferences B. SQLite only C. RenderObject D. Hero
+A. SharedPreferences
+
+
+[M9] Which storage option is best for structured relational data such as a todo list database? A. SharedPreferences B. SQLite/sqflite C. MediaQuery D. SnackBar
+B. SQLite/sqflite
+
+
+[M9] Which statement about SharedPreferences is correct? A. It is ideal for very large complex objects B. It stores simple key-value pairs persistently C. It only works in DartPad D. It is a UI widget
+B. It stores simple key-value pairs persistently
+
+
+[M9] Which sequence best matches the SharedPreferences workflow in the slides? A. Render -> compile -> publish B. Load -> read -> update -> save -> refresh UI C. Push -> pop -> replace D. Build -> dispose -> ignore
+B. Load -> read -> update -> save -> refresh UI
+
+
+[M9] On Flutter Web, SharedPreferences typically maps to what? A. SQLite B. localStorage C. a GPU buffer D. Firebase Auth
+B. localStorage
+
+
+[M9] Why would you use local files instead of SharedPreferences? A. You need larger or structured offline documents such as JSON exports B. You want a simpler boolean flag C. You only need one dark-mode setting D. You want Navigator 2.0
+A. You need larger or structured offline documents such as JSON exports
+
+
+[M9] What does sqflite provide in Flutter? A. A package for working with SQLite databases B. A package for routing between screens C. A package for push notifications D. A package for theme switching
+A. A package for working with SQLite databases
+
+
+[M9] What does CRUD stand for in database work? A. Create, Read, Update, Delete B. Copy, Render, Upload, Deploy C. Cache, Retry, Update, Debug D. Compile, Run, Undo, Download
+A. Create, Read, Update, Delete
+
+
+[M9] What is the offline-first concept? A. The app should fail when there is no internet B. The app is designed to work with local data first and sync when possible C. The app stores everything only in RAM D. The app never uses APIs
+B. The app is designed to work with local data first and sync when possible
+
+
+[M10] What is authentication? A. Deciding what a user is allowed to do B. Verifying who the user is C. Compressing app images D. Testing widgets
+B. Verifying who the user is
+
+
+[M10] What is the difference between authentication and authorization? A. Authentication checks identity; authorization checks permissions B. They mean exactly the same thing C. Authorization happens before login UI is built D. Authentication is only for web apps
+A. Authentication checks identity; authorization checks permissions
+
+
+[M10] In token-based authentication, what does the server typically return after a successful login? A. A new widget tree B. Access token and possibly refresh token C. A SQLite database D. A GridView
+B. Access token and possibly refresh token
+
+
+[M10] What is a key benefit of token-based authentication noted in the slides? A. It is stateless B. It requires no backend C. It cannot expire D. It only works on Android
+A. It is stateless
+
+
+[M10] Which part of a JWT contains claims such as user ID or role? A. Header B. Payload C. Signature key file D. Splash screen
+B. Payload
+
+
+[M10] Which statement about JWT is correct according to the slides? A. It is encrypted by default B. It is signed, not encrypted C. It never expires D. It only stores images
+B. It is signed, not encrypted
+
+
+[M10] Why should the login button often be disabled during a request? A. To reduce code size B. To prevent duplicate submissions while loading C. To force logout D. To refresh SharedPreferences
+B. To prevent duplicate submissions while loading
+
+
+[M10] What is the purpose of session persistence with SharedPreferences? A. To remember login/session state across app restarts B. To store large videos C. To replace a backend database D. To create integration tests
+A. To remember login/session state across app restarts
+
+
+[M10] What is the goal of an auto-login flow using Splash -> Login/Home? A. To always show the login page first B. To route the user based on saved session state C. To optimize images D. To replace Firebase
+B. To route the user based on saved session state
+
+
+[M10] What is the main difference between local and push notifications? A. Local notifications are scheduled by the app on the device; push notifications come from a remote server B. Local notifications require Firebase Auth only C. Push notifications cannot appear on phones D. There is no difference
+A. Local notifications are scheduled by the app on the device; push notifications come from a remote server
+
+
+[M11] Which type of Flutter test checks business logic without rendering UI? A. Widget test B. Unit test C. Integration test D. Snapshot test
+B. Unit test
+
+
+[M11] Which type of Flutter test focuses on UI rendering and user interaction? A. Unit test B. Widget test C. SQL test D. Deploy test
+B. Widget test
+
+
+[M11] Which type of test validates a complete user flow across screens? A. Integration test B. Theme test C. Build test D. Mixin test
+A. Integration test
+
+
+[M11] In the testing pyramid, which tests should be most numerous? A. Integration tests B. Widget tests C. Unit tests D. Manual tests only
+C. Unit tests
+
+
+[M11] Why are integration tests kept relatively few? A. They are slow and expensive compared with smaller tests B. They cannot test navigation C. They are not supported in Flutter D. They only work in release mode
+A. They are slow and expensive compared with smaller tests
+
+
+[M11] Which function is commonly used to assert expected results in Flutter tests? A. render() B. expect() C. save() D. compile()
+B. expect()
+
+
+[M11] Which issue is best matched with a widget test according to the slides? A. UI not updating correctly B. Large file storage C. App store signing D. SQL indexing
+A. UI not updating correctly
+
+
+[M11] Which issue is best matched with a navigation or integration-style test? A. Wrong route or broken multi-screen flow B. A typo in a comment C. An icon color mismatch in Figma D. A missing local file path only
+A. Wrong route or broken multi-screen flow
+
+
+[M11] Why can overflow errors be missed without tests or DevTools? A. They always crash the app immediately B. They do not necessarily crash the app even though the UI is wrong C. They are compile-time syntax errors D. They only happen on servers
+B. They do not necessarily crash the app even though the UI is wrong
+
+
+[M11] Which demo app is used in the testing slides? A. MovieHub B. Taskly C. ShopCart D. TravelMate
+B. Taskly
+
+
+[M12] Why is Flutter performance often discussed in terms of 60 FPS? A. Because 60 FPS means about 16.6 ms available per frame B. Because 60 FPS is the only mode Flutter supports C. Because slower FPS improves UX D. Because FPS only affects databases
+A. Because 60 FPS means about 16.6 ms available per frame
+
+
+[M12] In Flutter's render pipeline, what are widgets? A. Mutable render nodes B. Immutable blueprints for UI configuration C. Local database rows D. Push-notification payloads
+B. Immutable blueprints for UI configuration
+
+
+[M12] Which objects handle layout, painting, and compositing? A. Futures B. RenderObjects C. Validators D. Routes
+B. RenderObjects
+
+
+[M12] Which practice is specifically discouraged in the slides because it hurts performance? A. Using const for static widgets B. Running heavy logic inside build() C. Extracting widgets D. Profiling with DevTools
+B. Running heavy logic inside build()
+
+
+[M12] Why can const improve Flutter performance? A. It reduces unnecessary rebuild work for widgets that do not change B. It makes all network calls faster C. It replaces Provider D. It turns stateful widgets into databases
+A. It reduces unnecessary rebuild work for widgets that do not change
+
+
+[M12] Why is extracting widgets a useful optimization? A. It forces all screens to rebuild B. It isolates rebuilds and improves code structure C. It removes the need for keys D. It disables DevTools
+B. It isolates rebuilds and improves code structure
+
+
+[M12] What is a common image optimization strategy mentioned in performance topics? A. Always load full-resolution images regardless of size B. Reduce image loading/layout cost using optimized image handling C. Replace images with SQLite D. Put images in build() calculations
+B. Reduce image loading/layout cost using optimized image handling
+
+
+[M12] For more accurate performance measurements, DevTools should usually be used in which mode? A. Debug mode B. Profile mode C. Mock mode D. Edit mode
+B. Profile mode
+
+
+[M12] What is the main goal of app size analysis before release? A. To add more unused assets B. To understand and reduce the final app package size C. To change route names D. To disable icons
+B. To understand and reduce the final app package size
+
+
+[M12] Which build output is commonly prepared for Android distribution in release workflows? A. TXT file only B. Release APK or App Bundle C. JSON model class D. FakePrefs storage
+B. Release APK or App Bundle
