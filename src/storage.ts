@@ -1,9 +1,9 @@
 import { defaultState, STARTER_DECK_IDS } from './data'
-import { FLUTTER_QUIZ_DECK_ID, flutterQuizDeck } from './flutterQuizDeck'
+import { PRM393_DECK_ID, prm393Deck } from './prm393Deck'
 import type { AppState, Deck, ReviewRating } from './types'
 
 const STORAGE_KEY = 'memu-local-app-state'
-const FLUTTER_QUIZ_MIGRATION_KEY = 'memu-content-flutter-fundamentals-v1'
+const PRM393_MIGRATION_KEY = 'memu-content-prm393-v2'
 const starterDeckIds = new Set<string>(STARTER_DECK_IDS)
 
 const safeJsonParse = (value: string): AppState | null => {
@@ -53,21 +53,41 @@ export const loadState = (): AppState => {
   const parsed = stored ? safeJsonParse(stored) : null
   const state = parsed ? sanitizeState(parsed) : defaultState
 
-  if (localStorage.getItem(FLUTTER_QUIZ_MIGRATION_KEY) === 'complete') {
+  if (localStorage.getItem(PRM393_MIGRATION_KEY) === 'complete') {
     return state
   }
 
-  const hasFlutterQuizDeck = state.decks.some((deck) => deck.id === FLUTTER_QUIZ_DECK_ID)
-  const migratedState = hasFlutterQuizDeck
-    ? state
-    : {
-        ...state,
-        decks: [flutterQuizDeck, ...state.decks],
-        selectedDeckId: state.selectedDeckId || FLUTTER_QUIZ_DECK_ID,
-      }
+  const existingDeck = state.decks.find((deck) => deck.id === PRM393_DECK_ID)
+  const existingCardsById = new Map(existingDeck?.cards.map((card) => [card.id, card]))
+  const migratedDeck: Deck = {
+    ...prm393Deck,
+    createdAt: existingDeck?.createdAt ?? prm393Deck.createdAt,
+    lastStudiedAt: existingDeck?.lastStudiedAt,
+    cards: prm393Deck.cards.map((card) => {
+      const existingCard = existingCardsById.get(card.id)
+
+      return existingCard
+        ? {
+            ...card,
+            lastReviewedAt: existingCard.lastReviewedAt,
+            dueAt: existingCard.dueAt,
+            ease: existingCard.ease,
+            interval: existingCard.interval,
+            step: existingCard.step,
+          }
+        : card
+    }),
+  }
+  const migratedState = {
+    ...state,
+    decks: existingDeck
+      ? state.decks.map((deck) => (deck.id === PRM393_DECK_ID ? migratedDeck : deck))
+      : [migratedDeck, ...state.decks],
+    selectedDeckId: state.selectedDeckId || PRM393_DECK_ID,
+  }
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(migratedState))
-  localStorage.setItem(FLUTTER_QUIZ_MIGRATION_KEY, 'complete')
+  localStorage.setItem(PRM393_MIGRATION_KEY, 'complete')
 
   return migratedState
 }

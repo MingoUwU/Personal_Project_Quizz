@@ -1,6 +1,7 @@
 import type { Deck } from './types'
+import prm393QuizSource from './prm393QuizBank.txt?raw'
 
-export const FLUTTER_QUIZ_DECK_ID = 'deck-flutter-fundamentals'
+export const PRM393_DECK_ID = 'deck-flutter-fundamentals'
 
 type OptionLabel = 'a' | 'b' | 'c' | 'd'
 
@@ -420,15 +421,59 @@ const flutterQuizItems: readonly QuizItem[] = [
 
 const optionLabels: readonly OptionLabel[] = ['a', 'b', 'c', 'd']
 
-export const flutterQuizDeck: Deck = {
-  id: FLUTTER_QUIZ_DECK_ID,
-  name: 'Flutter Fundamentals - 50 Questions',
-  description: 'A 50-question multiple-choice review deck covering Flutter, Dart, storage, state, layout, and navigation.',
+const parseQuizSource = (source: string): QuizItem[] =>
+  source
+    .trim()
+    .split(/\r?\n\s*\r?\n/u)
+    .map((block, index) => {
+      const lines = block
+        .split(/\r?\n/u)
+        .map((line) => line.trim())
+        .filter(Boolean)
+      const questionMatch = lines[0]?.match(
+        /^(.*?)\s+A\.\s+(.*?)\s+B\.\s+(.*?)\s+C\.\s+(.*?)\s+D\.\s+(.*?)$/u,
+      )
+      const answerMatch = lines[1]?.match(/^([A-D])\.\s+(.+)$/u)
+
+      if (lines.length !== 2 || !questionMatch || !answerMatch) {
+        throw new Error(`Invalid PRM393 question block ${index + 1}.`)
+      }
+
+      const answer = answerMatch[1].toLowerCase() as OptionLabel
+      const options: Record<OptionLabel, string> = {
+        a: questionMatch[2],
+        b: questionMatch[3],
+        c: questionMatch[4],
+        d: questionMatch[5],
+      }
+
+      if (options[answer] !== answerMatch[2]) {
+        throw new Error(`PRM393 answer does not match its option in block ${index + 1}.`)
+      }
+
+      return {
+        question: questionMatch[1],
+        options,
+        answer,
+      }
+    })
+
+const normalizeQuestion = (question: string) => question.toLowerCase().replace(/[^a-z0-9]+/gu, '')
+
+const quizItems = [...flutterQuizItems, ...parseQuizSource(prm393QuizSource)].filter(
+  (item, index, items) =>
+    items.findIndex((candidate) => normalizeQuestion(candidate.question) === normalizeQuestion(item.question)) === index,
+)
+
+export const prm393Deck: Deck = {
+  id: PRM393_DECK_ID,
+  name: 'PRM393',
+  description: 'A multiple-choice review deck covering Flutter, Dart, widgets, state, storage, navigation, testing, and tooling.',
   language: 'English',
   category: 'Flutter',
   createdAt: '2026-07-26T00:00:00.000Z',
-  cards: flutterQuizItems.map((item, index) => ({
-    id: `${FLUTTER_QUIZ_DECK_ID}-card-${index + 1}`,
+  cards: quizItems.map((item, index) => ({
+    id: `${PRM393_DECK_ID}-card-${index + 1}`,
     front: [
       item.question,
       '',

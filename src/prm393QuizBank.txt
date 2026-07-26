@@ -1,0 +1,938 @@
+What is Flutter? A. Database B. UI toolkit C. Operating system D. Browser
+B. UI toolkit
+
+
+Flutter is developed by? A. Apple B. Microsoft C. Google D. Meta
+C. Google
+
+
+Flutter apps are mainly written in? A. Java B. Kotlin C. Dart D. Swift
+C. Dart
+
+
+Flutter supports? A. Only Android B. Only iOS C. Multiple platforms D. Desktop only
+C. Multiple platforms
+
+
+Hot Reload is used for? A. Faster UI updates B. App publishing C. Database sync D. Code minification
+A. Faster UI updates
+
+
+Flutter uses which rendering engine? A. WebKit B. Skia C. Blink D. Metal
+B. Skia
+
+
+What is the main concept of Flutter UI? A. Everything is a widget B. Everything is a class C. Everything is a function D. Everything is a file
+A. Everything is a widget
+
+
+Flutter compiles to? A. HTML only B. JavaScript only C. Native code D. XML
+C. Native code
+
+
+Which language is used for Flutter web logic? A. Dart B. PHP C. Ruby D. C#
+A. Dart
+
+
+Which company created Dart? A. Apple B. Microsoft C. Google D. IBM
+C. Google
+
+
+Every Dart program starts with? A. init() B. run() C. start() D. main()
+D. main()
+
+
+Which Dart type stores true or false? A. int B. bool C. String D. double
+B. bool
+
+
+Which Dart keyword declares an inferred variable? A. let B. dynamic C. var D. auto
+C. var
+
+
+What does dynamic mean in Dart? A. Compile-time constant B. Runtime type flexibility C. Immutable value D. Private variable
+B. Runtime type flexibility
+
+
+What does final mean in Dart? A. Compile-time constant B. Runtime single assignment C. Nullable type D. Private member
+B. Runtime single assignment
+
+
+What does const mean in Dart? A. Runtime constant B. Compile-time constant C. Mutable value D. Dynamic value
+B. Compile-time constant
+
+
+Which collection is ordered in Dart? A. Set B. Map C. List D. Queue
+C. List
+
+
+Which collection stores unique values? A. Set B. List C. Map D. Array
+A. Set
+
+
+Which collection uses key-value pairs? A. List B. Set C. Map D. Tuple
+C. Map
+
+
+Which symbol is used for string interpolation in Dart? A. # B. $ C. % D. &
+B. $
+
+
+Which operator is arithmetic? A. == B. && C. + D. !
+C. +
+
+
+Which operator is comparison? A. == B. + C. && D. ??
+A. ==
+
+
+Which operator is logical AND? A. + B. == C. && D. %
+C. &&
+
+
+if/else is used for? A. Looping B. Conditional logic C. Class creation D. Importing files
+B. Conditional logic
+
+
+switch is useful for? A. Multiple conditions B. Widget styling C. Database queries D. Navigation
+A. Multiple conditions
+
+
+for-in loop is mainly used for? A. Arithmetic B. Iterating collections C. Creating widgets D. Importing packages
+B. Iterating collections
+
+
+What is the arrow function syntax in Dart? A. -> B. => C. == D. ::=
+B. =>
+
+
+OOP stands for? A. Open Output Process B. Object-Oriented Programming C. Order of Operations Programming D. Object Option Protocol
+B. Object-Oriented Programming
+
+
+A class defines? A. A loop B. A structure or blueprint C. A package D. An import
+B. A structure or blueprint
+
+
+An object is? A. A function B. An instance of a class C. A library D. A widget tree
+B. An instance of a class
+
+
+Null safety helps prevent? A. UI lag B. Null errors C. Build errors only D. Routing errors
+B. Null errors
+
+
+What does ? after a type mean in Dart? A. Force non-null B. Nullable type C. Default value D. Late initialization
+B. Nullable type
+
+
+What does ?? mean in Dart? A. Throw exception B. Default if null C. Force cast D. Increment
+B. Default if null
+
+
+What does ! after an expression mean in Dart? A. Negate boolean B. Force non-null C. Make nullable D. Compare values
+B. Force non-null
+
+
+A Future in Dart represents? A. A widget B. A synchronous value C. An asynchronous result D. A collection
+C. An asynchronous result
+
+
+A Stream in Dart represents? A. Multiple async values over time B. A single sync value C. A constant D. A widget tree
+A. Multiple async values over time
+
+
+What does await do? A. Skips execution B. Waits for async completion C. Restarts function D. Creates a stream
+B. Waits for async completion
+
+
+Which Flutter layer is written largely in C++? A. Framework B. Engine C. Widget D. Plugin
+B. Engine
+
+
+The embedder layer handles? A. Widget rendering only B. Platform integration C. State management D. Dart compilation
+B. Platform integration
+
+
+Flutter framework mainly includes? A. Widgets and libraries B. Browser APIs C. SQL engine D. Linux kernel
+A. Widgets and libraries
+
+
+Which widget provides basic Material Design page structure? A. Container B. Scaffold C. Padding D. Center
+B. Scaffold
+
+
+Which widget adds empty space around its child? A. Margin B. Padding C. Align D. Stack
+B. Padding
+
+
+Which widget centers its child? A. Expanded B. Align C. Center D. Positioned
+C. Center
+
+
+Which widget arranges children vertically? A. Row B. Column C. Stack D. Wrap
+B. Column
+
+
+Which widget arranges children horizontally? A. Row B. Column C. ListView D. Flex
+A. Row
+
+
+Which widget overlaps children? A. Stack B. Wrap C. Column D. Expanded
+A. Stack
+
+
+Which widget is used for scrollable lists? A. GridView B. ListView C. Row D. Table
+B. ListView
+
+
+ListView.builder is best for? A. One small fixed list B. Large or dynamic lists C. Static images D. Theme setup
+B. Large or dynamic lists
+
+
+Which widget expands to fill available space in a Row or Column? A. SizedBox B. Spacer C. Expanded D. Padding
+C. Expanded
+
+
+Which widget is useful for fixed empty space? A. SizedBox B. Card C. InkWell D. ClipRect
+A. SizedBox
+
+
+Which widget is commonly used for material cards? A. Panel B. Card C. Canvas D. Tile
+B. Card
+
+
+Which widget displays a single line of text? A. Text B. RichText only C. Label D. String
+A. Text
+
+
+Which widget displays an image from assets? A. Image.asset B. Asset.image C. File.image D. Picture.asset
+A. Image.asset
+
+
+Which widget loads an image from the internet? A. Image.network B. NetworkImageView C. UrlImage D. Image.http
+A. Image.network
+
+
+Which widget reacts to taps with Material ripple effect? A. GestureDetector B. InkWell C. Listener D. MouseRegion
+B. InkWell
+
+
+Which widget gives low-level gesture handling? A. GestureDetector B. InkWell C. Card D. Hero
+A. GestureDetector
+
+
+Which widget is used to input text? A. Text B. TextField C. EditableText only D. InputBox
+B. TextField
+
+
+Which widget creates a Material button? A. ElevatedButton B. ButtonWidget C. ClickButton D. TapButton
+A. ElevatedButton
+
+
+Which widget is used for icon-only actions? A. FloatingActionButton B. IconButton C. ActionChip D. PopupMenuButton
+B. IconButton
+
+
+Which widget commonly shows a circular action button? A. ElevatedButton B. Icon C. FloatingActionButton D. Card
+C. FloatingActionButton
+
+
+Which widget lets users toggle a boolean value? A. Slider B. Switch C. CheckboxListTile D. Chip
+B. Switch
+
+
+Which widget is used for selecting a value from a range? A. Slider B. Switch C. Radio D. Chip
+A. Slider
+
+
+Which widget allows one choice from several options? A. Checkbox B. Radio C. Switch D. Slider
+B. Radio
+
+
+Which widget allows multiple independent selections? A. Radio B. Switch C. Checkbox D. Slider
+C. Checkbox
+
+
+Which widget shows a popup message at the bottom? A. AlertDialog B. SnackBar C. Banner D. ToastView
+B. SnackBar
+
+
+Which widget shows a modal dialog? A. AlertDialog B. Card C. SnackBar D. Drawer
+A. AlertDialog
+
+
+Which widget provides a side navigation panel? A. BottomSheet B. Drawer C. AppBar D. TabBar
+B. Drawer
+
+
+Which widget displays tabs at the top? A. Drawer B. TabBar C. NavigationRail D. GridView
+B. TabBar
+
+
+Which widget is commonly paired with TabBar? A. TabBarView B. DrawerView C. PageGrid D. RouteBar
+A. TabBarView
+
+
+What does Navigator.push do? A. Removes current page B. Adds a new page to the stack C. Clears all routes D. Reloads widgets
+B. Adds a new page to the stack
+
+
+What does Navigator.pop do? A. Adds a route B. Removes current route C. Updates theme D. Restarts app
+B. Removes current route
+
+
+pushReplacement does what? A. Adds duplicate page B. Replaces current page C. Clears all pages D. Pushes multiple routes
+B. Replaces current page
+
+
+Named routes are used to? A. Style widgets B. Simplify navigation C. Handle databases D. Improve animations
+B. Simplify navigation
+
+
+Navigator 2.0 is more? A. Imperative B. Declarative C. Static D. Synchronous
+B. Declarative
+
+
+Which widget is often used for page-based swiping? A. PageView B. ListView C. Row D. Stack
+A. PageView
+
+
+Which widget helps build grids? A. GridView B. Column C. Stack D. Align
+A. GridView
+
+
+Which constructor is optimized for large grids? A. GridView.count B. GridView.builder C. GridView.fixed D. GridView.simple
+B. GridView.builder
+
+
+Which widget wraps children to the next line automatically? A. Row B. Column C. Wrap D. Stack
+C. Wrap
+
+
+Which widget positions children relative to Stack edges? A. Align B. Positioned C. Center D. Expanded
+B. Positioned
+
+
+Which widget aligns a child within itself? A. Align B. Padding C. Expanded D. Transform
+A. Align
+
+
+Which widget clips its child to rounded corners easily? A. ClipRRect B. BorderRadius C. DecoratedBox D. RoundedBox
+A. ClipRRect
+
+
+Which widget adds decoration like color or border? A. Box B. DecoratedBox C. Container D. Card
+C. Container
+
+
+Container can combine? A. Padding, margin, decoration, constraints B. Only color C. Only alignment D. Only size
+A. Padding, margin, decoration, constraints
+
+
+What is pubspec.yaml used for? A. App screenshots B. Dependencies and assets C. SQL tables D. Route trees
+B. Dependencies and assets
+
+
+Assets must be declared in? A. main.dart B. pubspec.yaml C. analysis_options.yaml D. androidmanifest.xml
+B. pubspec.yaml
+
+
+Which command fetches Flutter dependencies? A. flutter add B. flutter get C. flutter pub get D. dart fetch
+C. flutter pub get
+
+
+Which command creates a new Flutter project? A. flutter new B. flutter create C. dart create flutter D. flutter init
+B. flutter create
+
+
+Which command runs a Flutter app? A. flutter go B. flutter start C. flutter run D. dart run ui
+C. flutter run
+
+
+Which command checks environment setup? A. flutter doctor B. flutter inspect C. flutter env D. flutter config
+A. flutter doctor
+
+
+Which command lists connected devices? A. flutter devices B. flutter emulators C. flutter targets D. flutter doctor
+A. flutter devices
+
+
+Which command shows available emulators? A. flutter devices B. flutter emulators C. flutter doctor D. flutter list
+B. flutter emulators
+
+
+Which command cleans the build folder? A. flutter purge B. flutter clear C. flutter clean D. flutter remove
+C. flutter clean
+
+
+Which command builds an APK? A. flutter build apk B. flutter apk build C. flutter compile apk D. flutter package apk
+A. flutter build apk
+
+
+Which command builds an iOS app? A. flutter build ios B. flutter ios build C. flutter make ios D. dart build ios
+A. flutter build ios
+
+
+Which file contains the app entry point by default? A. app.dart B. index.dart C. main.dart D. start.dart
+C. main.dart
+
+
+runApp() is used to? A. Stop the app B. Launch the widget tree C. Build APK D. Register plugins
+B. Launch the widget tree
+
+
+What is a StatelessWidget? A. Widget with mutable state B. Widget with immutable configuration C. Widget for async only D. Widget for navigation only
+B. Widget with immutable configuration
+
+
+What is a StatefulWidget? A. Widget with mutable state handled separately B. Widget with no UI C. Widget only for forms D. Widget only for lists
+A. Widget with mutable state handled separately
+
+
+Which method is required in a StatelessWidget? A. initState B. build C. dispose D. setState
+B. build
+
+
+Which class holds mutable state for StatefulWidget? A. State B. WidgetStateHolder C. MutableWidget D. Store
+A. State
+
+
+Which method is called once when State is inserted into the tree? A. build B. initState C. deactivate D. reassemble
+B. initState
+
+
+Which method is called when a State object is removed permanently? A. dispose B. initState C. didUpdateWidget D. activate
+A. dispose
+
+
+setState() is used to? A. Navigate pages B. Update state and trigger rebuild C. Make widget const D. Fetch assets
+B. Update state and trigger rebuild
+
+
+Which method describes the widget UI? A. render B. create C. build D. mount
+C. build
+
+
+Which lifecycle method is called when widget configuration changes? A. dispose B. didUpdateWidget C. initState D. deactivate
+B. didUpdateWidget
+
+
+Which widget should be preferred for static UI parts when possible? A. const widget B. dynamic widget C. late widget D. mutable widget
+A. const widget
+
+
+Why use const widgets? A. More network access B. Better rebuild optimization C. Adds state D. Enables navigation
+B. Better rebuild optimization
+
+
+Which widget rebuilds from a function returning UI? A. Builder B. Maker C. Constructor D. Router
+A. Builder
+
+
+FutureBuilder is used for? A. Streams B. Async one-time style results C. Navigation D. Theme changes
+B. Async one-time style results
+
+
+StreamBuilder is used for? A. Multiple async events B. Static layouts C. One constant value D. Only animations
+A. Multiple async events
+
+
+Which package is popular for simple state management? A. Provider B. SQL C. HttpClient D. Lint
+A. Provider
+
+
+Provider is mainly used for? A. Image loading B. State management C. Audio playback D. Layout building
+B. State management
+
+
+ChangeNotifier is commonly used with? A. Provider B. Hero C. GridView D. Scaffold
+A. Provider
+
+
+What does notifyListeners() do? A. Opens dialog B. Informs listeners to rebuild/update C. Deletes state D. Pushes route
+B. Informs listeners to rebuild/update
+
+
+Which package is used for HTTP requests commonly? A. path B. async C. http D. test
+C. http
+
+
+Which method sends a GET request with package:http? A. http.load B. http.fetch C. http.get D. http.readall
+C. http.get
+
+
+Which data format is commonly used in APIs with Flutter? A. XML only B. CSV only C. JSON D. YAML
+C. JSON
+
+
+jsonDecode() is used to? A. Encode JSON B. Parse JSON string into Dart object C. Build widgets D. Compress files
+B. Parse JSON string into Dart object
+
+
+jsonEncode() is used to? A. Convert Dart object to JSON string B. Parse route names C. Load assets D. Build APK
+A. Convert Dart object to JSON string
+
+
+Which widget is useful for forms? A. Form B. Scaffold C. Card D. Icon
+A. Form
+
+
+Which object helps validate a Form? A. FormState B. StateForm C. FormCheck D. InputState
+A. FormState
+
+
+A TextEditingController is used to? A. Manage text field content B. Navigate pages C. Play animation D. Set theme
+A. Manage text field content
+
+
+Which property obscures password text in TextField? A. hidden B. secure C. obscureText D. maskValue
+C. obscureText
+
+
+Which widget displays app bar title area? A. AppBar B. TopBar C. TitleBar D. Header
+A. AppBar
+
+
+Which property of AppBar usually shows the title widget? A. text B. header C. title D. label
+C. title
+
+
+ThemeData is used for? A. Styling the app B. Fetching data C. Navigation D. State storage
+A. Styling the app
+
+
+MaterialApp is used to? A. Start Material Design app structure B. Build only buttons C. Create database D. Decode JSON
+A. Start Material Design app structure
+
+
+Cupertino widgets imitate? A. Windows style B. Material only C. iOS style D. Linux style
+C. iOS style
+
+
+Which widget is used for custom painting? A. CustomPaint B. PaintBox C. DrawWidget D. CanvasView
+A. CustomPaint
+
+
+Which class is extended for custom drawing? A. CustomPainter B. PaintState C. DrawerPainter D. ShapeBuilder
+A. CustomPainter
+
+
+Which widget animates between two visual states automatically? A. AnimatedContainer B. StaticContainer C. FutureBuilder D. MaterialApp
+A. AnimatedContainer
+
+
+Which widget provides shared element transitions? A. Hero B. FadeIn C. AnimatedSize D. RouteBox
+A. Hero
+
+
+Which widget animates opacity changes? A. Opacity B. AnimatedOpacity C. FadeBox D. AlphaWidget
+B. AnimatedOpacity
+
+
+Which widget animates size changes implicitly? A. AnimatedSize B. SizeBox C. Expanded D. Transform
+A. AnimatedSize
+
+
+Which package is widely used for local key-value storage? A. dio B. shared_preferences C. provider D. analyzer
+B. shared_preferences
+
+
+Which database is popular for local structured storage in Flutter? A. MySQL server B. sqflite C. PostgreSQL D. Redis
+B. sqflite
+
+
+Which package is often used for powerful networking in Flutter? A. dio B. lint C. path D. test
+A. dio
+
+
+Which widget can display future loading, success, and error states? A. StreamBuilder B. FutureBuilder C. LayoutBuilder D. Builder
+B. FutureBuilder
+
+
+Which widget can adapt UI based on parent constraints? A. MediaQuery B. LayoutBuilder C. Builder D. Align
+B. LayoutBuilder
+
+
+MediaQuery is useful for? A. Screen size and device info B. Database state C. HTTP headers D. Animation controllers
+A. Screen size and device info
+
+
+Which property often gives screen width? A. MediaQuery.of(context).size.width B. context.width() C. screen.width D. device.width
+A. MediaQuery.of(context).size.width
+
+
+Which property often gives screen height? A. MediaQuery.of(context).size.height B. context.height() C. display.height D. screen.height
+A. MediaQuery.of(context).size.height
+
+
+Which widget is useful for responsive spacing and alignment? A. Expanded B. Text C. Hero D. Stream
+A. Expanded
+
+
+Which widget can overlay floating content above body content? A. Stack B. Column C. Row D. ListTile
+A. Stack
+
+
+Which widget is commonly used for one row in a list? A. ListTile B. TileRow C. ListItem D. RowTile
+A. ListTile
+
+
+Which property of ListTile usually displays leading icon/avatar? A. before B. lead C. leading D. start
+C. leading
+
+
+Which property of ListTile usually displays the main text? A. content B. title C. header D. center
+B. title
+
+
+Which property of ListTile usually displays smaller text below title? A. caption B. body C. subtitle D. note
+C. subtitle
+
+
+Which property of ListTile usually displays trailing widget? A. trailing B. end C. after D. suffix
+A. trailing
+
+
+Which widget can create dismissible list items? A. Dismissible B. Removable C. SwipeDelete D. HiddenTile
+A. Dismissible
+
+
+Which widget can pull to refresh content? A. RefreshIndicator B. ReloadView C. PullView D. UpdateContainer
+A. RefreshIndicator
+
+
+Which widget supports horizontal or vertical swiping between pages? A. PageView B. GridView C. ListTile D. Table
+A. PageView
+
+
+Which widget can show progress in a circular form? A. CircularProgressIndicator B. CircleLoader C. ArcProgress D. ProgressWheel
+A. CircularProgressIndicator
+
+
+Which widget can show linear progress? A. LinearProgressIndicator B. BarLoader C. ProgressBarWidget D. TrackProgress
+A. LinearProgressIndicator
+
+
+Which package helps generate immutable models and JSON code? A. freezed B. lint C. flutter_test D. path
+A. freezed
+
+
+Which command runs tests in Flutter? A. flutter test B. flutter run test C. dart flutter test D. flutter check
+A. flutter test
+
+
+Widget tests are used to? A. Test UI widgets B. Publish app C. Configure IDE D. Create plugins
+A. Test UI widgets
+
+
+Integration tests are used to? A. Test entire app flows B. Only compile code C. Draw UI D. Format code
+A. Test entire app flows
+
+
+Which package is used for mocking in Dart tests often? A. provider B. mocktail C. skia D. sqflite
+B. mocktail
+
+
+Which file often stores lint rules for Dart/Flutter? A. analysis_options.yaml B. pubspec.lock C. routes.yaml D. build.gradle
+A. analysis_options.yaml
+
+
+Which command formats Dart files? A. dart style B. dart format C. flutter tidy D. flutter format
+B. dart format
+
+
+Which keyword imports a library in Dart? A. include B. using C. import D. require
+C. import
+
+
+Which keyword exports a library in Dart? A. expose B. export C. send D. share
+B. export
+
+
+Which keyword hides identifiers in an import/export? A. hide B. remove C. except D. private
+A. hide
+
+
+Which keyword shows only selected identifiers in an import/export? A. only B. include C. show D. select
+C. show
+
+
+Which keyword delays initialization of a non-null field? A. var B. late C. defer D. final
+B. late
+
+
+What is an enum used for? A. Fixed set of named values B. Mutable lists C. Widget trees D. Network requests
+A. Fixed set of named values
+
+
+Which feature lets you add reusable behavior to classes without inheritance chain issues? A. mixin B. struct C. typedef D. static
+A. mixin
+
+
+The extends keyword is used to? A. Implement interface only B. Inherit from a class C. Create object D. Import package
+B. Inherit from a class
+
+
+The implements keyword is used to? A. Force interface contract implementation B. Extend build time C. Export packages D. Hide members
+A. Force interface contract implementation
+
+
+A factory constructor is used for? A. Widget layout only B. Controlled instance creation C. Async loops D. Theme styling
+B. Controlled instance creation
+
+
+Generics improve? A. File size only B. Type safety and reuse C. Networking D. Animation speed
+B. Type safety and reuse
+
+
+Which symbol is used for single-line comments in Dart? A. <!-- --> B. // C. ## D. **
+B. //
+
+
+Which syntax is used for multi-line comments in Dart? A. <!-- --> B. / / C. ## ## D. [[ ]]
+B. / /
+
+
+Which keyword declares a function that returns no value explicitly? A. null B. empty C. void D. none
+C. void
+
+
+Which widget is commonly used to render Material Design icons? A. Icon B. Symbol C. Glyph D. Shape
+A. Icon
+
+
+Which widget gives rounded material ink splash on tap around a child? A. InkWell B. GestureDetector C. MouseRegion D. ClipRRect
+A. InkWell
+
+
+Which property of Container sets background color usually? A. bgColor B. color C. paint D. fill
+B. color
+
+
+Which property of Container often sets inner spacing? A. margin B. padding C. gap D. border
+B. padding
+
+
+Which property of Container often sets outer spacing? A. padding B. margin C. fill D. shadow
+B. margin
+
+
+Which widget displays children one after another lazily in a sliver list style? A. CustomScrollView B. SliverList C. GridView D. PageView
+B. SliverList
+
+
+Which widget combines multiple slivers in one scrollable area? A. CustomScrollView B. MultiList C. ScrollGroup D. SliverBox
+A. CustomScrollView
+
+
+Which widget can pin and expand an app bar in a CustomScrollView? A. SliverAppBar B. FlexibleBar C. StickyBar D. AppHeader
+A. SliverAppBar
+
+
+Which widget allows content to scroll when keyboard appears in forms commonly? A. SingleChildScrollView B. Wrap C. Align D. Card
+A. SingleChildScrollView
+
+
+Which widget can display a child only if a condition is met using normal Dart control flow? A. if inside widget list B. only Switch widget C. only Visibility widget D. only Builder
+A. if inside widget list
+
+
+Which widget can hide or show a child without removing layout logic explicitly? A. Visibility B. HiddenBox C. DisplayNone D. ClipRect
+A. Visibility
+
+
+Which widget is used for bottom navigation with a few destinations? A. BottomNavigationBar B. Drawer C. TabBarView D. AppBar
+A. BottomNavigationBar
+
+
+Which newer Material 3 widget is often used for bottom destinations? A. NavigationBar B. RouteBar C. BottomPanel D. ActionRail
+A. NavigationBar
+
+
+Which widget is useful for side navigation on larger screens? A. NavigationRail B. Drawer only C. BottomSheet D. TabBar
+A. NavigationRail
+
+
+Which widget shows temporary content sliding from the bottom? A. BottomSheet B. SnackBar C. Banner D. AppBar
+A. BottomSheet
+
+
+Which method opens a dialog in Flutter? A. showDialog B. openDialog C. Navigator.dialog D. dialogShow
+A. showDialog
+
+
+Which method opens a bottom sheet commonly? A. showBottomSheet B. openBottomSheet C. displaySheet D. Navigator.sheet
+A. showBottomSheet
+
+
+Which widget is often used to keep widgets alive in tabs with manual control? A. AutomaticKeepAliveClientMixin B. ChangeNotifier C. StreamBuilder D. Future
+A. AutomaticKeepAliveClientMixin
+
+
+Which mixin is often used with TabBarView children to preserve state? A. AutomaticKeepAliveClientMixin B. SingleTickerProviderStateMixin C. HeroController D. WidgetsBindingObserver
+A. AutomaticKeepAliveClientMixin
+
+
+Which mixin is commonly used to provide vsync for one animation controller? A. SingleTickerProviderStateMixin B. AutomaticKeepAliveClientMixin C. RouteAware D. Diagnosticable
+A. SingleTickerProviderStateMixin
+
+
+AnimationController usually requires? A. vsync provider B. JSON parser C. Navigator key D. ThemeData
+A. vsync provider
+
+
+Which widget can animate between pages/routes with default material transition? A. MaterialPageRoute B. RouteBuilder C. PageSwitch D. TransitionBox
+A. MaterialPageRoute
+
+
+Which function marks the callback for a button tap usually? A. onBuild B. onTap/onPressed C. onPaint D. onInit
+B. onTap/onPressed
+
+
+Which property disables an ElevatedButton when set to null? A. child B. style C. onPressed D. enabled
+C. onPressed
+
+
+Which widget can show expandable/collapsible panels? A. ExpansionTile B. FoldTile C. CollapseCard D. TogglePanel
+A. ExpansionTile
+
+
+Which widget can preserve a subtree across rebuilds with a key? A. Key B. Theme C. Route D. Blend
+A. Key
+
+
+What is a GlobalKey useful for? A. Accessing widget/state uniquely across tree B. Styling text C. Making HTTP calls D. Compiling assets
+A. Accessing widget/state uniquely across tree
+
+
+Which widget test utility pumps frames/widgets? A. tester.pump B. tester.run C. tester.click D. tester.build
+A. tester.pump
+
+
+Which package provides core Flutter testing APIs? A. flutter_test B. flutter_http C. flutter_state D. flutter_async
+A. flutter_test
+
+
+Which file is generated and should usually not be edited manually for dependencies lock? A. pubspec.lock B. main.dart C. analysis_options.yaml D. android/app/build.gradle
+A. pubspec.lock
+
+
+Which command upgrades dependency versions within constraints? A. flutter pub upgrade B. flutter pub get C. flutter pub sync D. dart pub build
+A. flutter pub upgrade
+
+
+Which command can add a package dependency quickly? A. flutter pub add B. flutter add package C. dart include D. flutter pub create
+A. flutter pub add
+
+
+Which command removes a dependency quickly? A. flutter pub remove B. flutter remove package C. dart pub del D. flutter dep remove
+A. flutter pub remove
+
+
+What is the purpose of pub.dev? A. Flutter package repository B. Device emulator C. Rendering engine D. Cloud IDE
+A. Flutter package repository
+
+
+Which widget is often used for adaptive platform-aware UI decisions? A. Theme B. Platform checks with dart:io/foundation C. Card D. RouteObserver
+B. Platform checks with dart:io/foundation
+
+
+Which constant is true in release mode from foundation? A. kReleaseMode B. isRelease C. releaseFlag D. kProd
+A. kReleaseMode
+
+
+Which tool is used to inspect widget tree and performance? A. Flutter DevTools B. Android Paint C. Xcode Organizer only D. Pub Inspector
+A. Flutter DevTools
+
+
+Hot Restart differs from Hot Reload because it? A. Preserves state more B. Rebuilds from scratch and loses state C. Only changes text D. Builds APK
+B. Rebuilds from scratch and loses state
+
+
+Which file commonly defines Android app permissions? A. AndroidManifest.xml B. Info.plist C. pubspec.yaml D. main.dart
+A. AndroidManifest.xml
+
+
+Which file commonly defines iOS app permissions text? A. build.gradle B. Info.plist C. pubspec.lock D. analysis_options.yaml
+B. Info.plist
+
+
+Which package is used for launching URLs externally often? A. url_launcher B. http C. path D. provider
+A. url_launcher
+
+
+Which package is used for picking images from camera/gallery often? A. image_picker B. sqflite C. dio D. lint
+A. image_picker
+
+
+Which widget is useful for showing remote data in a lazy list? A. ListView.builder B. Row C. Stack D. SizedBox
+A. ListView.builder
+
+
+Which architecture style is common in Flutter apps? A. MVC only B. MVVM, Clean Architecture, BLoC and others C. No architecture needed D. SQL architecture only
+B. MVVM, Clean Architecture, BLoC and others
+
+
+What is BLoC commonly used for? A. Image decoding B. Business logic and state separation C. Widget painting only D. Publishing apps
+B. Business logic and state separation
+
+
+Which package is popular for BLoC in Flutter? A. flutter_bloc B. flutter_sql C. bloc_ui_only D. skia_bloc
+A. flutter_bloc
+
+
+Cubit is? A. Lower-level rendering class B. Simpler state management class in bloc ecosystem C. Navigation route D. Asset tool
+B. Simpler state management class in bloc ecosystem
+
+
+Which keyword creates an immutable compile-time widget instance when possible? A. final B. const C. late D. dynamic
+B. const
+
+
+Which Dart feature allows concise anonymous functions? A. lambda via => B. macro C. template D. pointer
+A. lambda via =>
+
+
+Which widget can measure available constraints before building child layout? A. LayoutBuilder B. StreamBuilder C. Hero D. Divider
+A. LayoutBuilder
+
+
+Which widget draws a horizontal line separator? A. Divider B. BorderLine C. LineWidget D. SeparatorBox
+A. Divider
+
+
+Which widget draws a vertical separator? A. VDivider B. VerticalDivider C. Divider.vertical D. LineColumn
+B. VerticalDivider
+
+
+Which widget can show chips for compact info/actions? A. Chip B. TagView C. BadgeCard D. MicroTile
+A. Chip
+
+
+Which widget allows selecting one option from chips? A. ChoiceChip B. FilterChip C. ActionChip D. InputChip
+A. ChoiceChip
+
+
+Which widget allows filtering with multiple selectable chips? A. ActionChip B. FilterChip C. ChoiceChip D. Hero
+B. FilterChip
+
+
+Which widget triggers a simple chip action when tapped? A. ActionChip B. FilterChip C. Slider D. Card
+A. ActionChip
+
+
+Which widget lets users select a date? A. showDatePicker B. DateField only C. CalendarBox D. DayPickerView
+A. showDatePicker
+
+
+Which widget lets users select a time? A. showClock B. showTimePicker C. TimeBox D. selectTime
+B. showTimePicker
+
+
+What does mounted indicate in State? A. Whether widget is currently in tree B. Whether app is compiled C. Whether HTTP is done D. Whether theme is dark
+A. Whether widget is currently in tree
+
+
+Why check mounted before setState after async call? A. To avoid updating disposed state B. To improve image quality C. To enable routing D. To fetch dependencies
+A. To avoid updating disposed state
