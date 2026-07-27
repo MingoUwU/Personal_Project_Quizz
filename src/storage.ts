@@ -1,11 +1,11 @@
 import { defaultState, STARTER_DECK_IDS } from './data'
 import { prm393Deck } from './prm393Deck'
 import type { AppState, Deck, ReviewRating } from './types'
-import { vnrDeck } from './vnrDeck'
+import { VNR_DECK_ID, vnrDeck } from './vnrDeck'
 
 const STORAGE_KEY = 'memu-local-app-state'
 const PRM393_MIGRATION_KEY = 'memu-content-prm393-v4'
-const VNR_MIGRATION_KEY = 'memu-content-vnr-v1'
+const VNR_MIGRATION_KEY = 'memu-content-vnr-v2'
 const starterDeckIds = new Set<string>(STARTER_DECK_IDS)
 
 const safeJsonParse = (value: string): AppState | null => {
@@ -95,6 +95,12 @@ export const loadState = (): AppState => {
 
   if (localStorage.getItem(VNR_MIGRATION_KEY) !== 'complete') {
     state = mergeBundledDeck(state, vnrDeck)
+    const nextStudySessions = { ...state.studySessions }
+    delete nextStudySessions[VNR_DECK_ID]
+    state = {
+      ...state,
+      studySessions: nextStudySessions,
+    }
     completedMigrationKeys.push(VNR_MIGRATION_KEY)
   }
 

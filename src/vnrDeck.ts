@@ -16,15 +16,6 @@ interface RawVnrQuizBank {
   questions: RawVnrQuestion[]
 }
 
-const malformedQuestionIds = new Set([316, 319, 340, 342, 347, 354, 356, 357])
-
-// These are later repetitions or close paraphrases of questions retained elsewhere
-// in the same source. Question 57 is dropped in favor of the clearer question 283.
-const duplicateQuestionIds = new Set([
-  57, 254, 262, 268, 272, 284, 285, 290, 293, 297, 312, 315, 318, 320, 322, 324, 325, 329, 332, 334, 338, 339,
-  341, 343, 345, 346, 349, 351, 353, 355,
-])
-
 const normalizeQuestion = (question: string) =>
   question
     .normalize('NFD')
@@ -36,13 +27,13 @@ const normalizeQuestion = (question: string) =>
 const parseVnrQuizBank = (source: string) => {
   const parsed = JSON.parse(source) as RawVnrQuizBank
 
-  if (!Array.isArray(parsed.questions) || parsed.questions.length !== 357) {
-    throw new Error(`Expected 357 VNR questions, found ${parsed.questions?.length ?? 0}.`)
+  if (!Array.isArray(parsed.questions) || parsed.questions.length !== 364) {
+    throw new Error(`Expected 364 VNR questions, found ${parsed.questions?.length ?? 0}.`)
   }
 
   const seenQuestions = new Set<string>()
 
-  return parsed.questions.filter((item) => {
+  return parsed.questions.map((item) => {
     if (
       !Number.isInteger(item.id) ||
       !item.question?.trim() ||
@@ -56,13 +47,13 @@ const parseVnrQuizBank = (source: string) => {
       throw new Error(`Invalid VNR question ${item.id}.`)
     }
 
-    if (malformedQuestionIds.has(item.id) || duplicateQuestionIds.has(item.id)) return false
-
     const normalizedQuestion = normalizeQuestion(item.question)
-    if (seenQuestions.has(normalizedQuestion)) return false
+    if (seenQuestions.has(normalizedQuestion)) {
+      throw new Error(`Duplicate VNR question ${item.id}.`)
+    }
 
     seenQuestions.add(normalizedQuestion)
-    return true
+    return item
   })
 }
 
@@ -72,12 +63,12 @@ const optionLabels: readonly OptionLabel[] = ['a', 'b', 'c', 'd']
 export const vnrDeck: Deck = {
   id: VNR_DECK_ID,
   name: 'VNR',
-  description: 'Bộ câu hỏi trắc nghiệm Lịch sử Đảng, đã lọc câu trùng và các mục lỗi cấu trúc.',
+  description: 'Bộ câu hỏi Lịch sử Đảng từ PDF 730 câu, đã chuẩn hóa, đối chiếu đáp án và loại bản trùng lỗi.',
   language: 'Tiếng Việt',
   category: 'Lịch sử Đảng',
   createdAt: '2026-07-27T00:00:00.000Z',
   cards: vnrQuestions.map((item) => ({
-    id: `${VNR_DECK_ID}-card-${item.id}`,
+    id: `${VNR_DECK_ID}-v2-card-${item.id}`,
     front: [
       item.question.trim(),
       '',

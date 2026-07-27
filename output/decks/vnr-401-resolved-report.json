@@ -1,0 +1,3692 @@
+{
+  "source_stats": {
+    "pdf_question_occurrences": 822,
+    "unique_questions": 401,
+    "complete_four_options": 399,
+    "answers_detected_from_source": 252,
+    "unclear_or_malformed": 149
+  },
+  "retained_unique_questions": 364,
+  "answer_method_counts": {
+    "source_mark": 250,
+    "cross_reference_existing_vnr": 113,
+    "cross_reference_source_mark": 1
+  },
+  "dropped_malformed": [
+    {
+      "id": 75,
+      "source_number": 77,
+      "question": "Ai chủ trì Hội nghị Ban Chấp hành Trung ương Đảng tháng 11/1940? a. Nguyễn ái Quốc c. Trường Chinh. b. Nguyễn Văn Cừ d. Lê Hồng Phong",
+      "reason": "missing_four_options"
+    },
+    {
+      "id": 242,
+      "source_number": 241,
+      "question": "Thời kỳ Mỹ thực hiện chiến lược \"Chiến tranh đặc biệt\" của Kennơđi (1961 -1964), chính quyền Sài Gòn bị Mỹ thay đổi mấy lần? 10.",
+      "reason": "missing_four_options"
+    }
+  ],
+  "dropped_structural_duplicates": [
+    {
+      "id": 285,
+      "source_number": 309,
+      "question": "Yêu cầu, nhiệm vụ của cách mạng Việt Nam trong những năm 1975- 1985 là: E. Tham gia vào phân công lao động quốc tế. F. Tăng tính tùy thuộc lẫn nhau, nâng cao sự hiểu biết giữa Việt Nam với các",
+      "base_question": "Yêu cầu, nhiệm vụ của cách mạng Việt Nam trong những năm 1975- 1985 là:",
+      "retained_question_id": 283,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 286,
+      "source_number": 315,
+      "question": "Một trong những mục tiêu cơ bản của CNH ở nước ta là: E. Cải biến nước ta thành một nước công – nông nghiệp có cơ sở vật chất kỹ thuật hiện đại, có cơ cấu kinh tế hợp lý. F. Cải biến nước ta thành một nước công nghiệp có cơ sở vật chất kỹ thuật hiện đại, có cơ cấu kinh tế hợp lý.",
+      "base_question": "Một trong những mục tiêu cơ bản của CNH ở nước ta là:",
+      "retained_question_id": 280,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 288,
+      "source_number": 326,
+      "question": "Đại hội lần thứ V (1982) của Đảng xác định: E. Bảo vệ và phát triển mối quan hệ đặc biệt Việt Nam – Lào – Campuchia. F. Sẵn sàng thiết lập, phát triển quan hệ hữu nghị và hợp tác với Lào và",
+      "base_question": "Đại hội lần thứ V (1982) của Đảng xác định:",
+      "retained_question_id": 340,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 289,
+      "source_number": 330,
+      "question": "Trọng tâm của đổi mới hệ thống chính trị là: E. Đổi mới tổ chức và phương thức hoạt động của Đảng, Nhà nước và Mặt",
+      "base_question": "Trọng tâm của đổi mới hệ thống chính trị là:",
+      "retained_question_id": 279,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 290,
+      "source_number": 331,
+      "question": "Khu vực châu Á – Thái Bình Dương là khu vực: E. Có tiềm lực lớn và năng động về kinh tế.",
+      "base_question": "Khu vực châu Á – Thái Bình Dương là khu vực:",
+      "retained_question_id": 278,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 294,
+      "source_number": 421,
+      "question": "Phương thức tiến hành CNH được Đại hội lần thứ VI (1986) của xác định là: E. Phải xuất phát từ nhu cầu thực tiễn, coi trọng tính khả thi và tính hiệu quả của các chương trình CNH. F. Quá trình CNH phải được tiến hành từng bước, phù hợp với trình độ LLSX",
+      "base_question": "Phương thức tiến hành CNH được Đại hội lần thứ VI (1986) của xác định là:",
+      "retained_question_id": 281,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 295,
+      "source_number": 441,
+      "question": "Mục tiêu tổng quát đổi mới kiện toàn hệ thống chính trị ở nước ta trong công cuộc đổi mới hiện nay là: E. Phát huy tính ưu việt và vai trò tích cực của chính trị đối với sự phát triển kinh tế – xã hội. F. Thể hiện đúng đắn và đầy đủ hơn bản chất XHCN của chế độ chính trị",
+      "base_question": "Mục tiêu tổng quát đổi mới kiện toàn hệ thống chính trị ở nước ta trong công cuộc đổi mới hiện nay là:",
+      "retained_question_id": 291,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 296,
+      "source_number": 444,
+      "question": "Khuyết tật của cơ chế tập trung quan liêu bao cấp là: E. Thủ tiêu cạnh tranh và kìm hãm tiến bộ khoa học công nghệ.",
+      "base_question": "Khuyết tật của cơ chế tập trung quan liêu bao cấp là:",
+      "retained_question_id": 292,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 298,
+      "source_number": 412,
+      "question": "Đặc điểm chủ yếu của cơ chế tập trung quan liêu bao cấp là: E. Nhà nước quản lý nền kinh tế dựa trên cơ chế thị trường.",
+      "base_question": "Đặc điểm chủ yếu của cơ chế tập trung quan liêu bao cấp là:",
+      "retained_question_id": 287,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 301,
+      "source_number": 524,
+      "question": "Yêu cầu, nhiệm vụ của cách mạng Việt Nam trong những năm 1975- 1985 là: I. Tham gia vào phân công lao động quốc tế. J. Tăng tính tùy thuộc lẫn nhau, nâng cao sự hiểu biết giữa Việt Nam với các quốc gia khác. K. Phá thế bị bao vây, cấm vận, chống tụt hậu về kinh tế, thu hẹp khoảng cách phát triển giữa nước ta với các quốc gia khác. L. Mở rộng thị trường, trao đổi hàng hóa. Câu5 25. Nhiệm vụ hàng đầu của nhân dân ta trong quá trình kháng chiến chống thực dân Pháp là:",
+      "base_question": "Yêu cầu, nhiệm vụ của cách mạng Việt Nam trong những năm 1975- 1985 là:",
+      "retained_question_id": 283,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 302,
+      "source_number": 526,
+      "question": "Đại hội lần thứ III (1960) của Đảng xác định: E. Nhiệm vụ trung tâm suốt thời kỳ quá độ ở nước ta là CNH XHCN, mà mấu chốt là ưu tiên phát triển công nghiệp nặng và công nghiệp nhẹ. F. Nhiệm vụ trung tâm suốt thời kỳ quá độ ở nước ta là CNH XHCN, mà mấu chốt là ưu tiên phát triển công nghiệp nặng.",
+      "base_question": "Đại hội lần thứ III (1960) của Đảng xác định:",
+      "retained_question_id": 293,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 303,
+      "source_number": 3,
+      "question": "Quan điểm của Đảng về mối quan hệ giữa phát triển kinh tế với thực hiện chính sách xã hội là: D. Phát triển kinh tế là cơ sở và tiền đề để thực hiện các chính sách xã hội. E. Thực hiện tốt các chính sách xã hội là động lực thúc đẩy phát triển kinh tế. F. Phát triển kinh tế là cơ sở và tiền đề để thực hiện các chính sách xã hội,",
+      "base_question": "Quan điểm của Đảng về mối quan hệ giữa phát triển kinh tế với thực hiện chính sách xã hội là:",
+      "retained_question_id": 282,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 304,
+      "source_number": 9,
+      "question": "Mục tiêu sâu xa của CNH, HĐH nước ta là: A.Đến năm 2020, nước ta về cơ bản trở thành một nước công nghiệp theo hướng hiện đại. E. Trở thành một nước “dân giầu, nước mạnh, xã hội công bằng, dân chủ, văn minh”. F. Trở thành một nước có nền kinh tế tri thức phát triển. D.Trở thành một nước hội nhập sâu, rộng vào sự phát triển chung của khu vực và thế giớiCâu Câu 10 Nhà nước pháp quyền là :",
+      "base_question": "Mục tiêu sâu xa của CNH, HĐH nước ta là:",
+      "retained_question_id": 297,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 307,
+      "source_number": 23,
+      "question": "Đại hội VIII (6 - 1996) của Đảng xác định: E. Cơ chế vận hành của nền kinh tế hàng hóa nhiều thành phần theo định hướng XHCN ở nước ta là “cơ chế thị trường có sự quản lý của Nhà nước”. F. Phát triển nền kinh tế nhiều thành phần vận hành theo cơ chế thị trường có sự quản lý của Nhà nước theo định hướng XHCN.",
+      "base_question": "Đại hội VIII (6 - 1996) của Đảng xác định:",
+      "retained_question_id": 277,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 309,
+      "source_number": 25,
+      "question": "Mục đích căn bản của nền kinh tế thị trường định hướng XHCN ở nước ta là: E. Mở rộng thị trường và phát triền đồng bộ các loại thị trường.",
+      "base_question": "Mục đích căn bản của nền kinh tế thị trường định hướng XHCN ở nước ta là:",
+      "retained_question_id": 356,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 310,
+      "source_number": 30,
+      "question": "Kinh tế thị trường là sản phẩm riêng có của: I. Nhà nước tư sản. J. Chủ nghĩa tư bản. K. Thành tựu phát triển chung của nhân loại. L. Văn minh phương Tây. 800. Mâu thuẫn chủ yếu nhất của xã hội Việt Nam dưới ách thống trị của thực dân Pháp là:",
+      "base_question": "Kinh tế thị trường là sản phẩm riêng có của:",
+      "retained_question_id": 337,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 311,
+      "source_number": 528,
+      "question": "Đại hội đại biểu toàn quốc lần thứ VII của Đảng (6-1991) xác định: E. Việt Nam muốn là bạn với tất cả các nước, để học tập kinh nghiệm quản lý của nước ngoài, tiếp cận thị trường thế giới. F. Việt Nam muốn đổi mới phương thức hợp tác, chú trọng hiệu quả hợp tác trên tinh thần bình đẳng.",
+      "base_question": "Đại hội đại biểu toàn quốc lần thứ VII của Đảng (6-1991) xác định:",
+      "retained_question_id": 284,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 313,
+      "source_number": 554,
+      "question": "Nền tảng và động lực của CNH, HĐH ở nước ta thời kỳ đổi mới là: L. Nguồn nhân lực. M. Khoa học và công nghệ. N. Kinh tế thị trường định hướng XHCN. O. Hội nhập kinh tế quốc tế. Câu55 5. Hội nghị của BCH Trung ương Đảng chủ trương tạm gác các khẩu hiệu “độc lập dân tộc” và “cách mạng ruộng đất” là:",
+      "base_question": "Nền tảng và động lực của CNH, HĐH ở nước ta thời kỳ đổi mới là:",
+      "retained_question_id": 362,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 319,
+      "source_number": 528,
+      "question": "Đại hội VII của Đảng (6 - 1991) đã đưa ra kết luận quan trọng: D. Sản xuất hàng hóa đối lập với CNXH, tuy nhiên nó tồn tại khách quan. E. Sản xuất hàng hóa không đối lập với CNXH, nó tồn tại khách quan và cần thiết cho xây dựng CNXH.",
+      "base_question": "Đại hội VII của Đảng (6 - 1991) đã đưa ra kết luận quan trọng:",
+      "retained_question_id": 306,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 325,
+      "source_number": 521,
+      "question": "Quan điểm: “Văn hoá là nền tảng tinh thần của xã hội, vừa là mục tiêu, vừa là động lực thúc đẩy sự phát triển của kinh tế - xã hội” lần đầu tiên được đưa ra tại: I. Đại hội lần thứ VI (1986) của Đảng. J. Đại hội lần thứ VII (1991) của Đảng. K. Đại hội lần thứ VIII (1996) của Đảng. D. Đại hội lần thứ IX (2001) của Đảng . Câu 522. Khái niệm \"kinh tế thị trường định hướng XHCN\" được chính thức đưa ra tại:",
+      "base_question": "Quan điểm: “Văn hoá là nền tảng tinh thần của xã hội, vừa là mục tiêu, vừa là động lực thúc đẩy sự phát triển của kinh tế - xã hội” lần đầu tiên được đưa ra tại:",
+      "retained_question_id": 343,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 328,
+      "source_number": 553,
+      "question": "Quan điểm “Đoàn kết, hợp tác toàn diện với Liên Xô, coi quan hệ với Liên Xô là hòn đá tảng trong chính sách đối ngoại của Việt Nam” được xác định vào giai đoạn: I. 1945-1954. J. 1954-1975. K. 1975-1985. L. 1986-1996. Câu55 4. Ba nguyên tắc của nền văn hoá mới: “Dân tộc hoá, đại chúng hoá, khoa học hoá” xuất hiện đầu tiên trong văn kiện:",
+      "base_question": "Quan điểm “Đoàn kết, hợp tác toàn diện với Liên Xô, coi quan hệ với Liên Xô là hòn đá tảng trong chính sách đối ngoại của Việt Nam” được xác định vào giai đoạn:",
+      "retained_question_id": 399,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 333,
+      "source_number": 5,
+      "question": "Văn kiện nào của Đảng đánh dấu bước đột phá quan trọng trong đổi mới tư duy đối ngoại của Đảng những năm 1986 đến nay? Y. Nghị quyết Đại hội lần thứ VI (12-1986) của Đảng.",
+      "base_question": "Văn kiện nào của Đảng đánh dấu bước đột phá quan trọng trong đổi mới tư duy đối ngoại của Đảng những năm 1986 đến nay?",
+      "retained_question_id": 332,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 336,
+      "source_number": 10,
+      "question": "Yêu cầu, nhiệm vụ của cách mạng Việt Nam trong những năm 1975- 1985 là: CC. Tham gia vào phân công lao động quốc tế. DD. Tăng tính tùy thuộc lẫn nhau, nâng cao sự hiểu biết giữa Việt Nam",
+      "base_question": "Yêu cầu, nhiệm vụ của cách mạng Việt Nam trong những năm 1975- 1985 là:",
+      "retained_question_id": 283,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 342,
+      "source_number": 20,
+      "question": "Mục tiêu tổng quát đổi mới kiện toàn hệ thống chính trị ở nước ta trong công cuộc đởi mới hiện nay là gì? U. Phát huy tính ưu việt và vai trò tích cực của chính trị đối với sự phát triển kinh tế – xã hội. V. Thể hiện đúng đắn và đầy đủ hơn bản chất XHCN của chế độ chính trị",
+      "base_question": "Mục tiêu tổng quát đổi mới kiện toàn hệ thống chính trị ở nước ta trong công cuộc đởi mới hiện nay là gì?",
+      "retained_question_id": 291,
+      "similarity": 0.9811320754716981,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 353,
+      "source_number": 29,
+      "question": "Trọng tâm của đổi mới hệ thống chính trị là: Y. Đổi mới tổ chức và phương thức hoạt động của Đảng, Nhà nước và Mặt trận Tổ quốc.",
+      "base_question": "Trọng tâm của đổi mới hệ thống chính trị là:",
+      "retained_question_id": 279,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 359,
+      "source_number": 5,
+      "question": "Mục tiêu tổng quát đổi mới kiện toàn hệ thống chính trị ở nước ta trong công cuộc đổi mới hiện nay là: Y. Phát huy tính ưu việt và vai trò tích cực của chính trị đối với sự phát triển kinh tế – xã hội. Z. Thể hiện đúng đắn và đầy đủ hơn bản chất XHCN của chế độ chính trị được kiến lập sau Cách mạng Tháng Tám. AA. Xây dựng nền dân chủ xã hội chủ nghĩa. BB. Làm cho chế độ chính trị đã được kiến lập sau Cách mạng Tháng Tám ngày càng bền vững hơn. Câu8 6. Trong cao trào dân chủ 1936-1939, Đảng chủ trương tập hợp những lực lượng:",
+      "base_question": "Mục tiêu tổng quát đổi mới kiện toàn hệ thống chính trị ở nước ta trong công cuộc đổi mới hiện nay là:",
+      "retained_question_id": 291,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 365,
+      "source_number": 12,
+      "question": "Văn kiện nào của Đảng đánh dấu bước đột phá quan trọng trong đổi mới tư duy đối ngoại của Đảng những năm 1986 đến nay? GG. Nghị quyết Đại hội lần thứ VI (12-1986) của Đảng. HH. Nghị quyết 13 Bộ Chính trị (5- 1988). II. Nghị quyết Đại hội lần thứ VII (6-1991) của Đảng. JJ. Nghị quyết Hội nghị đại biểu toàn quốc giữa nhiệm kỳ (khóa VII, 1-1994). Câu1 13. Ban Thường vụ Trung ương Đảng ra Quyết định chấp nhận Đông Dương cộng sản liên đoàn là bộ phận của ĐCSVN vào ngày:",
+      "base_question": "Văn kiện nào của Đảng đánh dấu bước đột phá quan trọng trong đổi mới tư duy đối ngoại của Đảng những năm 1986 đến nay?",
+      "retained_question_id": 332,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 367,
+      "source_number": 15,
+      "question": "Khu vực châu Á – Thái Bình Dương là khu vực: CC. Có tiềm lực lớn và năng động về kinh tế.",
+      "base_question": "Khu vực châu Á – Thái Bình Dương là khu vực:",
+      "retained_question_id": 278,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 370,
+      "source_number": 26,
+      "question": "Đại hội lần thứ V (1982) của Đảng xác định: Y. Bảo vệ và phát triển mối quan hệ đặc biệt Việt Nam – Lào – Campuchia. Z. Sẵn sàng thiết lập, phát triển quan hệ hữu nghị và hợp tác với Lào và Campuchia.",
+      "base_question": "Đại hội lần thứ V (1982) của Đảng xác định:",
+      "retained_question_id": 340,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 374,
+      "source_number": 30,
+      "question": "Ba nguyên tắc của nền văn hoá mới: “Dân tộc hoá, đại chúng hoá, khoa học hoá” xuất hiện đầu tiên trong văn kiện: X. Đề cương văn hóa 1943.",
+      "base_question": "Ba nguyên tắc của nền văn hoá mới: “Dân tộc hoá, đại chúng hoá, khoa học hoá” xuất hiện đầu tiên trong văn kiện:",
+      "retained_question_id": 347,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 383,
+      "source_number": 710,
+      "question": "Văn kiện nào của Đảng xác định: “Tiến hành đồng thời 3 cuộc cách mạng về quan hệ sản xuất, khoa học - kỹ thuật, tư tưởng văn hoá, trong đó cách mạng khoa học - kỹ thụât là then chốt”? CC. Báo cáo chính trị tại Đại hội lần thứ III của Đảng (1960). DD. Báo cáo chính trị tại Đại hội lần thứ IV của Đảng (1976) EE. Nghị quyết Hội nghị Trung ương 6 (khoá VI, 3- 1989). FF. Cương lĩnh xây dựng đất nước thời kỳ quá độ lên CNXH (1991). Câu7 11. Đại hội lần thứ V (1982) của Đảng xác định:",
+      "base_question": "Văn kiện nào của Đảng xác định: “Tiến hành đồng thời 3 cuộc cách mạng về quan hệ sản xuất, khoa học - kỹ thuật, tư tưởng văn hoá, trong đó cách mạng khoa học - kỹ thụât là then chốt”?",
+      "retained_question_id": 354,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 386,
+      "source_number": 714,
+      "question": "Đại hội lần thứ V (1982) của Đảng xác định: CC. Bảo vệ và phát triển mối quan hệ đặc biệt Việt Nam – Lào – Campuchia. DD. Sẵn sàng thiết lập, phát triển quan hệ hữu nghị và hợp tác với Lào và Campuchia.",
+      "base_question": "Đại hội lần thứ V (1982) của Đảng xác định:",
+      "retained_question_id": 340,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 387,
+      "source_number": 715,
+      "question": "Trọng tâm của đổi mới hệ thống chính trị là: GG. Đổi mới tổ chức và phương thức hoạt động của Đảng, Nhà nước và",
+      "base_question": "Trọng tâm của đổi mới hệ thống chính trị là:",
+      "retained_question_id": 279,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 390,
+      "source_number": 719,
+      "question": "Đại hội đại biểu toàn quốc lần thứ IX của Đảng (4-2001) tuyên bố: E. Việt Nam sẵn sàng là bạn, là đối tác tin cậy của các nước, nhằm tích cực hội nhập kinh tế quốc tế. F. Việt Nam sẵn sàng là bạn, là đối tác tin cậy của các nước trong cộng đồng quốc tế, phấn đấu vì hòa bình, độc lập và phát triển.",
+      "base_question": "Đại hội đại biểu toàn quốc lần thứ IX của Đảng (4-2001) tuyên bố:",
+      "retained_question_id": 348,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    },
+    {
+      "id": 391,
+      "source_number": 720,
+      "question": "Nền tảng và động lực của CNH, HĐH ở nước ta thời kỳ đổi mới là: X. Nguồn nhân lực. Y. Khoa học và công nghệ. Z. Kinh tế thị trường định hướng XHCN. E. Hội nhập kinh tế quốc tế Chương 1 Văn kiện nào dưới đây đã giúp Nguyễn Ái Quốc tìm thấy con đường cứu nước:",
+      "base_question": "Nền tảng và động lực của CNH, HĐH ở nước ta thời kỳ đổi mới là:",
+      "retained_question_id": 362,
+      "similarity": 1,
+      "reason": "embedded_options_duplicate"
+    }
+  ],
+  "answer_audit": [
+    {
+      "id": 1,
+      "source_number": 1,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 2,
+      "source_number": 2,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 3,
+      "source_number": 3,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 4,
+      "source_number": 4,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 5,
+      "source_number": 5,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 6,
+      "source_number": 6,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 7,
+      "source_number": 8,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 8,
+      "source_number": 9,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 9,
+      "source_number": 10,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 10,
+      "source_number": 11,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 11,
+      "source_number": 12,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 12,
+      "source_number": 13,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 13,
+      "source_number": 14,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 14,
+      "source_number": 15,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 15,
+      "source_number": 16,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 16,
+      "source_number": 17,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 17,
+      "source_number": 18,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 18,
+      "source_number": 19,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 19,
+      "source_number": 20,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 20,
+      "source_number": 21,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 21,
+      "source_number": 22,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 22,
+      "source_number": 23,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 23,
+      "source_number": 24,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 24,
+      "source_number": 25,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 25,
+      "source_number": 26,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 26,
+      "source_number": 27,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 27,
+      "source_number": 28,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 28,
+      "source_number": 29,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 29,
+      "source_number": 30,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 30,
+      "source_number": 31,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 31,
+      "source_number": 33,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 32,
+      "source_number": 34,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 33,
+      "source_number": 35,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 35,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 34,
+      "source_number": 36,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 36,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 35,
+      "source_number": 37,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 36,
+      "source_number": 38,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 37,
+      "source_number": 39,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 38,
+      "source_number": 40,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 40,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 39,
+      "source_number": 41,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 41,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 40,
+      "source_number": 42,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 41,
+      "source_number": 43,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 42,
+      "source_number": 44,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 43,
+      "source_number": 45,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 44,
+      "source_number": 46,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 45,
+      "source_number": 47,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 46,
+      "source_number": 48,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 47,
+      "source_number": 49,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 48,
+      "source_number": 50,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 49,
+      "source_number": 51,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 50,
+      "source_number": 52,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 51,
+      "source_number": 53,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 52,
+      "source_number": 54,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 53,
+      "source_number": 55,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 55,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 54,
+      "source_number": 56,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 55,
+      "source_number": 57,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 57,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 56,
+      "source_number": 58,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 58,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 57,
+      "source_number": 59,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 58,
+      "source_number": 60,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 60,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 59,
+      "source_number": 61,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 61,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 60,
+      "source_number": 62,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 62,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 61,
+      "source_number": 63,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 62,
+      "source_number": 64,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 63,
+      "source_number": 65,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 64,
+      "source_number": 66,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 65,
+      "source_number": 67,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 66,
+      "source_number": 68,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 67,
+      "source_number": 69,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 68,
+      "source_number": 70,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 69,
+      "source_number": 71,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 70,
+      "source_number": 72,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 71,
+      "source_number": 73,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 72,
+      "source_number": 74,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 73,
+      "source_number": 75,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 74,
+      "source_number": 76,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 76,
+      "source_number": 78,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 77,
+      "source_number": 79,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 78,
+      "source_number": 80,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 79,
+      "source_number": 81,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 80,
+      "source_number": 82,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 81,
+      "source_number": 83,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 82,
+      "source_number": 84,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 83,
+      "source_number": 85,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 84,
+      "source_number": 86,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 85,
+      "source_number": 87,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 86,
+      "source_number": 88,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 87,
+      "source_number": 89,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 88,
+      "source_number": 90,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 89,
+      "source_number": 50,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 90,
+      "source_number": 91,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 91,
+      "source_number": 92,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 92,
+      "source_number": 93,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 93,
+      "source_number": 94,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 94,
+      "source_number": 95,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 95,
+      "source_number": 96,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 96,
+      "source_number": 97,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 97,
+      "source_number": 98,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 98,
+      "source_number": 99,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 99,
+      "source_number": 100,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 100,
+      "source_number": 101,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 101,
+      "source_number": 102,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 102,
+      "source_number": 103,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 103,
+      "source_number": 104,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 104,
+      "source_number": 105,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 105,
+      "source_number": 106,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 103,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 106,
+      "source_number": 107,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 107,
+      "source_number": 108,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 108,
+      "source_number": 109,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 109,
+      "source_number": 110,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 110,
+      "source_number": 111,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 111,
+      "source_number": 112,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 109,
+        "source_answer_detection": "source_double_period",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 112,
+      "source_number": 113,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 113,
+      "source_number": 114,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 114,
+      "source_number": 115,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 115,
+      "source_number": 116,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 116,
+      "source_number": 117,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 117,
+      "source_number": 118,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 118,
+      "source_number": 119,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 119,
+      "source_number": 120,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 120,
+      "source_number": 121,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 121,
+      "source_number": 122,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 122,
+      "source_number": 123,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 123,
+      "source_number": 124,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 124,
+      "source_number": 125,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 125,
+      "source_number": 126,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 126,
+      "source_number": 127,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 127,
+      "source_number": 128,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 128,
+      "source_number": 129,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 129,
+      "source_number": 130,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 126,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 130,
+      "source_number": 131,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 131,
+      "source_number": 132,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 132,
+      "source_number": 133,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 129,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 133,
+      "source_number": 134,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 134,
+      "source_number": 135,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 135,
+      "source_number": 67,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 136,
+      "source_number": 136,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 137,
+      "source_number": 137,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 138,
+      "source_number": 138,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 139,
+      "source_number": 139,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 140,
+      "source_number": 140,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 141,
+      "source_number": 141,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 142,
+      "source_number": 142,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 143,
+      "source_number": 143,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 140,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 144,
+      "source_number": 144,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 145,
+      "source_number": 145,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 146,
+      "source_number": 146,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 147,
+      "source_number": 147,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 148,
+      "source_number": 148,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 149,
+      "source_number": 149,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 150,
+      "source_number": 150,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 151,
+      "source_number": 151,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 152,
+      "source_number": 152,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 153,
+      "source_number": 153,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 154,
+      "source_number": 154,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 155,
+      "source_number": 155,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 156,
+      "source_number": 156,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 153,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 157,
+      "source_number": 157,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 158,
+      "source_number": 158,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 159,
+      "source_number": 159,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 160,
+      "source_number": 160,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 161,
+      "source_number": 161,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 162,
+      "source_number": 162,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 163,
+      "source_number": 163,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 164,
+      "source_number": 164,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 165,
+      "source_number": 165,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 166,
+      "source_number": 166,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 167,
+      "source_number": 167,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 168,
+      "source_number": 168,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 165,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 169,
+      "source_number": 169,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 170,
+      "source_number": 170,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 167,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 171,
+      "source_number": 171,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 168,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 172,
+      "source_number": 172,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 173,
+      "source_number": 173,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 174,
+      "source_number": 174,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 171,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 175,
+      "source_number": 175,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 172,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 176,
+      "source_number": 176,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 177,
+      "source_number": 177,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 178,
+      "source_number": 178,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 179,
+      "source_number": 179,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 180,
+      "source_number": 180,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 181,
+      "source_number": 181,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 182,
+      "source_number": 182,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 183,
+      "source_number": 183,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 184,
+      "source_number": 184,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 185,
+      "source_number": 185,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 186,
+      "source_number": 186,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 187,
+      "source_number": 187,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 188,
+      "source_number": 188,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 189,
+      "source_number": 189,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 190,
+      "source_number": 190,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 187,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 191,
+      "source_number": 191,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 192,
+      "source_number": 192,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 193,
+      "source_number": 193,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 194,
+      "source_number": 194,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 195,
+      "source_number": 195,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 192,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 196,
+      "source_number": 196,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 193,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 197,
+      "source_number": 197,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 198,
+      "source_number": 198,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 199,
+      "source_number": 199,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 200,
+      "source_number": 200,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 201,
+      "source_number": 201,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 202,
+      "source_number": 202,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 203,
+      "source_number": 203,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 204,
+      "source_number": 204,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 205,
+      "source_number": 205,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 206,
+      "source_number": 206,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 207,
+      "source_number": 207,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 208,
+      "source_number": 208,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 204,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 209,
+      "source_number": 209,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 210,
+      "source_number": 210,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 211,
+      "source_number": 211,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 212,
+      "source_number": 212,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 213,
+      "source_number": 213,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 214,
+      "source_number": 214,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 215,
+      "source_number": 215,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 216,
+      "source_number": 216,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 217,
+      "source_number": 217,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 218,
+      "source_number": 218,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 219,
+      "source_number": 219,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 220,
+      "source_number": 220,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 221,
+      "source_number": 221,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 222,
+      "source_number": 222,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 223,
+      "source_number": 223,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 224,
+      "source_number": 224,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 225,
+      "source_number": 225,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 226,
+      "source_number": 226,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 227,
+      "source_number": 227,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 228,
+      "source_number": 228,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 229,
+      "source_number": 229,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 230,
+      "source_number": 230,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 231,
+      "source_number": 231,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 232,
+      "source_number": 232,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 233,
+      "source_number": 233,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 234,
+      "source_number": 234,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 235,
+      "source_number": 235,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 236,
+      "source_number": 236,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 237,
+      "source_number": 237,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 238,
+      "source_number": 81,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 239,
+      "source_number": 238,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 240,
+      "source_number": 239,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 241,
+      "source_number": 240,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 243,
+      "source_number": 242,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 237,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 244,
+      "source_number": 243,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 245,
+      "source_number": 244,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 246,
+      "source_number": 245,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 247,
+      "source_number": 246,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 248,
+      "source_number": 247,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 249,
+      "source_number": 248,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 250,
+      "source_number": 249,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 251,
+      "source_number": 250,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 252,
+      "source_number": 251,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 253,
+      "source_number": 252,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 254,
+      "source_number": 253,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 255,
+      "source_number": 254,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 256,
+      "source_number": 255,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 257,
+      "source_number": 256,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 258,
+      "source_number": 257,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 259,
+      "source_number": 258,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 260,
+      "source_number": 259,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 261,
+      "source_number": 260,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 262,
+      "source_number": 261,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 263,
+      "source_number": 262,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 264,
+      "source_number": 263,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 265,
+      "source_number": 265,
+      "answer_letter": "a",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 266,
+      "source_number": 266,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 267,
+      "source_number": 264,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 268,
+      "source_number": 268,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_source_mark",
+      "evidence": {
+        "source_question_id": 265,
+        "question_similarity": 0.9605263157894737,
+        "option_similarity": 0.9357142857142857,
+        "combined_similarity": 0.9535789473684211
+      }
+    },
+    {
+      "id": 269,
+      "source_number": 269,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 270,
+      "source_number": 270,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 271,
+      "source_number": 271,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 272,
+      "source_number": 272,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 273,
+      "source_number": 273,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 274,
+      "source_number": 274,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 275,
+      "source_number": 275,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 276,
+      "source_number": 276,
+      "answer_letter": "c",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 277,
+      "source_number": 282,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 265,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 278,
+      "source_number": 283,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 266,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 279,
+      "source_number": 286,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 269,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 280,
+      "source_number": 290,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 273,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 281,
+      "source_number": 291,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 274,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 282,
+      "source_number": 292,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 275,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 283,
+      "source_number": 295,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 278,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 284,
+      "source_number": 303,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 286,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 287,
+      "source_number": 316,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 295,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 291,
+      "source_number": 332,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 301,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 292,
+      "source_number": 334,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 303,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 293,
+      "source_number": 337,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 305,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 297,
+      "source_number": 445,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 310,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 299,
+      "source_number": 416,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 313,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 300,
+      "source_number": 523,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 315,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 305,
+      "source_number": 14,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 320,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 306,
+      "source_number": 21,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 336,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 308,
+      "source_number": 24,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 312,
+      "source_number": 552,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 341,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 314,
+      "source_number": 557,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 343,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 315,
+      "source_number": 308,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 290,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 316,
+      "source_number": 511,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 344,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 317,
+      "source_number": 512,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 345,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 318,
+      "source_number": 515,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 346,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 320,
+      "source_number": 304,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 287,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 321,
+      "source_number": 546,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 348,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 322,
+      "source_number": 547,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 349,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 323,
+      "source_number": 419,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 314,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 324,
+      "source_number": 322,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 299,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 326,
+      "source_number": 333,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 302,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 327,
+      "source_number": 530,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 350,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 329,
+      "source_number": 1,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 317,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 330,
+      "source_number": 14,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 326,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 331,
+      "source_number": 22,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 337,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 332,
+      "source_number": 329,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 300,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 334,
+      "source_number": 348,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 309,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 335,
+      "source_number": 317,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 296,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 337,
+      "source_number": 311,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 292,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 338,
+      "source_number": 5,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 351,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 339,
+      "source_number": 320,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 298,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 340,
+      "source_number": 296,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 279,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 341,
+      "source_number": 2,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 331,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 343,
+      "source_number": 15,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 321,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 344,
+      "source_number": 289,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 272,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 345,
+      "source_number": 299,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 282,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 346,
+      "source_number": 336,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 304,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 347,
+      "source_number": 274,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 257,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 348,
+      "source_number": 280,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 263,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 349,
+      "source_number": 302,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 285,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 350,
+      "source_number": 294,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 277,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 351,
+      "source_number": 338,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 318,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 0.969208211143695,
+        "combined_similarity": 0.969208211143695,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 352,
+      "source_number": 7,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 324,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 354,
+      "source_number": 284,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 267,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 355,
+      "source_number": 10,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 334,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 356,
+      "source_number": 287,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 270,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 357,
+      "source_number": 26,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 328,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 358,
+      "source_number": 30,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 329,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 360,
+      "source_number": 268,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 254,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 361,
+      "source_number": 312,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 293,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 362,
+      "source_number": 307,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 289,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 363,
+      "source_number": 110,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 355,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 364,
+      "source_number": 275,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 258,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 366,
+      "source_number": 27,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 322,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 368,
+      "source_number": 7,
+      "answer_letter": "d",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 369,
+      "source_number": 32,
+      "answer_letter": "b",
+      "answer_method": "source_mark",
+      "evidence": null
+    },
+    {
+      "id": 371,
+      "source_number": 297,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 280,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 372,
+      "source_number": 300,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 283,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 373,
+      "source_number": 306,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 288,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 375,
+      "source_number": 19,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 335,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 376,
+      "source_number": 301,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 284,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 377,
+      "source_number": 278,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 261,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 378,
+      "source_number": 19,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 327,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 379,
+      "source_number": 276,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 259,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 380,
+      "source_number": 277,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 260,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 381,
+      "source_number": 270,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 256,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 382,
+      "source_number": 310,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 291,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 384,
+      "source_number": 446,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 311,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 385,
+      "source_number": 10,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 352,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 388,
+      "source_number": 313,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 294,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 389,
+      "source_number": 342,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 307,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 392,
+      "source_number": 339,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 306,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 393,
+      "source_number": 281,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 264,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 394,
+      "source_number": 293,
+      "answer_letter": "d",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 276,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 395,
+      "source_number": 298,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 281,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 396,
+      "source_number": 288,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 271,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 397,
+      "source_number": 8,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 333,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 398,
+      "source_number": 285,
+      "answer_letter": "a",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 268,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 399,
+      "source_number": 269,
+      "answer_letter": "c",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 255,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 400,
+      "source_number": 345,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 308,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    },
+    {
+      "id": 401,
+      "source_number": 1,
+      "answer_letter": "b",
+      "answer_method": "cross_reference_existing_vnr",
+      "evidence": {
+        "source_question_id": 330,
+        "source_answer_detection": "ai_inferred_or_external_check",
+        "question_similarity": 1,
+        "option_similarity": 1,
+        "combined_similarity": 1,
+        "answer_similarity": 1
+      }
+    }
+  ]
+}
