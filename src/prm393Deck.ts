@@ -1,4 +1,5 @@
 import type { Deck } from './types'
+import prm393DetailedQuizSource from './prm393DetailedQuizBank.txt?raw'
 import prm393QuizSource from './prm393QuizBank.txt?raw'
 import prm393ModuleQuizSource from './prm393ModuleQuizBank.txt?raw'
 
@@ -10,6 +11,11 @@ interface QuizItem {
   question: string
   options: Record<OptionLabel, string>
   answer: OptionLabel
+  explanation?: string
+}
+
+interface NumberedQuizItem extends QuizItem {
+  sourceNumber: number
 }
 
 const flutterQuizItems: readonly QuizItem[] = [
@@ -459,6 +465,63 @@ const parseQuizSource = (source: string): QuizItem[] =>
       }
     })
 
+const knownInvalidDetailedQuizBlocks = new Set([163, 174, 196, 257, 299])
+
+const parseDetailedQuizSource = (source: string): NumberedQuizItem[] => {
+  const normalizedSource = source.replace(/\u23ce/gu, '\n').replace(/\r/gu, '')
+  const sections = [
+    ...normalizedSource.matchAll(/Question\s+(\d+)\.\s*([\s\S]*?)(?=\n\s*Question\s+\d+\.|$)/gu),
+  ]
+
+  if (sections.length !== 326) {
+    throw new Error(`Expected 326 detailed PRM393 questions, found ${sections.length}.`)
+  }
+
+  return sections.flatMap((section) => {
+    const sourceNumber = Number(section[1])
+    const body = section[2].trim()
+    const answerIndex = body.lastIndexOf('\nAnswer:')
+
+    if (answerIndex < 0) {
+      throw new Error(`Detailed PRM393 question ${sourceNumber} is missing its answer.`)
+    }
+
+    const prompt = body.slice(0, answerIndex).trim()
+    const answerText = body.slice(answerIndex + 1).trim()
+    const markers = [...prompt.matchAll(/^\s*([A-D])\.\s+/gmu)]
+    const hasFourOrderedOptions =
+      markers.length === 4 && markers.map((marker) => marker[1]).join('') === 'ABCD'
+    const answerMatch = answerText.match(/^Answer:\s*([A-D])\.\s*([\s\S]*)$/u)
+
+    if (!hasFourOrderedOptions || !answerMatch) {
+      if (knownInvalidDetailedQuizBlocks.has(sourceNumber)) return []
+      throw new Error(`Invalid detailed PRM393 question ${sourceNumber}.`)
+    }
+
+    const options = markers.reduce<Partial<Record<OptionLabel, string>>>((result, marker, index) => {
+      const label = marker[1].toLowerCase() as OptionLabel
+      const nextMarker = markers[index + 1]
+      result[label] = prompt
+        .slice((marker.index ?? 0) + marker[0].length, nextMarker?.index ?? prompt.length)
+        .trim()
+      return result
+    }, {})
+    const answer = answerMatch[1].toLowerCase() as OptionLabel
+
+    if (!options.a || !options.b || !options.c || !options.d || !options[answer]) {
+      throw new Error(`Detailed PRM393 question ${sourceNumber} has an incomplete option set.`)
+    }
+
+    return [{
+      sourceNumber,
+      question: prompt.slice(0, markers[0].index).trim(),
+      options: options as Record<OptionLabel, string>,
+      answer,
+      explanation: answerMatch[2].trim(),
+    }]
+  })
+}
+
 const normalizeQuestion = (question: string) =>
   question
     .toLowerCase()
@@ -476,7 +539,23 @@ const moduleQuizItems = parseQuizSource(prm393ModuleQuizSource).filter(
   (_item, index) => !duplicateModuleQuizBlocks.has(index + 1),
 )
 
-const quizItems = [...flutterQuizItems, ...parseQuizSource(prm393QuizSource), ...moduleQuizItems].filter(
+const duplicateDetailedQuizBlocks = new Set([
+  1, 2, 4, 5, 11, 12, 13, 15, 17, 26, 31, 44, 51, 53, 55, 57, 59, 62, 65, 70, 76, 92, 101, 102, 106, 109,
+  112, 114, 123, 127, 129, 131, 132, 134, 143, 147, 151, 152, 155, 157, 158, 173, 177, 178, 180, 182,
+  184, 186, 188, 202, 203, 205, 208, 217, 227, 228, 236, 243, 245, 253, 260, 267, 270, 277, 278, 282,
+  283, 287, 289, 297, 302, 303, 308, 309,
+])
+
+const detailedQuizItems = parseDetailedQuizSource(prm393DetailedQuizSource).filter(
+  (item) => !duplicateDetailedQuizBlocks.has(item.sourceNumber),
+)
+
+const quizItems = [
+  ...flutterQuizItems,
+  ...parseQuizSource(prm393QuizSource),
+  ...moduleQuizItems,
+  ...detailedQuizItems,
+].filter(
   (item, index, items) =>
     items.findIndex((candidate) => normalizeQuestion(candidate.question) === normalizeQuestion(item.question)) === index,
 )
@@ -495,7 +574,10 @@ export const prm393Deck: Deck = {
       '',
       ...optionLabels.map((label) => `${label}. ${item.options[label]}`),
     ].join('\n'),
-    back: `${item.answer}. ${item.options[item.answer]}`,
+    back: [
+      `${item.answer}. ${item.options[item.answer]}`,
+      item.explanation ? `\n\n${item.explanation}` : '',
+    ].join(''),
     tags: ['flutter', 'multiple-choice'],
     ease: 2.5,
     interval: 1,

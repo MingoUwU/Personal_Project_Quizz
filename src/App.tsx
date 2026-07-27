@@ -1920,6 +1920,19 @@ function collectChoiceMarkers(normalized: string) {
   return markers
 }
 
+function collectLineChoiceMarkers(text: string) {
+  return [...text.matchAll(/^[\t ]*([A-Da-d])[.)][\t ]+/gmu)].map((match) => {
+    const labelOffset = match[0].search(/[A-Da-d]/u)
+    const index = (match.index ?? 0) + labelOffset
+
+    return {
+      index,
+      end: (match.index ?? 0) + match[0].length,
+      label: `${match[1].toLowerCase()}.`,
+    }
+  })
+}
+
 function getChoiceLabelIndex(label: string) {
   return examChoiceOrder.indexOf(label.replace('.', '').toLowerCase() as (typeof examChoiceOrder)[number])
 }
@@ -1963,28 +1976,28 @@ function selectOrderedChoiceMarkers(markers: Array<{ index: number; end: number;
   }, [])
 }
 
-function parseChoiceContent(text: string): ChoiceContent {
-  const normalized = normalizeChoiceMarkers(text)
-  const markers = selectOrderedChoiceMarkers(collectChoiceMarkers(normalized))
-
+function parseMarkedChoiceContent(
+  text: string,
+  markers: Array<{ index: number; end: number; label: string }>,
+): ChoiceContent {
   if (markers.length < 2) {
-    return { stem: normalized, options: [] }
+    return { stem: text, options: [] }
   }
 
   const firstMarkerIndex = markers[0]?.index ?? -1
   if (firstMarkerIndex <= 0) {
-    return { stem: normalized, options: [] }
+    return { stem: text, options: [] }
   }
 
-  const stem = normalized.slice(0, firstMarkerIndex).trim()
+  const stem = text.slice(0, firstMarkerIndex).trim()
   const options = markers
     .map((marker, index) => {
       const nextMarker = markers[index + 1]
-      const nextStart = nextMarker ? nextMarker.index : normalized.length
+      const nextStart = nextMarker ? nextMarker.index : text.length
 
       return {
         label: marker.label,
-        text: normalized
+        text: text
           .slice(marker.end, nextStart)
           .trim()
           .replace(/^["'“”]+|["'“”]+$/g, ''),
@@ -1993,10 +2006,24 @@ function parseChoiceContent(text: string): ChoiceContent {
     .filter((option) => option.text.length > 0)
 
   if (options.length < 2) {
-    return { stem: normalized, options: [] }
+    return { stem: text, options: [] }
   }
 
   return { stem, options }
+}
+
+function parseChoiceContent(text: string): ChoiceContent {
+  const lineMarkers = selectOrderedChoiceMarkers(collectLineChoiceMarkers(text))
+  const lineContent = parseMarkedChoiceContent(text, lineMarkers)
+
+  if (lineContent.options.length >= 2) {
+    return lineContent
+  }
+
+  const normalized = normalizeChoiceMarkers(text)
+  const markers = selectOrderedChoiceMarkers(collectChoiceMarkers(normalized))
+
+  return parseMarkedChoiceContent(normalized, markers)
 }
 
 function formatStudyText(text: string) {
