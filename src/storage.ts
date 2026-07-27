@@ -1,9 +1,11 @@
 import { defaultState, STARTER_DECK_IDS } from './data'
-import { PRM393_DECK_ID, prm393Deck } from './prm393Deck'
+import { prm393Deck } from './prm393Deck'
 import type { AppState, Deck, ReviewRating } from './types'
+import { vnrDeck } from './vnrDeck'
 
 const STORAGE_KEY = 'memu-local-app-state'
 const PRM393_MIGRATION_KEY = 'memu-content-prm393-v4'
+const VNR_MIGRATION_KEY = 'memu-content-vnr-v1'
 const starterDeckIds = new Set<string>(STARTER_DECK_IDS)
 
 const safeJsonParse = (value: string): AppState | null => {
@@ -48,22 +50,14 @@ const sanitizeState = (state: AppState): AppState => {
   }
 }
 
-export const loadState = (): AppState => {
-  const stored = localStorage.getItem(STORAGE_KEY)
-  const parsed = stored ? safeJsonParse(stored) : null
-  const state = parsed ? sanitizeState(parsed) : defaultState
-
-  if (localStorage.getItem(PRM393_MIGRATION_KEY) === 'complete') {
-    return state
-  }
-
-  const existingDeck = state.decks.find((deck) => deck.id === PRM393_DECK_ID)
+const mergeBundledDeck = (state: AppState, bundledDeck: Deck): AppState => {
+  const existingDeck = state.decks.find((deck) => deck.id === bundledDeck.id)
   const existingCardsById = new Map(existingDeck?.cards.map((card) => [card.id, card]))
   const migratedDeck: Deck = {
-    ...prm393Deck,
-    createdAt: existingDeck?.createdAt ?? prm393Deck.createdAt,
+    ...bundledDeck,
+    createdAt: existingDeck?.createdAt ?? bundledDeck.createdAt,
     lastStudiedAt: existingDeck?.lastStudiedAt,
-    cards: prm393Deck.cards.map((card) => {
+    cards: bundledDeck.cards.map((card) => {
       const existingCard = existingCardsById.get(card.id)
 
       return existingCard
@@ -78,18 +72,38 @@ export const loadState = (): AppState => {
         : card
     }),
   }
-  const migratedState = {
+
+  return {
     ...state,
     decks: existingDeck
-      ? state.decks.map((deck) => (deck.id === PRM393_DECK_ID ? migratedDeck : deck))
+      ? state.decks.map((deck) => (deck.id === bundledDeck.id ? migratedDeck : deck))
       : [migratedDeck, ...state.decks],
-    selectedDeckId: state.selectedDeckId || PRM393_DECK_ID,
+    selectedDeckId: state.selectedDeckId || bundledDeck.id,
+  }
+}
+
+export const loadState = (): AppState => {
+  const stored = localStorage.getItem(STORAGE_KEY)
+  const parsed = stored ? safeJsonParse(stored) : null
+  let state = parsed ? sanitizeState(parsed) : defaultState
+  const completedMigrationKeys: string[] = []
+
+  if (localStorage.getItem(PRM393_MIGRATION_KEY) !== 'complete') {
+    state = mergeBundledDeck(state, prm393Deck)
+    completedMigrationKeys.push(PRM393_MIGRATION_KEY)
   }
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(migratedState))
-  localStorage.setItem(PRM393_MIGRATION_KEY, 'complete')
+  if (localStorage.getItem(VNR_MIGRATION_KEY) !== 'complete') {
+    state = mergeBundledDeck(state, vnrDeck)
+    completedMigrationKeys.push(VNR_MIGRATION_KEY)
+  }
 
-  return migratedState
+  if (completedMigrationKeys.length > 0) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+    completedMigrationKeys.forEach((key) => localStorage.setItem(key, 'complete'))
+  }
+
+  return state
 }
 
 export const saveState = (state: AppState) => {

@@ -1,0 +1,4649 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Lịch sử Đảng - đã lọc trùng và có đầy đủ đáp án",
+  "unique_questions": 357,
+  "answer_status": "Đã điền đáp án cho toàn bộ câu hỏi. Các câu nguồn đánh dấu rõ giữ nguyên; câu nguồn mơ hồ được suy luận/đối chiếu.",
+  "warning": "Một số câu ở cuối tài liệu PDF bị dính nội dung hoặc sai cấu trúc khi trích xuất. Đáp án được chọn theo bốn phương án hiển thị trong từng mục.",
+  "questions": [
+    {
+      "id": 1,
+      "source_question_number": 1,
+      "question": "Thời gian thực dân Pháp tiến hành khai thác thuộc địa lần thứ nhất ở Việt Nam khi nào ?",
+      "options": {
+        "a": "1858-1884",
+        "b": "1884-1896",
+        "c": "1896-1913.",
+        "d": "1914-1918"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 2,
+      "source_question_number": 2,
+      "question": "Trong đợt khai thác thuộc địa lần thứ nhất của thực dân Pháp ở nước ta có giai cấp mới nào được hình thành?",
+      "options": {
+        "a": "Giai cấp tư sản",
+        "b": "Giai cấp tư sản và công nhân",
+        "c": "Giai cấp công nhân.",
+        "d": "Giai cấp tiểu tư sản"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 3,
+      "source_question_number": 3,
+      "question": "Trước Chiến tranh thế giới thứ nhất, ở Việt Nam có những giai cấp nào?",
+      "options": {
+        "a": "Địa chủ phong kiến và nông dân",
+        "b": "Địa chủ phong kiến, nông dân, tư sản, tiểu tư sản và công nhân",
+        "c": "Địa chủ phong kiến, nông dân và công nhân.",
+        "d": "Địa chủ phong kiến, nông dân và tiểu tư sản"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 4,
+      "source_question_number": 4,
+      "question": "Dưới chế độ thực dân phong kiến, giai cấp nông dân Việt Nam có yêu cầu bức thiết nhất là gì?",
+      "options": {
+        "a": "Độc lập dân tộc.",
+        "b": "Ruộng đất",
+        "c": "Quyền bình đẳng nam, nữ",
+        "d": "Được giảm tô, giảm tức"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 5,
+      "source_question_number": 5,
+      "question": "Mâu thuẫn cơ bản và chủ yếu ở Việt Nam đầu thế kỷ XX là mâu thuẫn nào?",
+      "options": {
+        "a": "Mâu thuẫn giữa giai cấp nông dân với giai cấp địa chủ phong kiến",
+        "b": "Mâu thuẫn giữa giai cấp công nhân với giai cấp tư sản",
+        "c": "Mâu thuẫn giữa công nhân và nông dân với đế quốc và phong kiến",
+        "d": "Mâu thuẫn giữa dân tộc Việt Nam với đế quốc xâm lược và tay sai của chúng."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 6,
+      "source_question_number": 6,
+      "question": "Đặc điểm ra đời của giai cấp công nhân Việt Nam như thế nào?",
+      "options": {
+        "a": "Ra đời trước giai cấp tư sản, trong cuộc khai thác thuộc địa lần thứ nhất của thực dân Pháp.",
+        "b": "Phần lớn xuất thân từ nông dân.",
+        "c": "Chịu sự áp bức và bóc lột của đế quốc, phong kiến và tư sản",
+        "d": "Cả a, b và c"
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 7,
+      "source_question_number": 7,
+      "question": "Những giai cấp bị trị ở Việt Nam dưới chế độ thuộc địa của đế quốc Pháp là:",
+      "options": {
+        "a": "Công nhân và nông dân",
+        "b": "Công nhân, nông dân, tiểu tư sản",
+        "c": "Công nhân, nông dân, tiểu tư sản, tư sản dân tộc",
+        "d": "Công nhân, nông dân, tiểu tư sản, tư sản dân tộc, địa chủ vừa và nhỏ."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 8,
+      "source_question_number": 8,
+      "question": "Khi nào phong trào công nhân Việt Nam hoàn toàn trở thành một phong trào tự giác?",
+      "options": {
+        "a": "Năm 1920 (tổ chức công hội ở Sài Gòn được thành lập)",
+        "b": "Năm 1925 (cuộc bãi công Ba Son)",
+        "c": "Năm 1929 (sự ra đời ba tổ chức cộng sản)",
+        "d": "Năm 1930 (Đảng Cộng sản Việt Nam ra đời)."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 9,
+      "source_question_number": 9,
+      "question": "Nguyễn ái Quốc lựa chọn con đường giải phóng dân tộc theo khuynh hướng chính trị vô sản vào thời gian nào?",
+      "options": {
+        "a": "1917",
+        "b": "1918",
+        "c": "1919",
+        "d": "1920."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 10,
+      "source_question_number": 10,
+      "question": "Báo Đời sống công nhân là của tổ chức nào?",
+      "options": {
+        "a": "Đảng Xã hội Pháp",
+        "b": "Đảng Cộng sản Pháp",
+        "c": "Tổng Liên đoàn Lao động Pháp.",
+        "d": "Hội Liên hiệp thuộc địa"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 11,
+      "source_question_number": 11,
+      "question": "Hội Liên hiệp thuộc địa được thành lập vào năm nào?",
+      "options": {
+        "a": "1920",
+        "b": "1921.",
+        "c": "1923",
+        "d": "1924"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 12,
+      "source_question_number": 12,
+      "question": "Nguyễn ái Quốc đã đọc Sơ thảo lần thứ nhất Luận cương về vấn đề dân tộc và vấn đề thuộc địa khi nào? ở đâu?",
+      "options": {
+        "a": "7/ 1920 - Liên Xô",
+        "b": "7/ 1920 - Pháp.",
+        "c": "7/1920 - Quảng Châu (Trung Quốc)",
+        "d": "8/1920 - Trung Quốc"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 13,
+      "source_question_number": 13,
+      "question": "Sự kiện nào được Nguyễn ái Quốc đánh giá \"như chim én nhỏ báo hiệu mùa Xuân\"?",
+      "options": {
+        "a": "Cách mạng tháng Mười Nga bùng nổ và thắng lợi",
+        "b": "Sự thành lập Đảng Cộng sản Pháp",
+        "c": "Vụ mưu sát tên toàn quyền Méclanh của Phạm Hồng Thái.",
+        "d": "Sự thành lập Hội Việt Nam cách mạng thanh niên"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 14,
+      "source_question_number": 14,
+      "question": "Phong trào đòi trả tự do cho cụ Phan Bội Châu diễn ra sôi nổi năm nào?",
+      "options": {
+        "a": "1924",
+        "b": "1925.",
+        "c": "1926",
+        "d": "1927"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 15,
+      "source_question_number": 15,
+      "question": "Nguyễn ái Quốc từ Liên Xô về Quảng Châu (Trung Quốc) vào thời gian nào?",
+      "options": {
+        "a": "12/1924.",
+        "b": "12/1925",
+        "c": "11/1924",
+        "d": "10/1924"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 16,
+      "source_question_number": 16,
+      "question": "Hội Việt Nam Cách mạng Thanh niên thực hiện chủ trương \"vô sản hoá\" khi nào?",
+      "options": {
+        "a": "Cuối năm 1926 đầu năm 1927",
+        "b": "Cuối năm 1927 đầu năm 1928",
+        "c": "Cuối năm 1928 đầu năm 1929.",
+        "d": "Cuối năm 1929 đầu năm 1930"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 17,
+      "source_question_number": 17,
+      "question": "Tên chính thức của tổ chức này được đặt tại Đại hội lần thứ nhất ở Quảng Châu (tháng 5-1929) là gì?",
+      "options": {
+        "a": "Việt Nam Thanh niên cách mạng đồng chí Hội",
+        "b": "Hội Việt Nam cách mạng đồng minh",
+        "c": "Hội Việt Nam độc lập đồng minh",
+        "d": "Hội Việt Nam Cách mạng Thanh niên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 18,
+      "source_question_number": 18,
+      "question": "Việt Nam Quốc dân Đảng được thành lập vào thời gian nào?",
+      "options": {
+        "a": "12/1927.",
+        "b": "11/1926",
+        "c": "8/1925",
+        "d": "7/1925"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 19,
+      "source_question_number": 19,
+      "question": "Ai là người đã tham gia sáng lập Việt Nam Quốc dân Đảng 1927 ?",
+      "options": {
+        "a": "Tôn Quang Phiệt",
+        "b": "Trần Huy Liệu",
+        "c": "Phạm Tuấn Tài.",
+        "d": "Nguyễn Thái Học"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 20,
+      "source_question_number": 20,
+      "question": "Khởi nghĩa Yên Bái nổ ra vào thời gian nào?",
+      "options": {
+        "a": "9-2-1930.",
+        "b": "9-3-1930",
+        "c": "3-2-1930",
+        "d": "9-3-1931"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 21,
+      "source_question_number": 21,
+      "question": "Tổ chức cộng sản nào ra đời đầu tiên ở Việt Nam?",
+      "options": {
+        "a": "Hội Việt Nam cách mạng thanh niên",
+        "b": "Đông Dương cộng sản Đảng.",
+        "c": "An Nam cộng sản Đảng",
+        "d": "Đông Dương cộng sản liên đoàn"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 22,
+      "source_question_number": 22,
+      "question": "Chi bộ cộng sản đầu tiên ở Việt Nam được thành lập khi nào?",
+      "options": {
+        "a": "Cuối tháng 3/1929.",
+        "b": "Đầu tháng 3/1929",
+        "c": "4/1929",
+        "d": "5/1929"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 23,
+      "source_question_number": 23,
+      "question": "Chi bộ cộng sản đầu tiên gồm mấy đảng viên? Ai làm bí thư chi bộ?",
+      "options": {
+        "a": "5 đảng viên - Bí thư Trịnh Đình Cửu",
+        "b": "6 đảng viên - Bí thư Ngô Gia Tự",
+        "c": "7 đảng viên - Bí thư Trịnh Đình Cửu",
+        "d": "7 đảng viên - Bí thư Trần Văn Cung."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 24,
+      "source_question_number": 24,
+      "question": "Đông Dương Cộng sản Đảng và An nam Cộng sản Đảng được ra đời từ tổ chức tiền thân nào?",
+      "options": {
+        "a": "Tân Việt cách mạng Đảng",
+        "b": "Hội Việt Nam cách mạng Thanh niên.",
+        "c": "Việt Nam cách mạng đồng chí Hội",
+        "d": "Cả a, b và c"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 25,
+      "source_question_number": 25,
+      "question": "Đông Dương cộng sản liên đoàn hợp nhất vào Đảng Cộng sản Việt Nam khi nào?",
+      "options": {
+        "a": "22/2/ 1930",
+        "b": "24/2/1930.",
+        "c": "24/2/1931",
+        "d": "20/2/1931"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 26,
+      "source_question_number": 26,
+      "question": "Tổ chức Đông Dương Cộng sản Đảng được thành lập vào thời gian nào?",
+      "options": {
+        "a": "6/1927",
+        "b": "6/1928",
+        "c": "6/1929.",
+        "d": "5/1929"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 27,
+      "source_question_number": 27,
+      "question": "Tổ chức An Nam Cộng sản Đảng được thành lập vào thời gian nào?",
+      "options": {
+        "a": "6/1927",
+        "b": "6/1928",
+        "c": "8/1929.",
+        "d": "7/1929"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 28,
+      "source_question_number": 28,
+      "question": "Tổ chức Đông Dương Cộng sản liên Đoàn được thành lập vào thời gian nào?",
+      "options": {
+        "a": "7/1927",
+        "b": "1/1930.",
+        "c": "2/1930",
+        "d": "3/1930"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 29,
+      "source_question_number": 29,
+      "question": "Thời gian ra bản Tuyên đạt nêu rõ việc thành lập Đông Dương Cộng sản Liên đoàn?",
+      "options": {
+        "a": "7-1929",
+        "b": "9-1929.",
+        "c": "10-1929",
+        "d": "1-1930"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 30,
+      "source_question_number": 30,
+      "question": "Ban Thường vụ Trung ương Đảng ra Quyết nghị chấp nhận Đông Dương cộng sản liên đoàn là một bộ phận của Đảng Cộng sản Việt Nam vào thời gian nào?",
+      "options": {
+        "a": "22-2-1930",
+        "b": "20-2-1930",
+        "c": "24-2-1930.",
+        "d": "22-3-1930"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 31,
+      "source_question_number": 31,
+      "question": "Do đâu Nguyễn ái Quốc đã triệu tập và chủ trì Hội nghị thành lập Đảng đầu năm 1930?",
+      "options": {
+        "a": "Được sự uỷ nhiệm của Quốc tế Cộng sản",
+        "b": "Nhận được chỉ thị của Quốc tế Cộng sản",
+        "c": "Sự chủ động của Nguyễn ái Quốc.",
+        "d": "Các tổ chức cộng sản trong nước đề nghị"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 32,
+      "source_question_number": 32,
+      "question": "Đại biểu các tổ chức cộng sản nào đã tham dự Hội nghị thành lập Đảng đầu năm 1930?",
+      "options": {
+        "a": "Đông Dương cộng sản Đảng, An Nam cộng sản Đảng và Đông Dương cộng sản liên đoàn",
+        "b": "Đông Dương cộng sản Đảng và An Nam cộng sản Đảng.",
+        "c": "An Nam cộng sản Đảng và Đông Dương cộng sản liên đoàn",
+        "d": "Đông Dương cộng sản Đảng và Đông Dương cộng sản liên đoàn"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 33,
+      "source_question_number": 33,
+      "question": "Hội nghị thành lập Đảng Cộng sản Việt Nam đã thông qua mấy văn kiện?",
+      "options": {
+        "a": "3 văn kiện",
+        "b": "4 văn kiện",
+        "c": "5 văn kiện",
+        "d": "6 văn kiện."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 34,
+      "source_question_number": 34,
+      "question": "Hội nghị Hợp nhất thành lập Đảng CSVN (3/2/1930) thông qua các văn kiện nào sau đây:",
+      "options": {
+        "a": "Chánh cương vắn tắt",
+        "b": "Sách lược vắn tắt",
+        "c": "Điều lệ vắn tắt và Chương trình vắn tắt",
+        "d": "Cả A, B và C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 35,
+      "source_question_number": 35,
+      "question": "Nội dung nào sau đây nằm trong Cương lĩnh đầu tiên của Đảng?",
+      "options": {
+        "a": "Đánh đổ đế quốc chủ nghĩa Pháp và bọn phong kiến, làm cho nước Nam hoàn toàn độc lập.",
+        "b": "Tư sản dân quyền cách mạng là thời kỳ dự bị để làm xã hội cách mạng.",
+        "c": "Chỉ có giải phóng giai cấp vô sản thì mới giải phóng được dân tộc.",
+        "d": "Đảng có vững cách mạng mới thành công"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 36,
+      "source_question_number": 36,
+      "question": "Cương lĩnh đầu tiên của Đảng đã xác định mục tiêu chiến lược của cách mạng Việt Nam là gì?",
+      "options": {
+        "a": "Làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản.",
+        "b": "Xây dựng một nước Việt Nam dân giầu nước mạnh xã hội công bằng, dân chủ và văn minh.",
+        "c": "Cách mạng tư sản dân quyền - phản đế và điền địa - lập chính quyền của công nông bằng hình thức Xô viết, để dự bị điều kiện đi tới cách mạng xã hội chủ nghĩa.",
+        "d": "Cả a và b."
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 37,
+      "source_question_number": 37,
+      "question": "Sau Hội nghị thành lập Đảng, Ban chấp hành Trung ương lâm thời của Đảng được thành lập do ai đứng đầu?",
+      "options": {
+        "a": "Hà Huy Tập",
+        "b": "Trần Phú",
+        "c": "Lê Hồng Phong",
+        "d": "Trịnh Đình Cửu."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 38,
+      "source_question_number": 38,
+      "question": "Vào thời điểm nào Nguyễn ái Quốc gửi Quốc tế Cộng sản bản Báo cáo về việc thành lập Đảng Cộng sản Việt Nam?",
+      "options": {
+        "a": "ngày 8-2-1930",
+        "b": "Ngày 10-2-1920",
+        "c": "Ngày 18-2-1930.",
+        "d": "Ngày 28-2-1930"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 39,
+      "source_question_number": 39,
+      "question": "Văn kiện nào của Đảng đặt nhiệm vụ chống đế quốc lên hàng đầu?",
+      "options": {
+        "a": "Chính cương vắn tắt, Sách lược vắn tắt do Hội nghị thành lập Đảng thông qua.",
+        "b": "Luận cương chính trị tháng 10-1930 (Dự án cương lĩnh để thảo luận trong Đảng)",
+        "c": "Thư của Trung ương gửi cho các cấp đảng bộ (12-1930)",
+        "d": "Nghị quyết Đại hội lần thứ nhất của Đảng (3-1935)"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 40,
+      "source_question_number": 40,
+      "question": "Trong các điểm sau, chỉ rõ điểm khác nhau giữa Cương lĩnh chính trị đầu tiên của Đảng và Luận cương chính trị tháng 10-1930 là:",
+      "options": {
+        "a": "Phương hướng chiến lược của cách mạng.",
+        "b": "Chủ trương tập hợp lực lượng cách mạng.",
+        "c": "Vai trò lãnh đạo cách mạng.",
+        "d": "Phương pháp cách mạng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 41,
+      "source_question_number": 41,
+      "question": "Văn kiện nào của Đảng nhấn mạnh \"vấn đề thổ địa là cái cốt của cách mạng tư sản dân quyền\"?",
+      "options": {
+        "a": "Chính cương vắn tắt, Sách lược vắn tắt.",
+        "b": "Chỉ thị thành lập Hội phản đế đồng minh (18-11-1930).",
+        "c": "Luận cương chính trị tháng 10-1930.",
+        "d": "Chung quanh vấn đề chiến sách mới của Đảng (10-1936)."
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 42,
+      "source_question_number": 42,
+      "question": "Lần đầu tiên nhân dân Việt Nam kỷ niệm ngày Quốc tế lao động vào năm nào?",
+      "options": {
+        "a": "1930.",
+        "b": "1931",
+        "c": "1936",
+        "d": "1938"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 43,
+      "source_question_number": 43,
+      "question": "Cao trào cách mạng Việt Nam năm 1930 bắt đầu bị đế quốc Pháp đàn áp khốc liệt từ khi nào?",
+      "options": {
+        "a": "Đầu năm 1930",
+        "b": "Cuối năm 1930.",
+        "c": "Đầu năm 1931",
+        "d": "Cuối năm 1931"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 44,
+      "source_question_number": 44,
+      "question": "Tên của lực lượng vũ trang được thành lập ở Nghệ Tĩnh trong cao trào cách mạng năm 1930 là gì?",
+      "options": {
+        "a": "Du kích",
+        "b": "Tự vệ",
+        "c": "Tự vệ đỏ.",
+        "d": "Tự vệ chiến đấu"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 45,
+      "source_question_number": 45,
+      "question": "Chính quyền Xô viết ở một số vùng nông thôn Nghệ - Tĩnh được thành lập trong khoảng thời gian nào?",
+      "options": {
+        "a": "Đầu năm 1930",
+        "b": "Cuối năm 1930.",
+        "c": "Đầu năm 1931",
+        "d": "Cuối năm 1931"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 46,
+      "source_question_number": 46,
+      "question": "Nguyên nhân chủ yếu và có ý nghĩa quyết định sự bùng nổ và phát triển của cao trào cách mạng Việt Nam năm 1930?",
+      "options": {
+        "a": "Tác động tiêu cực của cuộc khủng hoảng kinh tế 1929-1933",
+        "b": "Chính sách khủng bố trắng của đế quốc Pháp",
+        "c": "Chính sách tăng cường vơ vét bóc lột của đế quốc Pháp",
+        "d": "Sự lãnh đạo của Đảng Cộng sản Việt Nam."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 47,
+      "source_question_number": 47,
+      "question": "Luận cương Chính trị do đồng chí Trần Phú khởi thảo ra đời vào thời gian nào?",
+      "options": {
+        "a": "2-1930",
+        "b": "10-1930.",
+        "c": "9-1930",
+        "d": "8-1930"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 48,
+      "source_question_number": 48,
+      "question": "Hội nghị lần thứ nhất Ban chấp hành Trung ương 10/1930 do ai chủ trì?",
+      "options": {
+        "a": "Hồ Chí Minh",
+        "b": "Lê Duẩn",
+        "c": "Trường Chinh",
+        "d": "Trần Phú."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 49,
+      "source_question_number": 49,
+      "question": "Hội nghị Ban chấp hành TƯ tháng 10 năm 1930 đã cử ra bao nhiêu uỷ viên?",
+      "options": {
+        "a": "4 uỷ viên",
+        "b": "5 uỷ viên",
+        "c": "6 uỷ viên.",
+        "d": "7 uỷ viên"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 50,
+      "source_question_number": 50,
+      "question": "Ai là Tổng Bí thư đầu tiên của Đảng?",
+      "options": {
+        "a": "Hồ Chí Minh",
+        "b": "Trần Văn Cung",
+        "c": "Trần Phú.",
+        "d": "Lê Hồng Phong"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 51,
+      "source_question_number": 51,
+      "question": "Đại hội lần thứ VII Quốc tế Cộng sản họp ở Matxcơva vào thời gian nào?",
+      "options": {
+        "a": "25-7 đến ngày 20-8-1935.",
+        "b": "25-7 đến ngày 25-8-1935",
+        "c": "20-7 đến ngày 20-8-1935",
+        "d": "10-7 đến ngày 20-7-1935"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 52,
+      "source_question_number": 52,
+      "question": "Được sự chỉ đạo của Quốc tế Cộng sản, ban lãnh đạo của Đảng ở nước ngoài được thành lập vào năm nào?",
+      "options": {
+        "a": "Năm 1933",
+        "b": "Năm 1934.",
+        "c": "Năm 1935",
+        "d": "1932"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 53,
+      "source_question_number": 53,
+      "question": "Được sự chỉ đạo của Quốc tế Cộng sản, ban lãnh đạo của Đảng ở nước ngoài do ai đứng đầu?",
+      "options": {
+        "a": "Hà Huy Tập",
+        "b": "Nguyễn Văn Cừ",
+        "c": "Trường Chinh",
+        "d": "Lê Hồng Phong."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 54,
+      "source_question_number": 54,
+      "question": "Được sự giúp đỡ của Quốc tế Cộng sản, Đảng ta đã kịp thời công bố chương trình hành động của Đảng Cộng sản Đông Dương vào thời gian nào?",
+      "options": {
+        "a": "Tháng 5 năm 1932",
+        "b": "Tháng 6 năm 1932.",
+        "c": "Tháng 7 năm 1932",
+        "d": "Tháng 8 năm 1932"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 55,
+      "source_question_number": 55,
+      "question": "Quốc tế Cộng sản họp Đại hội lần thứ 7 ở đâu khi nào?",
+      "options": {
+        "a": "Tháng 7 năm 1935, ở Béc lin.",
+        "b": "Tháng 7 năm 1935, ở Pa ri",
+        "c": "Tháng 7 năm 1935, ở Luân Đôn",
+        "d": "Tháng 7 năm 1935, ở Matxcơva."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 56,
+      "source_question_number": 56,
+      "question": "Hội nghị nào của Ban chấp hành Trung ương Đảng chủ trương tạm gác các khẩu hiệu \"độc lập dân tộc\" và \"cách mạng ruộng đất\"",
+      "options": {
+        "a": "Hội nghị họp tháng 10-1930",
+        "b": "Hội nghị họp tháng 7-1936.",
+        "c": "Hội nghị họp tháng 11-1939",
+        "d": "Hội nghị họp tháng 5-1941"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 57,
+      "source_question_number": 57,
+      "question": "Mục tiêu cụ thể trước mắt của cao trào cách mạng 1936-1939 là gì?",
+      "options": {
+        "a": "Độc lập dân tộc.",
+        "b": "Các quyền dân chủ đơn sơ.",
+        "c": "Ruộng đất cho dân cày.",
+        "d": "Tất cả các mục tiêu trên."
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 58,
+      "source_question_number": 58,
+      "question": "Cho biết đối tượng của cách mạng trong giai đoạn 1936-1939",
+      "options": {
+        "a": "Bọn đế quốc xâm lược.",
+        "b": "Địa chủ phong kiến.",
+        "c": "Đế quốc và phong kiến.",
+        "d": "Một bộ phận đế quốc xâm lược và tay sai."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 59,
+      "source_question_number": 59,
+      "question": "Phong trào Đông Dương Đại hội sôi nổi nhất năm nào?",
+      "options": {
+        "a": "1936.",
+        "b": "1937",
+        "c": "1938",
+        "d": "1939"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 60,
+      "source_question_number": 60,
+      "question": "Trong cao trào dân chủ 1936-1939 Đảng chủ trương tập hợp những lực lượng nào nào?",
+      "options": {
+        "a": "Công nhân và nông dân.",
+        "b": "Cả dân tộc Việt Nam.",
+        "c": "Công nhân, nông dân, tiểu tư sản, tư sản, địa chủ.",
+        "d": "Mọi lực lượng dân tộc và một bộ phận người Pháp ở Đông Dương."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 61,
+      "source_question_number": 61,
+      "question": "Hội nghị Ban chấp hành Trung ương Đảng họp tháng 7-1936 chủ trương thành lập mặt trận nào?",
+      "options": {
+        "a": "Mặt trận dân chủ Đông Dương.",
+        "b": "Mặt trận nhân dân phản đế Đông Dương.",
+        "c": "Mặt trận dân tộc thống nhất phản đế Đông Dương.",
+        "d": "Mặt trận phản đế đồng minh Đông Dương."
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 62,
+      "source_question_number": 62,
+      "question": "Cho biết hình thức tổ chức và đấu tranh trong giai đoạn 1936-1939?",
+      "options": {
+        "a": "Công khai, hợp pháp.",
+        "b": "Nửa công khai, nửa hợp pháp.",
+        "c": "Bí mật, bất hợp pháp.",
+        "d": "Tất cả các hình thức trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 63,
+      "source_question_number": 63,
+      "question": "Điều kiện nào tạo ra khả năng đấu tranh công khai hợp pháp cho phong trào cách mạng Đông Dương giai đoạn 1936-1939?",
+      "options": {
+        "a": "Sự xuất hiện chủ nghĩa phát xít và nguy cơ chiến tranh thế giới",
+        "b": "Chủ trương chuyển hướng chiến lược cách mạng thế giới của Quốc tế Cộng sản",
+        "c": "Mặt trận nhân dân Pháp lên cầm quyền.",
+        "d": "Tất cả các điều kiện trên"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 64,
+      "source_question_number": 64,
+      "question": "Ai là người viết tác phẩm \"Tự chỉ trích\"?",
+      "options": {
+        "a": "Nguyễn Văn Cừ.",
+        "b": "Lê Hồng Phong",
+        "c": "Hà Huy Tập",
+        "d": "Phan Đăng Lưu"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 65,
+      "source_question_number": 65,
+      "question": "Chiến tranh thế giới II bùng nổ vào thời gian nào?",
+      "options": {
+        "a": "1937",
+        "b": "1938",
+        "c": "1939.",
+        "d": "1940"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 66,
+      "source_question_number": 66,
+      "question": "Chủ trương điều chỉnh chiến lược cách mạng của Đảng được bắt đầu từ Hội nghị Trung ương nào?",
+      "options": {
+        "a": "Hội nghị Trung ương 6.",
+        "b": "Hội nghị Trung ương 7",
+        "c": "Hội nghị Trung ương 8",
+        "d": "Hội nghị Trung ương 9"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 67,
+      "source_question_number": 67,
+      "question": "Hội nghị Trung ương 6 (11-1939) họp tại đâu?",
+      "options": {
+        "a": "Tân Trào (Tuyên Quang)",
+        "b": "Bà Điểm (Gia Định).",
+        "c": "Đình Bảng (Bắc Ninh)",
+        "d": "Thái Nguyên"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 68,
+      "source_question_number": 68,
+      "question": "Quân đội phát xít Nhật vào xâm lược nước ta tháng, năm nào?",
+      "options": {
+        "a": "9- 1939",
+        "b": "9- 1940.",
+        "c": "3- 1941",
+        "d": "2-1940"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 69,
+      "source_question_number": 69,
+      "question": "Cuộc khởi nghĩa Bắc Sơn nổ ra ngày nào?",
+      "options": {
+        "a": "22/9/1940",
+        "b": "27/9/1940.",
+        "c": "23/11/1940",
+        "d": "20/11/1940"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 70,
+      "source_question_number": 70,
+      "question": "Ngày Nam Kỳ khởi nghĩa là ngày nào?",
+      "options": {
+        "a": "27-9-1940",
+        "b": "23-11-1940.",
+        "c": "13-1-1941",
+        "d": "10-1-1941"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 71,
+      "source_question_number": 71,
+      "question": "Hội nghị Trung ương lần thứ 7 của Đảng họp tại Đình Bảng (Bắc Ninh) vào thời gian nào?",
+      "options": {
+        "a": "11-1939",
+        "b": "11-1940.",
+        "c": "5-1941",
+        "d": "4-1941"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 72,
+      "source_question_number": 72,
+      "question": "Mặt trận Việt Nam độc lập đồng minh (Việt Minh) được thành lập năm nào?",
+      "options": {
+        "a": "1940",
+        "b": "1941.",
+        "c": "1942",
+        "d": "1943"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 73,
+      "source_question_number": 73,
+      "question": "Bạn hãy cho biết tên gọi của các tổ chức quần chúng trong mặt trận Việt Minh?",
+      "options": {
+        "a": "Dân chủ",
+        "b": "Cứu quốc.",
+        "c": "Phản đế",
+        "d": "Giải phóng"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 74,
+      "source_question_number": 75,
+      "question": "Hội nghị nào của Ban chấp hành Trung ương Đảng nhấn mạnh giải phóng dân tộc là nhiệm vụ bức thiết nhất",
+      "options": {
+        "a": "Hội nghị họp tháng 10-1930",
+        "b": "Hội nghị họp tháng 11-1939",
+        "c": "Hội nghị họp tháng 11-1940",
+        "d": "Hội nghị họp tháng 5-1941."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 75,
+      "source_question_number": 76,
+      "question": "Lần đầu tiên Ban chấp hành Trung ương Đảng chủ trương thành lập chính quyền nhà nước với hình thức cộng hoà dân chủ tại Hội nghị nào?",
+      "options": {
+        "a": "Hội nghị họp tháng 10-1930",
+        "b": "Hội nghị họp tháng 11-1939.",
+        "c": "Hội nghị họp tháng 11-1940",
+        "d": "Hội nghị họp tháng 5-1941"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 76,
+      "source_question_number": 78,
+      "question": "Hội nghị Ban Chấp hành TƯ Đảng 5/1941 họp ở đâu? Do ai chủ trì ?",
+      "options": {
+        "a": "Cao Bằng. Nguyễn ái Quốc.",
+        "b": "Cao Bằng. Trường Chinh",
+        "c": "Bắc Cạn. Trường Chinh",
+        "d": "Tuyên Quang. Nguyễn ái Quốc"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 77,
+      "source_question_number": 79,
+      "question": "Ban chấp hành Trung ương Đảng xác định chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trung tâm tại Hội nghị nào?",
+      "options": {
+        "a": "Hội nghị họp tháng 10-1930",
+        "b": "Hội nghị họp tháng 11-1939",
+        "c": "Hội nghị họp tháng 11-1940",
+        "d": "Hội nghị họp tháng 5-1941."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 78,
+      "source_question_number": 80,
+      "question": "Mặt trận dân tộc thống nhất phản đế Đông Dương được quyết định thành lập tại Hội nghị nào của Ban chấp hành Trung ương Đảng?",
+      "options": {
+        "a": "Hội nghị họp tháng 10-1930",
+        "b": "Hội nghị họp tháng 11-1939.",
+        "c": "Hội nghị họp tháng 11-1940",
+        "d": "Hội nghị họp tháng 5-1941"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 79,
+      "source_question_number": 81,
+      "question": "Ban chấp hành Trung ương Đảng chủ trương thành lập nước Việt Nam dân chủ cộng hoà tại Hội nghị nào?",
+      "options": {
+        "a": "Hội nghị họp tháng 10-1930",
+        "b": "Hội nghị họp tháng 11-1939",
+        "c": "Hội nghị họp tháng 11-1940",
+        "d": "Hội nghị họp tháng 5-1941."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 80,
+      "source_question_number": 82,
+      "question": "Ban chấp hành Trung ương Đảng chủ trương giải quyết vấn đề dân tộc trong khuôn khổ từng nước ở Đông Dương vào thời gian nào?",
+      "options": {
+        "a": "Tháng 10-1930",
+        "b": "Tháng 11-1939",
+        "c": "Tháng 11-1940",
+        "d": "Tháng 5-1941."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 81,
+      "source_question_number": 83,
+      "question": "Hội nghị lần thứ Tám của Ban chấp hành Trung ương Đảng (5-1941) cử ai làm Tổng bí thư?",
+      "options": {
+        "a": "Nguyễn ái Quốc",
+        "b": "Võ Văn Tần",
+        "c": "Trường Chinh.",
+        "d": "Lê Duẩn"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 82,
+      "source_question_number": 84,
+      "question": "Một đội vũ trang nhỏ được thành lập ở Cao Bằng gồm 12 chiến sĩ được thành lập vào thời gian nào?",
+      "options": {
+        "a": "Đầu năm 1941",
+        "b": "Cuối năm 1941.",
+        "c": "Đầu năm 1944",
+        "d": "Cuối năm 1944"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 83,
+      "source_question_number": 85,
+      "question": "Tổng bộ Việt Minh ra chỉ thị \"Sửa soạn khởi nghĩa\" vào thời gian nào?",
+      "options": {
+        "a": "5-1944.",
+        "b": "3-1945",
+        "c": "8-1945",
+        "d": "6-1945"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 84,
+      "source_question_number": 86,
+      "question": "Việt Nam Tuyên truyền giải phóng quân được thành lập khi nào?",
+      "options": {
+        "a": "22-12-1944.",
+        "b": "19-12-1946",
+        "c": "15-5-1945",
+        "d": "10-5-1945"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 85,
+      "source_question_number": 88,
+      "question": "Việt Nam Giải phóng quân được thành lập vào thời gian nào?",
+      "options": {
+        "a": "tháng 9-1940",
+        "b": "tháng 12-1941",
+        "c": "tháng 12-1944",
+        "d": "tháng 5-1945."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 86,
+      "source_question_number": 89,
+      "question": "Tài liệu nào sau đây được đánh giá như một văn kiện mang tính chất cương lĩnh quân sự đầu tiên của Đảng?",
+      "options": {
+        "a": "Đường cách mạng",
+        "b": "Cách đánh du kích",
+        "c": "Con đường giải phóng",
+        "d": "Chỉ thị thành lập đội Việt Nam tuyên truyền giải phóng quân."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 87,
+      "source_question_number": 90,
+      "question": "Chỉ thị \"Nhật - Pháp bắn nhau và hành động của chúng ta\" ra đời khi nào?",
+      "options": {
+        "a": "9/3/1945",
+        "b": "12/3/1945.",
+        "c": "10/3/1846",
+        "d": "12/3/1946"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 88,
+      "source_question_number": 50,
+      "question": "Bản Chỉ thị Nhật, Pháp bắn nhau và hành động của chúng ta phản ánh nội dung của Hội nghị nào?",
+      "options": {
+        "a": "Hội nghị Ban chấp hành Trung ương Đảng họp tháng 5-1941",
+        "b": "Hội nghị Ban Thường vụ Trung ương Đảng họp tháng 2-1943",
+        "c": "Hội nghị Ban Thường vụ Trung ương Đảng họp tháng 3-1945.",
+        "d": "Hội nghị quân sự cách mạng Bắc kỳ họp tháng 4-1945"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 89,
+      "source_question_number": 91,
+      "question": "Hội văn hoá cứu quốc được thành lập vào thời gian nào?",
+      "options": {
+        "a": "năm 1941",
+        "b": "năm 1943.",
+        "c": "năm 1944",
+        "d": "năm 1945"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 90,
+      "source_question_number": 92,
+      "question": "Trong cao trào vận động cứu nước 1939-1945, chiến khu cách mạng được xây dựng ở vùng Chí Linh - Đông Triều có tên là gì?",
+      "options": {
+        "a": "Trần Hưng Đạo.",
+        "b": "Hoàng Hoa Thám",
+        "c": "Lê Lợi",
+        "d": "Quang Trung"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 91,
+      "source_question_number": 93,
+      "question": "Chiến khu Hoà - Ninh - Thanh còn có tên là gì?",
+      "options": {
+        "a": "Trần Hưng Đạo",
+        "b": "Hoàng Hoa Thám",
+        "c": "Lê Lợi",
+        "d": "Quang Trung."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 92,
+      "source_question_number": 94,
+      "question": "Chiến khu cách mạng nào được gọi là Đệ tứ chiến khu",
+      "options": {
+        "a": "Trần Hưng Đạo.",
+        "b": "Hoàng Hoa Thám",
+        "c": "Lê Lợi",
+        "d": "Quang Trung"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 93,
+      "source_question_number": 95,
+      "question": "Hội nghị quân sự cách mạng Bắc Kỳ chủ trương thành lập chiến khu cách mạng nào ở Nam Kỳ?",
+      "options": {
+        "a": "Trưng Trắc",
+        "b": "Phan Đình Phùng",
+        "c": "Nguyễn Tri Phương.",
+        "d": "Hoàng Hoa Thám"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 94,
+      "source_question_number": 96,
+      "question": "Khẩu hiệu nào sau được nêu ra trong Cao trào kháng Nhật cứu nước?",
+      "options": {
+        "a": "Đánh đuổi phát xít Nhật- Pháp.",
+        "b": "Đánh đuổi phát xít Nhật",
+        "c": "Giải quyết nạn đói",
+        "d": "Chống nhổ lúa trồng đay"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 95,
+      "source_question_number": 97,
+      "question": "Cao trào kháng Nhật cứu nước đã diễn ra ở vùng rừng núi và trung du Bắc kỳ với hình thức nào là chủ yếu?",
+      "options": {
+        "a": "khởi nghĩa từng phần",
+        "b": "vũ trang tuyên truyền",
+        "c": "chiến tranh du kích cục bộ.",
+        "d": "đấu tranh báo chí"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 96,
+      "source_question_number": 98,
+      "question": "Trong cao trào kháng Nhật cứu nước, phong trào \"Phá kho thóc của Nhật để giải quyết nạn đói\" đã diễn ra mạnh mẽ ở đâu?",
+      "options": {
+        "a": "Đồng bằng Nam Bộ",
+        "b": "Đồng bằng Bắc Bộ và Bắc Trung Bộ.",
+        "c": "Đồng bằng Bắc Bộ",
+        "d": "Đồng bằng Trung Bộ"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 97,
+      "source_question_number": 99,
+      "question": "Hình thức hoạt động chủ yếu ở các đô thị trong cao trào kháng Nhật cứu nước là gì?",
+      "options": {
+        "a": "vũ trang tuyên truyền",
+        "b": "diệt ác trừ gian",
+        "c": "vũ trang tuyên truyền và diệt ác trừ gian.",
+        "d": "đấu tranh báo chí và đấu tranh nghị trường"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 98,
+      "source_question_number": 100,
+      "question": "Hội nghị quân sự cách mạng Bắc kỳ họp vào thời gian nào?",
+      "options": {
+        "a": "tháng 3-1945",
+        "b": "tháng 4-1945.",
+        "c": "tháng 5-1945",
+        "d": "tháng 6-1945"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 99,
+      "source_question_number": 101,
+      "question": "Hội nghị quân sự cách mạng Bắc kỳ do ai triệu tập?",
+      "options": {
+        "a": "Ban Thường vụ Trung ương Đảng.",
+        "b": "Tổng bộ Việt Minh",
+        "c": "Ban chấp hành Trung ương Đảng",
+        "d": "Xứ uỷ Bắc Kỳ"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 100,
+      "source_question_number": 102,
+      "question": "Tổ chức nào triệu tập Đại hội quốc dân họp tại Tân Trào?",
+      "options": {
+        "a": "Ban Thường vụ Trung ương Đảng",
+        "b": "Ban chấp hành Trung ương Đảng",
+        "c": "Tổng bộ Việt Minh.",
+        "d": "Uỷ ban khỏi nghĩa"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 101,
+      "source_question_number": 104,
+      "question": "Uỷ ban dân tộc giải phóng do ai làm chủ tịch?",
+      "options": {
+        "a": "Hồ Chí Minh.",
+        "b": "Trường Chinh",
+        "c": "Phạm Văn Đồng",
+        "d": "Võ Nguyên Giáp"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 102,
+      "source_question_number": 105,
+      "question": "Quốc dân Đại hội Tân trào họp tháng 8-1945 ở huyện nào?",
+      "options": {
+        "a": "Chiêm Hoá (Tuyên Quang)",
+        "b": "Định hoá ( Thái nguyên)",
+        "c": "Sơn Dương (Tuyên Quang).",
+        "d": "Đại Từ (Thái Nguyên)"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 103,
+      "source_question_number": 106,
+      "question": "Quốc dân Đại hội Tân trào tháng 8-1945 đã không quyết định những nội dung nào dưới đây:",
+      "options": {
+        "a": "Quyết định Tổng khởi nghĩa",
+        "b": "10 Chính sách của Việt Minh.",
+        "c": "Quyết định thành lập Uỷ ban giải phóng ở Hà Nội.",
+        "d": "Quyết định thành lập Uỷ ban giải phóng dân tộc, quy định Quốc kỳ, Quốc ca."
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 104,
+      "source_question_number": 107,
+      "question": "Hội nghị nào đã quyết định phát động toàn dân nổi dậy tổng khởi nghĩa giành chính quyền?",
+      "options": {
+        "a": "Hội nghị Ban chấp hành Trung ương Đảng",
+        "b": "Hội nghị Ban thường vụ Trung ương Đảng",
+        "c": "Hội nghị toàn quốc của Đảng.",
+        "d": "Hội nghị Tổng bộ Việt Minh"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 105,
+      "source_question_number": 108,
+      "question": "Nhân dân ta phải tiến hành tổng khởi nghĩa giành chính quyền trước khi quân Đồng minh vào Đông Dương vì:",
+      "options": {
+        "a": "đó là lúc so sánh lực lượng có lợi nhất đối với cách mạng",
+        "b": "đó là lúc kẻ thù cũ đã ngã gục nhưng kẻ thù mới chưa kịp đến",
+        "c": "quân Đồng minh có thể dựng ra một chính quyền trái với ý chí và nguyện vọng của nhân dân ta",
+        "d": "tất cả các lý do trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 106,
+      "source_question_number": 109,
+      "question": "Tình hình đất nước ta sau cách mạng tháng Tám năm 1945 được ví như hình ảnh:",
+      "options": {
+        "a": "Nước sôi lửa nóng",
+        "b": "Nước sôi lửa bỏng",
+        "c": "Ngàn cân treo sợi tóc.",
+        "d": "Trứng nước"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 107,
+      "source_question_number": 110,
+      "question": "Những khó khăn, thách thức đối với Việt Nam sau cách mạng tháng Tám - 1945:",
+      "options": {
+        "a": "Các thế lực đế quốc, phản động bao vây, chống phá",
+        "b": "Kinh tế kiệt quệ và nạn đói hoành hành",
+        "c": "Hơn 90% dân số không biết chữ",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 108,
+      "source_question_number": 111,
+      "question": "Những thuận lợi căn bản của đất nước sau cách mạng tháng Tám -",
+      "options": {
+        "a": "Cách mạng thế giới phát triển mạnh mẽ",
+        "b": "Hệ thống chính quyền cách mạng nhân dân được thiết lập",
+        "c": "Nhân dân có quyết tâm bảo vệ chế độ mới",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 109,
+      "source_question_number": 112,
+      "question": "Kẻ thù chính của cách mạng Việt Nam ngay sau Cách mạng 8- 1945?",
+      "options": {
+        "a": "Thực dân Pháp xâm lược.",
+        "b": "Tưởng Giới Thạch và tay sai",
+        "c": "Thực dân Anh xâm lược",
+        "d": "Giặc đói và giặc dốt."
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_double_period"
+    },
+    {
+      "id": 110,
+      "source_question_number": 113,
+      "question": "Sau ngày tuyên bố độc lập Chính phủ lâm thời đã xác định các nhiệm vụ cấp bách cần giải quyết:",
+      "options": {
+        "a": "Chống ngoại xâm",
+        "b": "Chống ngoại xâm và nội phản",
+        "c": "Diệt giặc đói, giặc dốt và giặc ngoại xâm.",
+        "d": "Cả ba phương án trên"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 111,
+      "source_question_number": 114,
+      "question": "Chỉ thị kháng chiến kiến quốc ra đời ngày, tháng, năm nào?",
+      "options": {
+        "a": "25/11/1945.",
+        "b": "26/11/1945",
+        "c": "25/11/1946",
+        "d": "26/11/1946"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 112,
+      "source_question_number": 115,
+      "question": "Chỉ thị Kháng chiến kiến quốc của Trung ương Đảng ngày 25/11/1945, xác định nhiệm vụ nào là trung tâm, bao trùm nhất?",
+      "options": {
+        "a": "Củng cố, bảo vệ chính quyền cách mạng.",
+        "b": "Chống thực dân Pháp xâm lược",
+        "c": "Cải thiện đời sống nhân dân",
+        "d": "Cả A, B và C"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 113,
+      "source_question_number": 116,
+      "question": "Chỉ thị kháng chiến, kiến quốc đã xác định khẩu hiệu cách mạng Việt Nam sau cách mạng tháng Tám -1945:",
+      "options": {
+        "a": "Dân tộc giải phóng",
+        "b": "Thành lập chính quyền cách mạng",
+        "c": "Dân tộc trên hết, Tổ quốc trên hết.",
+        "d": "Đoàn kết dân tộc và thế giới"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 114,
+      "source_question_number": 117,
+      "question": "Chủ trương và sách lược của Trung ương Đảng trong việc đối phó với các lực lượng đế quốc sau cách mạng tháng Tám-1945:",
+      "options": {
+        "a": "Thêm bạn bớt thù",
+        "b": "Hoa -Việt thân thiện",
+        "c": "Độc lập về chính trị, nhân nhượng về kinh tế đối với Pháp",
+        "d": "Cả ba phương án kể trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 115,
+      "source_question_number": 118,
+      "question": "Những thành tựu căn bản của cách mạng Việt Nam trong việc xây dựng và củng cố chính quyền cách mạng sau 1945 :",
+      "options": {
+        "a": "Tổ chức tổng tuyển cử và ban hành Hiến pháp",
+        "b": "Củng cố và mở rộng mặt trận Việt Minh",
+        "c": "Xây dựng và phát triển các lực lượng vũ trang nhân dân",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 116,
+      "source_question_number": 119,
+      "question": "Phong trào mà Đảng đã vận động nhân dân chống nạn mù chữ diễn ra sau cách mạng tháng Tám -1945",
+      "options": {
+        "a": "Xây dựng nếp sống văn hoá mới",
+        "b": "Bình dân học vụ.",
+        "c": "Bài trừ các tệ nạn xã hội",
+        "d": "Xoá bỏ văn hoá thực dân nô dịch phản động"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 117,
+      "source_question_number": 120,
+      "question": "Nhân dân Nam bộ đứng lên kháng chiến chống thực dân Pháp xâm lược bảo vệ chính quyền cách mạng vào ngày nào?",
+      "options": {
+        "a": "23-9-1945.",
+        "b": "23-11-1945",
+        "c": "19-12-1946",
+        "d": "10-12-1946"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 118,
+      "source_question_number": 121,
+      "question": "Đảng ta đã phát động phong trào gì để ủng hộ nhân lực cho Nam Bộ kháng chiến chống Pháp từ ngày 23-9-1945",
+      "options": {
+        "a": "Vì miền Nam \"thành đồng Tổ quốc\"",
+        "b": "Hướng về miền Nam ruột thịt",
+        "c": "Nam tiến.",
+        "d": "Cả ba phương án trên"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 119,
+      "source_question_number": 122,
+      "question": "Quốc hội đầu tiên của nước Việt Nam dân chủ cộng hoà được bầu khi nào?",
+      "options": {
+        "a": "4/1/1946",
+        "b": "5/1/1946",
+        "c": "6/1/1946.",
+        "d": "7/1/1946"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 120,
+      "source_question_number": 123,
+      "question": "Kỳ họp Quốc hội thứ nhất thành lập chính phủ đầu tiên của nước Việt Nam dân chủ cộng hoà khi nào?",
+      "options": {
+        "a": "3/2/1946",
+        "b": "2/3/1946.",
+        "c": "3/4/1946",
+        "d": "3/3/1945"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 121,
+      "source_question_number": 124,
+      "question": "Hiến pháp đầu tiên của nước Việt Nam dân chủ cộng hoà được thông qua vào ngày tháng năm nào?",
+      "options": {
+        "a": "9/11/1945",
+        "b": "10/10/1946",
+        "c": "9/11/1946.",
+        "d": "9/11/1947"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 122,
+      "source_question_number": 125,
+      "question": "Hà Nội được xác định là thủ đô của nước Việt Nam dân chủ cộng hoà vào năm nào?",
+      "options": {
+        "a": "Năm 1945",
+        "b": "Năm 1946.",
+        "c": "Năm 1954",
+        "d": "Năm 1930"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 123,
+      "source_question_number": 127,
+      "question": "Những sách lược nhân nhượng của Đảng ta với quân Tưởng và tay sai ở miền Bắc sau cách mạng tháng Tám",
+      "options": {
+        "a": "Cho Việt Quốc, Việt Cách tham gia Quốc hội và Chính phủ",
+        "b": "Cung cấp lương thực thực phẩm cho quân đội Tưởng",
+        "c": "Chấp nhận cho quân Tưởng tiêu tiền Quan kin, Quốc tệ",
+        "d": "Cả ba phương án kể trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 124,
+      "source_question_number": 128,
+      "question": "Để quân Tưởng và tay sai khỏi kiếm cớ sách nhiễu, Đảng chủ trương:",
+      "options": {
+        "a": "Dĩ hoà vi quý",
+        "b": "Hoa Việt thân thiện",
+        "c": "Biến xung đột lớn thành xung đột nhỏ, biến xung đột nhỏ thành không có xung đột.",
+        "d": "Cả hai phương án B và C"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 125,
+      "source_question_number": 129,
+      "question": "Đảng ta đã lựa chọn giải pháp gì trong mối quan hệ với thực dân Pháp sau ngày Pháp và Tưởng ký hiệp ước Trùng Khánh (28-2-1946)",
+      "options": {
+        "a": "Thương lượng và hoà hoãn với Pháp.",
+        "b": "Kháng chiến chống thực dân Pháp",
+        "c": "Nhân nhượng với quân đội Tưởng",
+        "d": "Chống cả quân đội Tưởng và Pháp"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 126,
+      "source_question_number": 130,
+      "question": "Tại sao Đảng lại lựa chọn giải pháp thương lượng với Pháp",
+      "options": {
+        "a": "Chấm dứt cuộc kháng chiến ở Nam Bộ",
+        "b": "Buộc quân Tưởng phải rút ngay về nước, tránh được tình trạng cùng một lúc phải đối phó với nhiều kẻ thù",
+        "c": "Phối hợp với Pháp tấn công Tưởng.",
+        "d": "Cả A, B và C."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 127,
+      "source_question_number": 131,
+      "question": "Sự kiện mở đầu cho sự hoà hoãn giữa Việt Nam và Pháp",
+      "options": {
+        "a": "Pháp ngừng bắn ở miền Nam",
+        "b": "Việt Nam với Pháp nhân nhượng quyền lợi ở miền Bắc",
+        "c": "Ký kết hiệp định Sơ bộ 6-3-1946 giữa Việt Nam với Pháp.",
+        "d": "Pháp và Tưởng ký hiệp ước Trùng Khánh trao đổi quyền lợi cho nhau"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 128,
+      "source_question_number": 132,
+      "question": "Sau khi ký bản Hiệp định Sơ bộ, ngày 9-3-1946, Ban thường vụ Trung ương Đảng đã ra",
+      "options": {
+        "a": "Chỉ thị kháng chiến kiến quốc",
+        "b": "Chỉ thị Hoà để tiến.",
+        "c": "Chỉ thị Toàn quốc kháng chiến",
+        "d": "Tất cả các phương án trên"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 129,
+      "source_question_number": 133,
+      "question": "Sau bản Hiệp định sơ bộ, ngày 14-9 Chủ tịch Hồ Chí Minh đã thay mặt Chính phủ ký bản Tạm ước với Chính phủ Pháp với nội dung:",
+      "options": {
+        "a": "Pháp thừa nhận các quyền dân tộc cơ bản của nước Việt Nam",
+        "b": "Chấm dứt chiến tranh ở Việt Nam.",
+        "c": "Đình chỉ xung đột ở miền Nam và sẽ tiếp tục đàm phán vào 1-1947",
+        "d": "Cả A, B và C."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 130,
+      "source_question_number": 134,
+      "question": "Cuối năm 1946, thực dân Pháp đã bội ước, liên tục tăng cường khiêu khích và lấn chiếm thêm một số địa điểm như:",
+      "options": {
+        "a": "Thành phố Hải Phòng, thị xã Lạng Sơn",
+        "b": "Đà Nẵng, Sài Gòn",
+        "c": "Hải Phòng, Hải Dương, Lào Cai, Yên Bái",
+        "d": "Thành phố Hải phòng, thị xã Lạng Sơn, Đà Nẵng, Hà Nội."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 131,
+      "source_question_number": 135,
+      "question": "Hiệp ước Hoa - Pháp được ký kết ở đâu?",
+      "options": {
+        "a": "Pari",
+        "b": "Trùng Khánh.",
+        "c": "Hương Cảng",
+        "d": "Ma Cao"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 132,
+      "source_question_number": 67,
+      "question": "Quân đội của Tưởng Giới Thạch đã rút hết khỏi miền Bắc nước ta vào thời gian nào?",
+      "options": {
+        "a": "Cuối tháng 8/1946",
+        "b": "Đầu tháng 8/1946",
+        "c": "Đầu tháng 9/1946",
+        "d": "Cuối tháng 9/1946."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 133,
+      "source_question_number": 136,
+      "question": "Hiệp định Sơ bộ được Hồ Chí Minh ký với G. Sanhtơny vào thời gian nào?",
+      "options": {
+        "a": "6-3-1946.",
+        "b": "14-9-1946",
+        "c": "19-12-1946",
+        "d": "10-12-1946"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 134,
+      "source_question_number": 137,
+      "question": "Hội nghị Phôngtennơblô diễn ra vào thời gian nào?",
+      "options": {
+        "a": "Từ 10/5 - 20/8/1945",
+        "b": "Từ 15/6 - 25/9/1946",
+        "c": "6/7 - 10/9/1946.",
+        "d": "12/8 - 30/10/1946"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 135,
+      "source_question_number": 138,
+      "question": "Chủ tịch Hồ Chí Minh ra Lời kêu gọi toàn quốc kháng chiến vào thời điểm nào",
+      "options": {
+        "a": "Đêm ngày 18-9-1946",
+        "b": "Đêm ngày 19-12-1946.",
+        "c": "Ngày 20-12-1946",
+        "d": "Cả ba phương án đều sai"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 136,
+      "source_question_number": 139,
+      "question": "Hội nghị Ban thường vụ Trung Đảng họp mở rộng quyết định phát động cuộc kháng chiến toàn quốc họp vào thời gian nào?",
+      "options": {
+        "a": "Ngày 18-12-1946",
+        "b": "Ngày 19-12-1946.",
+        "c": "Ngày 20-12-1946",
+        "d": "Ngày 22-12-1946"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 137,
+      "source_question_number": 140,
+      "question": "Cuộc tổng giao chiến lịch sử mở đầu của kháng chiến chống thực dân Pháp của quân và dân ta ở Hà Nội đã diễn ra trong",
+      "options": {
+        "a": "60 ngày đêm",
+        "b": "30 ngày đêm.",
+        "c": "12 ngày đêm",
+        "d": "90 ngày đêm"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 138,
+      "source_question_number": 141,
+      "question": "Những văn kiện nào dưới đây được coi như Cương lĩnh kháng chiến của Đảng ta:",
+      "options": {
+        "a": "Lời kêu gọi toàn quốc kháng chiến của chủ tịch Hồ Chí Minh",
+        "b": "Chỉ thị toàn dân kháng chiến của Trung ương Đảng",
+        "c": "Tác phẩm \"Kháng chiến nhất định thắng lợi\" của Tổng Bí thư Trường Chinh",
+        "d": "Cả ba phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 139,
+      "source_question_number": 142,
+      "question": "nhiệm vụ hàng đầu của nhân dân ta trong quá trình kháng chiến chống thực dân Pháp:",
+      "options": {
+        "a": "Chống đế quốc giành độc lập dân tộc.",
+        "b": "Xoá bỏ những tàn tích phong kiến đem lại ruộng đất cho nông dân",
+        "c": "Xây dựng chế độ dân chủ mới",
+        "d": "Cả ba phương án trên"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 140,
+      "source_question_number": 143,
+      "question": "Phương châm chiến lược của cuộc kháng chiến chống Pháp là:",
+      "options": {
+        "a": "Toàn dân",
+        "b": "Toàn diện",
+        "c": "Lâu dài và dựa vào sức mình là chính.",
+        "d": "Cả ba phương án trên đều sai."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 141,
+      "source_question_number": 144,
+      "question": "Tác phẩm \"Kháng chiến nhất định thắng lợi\" được phát hành khi nào?",
+      "options": {
+        "a": "6/ 1946",
+        "b": "7/ 1946",
+        "c": "7/ 1947",
+        "d": "9/1947."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 142,
+      "source_question_number": 145,
+      "question": "Tác giả tác phẩm Kháng chiến nhất định thắng lợi là ai?",
+      "options": {
+        "a": "Hồ Chí Minh",
+        "b": "Lê Duẩn",
+        "c": "Trường Chinh.",
+        "d": "Phạm Văn Đồng"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 143,
+      "source_question_number": 146,
+      "question": "Đâu là nơi được coi là căn cứ địa cách mạng của cả nước trong kháng chiến chống Pháp?",
+      "options": {
+        "a": "Tây Bắc",
+        "b": "Việt Bắc.",
+        "c": "Hà Nội",
+        "d": "Điện Biên Phủ"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 144,
+      "source_question_number": 147,
+      "question": "Chiến thắng nào đã căn bản đánh bại âm mưu đánh nhanh, thắng nhanh của thực dân Pháp?",
+      "options": {
+        "a": "Việt Bắc.",
+        "b": "Trung Du",
+        "c": "Biên Giới",
+        "d": "Hà Nam Ninh"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 145,
+      "source_question_number": 148,
+      "question": "Khi bắt đầu tiến hành xâm lược Việt Nam, thực dân Pháp đã thực hiện chiến lược:",
+      "options": {
+        "a": "Dùng người Việt đánh người Việt",
+        "b": "Lấy chiến tranh nuôi chiến tranh",
+        "c": "Đánh nhanh thắng nhanh.",
+        "d": "Hai phương án A và B"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 146,
+      "source_question_number": 149,
+      "question": "Ngày 15-10-1947, để đối phó với cuộc tấn công của thực dân Pháp lên căn cứ địa Việt Bắc, Ban thường vụ Trung ương Đảng đã đề ra",
+      "options": {
+        "a": "Chỉ thị kháng chiến, kiến quốc",
+        "b": "Chỉ thị \"Phá tan cuộc tấn công mùa Đông của giặc Pháp\".",
+        "c": "Chủ trương tiến công quân Pháp ở vùng sau lưng chúng",
+        "d": "Lời kêu gọi đánh tan cuộc tấn công lên Việt Bắc của thực dân Pháp"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 147,
+      "source_question_number": 150,
+      "question": "Một số thành quả tiêu biểu của chiến dịch Việt Bắc Thu Đông 1947",
+      "options": {
+        "a": "Tiêu diệt 7000 tên địch, phá huỷ hàng trăm xe, đánh chìm 16 ca nô và nhiều phương tiện chiến tranh khác",
+        "b": "Bảo vệ vững chắc cơ quan đầu não và căn cứ địa kháng chiến",
+        "c": "Lực lượng vũ trang ta được tôi luyện và trưởng thành",
+        "d": "Cả 3 phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 148,
+      "source_question_number": 151,
+      "question": "Sau chiến thắng Việt Bắc Thu Đông 1947 những chuyển biến lớn của tình hình thế giới ảnh hưởng đến cách mạng Việt Nam",
+      "options": {
+        "a": "Sự thắng lợi và phát triển mạnh mẽ của Liên Xô, các nước dân chủ nhân dân á - Âu và Phong trào giải phóng dân tộc trên thế giới",
+        "b": "Đế quốc Mỹ thực hiện âm mưu vừa vực dậy vừa khống chế các nước Tây Âu",
+        "c": "Thực dân Pháp vấp phải những khó khăn về kinh tế, chính trị và phong trào phản chiến ở nước Pháp phát triển",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 149,
+      "source_question_number": 152,
+      "question": "Để thúc đẩy cuộc kháng chiến tiến lên, theo sáng kiến của Chủ tịch Hồ Chí Minh, ngày 27-3-1948, Ban Thường vụ TW Đảng ra chỉ thị",
+      "options": {
+        "a": "Chống lại âm mưu thâm độc dùng người Việt đánh người Việt",
+        "b": "Phát động phong trào thi đua ái quốc.",
+        "c": "Tiến hành chiến tranh du kích trên cả nước",
+        "d": "Tất cả các phương án trên"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 150,
+      "source_question_number": 153,
+      "question": "Chiến dịch nào còn có tên là chiến dịch Hoàng Hoa Thám?",
+      "options": {
+        "a": "Trung Du",
+        "b": "Đường 18.",
+        "c": "Hà Nam Ninh",
+        "d": "Biên giới"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 151,
+      "source_question_number": 154,
+      "question": "Hội nghị văn hoá toàn quốc lần thứ hai diễn ra khi nào?",
+      "options": {
+        "a": "6/1948",
+        "b": "7/1948.",
+        "c": "7/1949",
+        "d": "8/1949"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 152,
+      "source_question_number": 155,
+      "question": "Đại hội văn hoá toàn quốc lần thứ hai xác định phương châm xây dựng nền văn hoá mới:",
+      "options": {
+        "a": "Dân tộc hoá",
+        "b": "Đại chúng hoá",
+        "c": "Khoa học hoá",
+        "d": "Cả ba phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 153,
+      "source_question_number": 156,
+      "question": "Đầu năm 1948, TW Đảng đã đề ra cách thức thực hiện cách mạng ruộng đất theo đường lối riêng biệt của cách mạng Việt Nam, đó là:",
+      "options": {
+        "a": "Cải cách ruộng đất",
+        "b": "Cải cách từng bước để dần dần thu hẹp phạm vi bóc lột của địa chủ",
+        "c": "Sửa đổi chế độ ruộng đất trong phạm vi không có hại cho nông dân.",
+        "d": "Cả A, B và C."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 154,
+      "source_question_number": 157,
+      "question": "Ban Thường vụ TƯ Đảng đã ra chỉ thị phát động phong trào thi đua ái quốc vào thời gian nào?",
+      "options": {
+        "a": "27/3/1946",
+        "b": "28/3/1946",
+        "c": "27/3/1948.",
+        "d": "28/4/1949"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 155,
+      "source_question_number": 158,
+      "question": "Trong thời kỳ kháng chiến chống Pháp, khẩu hiệu \"Tích cực cầm cự và chuẩn bị tổng phản công\" được nêu ra khi nào?",
+      "options": {
+        "a": "1948",
+        "b": "1949.",
+        "c": "1950",
+        "d": "1951"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 156,
+      "source_question_number": 159,
+      "question": "Trong kháng chiến chống Pháp, Đảng đã chủ trương mở rộng khối đại đoàn kết dân tộc với việc",
+      "options": {
+        "a": "Thống nhất Việt Minh và Liên Việt.",
+        "b": "Thành lập Mặt trận Liên Việt",
+        "c": "Mở rộng Mặt trận Việt Minh",
+        "d": "Cả 3 phương án trên"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 157,
+      "source_question_number": 160,
+      "question": "Đại hội thống nhất Mặt trận Việt Minh và Liên Việt được tổ chức vào thời gian nào?",
+      "options": {
+        "a": "3/1951.",
+        "b": "2/1952",
+        "c": "3/1953",
+        "d": "1/1953"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 158,
+      "source_question_number": 161,
+      "question": "Tháng 3-1951, Đại Hội thống nhất Việt Minh và Liên Việt thành",
+      "options": {
+        "a": "Mặt trận Việt Nam cách mạng thanh niên",
+        "b": "Mặt trận Việt Minh",
+        "c": "Mặt trận Tổ Quốc",
+        "d": "Mặt trận Liên hiệp quốc dân Việt Nam (Liên Việt)."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 159,
+      "source_question_number": 162,
+      "question": "Việt Nam đã bắt đầu đặt quan hệ ngoại giao với Trung Quốc, Liên Xô và một số nước khác vào thời điểm nào?",
+      "options": {
+        "a": "Năm 1945",
+        "b": "Năm 1948",
+        "c": "Năm 1950.",
+        "d": "Năm 1953"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 160,
+      "source_question_number": 163,
+      "question": "Để phá thế bao vây cô lập, phát triển lực lượng và giành thế chủ động, tháng 6-1950, lần đầu tiên TW Đảng đã chủ trương mở chiến dịch tiến công quy mô lớn. Đó là:",
+      "options": {
+        "a": "Chiến dịch Việt Bắc",
+        "b": "Chiến dịch Tây Bắc",
+        "c": "Chiến dịch Biên Giới.",
+        "d": "Chiến dịch Thượng Lào"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 161,
+      "source_question_number": 164,
+      "question": "ý nghĩa của chiến thắng Biên Giới Thu - Đông đối với cách mạng Việt Nam",
+      "options": {
+        "a": "Giáng một đòn nặng nề vào ý chí xâm lược của địch, đập tan tuyến phòng thủ và giải phóng hoàn toàn khu vực biên giới, nối liền Việt Nam với thế giới",
+        "b": "Đánh dấu sự trưởng thành vượt bậc về trình độ chiến đấu của quân đội Việt Nam",
+        "c": "Quân ta đã giành được thế chủ động chiến lược trên chiến trường chính Bắc Bộ, tạo bước chuyển biến lớn của kháng chiến vào giai đoạn mới",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 162,
+      "source_question_number": 165,
+      "question": "Sau 16 năm lãnh đạo cách mạng Việt Nam, lần đầu tiên Đảng đã tuyên bố ra hoạt động công khai và tiến hành. Đó là Đại hội lần thứ mấy?",
+      "options": {
+        "a": "Đại hội Đại hội Đảng toàn quốc lần thứ nhất",
+        "b": "Đại hội Đại hội Đảng toàn quốc lần thứ hai.",
+        "c": "Đại hội Đại hội Đảng toàn quốc lần thứ ba",
+        "d": "Cả ba phương án đều sai"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 163,
+      "source_question_number": 166,
+      "question": "Thời gian và địa điểm diễn ra Đại hội Đảng toàn quốc lần thứ hai",
+      "options": {
+        "a": "Tháng 3-1935, tại Ma Cao, Trung Quốc",
+        "b": "Tháng 2-1950, tại Tân Trào, Tuyên Quang",
+        "c": "Tháng 2-1951, tại Vinh Quang, Chiêm Hoá, Tuyên Quang.",
+        "d": "Tháng 3-1951, tại Việt Bắc"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 164,
+      "source_question_number": 167,
+      "question": "Tại Đại hội đại biểu toàn quốc lần thứ hai, Đảng quyết định đổi tên thành",
+      "options": {
+        "a": "Đảng Cộng sản Đông Dương",
+        "b": "Đảng Cộng sản Việt Nam",
+        "c": "Hội nghiên cứu Chủ nghĩa Mác",
+        "d": "Đảng Lao Động Việt Nam."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 165,
+      "source_question_number": 168,
+      "question": "Đại hội Đảng toàn quốc lần thứ hai của Đảng Lao Động Việt Nam đã thông qua một văn kiện mang tính chất cương lĩnh. Đó là:",
+      "options": {
+        "a": "Cương lĩnh cách mạng Việt Nam.",
+        "b": "Chính cương của Đảng Lao động Việt Nam.",
+        "c": "Luận cương về cách mạng Việt Nam",
+        "d": "Cương lĩnh của Đảng Lao Động Việt Nam"
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 166,
+      "source_question_number": 169,
+      "question": "Chính cương Đảng Lao Động Việt Nam tháng 2-1951 đã nêu ra các tính chất của xã hội Việt Nam",
+      "options": {
+        "a": "Dân chủ nhân dân, một phần thuộc địa và nửa phong kiến.",
+        "b": "Dân chủ và dân tộc",
+        "c": "Thuộc địa nửa phong kiến",
+        "d": "Dân tộc và dân chủ mới"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 167,
+      "source_question_number": 170,
+      "question": "Hai đối tượng của cách mạng Việt Nam được nêu ra tại Chính cương Đảng Lao Động Việt Nam",
+      "options": {
+        "a": "Đối tượng chính là chủ nghĩa đế quốc xâm lược, cụ thể là thực dân Pháp",
+        "b": "Đối tượng phụ là phong kiến, cụ thể là phong kiến phản động",
+        "c": "Cả hai phương án A và B",
+        "d": "Đế quốc và phong kiến Việt Nam"
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 168,
+      "source_question_number": 171,
+      "question": "Chính cương Đảng Lao Động Việt Nam đã nêu ra các nhiệm vụ cơ bản của cách mạng Việt Nam:",
+      "options": {
+        "a": "Đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất thật sự cho dân tộc",
+        "b": "Xoá bỏ những di tích phong kiến và nửa phong kiến, làm cho người cày có ruộng",
+        "c": "Phát triển chế dộ dân chủ nhân dân, gây cơ sở cho CNXH",
+        "d": "Cả 3 phương án trên"
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 169,
+      "source_question_number": 172,
+      "question": "Lực lượng tạo nên động lực cho cách mạng Việt Nam được nêu ra trong Chính cương Đảng Lao Động Việt Nam",
+      "options": {
+        "a": "Công nhân, nông dân, tiểu tư sản, tư sản dân tộc, địa chủ yêu nước (nhân dân).",
+        "b": "Công nhân, nông dân, lao động trí thức",
+        "c": "Công nhân, trí thức, tư sản dân tộc",
+        "d": "Nhân dân, địa chủ, tư sản dân tộc"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 170,
+      "source_question_number": 173,
+      "question": "Nền tảng của khối đại đoàn kết dân tộc được đảng Lao Động Việt Nam xác định tại Đại hội II",
+      "options": {
+        "a": "Công nhân và nông dân",
+        "b": "Công nhân, nông dân và tư sản dân tộc",
+        "c": "Công nhân, nông dân, lao động trí thức.",
+        "d": "Công nhân, nông dân và tiểu tư sản"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 171,
+      "source_question_number": 174,
+      "question": "Các giai đoạn của cuộc cách mạng dân tộc dân chủ nhân dân ở Việt Nam được Đảng xác định trong Cương lĩnh thứ ba (1951)",
+      "options": {
+        "a": "Giai đoạn thứ nhất chủ yếu là hoàn thành giải phóng dân tộc",
+        "b": "Giai đoạn thứ hai chủ yếu là xoá bỏ di tích phong kiến và nửa phong kiến, triệt để thực hiện người cày có ruộng",
+        "c": "Giai đoạn thứ ba là chủ yếu xây dựng cơ sở cho CNXH",
+        "d": "Cả ba phương án trên"
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 172,
+      "source_question_number": 175,
+      "question": "Điều lệ mới của Đảng Lao Động đã xác định Đảng đại diện cho quyền lợi của",
+      "options": {
+        "a": "Giai cấp công nhân Việt Nam.",
+        "b": "Nhân dân Việt Nam.",
+        "c": "Dân tộc Việt Nam.",
+        "d": "Giai cấp công nhân và nhân dân lao động Việt Nam."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 173,
+      "source_question_number": 176,
+      "question": "Nền tảng tư tưởng và kim chỉ nam được Đảng ta xác định tại Đại hội II là:",
+      "options": {
+        "a": "Chủ nghĩa Mác Lênin",
+        "b": "Tư tưởng Hồ Chí Minh",
+        "c": "Truyền thống dân tộc.",
+        "d": "Cả ba phương án trên"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 174,
+      "source_question_number": 177,
+      "question": "Đai hội Đảng toàn quốc lần thứ hai đã bầu ai làm Tổng Bí thư đảng Lao Động Việt Nam?",
+      "options": {
+        "a": "Hồ Chí Minh",
+        "b": "Trần Phú",
+        "c": "Trường Chinh.",
+        "d": "Lê Duẩn"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 175,
+      "source_question_number": 178,
+      "question": "Hôm nay buổi sáng tháng ba Mừng ngày thắng lợi Đảng ta ra đời Hai Câu thơ trên nói đến sự kiện gì",
+      "options": {
+        "a": "Hội nghị thành lập Đảng",
+        "b": "Đại hội toàn quốc thống nhất Việt Minh và Liên Việt.",
+        "c": "Đại hội Đảng toàn quốc lần II",
+        "d": "Cả ba phương án đều sai"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 176,
+      "source_question_number": 179,
+      "question": "Trong tiến trình hình thành và phát triển từ năm 1930-1951, Đảng Cộng sản Việt Nam đã đề ra bao nhiêu Cương lĩnh chính trị và vào thời điểm nào",
+      "options": {
+        "a": "Cương lĩnh năm 1930",
+        "b": "2 cương lĩnh vào năm 1930 và 1945",
+        "c": "3 cương lĩnh vào năm 1930, 1945, 1951",
+        "d": "3 cương lĩnh vào năm 1930, 1951 (năm 1930 ra đời 2 cương lĩnh)."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 177,
+      "source_question_number": 180,
+      "question": "Trong cương lĩnh thứ ba (2-1951), Đảng ta đã khẳng định nhận thức của mình về con đường cách mạng Việt Nam. Đó là:",
+      "options": {
+        "a": "Con đường cách mạng vô sản",
+        "b": "Con đường cách mạng tư sản dân quyền và thổ địa cách mạng",
+        "c": "Con đường cách mạng tư sản dân quyền",
+        "d": "Con đường cách mạng dân tộc, dân chủ, nhân dân."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 178,
+      "source_question_number": 181,
+      "question": "Đến năm 1951, Đảng ta đã tiến hành bao nhiêu kỳ Đại hội và trong khoảng thời gian nào?",
+      "options": {
+        "a": "1 kỳ Đại hội vào năm 1930",
+        "b": "2 kỳ Đại hội vào tháng 3-1935 và tháng 2-1951.",
+        "c": "3 kỳ Đại hội vào tháng 2-1930, 3-1935, 2-1951",
+        "d": "4 kỳ Đại hội và tháng 2-1930, 10-1930, 3-1935, 2-1951"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 179,
+      "source_question_number": 182,
+      "question": "Trong Cương lĩnh thứ 3 được thông qua tại Đại Hội Đảng toàn quốc lần thứ hai (2-1951), Đảng ta đã phát triển và hoàn thiện nhận thức về lực lượng cách mạng không chỉ là công nhân và nông dân mà bao gồm nhiều lực lượng dân tộc khác. Các lực lượng đó được gọi chung là:",
+      "options": {
+        "a": "Dân tộc",
+        "b": "Nhân dân.",
+        "c": "Dân chủ",
+        "d": "Vô Sản"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 180,
+      "source_question_number": 183,
+      "question": "Đại hội nào của Đảng đã quyết định tách 3 Đảng bộ Đảng Cộng sản ở 3 nước Việt Nam, Lào và Cam pu chia?",
+      "options": {
+        "a": "Đại hội I",
+        "b": "Đại hội II.",
+        "c": "Đại hội III",
+        "d": "Đại hội IV"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 181,
+      "source_question_number": 184,
+      "question": "Khối liên minh nhân dân 3 nước Việt Nam - Lào và Campuchia được thành lập khi nào?",
+      "options": {
+        "a": "2/1951",
+        "b": "3/1951.",
+        "c": "4/1951",
+        "d": "5/1951"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 182,
+      "source_question_number": 185,
+      "question": "Đại hội Chiến sĩ thi đua và Cán bộ gương mẫu toàn quốc lần thứ nhất họp năm nào?",
+      "options": {
+        "a": "1950",
+        "b": "1951",
+        "c": "1952.",
+        "d": "1953"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 183,
+      "source_question_number": 186,
+      "question": "Đại đoàn quân chủ lực đầu tiên của quân đội nhân dân Việt Nam (đại đoàn 308) được thành lập khi nào?",
+      "options": {
+        "a": "Năm 1945",
+        "b": "Năm 1947",
+        "c": "Năm 1949.",
+        "d": "Năm 1950"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 184,
+      "source_question_number": 187,
+      "question": "Đến cuối năm 1952, với sự phát triển mạnh mẽ, lực lượng vũ trang nhân dân Việt Nam đã hình thành bao nhiêu đại đoàn quân chủ lực",
+      "options": {
+        "a": "2 đại đoàn bộ binh",
+        "b": "5 đại đoàn bộ binh và công binh",
+        "c": "6 đại đoàn bộ binh và 1 đại đoàn công binh-pháo binh.",
+        "d": "7 đại đoàn bộ binh"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 185,
+      "source_question_number": 188,
+      "question": "Đại đoàn quân tiên phong là đại đoàn nào?",
+      "options": {
+        "a": "Đại đoàn 308.",
+        "b": "Đại đoàn 304",
+        "c": "Đại đoàn 316",
+        "d": "Đại đoàn 325"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 186,
+      "source_question_number": 189,
+      "question": "3 vùng tự do là hậu phương chủ yếu trong kháng chiến chống Pháp của cách mạng Việt Nam :",
+      "options": {
+        "a": "Việt Bắc, Thanh- Nghệ- Tĩnh, Liên khu V.",
+        "b": "Việt Bắc, Thanh- Nghệ -Tĩnh,",
+        "c": "Liên khu V, Nam Bộ, Thừa Thiên Huế",
+        "d": "Liên khu III, Liên khu IV, Liên khu V"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 187,
+      "source_question_number": 190,
+      "question": "Trong giai đoạn cuối cuộc kháng chiến chống Pháp, nhằm thực hiện nhiệm vụ dân chủ, Đảng ta đã chủ trương thực hiện một số giải pháp. Phương án nào sau đây không phải chủ trương của Đảng ta lúc đó:",
+      "options": {
+        "a": "Cải cách ruộng đất.",
+        "b": "Triệt để giảm tô, giảm tức",
+        "c": "Thí điểm và cải cách ruộng đất",
+        "d": "Cả hai phương án B và C."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 188,
+      "source_question_number": 191,
+      "question": "Nhằm đẩy mạnh thực hiện khẩu hiệu \"người cày có ruộng\", tháng 11- 1953, Hội Nghị BCH TW lần thứ V đã thông qua",
+      "options": {
+        "a": "Cương lĩnh ruộng đất.",
+        "b": "Chỉ thị giảm tô, giảm tức",
+        "c": "Chính sách cải cách ruộng đất",
+        "d": "Tất cả phương án trên"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 189,
+      "source_question_number": 192,
+      "question": "ý nghĩa của quá trình thực hiện khẩu hiệu \"người cày có ruộng\" đối với cuộc kháng chiến chống Pháp",
+      "options": {
+        "a": "Huy động mạnh mẽ nguồn lực con người vật chất cho kháng chiến",
+        "b": "Thúc đẩy mạnh mẽ tinh thần chiến đấu của quân và dân ta",
+        "c": "Chi viện trực tiếp cho chiến dịch Điện Biên Phủ",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 190,
+      "source_question_number": 193,
+      "question": "Một số hạn chế trong chính sách ruộng đất của Đảng ta từ 1953-1954",
+      "options": {
+        "a": "Không thấy hết được thực tiễn chuyển biến mới của sở hữu ruộng đất trong nông thôn Việt Nam trước 1953",
+        "b": "Không kế thừa kinh nghiệm của quá trình cải cách từng phần",
+        "c": "Học tập giáo điều kinh nghiệm cải cách ruộng đất của nước ngoài",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 191,
+      "source_question_number": 194,
+      "question": "Từ những nam 1950 trở đi, đế quốc Mỹ đã can thiệp ngày càng sâu vào cuộc chiến tranh ở Đông Dương. Theo đó đến năm 1954, viện trợ của Mỹ cho Pháp đã tăng bao nhiêu % trong ngân sách chiến tranh ở Đông Dương:",
+      "options": {
+        "a": "50%",
+        "b": "60%",
+        "c": "73%",
+        "d": "80%."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 192,
+      "source_question_number": 195,
+      "question": "Với thế chủ động trên chiến trường, từ cuối 1950 đến đầu 1953 quân ta đã tổ chức nhiều chiến dịch tiêu diệt, tiêu hao sinh lực địch. Đó là:",
+      "options": {
+        "a": "Chiến dịch Trung Du, chiến dịch Đường 18, chiến dịch Hà Nam Ninh.",
+        "b": "Chiến dịch Hoà Bình, chiến dịch Tây Bắc, chiến dịch Thượng Lào",
+        "c": "Chiến dịch Trung Lào, chiến dịch Tây Nguyên, chiến dịch Điện Biên Phủ",
+        "d": "Cả hai phương án A và B."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 193,
+      "source_question_number": 196,
+      "question": "Đầu năm 1953, nhằm cứu vãn tình thế ngày càng sa lầy và tìm kiếm giải pháp chính trị có \"danh dự\", Pháp và Mỹ đã đưa một viên tướng Pháp sang làm Tổng chỉ huy quân đội Pháp ở Đông Dương và lập kế hoạch quân sự mang tên:",
+      "options": {
+        "a": "Rơve",
+        "b": "Nava",
+        "c": "Pháp - Mỹ",
+        "d": "Cả 3 phương án đều sai"
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 194,
+      "source_question_number": 197,
+      "question": "Điểm mạnh của kế hoạch Nava của Pháp Mỹ trên chiến trường Đông Dương",
+      "options": {
+        "a": "Tập trung một đội quân cơ động mạnh nhất và phương tiện chiến tranh nhiều nhất.",
+        "b": "Phân tán và giải đều lực lượng ra khắp các chiến trường",
+        "c": "Tập trung tối đa lực lượng chủ lực ở đồng bằng Bắc Bộ",
+        "d": "Tất cả các phương án trên"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 195,
+      "source_question_number": 198,
+      "question": "Trên cơ sở nắm bắt những chuyển biến của tình hình, BCH TW đã đề ra chủ trương quân sự trong Đông Xuân 1953-1954:",
+      "options": {
+        "a": "Tăng cường chiến tranh du kích ở vùng sau lưng địch nhằm phân tán chủ lực địch",
+        "b": "Quân chủ lực của ta tập trung tiêu diệt sinh lực địch ở những vùng chiến lược quan trọng mà địch tương đối yếu, tranh thủ tiêu diệt địch ở những hướng địch đánh ra",
+        "c": "Thực hiện phương châm \"tích cực, chủ động, cơ động linh hoạt\"",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 196,
+      "source_question_number": 199,
+      "question": "Trong chiến cuộc Đông Xuân 1953-1954, những hướng tiến công chiến lược của quân và dân ta:",
+      "options": {
+        "a": "Tiến công ở Lai Châu, Trung Lào",
+        "b": "Tiến công ở Hạ Lào và Đông Campuchia",
+        "c": "Tiến công ở Tây Nguyên",
+        "d": "Cả ba phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 197,
+      "source_question_number": 200,
+      "question": "Ngày 20-11-1953, giữa lúc quân ta tiến quân lên Tây Bắc, Nava vội vàng phân tán lực lượng cho quân nhảy dù, tập trung một khối chủ lực mạnh ở",
+      "options": {
+        "a": "Lai Châu",
+        "b": "Điện Biên Phủ.",
+        "c": "Thượng Lào",
+        "d": "Hạ Lào và Đông Bắc Campuchia"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 198,
+      "source_question_number": 201,
+      "question": "Nava đã đưa tổng số binh lực lên Điện Biên Phủ lúc cao nhất là 16.200 quân; bố trí thành 3 phân khu, 49 cứ điểm. Mục đích là nhằm biến Điện Biên Phủ thành",
+      "options": {
+        "a": "Một tập đoàn cứ điểm mạnh nhất Đông Dương.",
+        "b": "Một nơi tập trung đông nhất khối quân chủ lực",
+        "c": "Căn cứ quân sự phòng thủ Đông Dương",
+        "d": "Tất cả các phương án trên"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 199,
+      "source_question_number": 202,
+      "question": "Bộ Chính trị đã thông qua phương án mở chiến dịch Điện Biên Phủ vào thời gian nào:",
+      "options": {
+        "a": "Đánh chắc, tiến chắc",
+        "b": "Đánh nhanh, thắng nhanh.",
+        "c": "Chắc thắng mới đánh, không chắc thắng không đánh",
+        "d": "Tất cả các phướng đều sai"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 200,
+      "source_question_number": 204,
+      "question": "Ai đã được cử làm Tư lệnh kiêm Bí thư Đảng uỷ chiến dịch Điện Biên Phủ",
+      "options": {
+        "a": "Hoàng Văn Thái",
+        "b": "Văn Tiến Dũng",
+        "c": "Phạm Văn Đồng",
+        "d": "Võ Nguyên Giáp."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 201,
+      "source_question_number": 205,
+      "question": "Trên cơ sở theo dõi tình hình địch ở Điện Biên Phủ, Đại tướng Võ Nguyên Giáp đã quyết định thay đổi để thực hiện phương châm:",
+      "options": {
+        "a": "Đánh nhanh, thắng nhanh",
+        "b": "Chắc thắng mới đánh, không chắc thắng không đánh",
+        "c": "Đánh chắc, tiến chắc.",
+        "d": "Cơ động, chủ động, linh hoạt"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 202,
+      "source_question_number": 206,
+      "question": "Chiến dịch Điện Biên Phủ đã diễn ra trong ba đợt và trong khoảng thời gian nào:",
+      "options": {
+        "a": "6-12-1953 - 25-1-1954",
+        "b": "25-11-1953 - 15-3-1954",
+        "c": "15-3-1954 - 21-7-1954",
+        "d": "13-3-1954 - 7-5-1954."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 203,
+      "source_question_number": 207,
+      "question": "Chiến dịch lịch sử Điện Biên Phủ diễn ra trong bao nhiêu ngày?",
+      "options": {
+        "a": "54",
+        "b": "55",
+        "c": "56.",
+        "d": "59"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 204,
+      "source_question_number": 208,
+      "question": "Lá cờ \"Quyết chiến, quyết thắng\" trong chiến dịch Điện Biên Phủ được trao cho đơn vị nào?",
+      "options": {
+        "a": "Đại đoàn 308",
+        "b": "Đại đoàn 312.",
+        "c": "Đại đoàn 316",
+        "d": "Đại đoàn 320."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 205,
+      "source_question_number": 209,
+      "question": "Kết thúc chiến dịch Điện Biên Phủ, quân và dân ta giành nhiều thắng lợi to lớn. Kết quả đã:",
+      "options": {
+        "a": "Tiêu diệt và bắt sống 16.200 tên địch, trong đó có viên tổng chỉ huy Đờ Catxtơri",
+        "b": "Thu toàn bộ vũ khí, cơ sở vật chất của địch ở Điện Biên Phủ",
+        "c": "Thủ tiêu toàn bộ vũ khí, phương tiện chiến tranh và bắt sống toàn bộ quân địch",
+        "d": "Cả hai phương án A và B."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 206,
+      "source_question_number": 210,
+      "question": "Đối với cách mạng Việt Nam, chiến thắng Điện Biên Phủ đã có ý nghĩa hết sức to lớn. Đó là:",
+      "options": {
+        "a": "Thắng lợi lớn nhất của cuộc đọ sức toàn diện và quyết liệt của quân dân Việt Nam với thực dân Pháp",
+        "b": "Chiến công đi vào lịch sử dân tộc như một Bạch Đằng, một Chi Lăng hay một Đống Đa trong thế kỷ XX",
+        "c": "Thắng lợi này đã giải phóng hoàn toàn miền Bắc, chấm dứt gần 1 thế kỷ ách thống trị của thực dân Pháp, đưa cách mạng Việt Nam chuyển sang xây dựng XHCN và giành độc lập, thống nhất hoàn toàn",
+        "d": "Tất cả các phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 207,
+      "source_question_number": 211,
+      "question": "Đối với cách mạng thế giới, thắng lợi của quân và dân ta trong kháng chiến chống Pháp và can thiệp Mỹ, đặc biệt là chiến thắng Điện Biên Phủ đã:",
+      "options": {
+        "a": "Góp phần làm sụp đổ hoàn toàn hệ thống thực dân kiểu cũ trên thế giới",
+        "b": "Cổ vũ mạnh mẽ nhân dân các dân tộc bị áp bức trên thế giới vùng lên đấu tranh giành độc lập",
+        "c": "Lần đầu tiên trong lịch sử một nước thuộc địa nhỏ yếu đã đánh thắng một nước thực dân hùng mạnh, đó là thắng lợi của các lực lượng hoà bình, dân chủ và XHCN trên toàn thế giới",
+        "d": "Cả ba phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 208,
+      "source_question_number": 212,
+      "question": "Nêu một số nguyên nhân thắng lợi của cuộc kháng chiến chống thực dân Pháp của Việt Nam:",
+      "options": {
+        "a": "Nhân dân Việt Nam giàu truyền thống yêu nước; được sự lãnh đạo tài tình của Đảng Cộng sản Việt Nam",
+        "b": "Có lực lượng đại đoàn kết toàn dân tộc, có chính quyền cách mạng dân chủ nhân dân và hậu phương kháng chiến vững chắc",
+        "c": "Sự liên minh chiến đấu của 3 nước Đông Dương, sự giúp đỡ của các nước Trung Quốc, Liên Xô, các nước XHCN",
+        "d": "Cả 3 phương án trên."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 209,
+      "source_question_number": 213,
+      "question": "Ngay sau khi chiến dịch Điện Biên Phủ kết thúc, Hội nghị quốc tế về chấm dứt chiến tranh Đông Dương đã diễn ra tại:",
+      "options": {
+        "a": "Pari",
+        "b": "Giơnevơ.",
+        "c": "Postdam",
+        "d": "New York"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 210,
+      "source_question_number": 214,
+      "question": "Ngày 8-5-1954, Hội nghị Giơnevơ bàn về chấm dứt cuộc chiến tranh ở Đông Dương khai mạc và kết thúc ngày:",
+      "options": {
+        "a": "19-7-1954",
+        "b": "20-7-1954",
+        "c": "21-7-1954.",
+        "d": "22-7-1954"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 211,
+      "source_question_number": 215,
+      "question": "Hiệp định Giơnevơ về chấm dứt chiến tranh, lập lại hoà bình ở Đông Dương đã quy định:",
+      "options": {
+        "a": "Các nước tham dự Hội nghị cam kết tôn trọng các quyền dân tộc cơ bản là độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ của nhân dân Việt Nam và nhân dân Lào, Campuchia",
+        "b": "Pháp rút quân ra khỏi 3 nước Đông Dương, vĩ tuyến 17 là giới tuyến quân sự tạm thời ở Việt Nam và sẽ tổng tuyển cử thống nhất đất nước vào tháng 7-1956",
+        "c": "Pháp tuyên bố công nhận Việt Nam là một nước tự do",
+        "d": "Cả hai phương án A và B."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 212,
+      "source_question_number": 216,
+      "question": "Giải pháp ký kết hiệp định Giơnevơ, lập lại hoà bình ở Đông Dương (21-7-1954) đã thể hiện rằng:",
+      "options": {
+        "a": "Tương quan so sánh lực lượng giữa ta và địch là chênh lệch lớn",
+        "b": "Việt Nam là một nước nhỏ, lại phải đương đầu với các nước đế quốc xâm lược lớn trong bối cảnh quan hệ quốc tế vô cùng phức tạp",
+        "c": "Cuộc đấu tranh giành độc lập dân tộc và tự do của Việt Nam là lâu dài, gian khổ, quanh co, giành thắng lợi từng bước là vấn đề có tính chất quy luật",
+        "d": "Cả hai phương án B và C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 213,
+      "source_question_number": 217,
+      "question": "Cuộc kháng chiến chống thực dân Pháp kéo dài bao nhiêu năm?",
+      "options": {
+        "a": "7 năm",
+        "b": "8 năm",
+        "c": "9 năm.",
+        "d": "10 năm"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 214,
+      "source_question_number": 218,
+      "question": "Trong chiến tranh xâm lược Việt Nam (1945 - 1954) quân đội Pháp ở Đông Dương đã mấy lần thay đổi Tổng chỉ huy?",
+      "options": {
+        "a": "7",
+        "b": "8.",
+        "c": "9",
+        "d": "10"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 215,
+      "source_question_number": 219,
+      "question": "Trong chiến tranh xâm lược Việt Nam (1945 - 1954) nước Pháp đã phải thay đổi bao nhiêu cao uỷ Pháp ở Đông Dương?",
+      "options": {
+        "a": "7.",
+        "b": "8",
+        "c": "9",
+        "d": "10"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 216,
+      "source_question_number": 220,
+      "question": "Quân ta vào tiếp quản Thủ đô Hà Nội ngày nào?",
+      "options": {
+        "a": "10-10-1954.",
+        "b": "10-10-1955",
+        "c": "10-10-1956",
+        "d": "1-10-1954"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 217,
+      "source_question_number": 222,
+      "question": "Nghị quyết về đường lối cách mạng miền Nam được thông qua tại Hội nghị TƯ, Đại hội nào?",
+      "options": {
+        "a": "Đại hội II",
+        "b": "Hội nghị TƯ 15 khoá II.",
+        "c": "Đại hội III",
+        "d": "Hội nghị TƯ 15 khoá III"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 218,
+      "source_question_number": 223,
+      "question": "Hội nghị nào của Đảng mở đường cho phong trào \" Đồng khởi\" ở miền Nam năm 1960?",
+      "options": {
+        "a": "Hội nghị Trung ương 12 - Khoá II của Đảng (3-1957)",
+        "b": "Hội nghị Trung ương 13 - Khoá II của Đảng (12-1957)",
+        "c": "Hội nghị Trung ương 14 - Khoá II của Đảng (11-1958)",
+        "d": "- Hội nghị Trung ương 15 - Khoá II của Đảng (1-1959)."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 219,
+      "source_question_number": 224,
+      "question": "Đường lối cách mạng xã hội chủ nghĩa ở miền Bắc được thông qua tại đại hội nào?",
+      "options": {
+        "a": "Đại hội II",
+        "b": "Đại hội III.",
+        "c": "Đại hội IV",
+        "d": "Đại hội V"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 220,
+      "source_question_number": 225,
+      "question": "Mặt trận dân tộc giải phóng miền Nam Việt Nam ra đời khi nào?",
+      "options": {
+        "a": "20/12/1960.",
+        "b": "21/12/1960",
+        "c": "20/12/1961",
+        "d": "21/12/1961"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 221,
+      "source_question_number": 226,
+      "question": "Quân dân miền Bắc đập tan cuộc tập kích chiến lược bằng B52 của đế quốc Mỹ trong bao nhiêu ngày đêm và từ ngày nào đến này nào?",
+      "options": {
+        "a": "10 ngày đêm từ 15 đến 25 tháng 10 năm 1970",
+        "b": "11 ngày đêm từ 16 đến 26 tháng 11năm 1971",
+        "c": "12 ngày đêm từ 17 đến 29 tháng 12 năm 1972",
+        "d": "12 ngày đêm từ 18 đến 30 tháng 12 năm 1972."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 222,
+      "source_question_number": 227,
+      "question": "Hiệp định Pari về chấm dứt chiến tranh lập lại hoà bình ở Việt Nam được ký khi nào?",
+      "options": {
+        "a": "20/7/1954",
+        "b": "22/12/1954",
+        "c": "27/2/1973",
+        "d": "27/1/1973."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 223,
+      "source_question_number": 228,
+      "question": "Từ năm 1945 đến nay nhân dân ta đã tham gia bầu cử bao nhiêu khoá Quốc hội?",
+      "options": {
+        "a": "9",
+        "b": "10",
+        "c": "11.",
+        "d": "12"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 224,
+      "source_question_number": 229,
+      "question": "Quốc hội khoá mấy đã quyết định đổi tên nước ta thành nước Cộng hoà xã hội chủ nghĩa Việt Nam?",
+      "options": {
+        "a": "Khoá 6.",
+        "b": "Khoá 7",
+        "c": "Khoá 8",
+        "d": "Khoá 9"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 225,
+      "source_question_number": 230,
+      "question": "Mỹ đã đưa quân viễn chinh Mỹ trực tiếp tham chiến ở Việt Nam khi nào?",
+      "options": {
+        "a": "1963",
+        "b": "1964",
+        "c": "1965.",
+        "d": "1966"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 226,
+      "source_question_number": 231,
+      "question": "Mỹ đã đưa Ngô Đình Diệm lên làm thủ tướng vào thời gian nào?",
+      "options": {
+        "a": "5/7/1954",
+        "b": "6/7/1954",
+        "c": "7/7/1954.",
+        "d": "15/7/1955"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 227,
+      "source_question_number": 232,
+      "question": "Chủ tịch Hồ Chí Minh ra lời kêu gọi đồng bào và chiến sỹ cả nước: \"Trung Nam Bắc đều là bờ cõi của ta, nước ta sẽ nhất định thống nhất, đồng bào cả nước nhất định được giải phóng\" vào thời gian nào?",
+      "options": {
+        "a": "22/7/1954.",
+        "b": "25/8/1954",
+        "c": "12/8/1955",
+        "d": "4/7/1955"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 228,
+      "source_question_number": 233,
+      "question": "Hội nghị nào của Ban Chấp hành Trung ương Đảng(khoá II) đã thông qua Nghị quyết về Đường lối cách mạng miền Nam?",
+      "options": {
+        "a": "Hội nghị lần thứ 15.",
+        "b": "Hội nghị lần thứ 16",
+        "c": "Hội nghị lần thứ 17",
+        "d": "Hội nghị lần thứ 18"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 229,
+      "source_question_number": 234,
+      "question": "Bản đề cương cách mạng miền Nam do ai chủ trì dự thảo?",
+      "options": {
+        "a": "Phạm Hùng",
+        "b": "Lê Đức Thọ",
+        "c": "Phạm Văn Đồng",
+        "d": "Lê Duẩn."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 230,
+      "source_question_number": 235,
+      "question": "Dự thảo \"Đề cương cách mạng miền Nam\" được viết vào thời gian nào?",
+      "options": {
+        "a": "7/1954",
+        "b": "8/1955",
+        "c": "8/1956.",
+        "d": "9/1957"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 231,
+      "source_question_number": 236,
+      "question": "Mỹ - Diệm đã ra luật 10/59 vào thời gian nào?",
+      "options": {
+        "a": "6/5/1959.",
+        "b": "10/5/1959",
+        "c": "10/10/1959",
+        "d": "5/10/1959"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 232,
+      "source_question_number": 237,
+      "question": "Trung ương cục miền Nam được thành lập vào thời gian nào?",
+      "options": {
+        "a": "10/1959",
+        "b": "11/1960",
+        "c": "5/1961",
+        "d": "10/1961."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 233,
+      "source_question_number": 81,
+      "question": "Ai được cử làm Bí thư Trung ương cục miền Nam đầu tiên?",
+      "options": {
+        "a": "Phạm Hùng",
+        "b": "Nguyễn Văn Linh.",
+        "c": "Phan Đăng Lưu",
+        "d": "Lê Duẩn"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 234,
+      "source_question_number": 238,
+      "question": "Trận đọ sức quyết liệt đầu tiên giữa quân và dân ta với quân viễn chinh Mỹ vào thời gian nào?",
+      "options": {
+        "a": "3/1965",
+        "b": "4/1965",
+        "c": "5/1965.",
+        "d": "6/1966"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 235,
+      "source_question_number": 239,
+      "question": "Chiến thắng Vạn Tường (Quảng Ngãi) vào thời gian nào?",
+      "options": {
+        "a": "5/1965",
+        "b": "7/1965",
+        "c": "8/1965.",
+        "d": "7/1966"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 236,
+      "source_question_number": 240,
+      "question": "Có bao nhiêu người Mỹ đã tự thiêu để phản đối chiến tranh của Mỹ ở Việt Nam?",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 237,
+      "source_question_number": 242,
+      "question": "Trong cuộc chiến tranh Việt Nam, chính phủ Mỹ đã phải thay bao nhiêu Tổng tư lệnh quân viễn chinh Mỹ ở Việt Nam?",
+      "options": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 238,
+      "source_question_number": 244,
+      "question": "Trong chiến tranh ở Việt Nam, Mỹ đã sử dụng mấy chiến lược chiến tranh?",
+      "options": {
+        "a": "2 chiến lược",
+        "b": "3 chiến lược",
+        "c": "4 chiến lược.",
+        "d": "5 chiến lược"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 239,
+      "source_question_number": 245,
+      "question": "Câu nói: \"Tất cả chúng ta hãy đoàn kết nhất trí triệu người như một, quyết tâm đánh thắng giặc Mỹ xâm lược...\" là của ai?",
+      "options": {
+        "a": "Hồ Chí Minh.",
+        "b": "Võ Nguyên Giáp",
+        "c": "Nguyễn Hữu Thọ",
+        "d": "Phạm Văn Đồng"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 240,
+      "source_question_number": 247,
+      "question": "Câu nói: \"Miền Nam là máu của máu Việt Nam, là thịt của thịt Việt Nam. Sông có thể cạn, núi có thể mòn song chân lý đó không bao giờ thay đổi\" là của ai?",
+      "options": {
+        "a": "Hồ Chí Minh.",
+        "b": "Trường Chinh",
+        "c": "Lê Duẩn",
+        "d": "Phạm Văn Đồng"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 241,
+      "source_question_number": 250,
+      "question": "Đế quốc Mỹ phải chấp nhận cuộc đàm phán với Chính phủ nước Việt Nam dân chủ cộng hoà ở Pari vào thời gian nào?",
+      "options": {
+        "a": "12/1968",
+        "b": "1/1969.",
+        "c": "3/1970",
+        "d": "4/1971"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 242,
+      "source_question_number": 251,
+      "question": "Mỹ tiến hành cuộc đảo chính ở Campuchia vào thời gian nào?",
+      "options": {
+        "a": "2/1969",
+        "b": "3/1969",
+        "c": "3/1970.",
+        "d": "5/1971"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 243,
+      "source_question_number": 252,
+      "question": "Cuộc hành quân \"Lam Sơn 719\" của Mỹ - Nguỵ bị đánh bại vào thời gian nào?",
+      "options": {
+        "a": "1970",
+        "b": "1971.",
+        "c": "1972",
+        "d": "1973"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 244,
+      "source_question_number": 255,
+      "question": "Bộ Chính trị đã ra chỉ thị về việc lãnh đạo tổng tuyển cử trong cả nước vào ngày nào?",
+      "options": {
+        "a": "30/12/1975",
+        "b": "2/1/1976",
+        "c": "3/1/1976.",
+        "d": "30/1/1976"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 245,
+      "source_question_number": 256,
+      "question": "Hội nghị hiệp thương chính trị giữa đoàn đại biểu miền Bắc và đoàn đại biểu miền Nam đã họp ở đâu?",
+      "options": {
+        "a": "Hà Nội",
+        "b": "Sài Gòn.",
+        "c": "Huế",
+        "d": "Đà Nẵng"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 246,
+      "source_question_number": 257,
+      "question": "Kỳ họp thứ nhất của Quốc hội nước Việt Nam thống nhất (Quốc hội khoá VI) được tổ chức trong thời gian nào?",
+      "options": {
+        "a": "Từ 24/6 - 3/7/1976.",
+        "b": "Từ 24/7 - 3/8/1976",
+        "c": "Từ 24/9 - 3/10/1976",
+        "d": "Từ 20/9 - 1/10/1976"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 247,
+      "source_question_number": 258,
+      "question": "Kế hoạch 5 năm lần thứ II (1976 - 1980) do đại hội IV thông qua đã đề ra bao nhiêu mục tiêu được xem là cơ bản, vừa là cấp bách?",
+      "options": {
+        "a": "2 mục tiêu.",
+        "b": "3 mục tiêu",
+        "c": "4 mục tiêu",
+        "d": "5 mục tiêu"
+      },
+      "correct_answer": "a",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 248,
+      "source_question_number": 259,
+      "question": "Đại hội IV của Đảng đã rút ra bao nhiêu bài học kinh nghiệm?",
+      "options": {
+        "a": "3",
+        "b": "4.",
+        "c": "5",
+        "d": "6"
+      },
+      "correct_answer": "b",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 249,
+      "source_question_number": 260,
+      "question": "Ngày 14/7/1986, tại Hội nghị Ban chấp hành TW đặc biệt ai được bầu làm Tổng Bí thư?",
+      "options": {
+        "a": "Đỗ Mười",
+        "b": "Nguyễn Văn Linh",
+        "c": "Lê Khả Phiêu",
+        "d": "Trường Chinh."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 250,
+      "source_question_number": 272,
+      "question": "Đại hội nào của Đảng khẳng định: Tư tưởng Hồ Chí Minh không chỉ là kết quả của sự vận dụng sáng tạo mà còn phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta?",
+      "options": {
+        "a": "Đại hội VII",
+        "b": "Đại hội VIII",
+        "c": "Đại hội IX.",
+        "d": "Đại hội VI"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 251,
+      "source_question_number": 273,
+      "question": "Sự nghiệp công nghiệp hoá, hiện đại hoá đất nước được Đảng ta xác định sẽ cơ bản hoàn thành vào năm nào?",
+      "options": {
+        "a": "2010",
+        "b": "2015",
+        "c": "2020.",
+        "d": "2030"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 252,
+      "source_question_number": 274,
+      "question": "Từ khi ra đời đến nay Đảng ta có bao nhiêu cương lĩnh?",
+      "options": {
+        "a": "2",
+        "b": "3",
+        "c": "4.",
+        "d": "5"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 253,
+      "source_question_number": 276,
+      "question": "Tại Đại hội nào của Đảng CSVN coi: \"Giáo dục là quốc sách hàng đầu\"?",
+      "options": {
+        "a": "Đại hội lần thứ V",
+        "b": "Đại hội lần thứ VI",
+        "c": "Đại hội lần thứ VII.",
+        "d": "Đại hội lần thứ VIII"
+      },
+      "correct_answer": "c",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 254,
+      "source_question_number": 268,
+      "question": "Dưới chế độ phong kiến, thực dân, nhân dân Việt Nam có yêu cầu bức thiết nhất về:",
+      "options": {
+        "a": "Độc lập dân tộc.",
+        "b": "Ruộng đất.",
+        "c": "Quyền làm việc ngày 8 tiếng.",
+        "d": "Tự do hội họp."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 255,
+      "source_question_number": 269,
+      "question": "Quan điểm “Đoàn kết, hợp tác toàn diện với Liên Xô, coi quan hệ với Liên Xô là hòn đá tảng trong chính sách đối ngoại của Việt Nam” được xác định vào giai đoạn:",
+      "options": {
+        "a": "1945-1954.",
+        "b": "1954-1975.",
+        "c": "1975-1985.",
+        "d": "1986-1996."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 256,
+      "source_question_number": 270,
+      "question": "Tổng khởi nghĩa giành chính quyền trước khi quân Đồng minh vào Đông Dương và sau khi Nhật đầu hàng Đồng minh vì:",
+      "options": {
+        "a": "Đó là lúc so sánh lực lượng có lợi nhất đối với cách mạng.",
+        "b": "Đó là lúc kẻ thù cũ ngã gục, kẻ thù mới chưa kịp đến.",
+        "c": "Đó là lúc quân Đồng minh chưa thể dựng ra một chính quyền trái với ý chí và nguyện vọng của nhân dân ta.",
+        "d": "Cả A, B, C"
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 257,
+      "source_question_number": 274,
+      "question": "Ba nguyên tắc của nền văn hoá mới: “Dân tộc hoá, đại chúng hoá, khoa học hoá” xuất hiện đầu tiên trong văn kiện:",
+      "options": {
+        "a": "Đề cương văn hóa 1943.",
+        "b": "“Lời kêu gọi toàn quốc kháng chiến” (19-12-1946).",
+        "c": "Báo cáo “Chủ nghĩa Mác và văn hoá Việt Nam” (7-1948).",
+        "d": "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH (1991)"
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 258,
+      "source_question_number": 275,
+      "question": "Hội nghị thành lập Đảng đầu năm 1930 được tổ chức vì:",
+      "options": {
+        "a": "Được sự uỷ nhiệm của Quốc tế Cộng sản.",
+        "b": "Nguyễn Ái Quốc nhận được chỉ thị của Quốc tế Cộng sản.",
+        "c": "Yêu cầu cầu thống nhất lực lượng của cách mạng Việt Nam và sự chủ động của Nguyễn Ái Quốc.",
+        "d": "Các tổ chức cộng sản trong nước đề nghị."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 259,
+      "source_question_number": 276,
+      "question": "Cở sở xã hội của hệ thống chuyên chính vô sản là:",
+      "options": {
+        "a": "Liên minh công nhân và nông dân.",
+        "b": "Giai cấp công nhân.",
+        "c": "Liên minh công nhân, nông dân và tầng lớp trí thức.",
+        "d": "Nhân dân lao động."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 260,
+      "source_question_number": 277,
+      "question": "Trong cơ chế tập trung quan liêu bao cấp, Nhà nước bao cấp bằng những hình thức:",
+      "options": {
+        "a": "Bao cấp qua giá.",
+        "b": "Bao cấp qua chế độ tem phiếu.",
+        "c": "Bao cấp theo chế độ cấp phát vốn",
+        "d": "Cả A, B,C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 261,
+      "source_question_number": 278,
+      "question": "Điểm cốt lõi của cơ sở chính trị trong hệ thống chuyên chính vô sản là:",
+      "options": {
+        "a": "Sự quản lý điều hành của nhà nước.",
+        "b": "Sự lãnh đạo toàn diện và tuyệt đối của Đảng.",
+        "c": "Vai trò nòng cốt của Mặt trận tổ quốc Việt Nam.",
+        "d": "Tính phản biện xã hội của các tổ chức xã hội."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 262,
+      "source_question_number": 279,
+      "question": "Đại biểu các tổ chức cộng sản nào đã tham dự hội nghị thành lập Đảng đầu năm 1930?",
+      "options": {
+        "a": "Đông Dương cộng sản Đảng, An Nam cộng sản Đảng, Đông Dương cộng sản liên đoàn.",
+        "b": "Đông Dương cộng sản Đảng, An Nam cộng sản Đảng.",
+        "c": "An Nam cộng sản Đảng, Đông Dương cộng sản liên đoàn.",
+        "d": "Đông Dương cộng sản Đảng, Đông Dương cộng sản liên đoàn."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 263,
+      "source_question_number": 280,
+      "question": "Đại hội đại biểu toàn quốc lần thứ IX của Đảng (4-2001) tuyên bố:",
+      "options": {
+        "a": "Việt Nam sẵn sàng là bạn, là đối tác tin cậy của các nước, nhằm tích cực hội nhập kinh tế quốc tế.",
+        "b": "Việt Nam sẵn sàng là bạn, là đối tác tin cậy của các nước trong cộng đồng quốc tế, phấn đấu vì hòa bình, độc lập và phát triển.",
+        "c": "Việt Nam sẵn sàng là bạn, là đối tác tin cậy của các nước, để tranh thủ cơ hội, xây dựng nền kinh tế độc lập tự chủ",
+        "d": "Việt Nam sẵn sàng là bạn, là đối tác tin cậy của các nước, nhằm kết hợp nội lực với ngoại lực thành nguồn lực tổng hợp phát triển đất nước."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 264,
+      "source_question_number": 281,
+      "question": "Nhà nước pháp quyền là :",
+      "options": {
+        "a": "Sản phẩm riêng của xã hội TBCN.",
+        "b": "Tinh hoa, sản phẩm trí tuệ của loài người và của nền văn minh nhân loại.",
+        "c": "Sản phẩm riêng của chế độ phong kiến phương Tây.",
+        "d": "Sản phẩm riêng của văn minh phương Đông."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 265,
+      "source_question_number": 282,
+      "question": "Đại hội VIII (6 - 1996) của Đảng xác định:",
+      "options": {
+        "a": "Cơ chế vận hành của nền kinh tế hàng hóa nhiều thành phần theo định hướng XHCN ở nước ta là “cơ chế thị trường có sự quản lý của Nhà nước”.",
+        "b": "Phát triển nền kinh tế nhiều thành phần vận hành theo cơ chế thị trường có sự quản lý của Nhà nước theo định hướng XHCN.",
+        "c": "Cơ chế vận hành của nền kinh tế hàng hóa nhiều thành phần theo định hướng XHCN ở nước ta là cơ chế thị trường.",
+        "d": "Phát triển nền kinh tế nhiều thành phần vận hành theo cơ chế thị trường có sự quản lý của Nhà nước."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 266,
+      "source_question_number": 283,
+      "question": "Khu vực châu Á – Thái Bình Dương là khu vực:",
+      "options": {
+        "a": "Có tiềm lực lớn và năng động về kinh tế.",
+        "b": "Còn tồn tại những bất ổn như vấn đề hạt nhân, tranh chấp lãnh thổ, lãnh hải, tăng cường vũ trang.",
+        "c": "Xu thế hòa bình hợp tác trong khu vực phát triển mạnh.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 267,
+      "source_question_number": 284,
+      "question": "Văn kiện nào của Đảng xác định: “Tiến hành đồng thời 3 cuộc cách mạng về quan hệ sản xuất, khoa học - kỹ thuật, tư tưởng văn hoá, trong đó cách mạng khoa học - kỹ thụât là then chốt”?",
+      "options": {
+        "a": "Báo cáo chính trị tại Đại hội lần thứ III của Đảng (1960).",
+        "b": "Báo cáo chính trị tại Đại hội lần thứ IV của Đảng (1976)",
+        "c": "Nghị quyết Hội nghị Trung ương 6 (khoá VI, 3- 1989).",
+        "d": "Cương lĩnh xây dựng đất nước thời kỳ quá độ lên CNXH (1991)."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 268,
+      "source_question_number": 285,
+      "question": "Văn kiện của Đảng đặt nhiệm vụ chống đế quốc lên hàng đầu là:",
+      "options": {
+        "a": "Chính cương vắn tắt, Sách lược vắn tắt.",
+        "b": "Luận cương chính trị tháng 10-1930.",
+        "c": "Chương trình hành động của ĐCS Đông Dương (15-6-1932).",
+        "d": "Nghị quyết Đại hội lần thứ nhất của Đảng (3-1935)."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 269,
+      "source_question_number": 286,
+      "question": "Trọng tâm của đổi mới hệ thống chính trị là:",
+      "options": {
+        "a": "Đổi mới tổ chức và phương thức hoạt động của Đảng, Nhà nước và Mặt trận Tổ quốc.",
+        "b": "Xây dựng, hoàn thiện hệ thống pháp luật.",
+        "c": "Đổi mới tổ chức và phương thức hoạt động của Quốc hội.",
+        "d": "Từng bước hiện đại hoá Nhà nước pháp quyền của dân, do dân, vì dân."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 270,
+      "source_question_number": 287,
+      "question": "Mục đích căn bản của nền kinh tế thị trường định hướng XHCN ở nước ta là:",
+      "options": {
+        "a": "Mở rộng thị trường và phát triền đồng bộ các loại thị trường.",
+        "b": "Phát triển LLSX, phát triển kinh tế để xây dựng cơ sở vật chất – kỹ thuật của CNXH, nâng cao đời sống nhân dân.",
+        "c": "Hội nhập kinh tế quốc tế.",
+        "d": "Tiến hành CNH, HĐH đất nước."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 271,
+      "source_question_number": 288,
+      "question": "Thuật ngữ \"chính sách xã hội\" lần đầu tiên được đưa ra tại Đại hội:",
+      "options": {
+        "a": "Đại hội lần thứ VI (1986) của Đảng.",
+        "b": "Đại hội lần thứ VII (1991) của Đảng.",
+        "c": "Đại hội lần thứ VIII (1996) của Đảng.",
+        "d": "Đại hội lần thứ IX (2001) của Đảng."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 272,
+      "source_question_number": 289,
+      "question": "Tên của lực lượng vũ trang được thành lập ở Nghệ Tĩnh trong cao trào cách mạng năm 1930 là:",
+      "options": {
+        "a": "Du kích.",
+        "b": "Tự vệ.",
+        "c": "Tự vệ đỏ.",
+        "d": "Tự vệ chiến đấu."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 273,
+      "source_question_number": 290,
+      "question": "Một trong những mục tiêu cơ bản của CNH ở nước ta là:",
+      "options": {
+        "a": "Cải biến nước ta thành một nước công – nông nghiệp có cơ sở vật chất kỹ thuật hiện đại, có cơ cấu kinh tế hợp lý.",
+        "b": "Cải biến nước ta thành một nước công nghiệp có cơ sở vật chất kỹ thuật hiện đại, có cơ cấu kinh tế hợp lý.",
+        "c": "Cải biến nước ta thành một nước nông nghiệp phát triển, có cơ sở vật chất kỹ thuật hiện đại, có cơ cấu kinh tế hợp lý.",
+        "d": "Cải biến nước ta thành một nước công nghiệp nhẹ phát triển, có cơ sở vật chất kỹ thuật hiện đại, có cơ cấu kinh tế hợp lý."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 274,
+      "source_question_number": 291,
+      "question": "Phương thức tiến hành CNH được Đại hội lần thứ VI (1986) của xác định là:",
+      "options": {
+        "a": "Phải xuất phát từ nhu cầu thực tiễn, coi trọng tính khả thi và tính hiệu quả của các chương trình CNH.",
+        "b": "Quá trình CNH phải được tiến hành từng bước, phù hợp với trình độ LLSX trong thời kỳ quá độ lên CNXH.",
+        "c": "CNH được tiến hành trong nền kinh tế nhiều thành phần và nhiều hình thức sở hữu, gắn với nền kinh tế mở.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 275,
+      "source_question_number": 292,
+      "question": "Quan điểm của Đảng về mối quan hệ giữa phát triển kinh tế với thực hiện chính sách xã hội là:",
+      "options": {
+        "a": "Phát triển kinh tế là cơ sở và tiền đề để thực hiện các chính sách xã hội.",
+        "b": "Thực hiện tốt các chính sách xã hội là động lực thúc đẩy phát triển kinh tế.",
+        "c": "Phát triển kinh tế là cơ sở và tiền đề để thực hiện các chính sách xã hội, đồng thời thực hiện tốt các chính sách xã hội là động lực thúc dẩy phát triển kinh tế.",
+        "d": "Phát triển kinh tế và thực hiện chính sách xã hội không liên quan trực tiếp và tác động qua lại"
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 276,
+      "source_question_number": 293,
+      "question": "Hạn chế trong đường lối công nghiệp hóa thời kỳ 1961-1965:",
+      "options": {
+        "a": "Chưa hướng vào mục tiêu trung tâm phục vụ sản xuất nông nghiệp và hàng tiêu dùng.",
+        "b": "Quan niệm về công nghiệp hoá còn giản đơn, giáo điều.",
+        "c": "Đầu tư quá nhiều vào xây dựng cơ bản trong điều kiện có chiến tranh phá hoại.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 277,
+      "source_question_number": 294,
+      "question": "Quan điểm cơ bản trong chính sách xã hội thời kỳ đổi mới là:",
+      "options": {
+        "a": "Ưu tiên mục tiêu công bằng xã hội.",
+        "b": "Ưu tiên mục tiêu xã hội trên mục tiêu kinh tế.",
+        "c": "Kết hợp các mục tiêu kinh tế với các mục tiêu xã hội.",
+        "d": "Chú trọng các mục tiêu kinh tế, từng bước thực hiện mục tiêu xã hội."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 278,
+      "source_question_number": 295,
+      "question": "Yêu cầu, nhiệm vụ của cách mạng Việt Nam trong những năm 1975- 1985 là:",
+      "options": {
+        "a": "Tham gia vào phân công lao động quốc tế.",
+        "b": "Tăng tính tùy thuộc lẫn nhau, nâng cao sự hiểu biết giữa Việt Nam với các quốc gia khác.",
+        "c": "Phá thế bị bao vây, cấm vận, chống tụt hậu về kinh tế, thu hẹp khoảng cách phát triển giữa nước ta với các quốc gia khác.",
+        "d": "Mở rộng thị trường, trao đổi hàng hóa."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 279,
+      "source_question_number": 296,
+      "question": "Đại hội lần thứ V (1982) của Đảng xác định:",
+      "options": {
+        "a": "Bảo vệ và phát triển mối quan hệ đặc biệt Việt Nam – Lào – Campuchia.",
+        "b": "Sẵn sàng thiết lập, phát triển quan hệ hữu nghị và hợp tác với Lào và Campuchia.",
+        "c": "Quan hệ Việt Nam – Lào – Campuchia có ý nghĩa sống còn đối với vận mệnh của ba dân tộc.",
+        "d": "Chú trọng củng cố, tăng cường hợp tác về mọi mặt với Lào và Campuchia."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 280,
+      "source_question_number": 297,
+      "question": "Đường lối kháng chiến chống Mỹ cứu nước được thông qua tại Đại hội lần thứ:",
+      "options": {
+        "a": "Đại hội lần thứ II (1951)",
+        "b": "Đại hội lần thứ III (1960)",
+        "c": "Đại hội lần thứ IV (1976)",
+        "d": "Đại hội lần thứ V (1982)"
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 281,
+      "source_question_number": 298,
+      "question": "Năm quan điểm cơ bản chỉ đạo quá trình phát triển văn hoá trong thời kỳ công nghiệp hoá, hiện đại hoá đất nước được đưa ra tại:",
+      "options": {
+        "a": "Đại hội lần thứ VII (1991) của Đảng.",
+        "b": "Đại hội lần thứ VIII (1996) của Đảng.",
+        "c": "Hội nghị Trung ương 5 (khoá VIII, 7-1998).",
+        "d": "Đại hội lần thứ IX (2001) của Đảng."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 282,
+      "source_question_number": 299,
+      "question": "Khái niệm “chặng đường đầu tiên” của thời kỳ quá độ được đưa ra tại:",
+      "options": {
+        "a": "Đại hội lần thứ IV (1976) của Đảng.",
+        "b": "Đại hội lần thứ V (1982) của Đảng.",
+        "c": "Hội nghị Trung ương 6 (khoá VI, 3- 1989).",
+        "d": "Đại hội lần thứ VII (1991) của Đảng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 283,
+      "source_question_number": 300,
+      "question": "Mục tiêu cụ thể, trước mắt của cao trào cách mạng 1936-1939 là:",
+      "options": {
+        "a": "Độc lập dân tộc.",
+        "b": "Hòa bình, dân sinh, dân chủ.",
+        "c": "Ruộng đất cho dân cày.",
+        "d": "Tất cả các mục tiêu trên."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 284,
+      "source_question_number": 301,
+      "question": "Những văn kiện nào dưới đây được coi như Cương lĩnh kháng chiến của Đảng?",
+      "options": {
+        "a": "Lời kêu gọi toàn quốc kháng chiến của Chủ tịch Hồ Chí Minh.",
+        "b": "Chỉ thị “Toàn dân kháng chiến” của Trung ương Đảng.",
+        "c": "Tác phẩm “Kháng chiến nhất định thắng lợi” của đồng chí Trường Chinh.",
+        "d": "Cả A, B, C"
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 285,
+      "source_question_number": 302,
+      "question": "Trong các điểm sau, điểm khác nhau giữa Cương lĩnh chính trị đầu tiên của Đảng và Luận cương chính trị tháng 10-1930 là:",
+      "options": {
+        "a": "Phương hướng chiến lược của cách mạng.",
+        "b": "Chủ trương tập hợp lực lượng cách mạng",
+        "c": "Vai trò lãnh đạo cách mạng.",
+        "d": "Phương pháp cách mạng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 286,
+      "source_question_number": 303,
+      "question": "Đại hội đại biểu toàn quốc lần thứ VII của Đảng (6-1991) xác định:",
+      "options": {
+        "a": "Việt Nam muốn là bạn với tất cả các nước, để học tập kinh nghiệm quản lý của nước ngoài, tiếp cận thị trường thế giới.",
+        "b": "Việt Nam muốn đổi mới phương thức hợp tác, chú trọng hiệu quả hợp tác trên tinh thần bình đẳng.",
+        "c": "Việt Nam muốn là bạn với tất cả các nước trong cộng đồng thế giới, phấn đấu vì hòa bình, độc lập và phát triển.",
+        "d": "Việt Nam muốn là bạn với tất cả các nước, mở rộng cửa để tiếp thu vốn, công nghệ."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 287,
+      "source_question_number": 304,
+      "question": "Bộ Chính trị đã chỉ rõ nhiệm vụ chính của miền Bắc trong thời kỳ 1973-1975 là:",
+      "options": {
+        "a": "Đánh bại chiến tranh phá hoại bằng thuỷ quân của đế quốc Mỹ.",
+        "b": "Chuyển hướng các hoạt động kinh tế, sản xuất phù hợp với hoàn cảnh chiến tranh phá hoại.",
+        "c": "Ra sức chi viện cho các nước bạn Lào, Campuchia.",
+        "d": "Đẩy mạnh phát triển các ngành công nghiệp, đặc biệt là công nghiệp nặng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 288,
+      "source_question_number": 306,
+      "question": "Đảng Cộng sản Việt Nam ra đời là sự kết hợp của:",
+      "options": {
+        "a": "Chủ nghĩa Mác - Lênin với phong trào yêu nước.",
+        "b": "Chủ nghĩa Mác - Lênin với phong trào yêu nước và phong trào công nhân.",
+        "c": "Chủ nghĩa Mác - Lênin với phong trào công nhân.",
+        "d": "Chủ nghĩa Mác - Lênin với phong trào đấu tranh theo khuynh hướng phong kiến."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 289,
+      "source_question_number": 307,
+      "question": "Nền tảng và động lực của CNH, HĐH ở nước ta thời kỳ đổi mới là:",
+      "options": {
+        "a": "Nguồn nhân lực.",
+        "b": "Khoa học và công nghệ.",
+        "c": "Kinh tế thị trường định hướng XHCN.",
+        "d": "Hội nhập kinh tế quốc tế."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 290,
+      "source_question_number": 308,
+      "question": "Hình thức hoạt động chủ yếu ở các đô thị trong cao trào kháng Nhật cứu nước là:",
+      "options": {
+        "a": "Vũ trang tuyên truyền.",
+        "b": "Diệt ác, trừ gian.",
+        "c": "Vũ trang tuyên truyền và diệt ác, trừ gian.",
+        "d": "Đấu tranh báo trí và đấu tranh nghị trường."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 291,
+      "source_question_number": 310,
+      "question": "Cơ chế vận hành của hệ thống chính trị thời kỳ đổi mới là:",
+      "options": {
+        "a": "Nhà nước quản lý, nhân dân làm chủ.",
+        "b": "Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ.",
+        "c": "Đảng lãnh đạo, Nhà nước quản lý.",
+        "d": "Đảng lãnh đạo, nhân dân làm chủ."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 292,
+      "source_question_number": 311,
+      "question": "Kinh tế thị trường là sản phẩm riêng có của:",
+      "options": {
+        "a": "Nhà nước tư sản.",
+        "b": "Chủ nghĩa tư bản.",
+        "c": "Thành tựu phát triển chung của nhân loại.",
+        "d": "Văn minh phương Tây."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 293,
+      "source_question_number": 312,
+      "question": "Phong trào công nhân Việt Nam hoàn toàn trở thành một phong trào tự giác vào:",
+      "options": {
+        "a": "Năm 1920 (tổ chức Công hội ở Sài Gòn được thành lập).",
+        "b": "Năm 1925 (cuộc bãi công Ba Son).",
+        "c": "Năm 1929 (sự ra đời của các tổ chức cộng sản)",
+        "d": "Năm 1930 (ĐCSVN ra đời)."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 294,
+      "source_question_number": 313,
+      "question": "Hội nghị Trung ương lần thứ 15 (1-1959) xác định:",
+      "options": {
+        "a": "Tiếp tục thế giữ gìn lực lượng.",
+        "b": "Đấu tranh đòi thi hành Hiệp định Giơnevơ.",
+        "c": "Lấy đấu tranh chính trị là chủ yếu.",
+        "d": "Nhân dân miền Nam phải dùng con đường bạo lực cách mạng để tự giải phóng mình."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 295,
+      "source_question_number": 316,
+      "question": "Đặc điểm chủ yếu của cơ chế tập trung quan liêu bao cấp là:",
+      "options": {
+        "a": "Nhà nước quản lý nền kinh tế dựa trên cơ chế thị trường.",
+        "b": "Nhà nước quản lý nền kinh tế chủ yếu bằng mệnh lệnh hành chính; quan hệ hàng hóa - tiền tệ bị coi nhẹ; nền kinh tế khép kín về LLSX.",
+        "c": "Bộ máy quản lý gọn nhẹ, đơn giản, năng động.",
+        "d": "Thừa nhận sự tồn tại của nhiều thành phần kinh tế trong thời kỳ quá độ."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 296,
+      "source_question_number": 317,
+      "question": "Nguyên nhân chủ yếu, có ý nghĩa quyết định sự bùng nổ và phát triển của phong trào cách mạng Việt Nam những năm 1930 -1939 là:",
+      "options": {
+        "a": "Tác động tiêu cực của cuộc khủng hoảng kinh tế 1929-1933.",
+        "b": "Chính sách khủng bố trắng của đế quốc Pháp.",
+        "c": "Chính sách tăng cường vơ vét, bóc lột của đế quốc Pháp.",
+        "d": "Sự lãnh đạo của ĐCSVN."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 297,
+      "source_question_number": 319,
+      "question": "Lực lượng tạo nên động lực cho cách mạng Việt Nam được nêu ra trong Chính cương Đảng Lao động Việt Nam là:",
+      "options": {
+        "a": "Công nhân, nông dân, tiểu tư sản, tư sản dân tộc, địa chủ yêu nước.",
+        "b": "Công nhân, nông dân, trí thức.",
+        "c": "Công nhân, trí thức, tư sản dân tộc.",
+        "d": "Nhân dân, địa chủ, tư sản dân tộc."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 298,
+      "source_question_number": 320,
+      "question": "Ba nội dung quan trọng của cái cách: Giá cả, tiền lương, tiền tệ (giá – lương – tiền) được đề cập tại:",
+      "options": {
+        "a": "Đại hội lần thứ V(1982) của Đảng.",
+        "b": "Hội nghị Trung ương lần thứ 8 (6-1985)",
+        "c": "Đại hội lần thứ VI (1986) của Đảng.",
+        "d": "Đại hội lần thứ VII (1991) của Đảng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 299,
+      "source_question_number": 322,
+      "question": "Khái niệm “công nghiệp hóa, hiện đại hóa”- khái niệm kép, lần đầu tiên được đưa ra tại:",
+      "options": {
+        "a": "Đại hội lần thứ VI (1986) của Đảng.",
+        "b": "Hội nghị Trung ương 7,( khóa VII, (7 – 1994)",
+        "c": "Đại hội lần thứ VIII (1996) của Đảng.",
+        "d": "Đại hội lần thứ IX (2001) của Đảng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 300,
+      "source_question_number": 329,
+      "question": "Văn kiện nào của Đảng đánh dấu bước đột phá quan trọng trong đổi mới tư duy đối ngoại của Đảng những năm 1986 đến nay?",
+      "options": {
+        "a": "Nghị quyết Đại hội lần thứ VI (12-1986) của Đảng.",
+        "b": "Nghị quyết 13 Bộ Chính trị (5- 1988).",
+        "c": "Nghị quyết Đại hội lần thứ VII (6-1991) của Đảng.",
+        "d": "Nghị quyết Hội nghị đại biểu toàn quốc giữa nhiệm kỳ (khóa VII, 1-1994)."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 301,
+      "source_question_number": 332,
+      "question": "Mục tiêu tổng quát đổi mới kiện toàn hệ thống chính trị ở nước ta trong công cuộc đổi mới hiện nay là:",
+      "options": {
+        "a": "Phát huy tính ưu việt và vai trò tích cực của chính trị đối với sự phát triển kinh tế – xã hội.",
+        "b": "Thể hiện đúng đắn và đầy đủ hơn bản chất XHCN của chế độ chính trị được kiến lập sau Cách mạng Tháng Tám.",
+        "c": "Xây dựng nền dân chủ xã hội chủ nghĩa.",
+        "d": "Làm cho chế độ chính trị đã được kiến lập sau Cách mạng Tháng Tám ngày càng bền vững hơn."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 302,
+      "source_question_number": 333,
+      "question": "Thuật ngữ “Nhà nước pháp quyền” lần đầu tiên được sử dụng tại :",
+      "options": {
+        "a": "Đại hội đại biểu toàn quốc lần thứ VI (1986).",
+        "b": "Đại hội đại biểu toàn quốc lần thứ VII (1991).",
+        "c": "Hội nghị đại biểu toàn quốc giữa nhiệm kỳ khoá VII (1994).",
+        "d": "Đại hội đại biểu toàn quốc lần thứ VIII (1996)."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 303,
+      "source_question_number": 334,
+      "question": "Khuyết tật của cơ chế tập trung quan liêu bao cấp là:",
+      "options": {
+        "a": "Thủ tiêu cạnh tranh và kìm hãm tiến bộ khoa học công nghệ.",
+        "b": "Triệt tiêu động lực kinh tế đối với người lao động.",
+        "c": "Không kích thích tính năng động, sáng tạo của các đơn vị sản xuất kinh doanh.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 304,
+      "source_question_number": 336,
+      "question": "Văn kiện nào của Đảng lần đầu tiên xác định “văn hóa là một trong ba mặt trận (kinh tế, chính trị, văn hóa) của cách mạng Việt Nam?",
+      "options": {
+        "a": "Đề cương văn hóa 1943.",
+        "b": "Chỉ thị “Kháng chiến, kiến quốc” (25-11-1945).",
+        "c": "Báo cáo “Chủ nghĩa Mác và văn hoá Việt Nam” (7-1948).",
+        "d": "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH (1991)"
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 305,
+      "source_question_number": 337,
+      "question": "Đại hội lần thứ III (1960) của Đảng xác định:",
+      "options": {
+        "a": "Nhiệm vụ trung tâm suốt thời kỳ quá độ ở nước ta là CNH XHCN, mà mấu chốt là ưu tiên phát triển công nghiệp nặng và công nghiệp nhẹ.",
+        "b": "Nhiệm vụ trung tâm suốt thời kỳ quá độ ở nước ta là CNH XHCN, mà mấu chốt là ưu tiên phát triển công nghiệp nặng.",
+        "c": "Nhiệm vụ trung tâm suốt thời kỳ quá độ ở nước ta là CNH XHCN, mà mấu chốt là ưu tiên phát triển công nghiệp nặng và nông nghiệp.",
+        "d": "Nhiệm vụ trung tâm suốt thời kỳ quá độ ở nước ta là CNH XHCN, mà mấu chốt là ưu tiên phát triển công nghiệp nặng, công nghiệp nhẹ và nông nghiệp."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 306,
+      "source_question_number": 339,
+      "question": "Những nước cuối cùng trong ASEAN thiết lập quan hệ ngoại giao với Việt Nam là:",
+      "options": {
+        "a": "Philippin, Thái Lan và Inđonêxia.",
+        "b": "Philippin và Thái Lan.",
+        "c": "Brunay và Thái Lan.",
+        "d": "Thái Lan và Myama."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 307,
+      "source_question_number": 342,
+      "question": "Giai đoạn nào Đảng thừa nhận cơ chế thị trường, nhưng không coi nền kinh tế của nước ta là kinh tế thị trường?",
+      "options": {
+        "a": "1975-1985.",
+        "b": "1986- 1994.",
+        "c": "1994- 2001.",
+        "d": "2001-2006."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 308,
+      "source_question_number": 345,
+      "question": "Quan điểm: “Xây dựng nền văn hoá Việt Nam tiên tiến, đậm đà bản sắc dân tộc” lần đầu tiên được đưa ra tại:",
+      "options": {
+        "a": "Đại hội lần thứ VI (1986) của Đảng.",
+        "b": "Đại hội lần thứ VII (1991) của Đảng.",
+        "c": "Đại hội lần thứ VIII (1996) của Đảng.",
+        "d": "Đại hội lần thứ IX (2001) của Đảng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 309,
+      "source_question_number": 348,
+      "question": "Văn kiện nào Đảng nhấn mạnh “cuộc dân tộc giải phóng không nhất thiết phải kết chặt với cuộc cách mạng điền địa”?",
+      "options": {
+        "a": "Chánh cương vắn tắt, Sách lược vắn tắt.",
+        "b": "Chỉ thị thành lập Hội phản đế đồng minh (18-11-1930).",
+        "c": "Luận cương chính trị tháng 10-1930.",
+        "d": "Chung quanh vấn đề chiến sách mới của Đảng (10-1936)."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 310,
+      "source_question_number": 445,
+      "question": "Mục tiêu sâu xa của CNH, HĐH nước ta là:",
+      "options": {
+        "a": "Đến năm 2020, nước ta về cơ bản trở thành một nước công nghiệp theo hướng hiện đại.",
+        "b": "Trở thành một nước “dân giầu, nước mạnh, xã hội công bằng, dân chủ, văn minh”.",
+        "c": "Trở thành một nước có nền kinh tế tri thức phát triển.",
+        "d": "Trở thành một nước hội nhập sâu, rộng vào sự phát triển chung của khu vực và thế giới."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 311,
+      "source_question_number": 446,
+      "question": "Vấn đề mấu chốt nhất trong đổi mới phương thức hoạt động của hệ thống chính trị là :",
+      "options": {
+        "a": "Đổi mới phương thức hoạt động của Đảng.",
+        "b": "Đổi mới phương thức hoạt động của Nhà nước.",
+        "c": "Đổi mới phương thức hoạt động của Mặt trận Tổ quốc Việt Nam.",
+        "d": "Đổi mới phương thức hoạt động của các tổ chức xã hội."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 312,
+      "source_question_number": 447,
+      "question": "Hội nghị Trung ương lần thứ 15 (1-1959) xác định:",
+      "options": {
+        "a": "Hội nghị tháng 10-1930.",
+        "b": "Hội nghị tháng 11-1939.",
+        "c": "Hội nghị tháng 11-1940.",
+        "d": "Hội nghị tháng 5-1941."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 313,
+      "source_question_number": 416,
+      "question": "Chỉ thị “Kháng chiến, kiến quốc” đã nêu ra nhiệm vụ chủ yếu của cách mạng Việt Nam là:",
+      "options": {
+        "a": "Chống thực dân Pháp xâm lược.",
+        "b": "Củng cố chính quyền.",
+        "c": "Bài trừ nội phản, cải thiện đời sống nhân dân.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 314,
+      "source_question_number": 419,
+      "question": "Các giai đoạn của cuộc cách mạng dân tộc dân chủ nhân dân ở Việt Nam được Đảng xác định trong Chính cương Đảng Lao động là:",
+      "options": {
+        "a": "Giai đoạn thứ nhất chủ yếu là hoàn thành giải phóng dân tộc.",
+        "b": "Giai đoạn thứ hai chủ yếu là xoá bỏ tàn dư phong kiến, thực hiện người cày có ruộng.",
+        "c": "Giai đoạn thứ ba chủ yếu là gây cơ sở cho CNXH.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 315,
+      "source_question_number": 523,
+      "question": "Chủ trương và sách lược của Đảng trong việc đối phó với các lực lượng đế quốc sau Cách mạng tháng Tám là:",
+      "options": {
+        "a": "Thêm bạn, bớt thù.",
+        "b": "Hoa-Việt thân thiện.",
+        "c": "Độc lập về chính trị, nhân nhượng về kinh tế đối với Pháp.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 316,
+      "source_question_number": 524,
+      "question": "Yêu cầu, nhiệm vụ của cách mạng Việt Nam trong những năm 1975- 1985 là: I. Tham gia vào phân công lao động quốc tế. J. Tăng tính tùy thuộc lẫn nhau, nâng cao sự hiểu biết giữa Việt Nam với các quốc gia khác. K. Phá thế bị bao vây, cấm vận, chống tụt hậu về kinh tế, thu hẹp khoảng cách phát triển giữa nước ta với các quốc gia khác. L. Mở rộng thị trường, trao đổi hàng hóa. Câu5 25. Nhiệm vụ hàng đầu của nhân dân ta trong quá trình kháng chiến chống thực dân Pháp là:",
+      "options": {
+        "a": "Chống đế quốc, giành độc lập dân tộc.",
+        "b": "Xoá bỏ những tàn dư phong kiến, đem lại ruộng đất cho nông dân.",
+        "c": "Xây dựng chế độ dân chủ mới.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 317,
+      "source_question_number": 1,
+      "question": "BCH Trung ương Đảng chủ trương thành lập nước Việt Nam DCCH và giải quyết vấn đề dân tộc trong khuôn khổ từng nước tại Hội nghị:",
+      "options": {
+        "a": "Hội nghị tháng 10-1930.",
+        "b": "Hội nghị tháng 11-1939.",
+        "c": "Hội nghị tháng 11-1940.",
+        "d": "Hội nghị tháng 5-1941."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 318,
+      "source_question_number": 2,
+      "question": "Đường lối kháng chiến chống Mỹ cứu nước được thông qua tại Đại hội nào của Đảng?",
+      "options": {
+        "a": "Đại hội lần thứ II (1951).",
+        "b": "Đại hội lần thứ III (1960).",
+        "c": "Đại hội lần thứ IV (1976) .",
+        "d": "Đại hội lần thứ V (1982)."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 319,
+      "source_question_number": 5,
+      "question": "Ban Thường vụ Trung ương Đảng ra Quyết định chấp nhận Đông Dương cộng sản liên đoàn là bộ phận của ĐCSVN vào ngày:",
+      "options": {
+        "a": "22-2-1930.",
+        "b": "20-2-1930",
+        "c": "24-2-1930.",
+        "d": "22-3-1930. Câu 6 Nền tảng và động lực của CNH, HĐH ở nước ta thời kỳ đổi mới là: E. Nguồn nhân lực. F. Khoa học và công nghệ. G. Kinh tế thị trường định hướng XHCN. H. Hội nhập kinh tế quốc tế."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 320,
+      "source_question_number": 14,
+      "question": "Trong cao trào dân chủ 1936-1939, Đảng chủ trương tập hợp những lực lượng:",
+      "options": {
+        "a": "Công nhân và nông dân.",
+        "b": "Cả dân tộc Việt Nam.",
+        "c": "Công nhân, nông dân, tiểu tư sản, tư sản, địa chủ.",
+        "d": "Mọi lực lượng dân tộc có nhu cầu dân chủ, dân sinh và một bộ phận người Pháp ở Đông Dương chống phát-xít, chống chiến tranh."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 321,
+      "source_question_number": 15,
+      "question": "Quan điểm: “Văn hoá là nền tảng tinh thần của xã hội, vừa là mục tiêu, vừa là động lực thúc đẩy sự phát triển của kinh tế - xã hội” lần đầu tiên được đưa ra tại:",
+      "options": {
+        "a": "Đại hội lần thứ VI (1986) của Đảng.",
+        "b": "Đại hội lần thứ VII (1991) của Đảng.",
+        "c": "Đại hội lần thứ VIII (1996) của Đảng.",
+        "d": "Đại hội lần thứ IX (2001) của Đảng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 322,
+      "source_question_number": 27,
+      "question": "Cương lĩnh đầu tiên của Đảng đã xác định mục tiêu chiến lược của cách mạng Việt Nam là:",
+      "options": {
+        "a": "Làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản.",
+        "b": "Làm tư sản dân quyền cách mạng có tính chất thổ địa và phản đế để đi tới xã hội cộng sản.",
+        "c": "Cách mạng tư sản dân quyền – phản đế và điền địa - lập chính quyền của công nông bằng hình thức Xô viết, để dự bị điều kiện đi tới CMXHCN.",
+        "d": "Cả ba phương án trên."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 323,
+      "source_question_number": 4,
+      "question": "Hội nghị nào của Đảng quyết định mở cuộc Tổng tấn công và nổi dậy giải phóng Sài Gòn trước tháng 5-1975?",
+      "options": {
+        "a": "Hội nghị Trung ương 21 (khoá III -7/1973)",
+        "b": "Hội nghị Bộ Chính trị (10-1974)",
+        "c": "Hội nghị Trung ương 23 (khoá III - 12/1974)",
+        "d": "Hội nghị Bộ Chính trị (3-1975)."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 324,
+      "source_question_number": 7,
+      "question": "Hai đối tượng của cách mạng Việt Nam được nêu ra tại Chính cương Đảng Lao động Việt Nam là:",
+      "options": {
+        "a": "Đối tượng chính là chủ nghĩa đế quốc xâm lược, cụ thể là thực dân Pháp.",
+        "b": "Đối tượng phụ là phong kiến, cụ thể là phong kiến phản động.",
+        "c": "Phương án A, B.",
+        "d": "Đế quốc và phong kiến Việt Nam."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 325,
+      "source_question_number": 13,
+      "question": "Đại hội lần thứ V (1982) của Đảng xác định:",
+      "options": {
+        "a": "Công nghiệp là mặt trận hàng đầu.",
+        "b": "Ưu tiên phát triển công nghiệp và hàng tiêu dùng.",
+        "c": "Nông nghiệp là mặt trận hàng đầu.",
+        "d": "Nông nghiệp, công nghiệp nhẹ là mặt trận hàng đầu."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 326,
+      "source_question_number": 14,
+      "question": "Đảng chủ trương đánh bại “Việt Nam hoá chiến tranh” của Mỹ bằng con đường:",
+      "options": {
+        "a": "Chuyển hướng tiến công, lấy nông thôn làm hướng chính.",
+        "b": "Đẩy lùi chương trình “bình định” của địch.",
+        "c": "Tăng cường các lực lượng vũ trang tại chỗ.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 327,
+      "source_question_number": 19,
+      "question": "Đường lối xây dựng, phát triển văn hoá giai đoạn nào bị chi phối bởi tư duy chính trị “nắm vững chuyên chính vô sản”?",
+      "options": {
+        "a": "1930-1945.",
+        "b": "1945-1954.",
+        "c": "1954-1986.",
+        "d": "1986- nay."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 328,
+      "source_question_number": 26,
+      "question": "Chủ trương tiến hành cuộc cách mạng tư tưởng - văn hoá đồng thời với cuộc cách mạng về QHSX và cách mạng về khoa học, kỹ thuật được xác định tại:",
+      "options": {
+        "a": "Đại hội lần thứ II (1951) của Đảng.",
+        "b": "Đại hội lần thứ III (1960) của Đảng.",
+        "c": "Đại hội lần thứ IV (1976) của Đảng.",
+        "d": "Đại hội lần thứ V (1982) của Đảng."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 329,
+      "source_question_number": 30,
+      "question": "Đối tượng của cách mạng trong giai đoạn 1936-1939 là:",
+      "options": {
+        "a": "Bọn đế quốc xâm lược.",
+        "b": "Địa chủ phong kiến.",
+        "c": "Đế quốc và phong kiến.",
+        "d": "Một bộ phận phản động thuộc địa và tay sai."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 330,
+      "source_question_number": 1,
+      "question": "Hệ thống chính trị dân chủ nhân dân ra đời vào thời gian nào?",
+      "options": {
+        "a": "Sau năm 1930.",
+        "b": "Sau năm 1945.",
+        "c": "Sau năm 1954.",
+        "d": "Sau năm 1975"
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 331,
+      "source_question_number": 2,
+      "question": "Khái niệm \"kinh tế thị trường định hướng XHCN\" được chính thức đưa ra tại:",
+      "options": {
+        "a": "Đại hội lần thứ VI (1986) của Đảng.",
+        "b": "Hội nghị Trung ương 7, ( khóa VII, (7 – 1994)",
+        "c": "Đại hội lần thứ VIII (1996) của Đảng.",
+        "d": "Đại hội lần thứ IX (2001) của Đảng."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 332,
+      "source_question_number": 3,
+      "question": "Trong các điểm sau, điểm khác nhau giữa Cương lĩnh chính trị đầu tiên của Đảng và Luận cương chính trị tháng 10-1930 là:",
+      "options": {
+        "a": "Phương hướng chiến lược của cách mạng.",
+        "b": "Chủ trương tập hợp lực lượng cách mạng và mối quan hệ giữa hai nhiệm vụ chống đế quốc và chống phong kiến.",
+        "c": "Vai trò lãnh đạo cách mạng của Đảng.",
+        "d": "Phương pháp cách mạng."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 333,
+      "source_question_number": 8,
+      "question": "Thuật ngữ \"Hệ thống chính trị\" lần đầu tiên được đề cập tại:",
+      "options": {
+        "a": "Đại hội đại biểu toàn quốc lần thứ IV của Đảng (1976).",
+        "b": "Hội nghị Trung ương VI (khoá 6 -3/ 1989).",
+        "c": "Đại hội đại biểu toàn quốc lần thứ VI (1986).",
+        "d": "Đại hội đại biểu toàn quốc lần thứ VII (1991)."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 334,
+      "source_question_number": 10,
+      "question": "Mâu thuẫn cơ bản và chủ yếu ở Việt Nam đầu thế kỷ XX là giữa:",
+      "options": {
+        "a": "Giai cấp nông dân với giai cấp địa chủ phong kiến.",
+        "b": "Giai cấp công nhân với giai cấp tư sản.",
+        "c": "Giai công nhân và nông dân với đế quốc và phong kiến.",
+        "d": "Dân tộc Việt Nam với đế quốc xâm lược và tay sai của chúng."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 335,
+      "source_question_number": 19,
+      "question": "Trên cơ sở phân tích tình hình nước ta sau Cách mạng tháng Tám, ngày 25-11-1945, Trung ương Đảng đã đề ra:",
+      "options": {
+        "a": "Chỉ thị “Nhật- Pháp bắn nhau và hành động của chúng ta”.",
+        "b": "Quyết định cải tổ UBDTGP thành Chính phủ lâm thời.",
+        "c": "Chỉ thị thành lập Chính phủ Liên hiệp kháng chiến.",
+        "d": "Chỉ thị “Kháng chiến, kiến quốc”."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 336,
+      "source_question_number": 21,
+      "question": "Đại hội VII của Đảng (6 - 1991) đã đưa ra kết luận quan trọng:",
+      "options": {
+        "a": "Sản xuất hàng hóa đối lập với CNXH, tuy nhiên nó tồn tại khách quan.",
+        "b": "Sản xuất hàng hóa không đối lập với CNXH, nó tồn tại khách quan và cần thiết cho xây dựng CNXH.",
+        "c": "Sản xuất hàng hóa không đối lập với CNXH, tuy nhiên nó không cần thiết cho xây dựng CNXH.",
+        "d": "Sản xuất hàng hóa tồn tại khách quan, nhưng không cần thiết cho xây dựng CNXH."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 337,
+      "source_question_number": 22,
+      "question": "Nhiệm vụ hàng đầu, cấp thiết nhất được xác định trong đường lối kháng chiến chống thực dân Pháp là:",
+      "options": {
+        "a": "Chống đế quốc, giành độc lập tự do và thống nhất thực sự.",
+        "b": "Xoá bỏ những tàn dư phong kiến, đem lại ruộng đất cho nông dân.",
+        "c": "Xây dựng chế độ dân chủ mới.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 338,
+      "source_question_number": 24,
+      "question": "Chính cương Đảng Lao động Việt Nam đã nêu ra các nhiệm vụ cơ bản cho cách mạng Việt Nam là:",
+      "options": {
+        "a": "Đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất thật sự cho dân tộc",
+        "b": "Xoá bỏ những di tích phong kiến và nửa phong kiến, làm cho người cày có ruộng",
+        "c": "Phát triển chế độ dân chủ nhân dân, gây cơ sở cho CNXH",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "source_single_period"
+    },
+    {
+      "id": 339,
+      "source_question_number": 29,
+      "question": "Văn kiện nào Đảng nhấn mạnh “cuộc dân tộc giải phóng không nhất thiết phải kết chặt với cuộc cách mạng điền địa”?",
+      "options": {
+        "a": "Chánh cương vắn tắt, Sách lược vắn tắt.",
+        "b": "Chỉ thị thành lập Hội phản đế đồng minh (18-11-1930).",
+        "c": "Luận cương chính trị tháng 10-1930.",
+        "d": "quanh vấn đề chiến sách mới của Đảng (10-1936)."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 340,
+      "source_question_number": 30,
+      "question": "Kinh tế thị trường là sản phẩm riêng có của: I. Nhà nước tư sản. J. Chủ nghĩa tư bản. K. Thành tựu phát triển chung của nhân loại. L. Văn minh phương Tây. 800. Mâu thuẫn chủ yếu nhất của xã hội Việt Nam dưới ách thống trị của thực dân Pháp là:",
+      "options": {
+        "a": "Đại hội lần thứ VII (6/1991).",
+        "b": "Đại hội lần thứ VIII (6/1996).",
+        "c": "Đại hội lần thứ IX (4/2001).",
+        "d": "Đại Hội lần thứ X (4/2006)"
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 341,
+      "source_question_number": 552,
+      "question": "Cao trào kháng Nhật, cứu nước đã diễn ra ở vùng rừng núi và trung du Bắc kỳ với hình thức chủ yếu là:",
+      "options": {
+        "a": "Khởi nghĩa từng phần.",
+        "b": "Vũ trang tuyên truyền.",
+        "c": "Chiến tranh du kích cục bộ.",
+        "d": "Đấu tranh báo chí."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 342,
+      "source_question_number": 554,
+      "question": "Nền tảng và động lực của CNH, HĐH ở nước ta thời kỳ đổi mới là: L. Nguồn nhân lực. M. Khoa học và công nghệ. N. Kinh tế thị trường định hướng XHCN. O. Hội nhập kinh tế quốc tế. Câu55 5. Hội nghị của BCH Trung ương Đảng chủ trương tạm gác các khẩu hiệu “độc lập dân tộc” và “cách mạng ruộng đất” là:",
+      "options": {
+        "a": "Hội nghị họp tháng 10-1930.",
+        "b": "Hội nghị họp tháng 7-1936.",
+        "c": "Hội nghị họp tháng 11-1939.",
+        "d": "Hội nghị họp tháng 5-1941."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 343,
+      "source_question_number": 557,
+      "question": "Chỉ thị “Nhật- Pháp bắn nhau và hành động của chúng ta” phản ánh nội dung của hội nghị:",
+      "options": {
+        "a": "Hội nghị BCH Trung ương Đảng họp tháng 5-1941.",
+        "b": "Hội nghị Ban Thường vụ Trung ương Đảng họp tháng 2-1943.",
+        "c": "Hội nghị Ban Thường vụ Trung ương Đảng họp tháng 3-1945.",
+        "d": "Hội nghị quân sự cách mạng Bắc kỳ họp tháng 4-1945."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 344,
+      "source_question_number": 511,
+      "question": "Hội nghị toàn quốc của Đảng đã quyết định phát động toàn dân nổi dậy Tổng khởi nghĩa giành chính quyền vào ngày:",
+      "options": {
+        "a": "13 đến ngày 15-8-1945.",
+        "b": "13 đến ngày 17-8-1945.",
+        "c": "14 đến ngày 15-8-1945.",
+        "d": "16 đến ngày 17-8-1945."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 345,
+      "source_question_number": 512,
+      "question": "Hình thức tổ chức đấu tranh trong giai đoạn 1936-1939 là:",
+      "options": {
+        "a": "Công khai, hợp pháp.",
+        "b": "Nửa công khai, nửa hợp pháp.",
+        "c": "Bí mật, hợp pháp.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 346,
+      "source_question_number": 515,
+      "question": "Những khó khăn, thách thức đối với Việt Nam sau Cách mạng tháng Tám 1945 là:",
+      "options": {
+        "a": "Các thế lực đế quốc phản động bao vây, chống phá.",
+        "b": "Kinh tế kiệt quệ và nạn đói hoành hành.",
+        "c": "Hơn 90% dân số không biết chữ.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 347,
+      "source_question_number": 523,
+      "question": "Hạn chế trong đường lối công nghiệp hóa thời kỳ 1961-1965:",
+      "options": {
+        "a": "Chưa hướng vào mục tiêu trung tâm phục vụ sản xuất nông nghiệp và hàng tiêu dùng.",
+        "b": "Quan niệm về công nghiệp hoá còn giản đơn, giáo điều.",
+        "c": "Đầu tư quá nhiều vào xây dựng cơ bản trong điều kiện có chiến tranh phá hoại.",
+        "d": "Cả A, B, C. Câu5 24. Quan điểm cơ bản trong chính sách xã hội thời kỳ đổi mới là: M. Ưu tiên mục tiêu công bằng xã hội. N. Ưu tiên mục tiêu xã hội trên mục tiêu kinh tế. O. Kết hợp các mục tiêu kinh tế với các mục tiêu xã hội. P. Chú trọng các mục tiêu kinh tế, từng bước thực hiện mục tiêu xã hội."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 348,
+      "source_question_number": 546,
+      "question": "Đại hội III (1960) của Đảng xác định:",
+      "options": {
+        "a": "Cách mạng Việt Nam tiến hành đồng thời hai chiến lược ở cả hai miền, miền Bắc tiến hành CMXHCN, miền Nam tiến hành CMDTDCND, hướng vào mục tiêu chung thống nhất nước nhà.",
+        "b": "Cách mạng Việt Nam tập trung chủ yếu vào nhiệm vụ xây dựng XHCN ở miền Bắc.",
+        "c": "Cách mạng Việt Nam tập trung chủ yếu vào nhiệm vụ kháng chiến chiến, kiến quốc.",
+        "d": "Cách mạng Việt Nam tập trung chủ yếu vào nhiệm vụ cải tạo XHCN trên miền Bắc."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 349,
+      "source_question_number": 547,
+      "question": "Văn kiện của Đảng nhấn mạnh: “Vấn đề thổ địa là cái cốt của cách mạng tư sản dân quyền” là:",
+      "options": {
+        "a": "Chánh cương vắn tắt, Sách lược vắn tắt.",
+        "b": "Chỉ thị thành lập Hội phản đế đồng minh (18-11-1930).",
+        "c": "Luận cương chính trị tháng 10-1930.",
+        "d": "Chung quanh vấn đề chiến sách mới của Đảng (10-1936)."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 350,
+      "source_question_number": 530,
+      "question": "Từ 1975 - 1977, nước ta thiết lập thêm quan hệ ngoại giao với bao nhiêu nước?",
+      "options": {
+        "a": "19 nước.",
+        "b": "21 nước.",
+        "c": "23 nước.",
+        "d": "25 nước. M. Nhà nước quản lý nền kinh tế dựa trên cơ chế thị trường. N. Nhà nước quản lý nền kinh tế chủ yếu bằng mệnh lệnh hành chính; quan hệ hàng hóa - tiền tệ bị coi nhẹ; nền kinh tế khép kín về LLSX. O. Bộ máy quản lý gọn nhẹ, đơn giản, năng động. P. Thừa nhận sự tồn tại của nhiều thành phần kinh tế trong thời kỳ quá độ."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 351,
+      "source_question_number": 13,
+      "question": "Ban Thường vụ Trung ương Đảng ra Quyết định chấp nhận Đông Dương cộng sản liên đoàn là bộ phận của ĐCSVN vào ngày:",
+      "options": {
+        "a": "22-2-1930.",
+        "b": "20-2-1930",
+        "c": "24-2-1930.",
+        "d": "22-3-1930."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 352,
+      "source_question_number": 10,
+      "question": "Chủ trương “chủ động và tích cực hội nhập kinh tế quốc tế” được đề ra tại:",
+      "options": {
+        "a": "Đại hội lần thứ VII (6-1991) của Đảng.",
+        "b": "Hội nghị Trung ương lần thứ 9 (khóa IX, 1-2004).",
+        "c": "Đại hội lần thứ IX (4-2004) của Đảng.",
+        "d": "Hội nghị Trung ương lần thứ 4 (khóa VIII, 12-1997)."
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 353,
+      "source_question_number": 18,
+      "question": "Cương lĩnh đầu tiên của Đảng đã xác định mục tiêu chiến lược của cách mạng Việt Nam là:",
+      "options": {
+        "a": "Làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản.",
+        "b": "Làm tư sản dân quyền cách mạng có tính chất thổ địa và phản đế để đi tới xã hội cộng sản.",
+        "c": "Cách mạng tư sản dân quyền – phản đế và điền địa - lập chính quyền của công nông bằng hình thức Xô viết, để dự bị điều kiện đi tới CMXHCN.",
+        "d": "Cả A, B, C."
+      },
+      "correct_answer": "a",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 354,
+      "source_question_number": 5,
+      "question": "Mục tiêu tổng quát đổi mới kiện toàn hệ thống chính trị ở nước ta trong công cuộc đổi mới hiện nay là: Y. Phát huy tính ưu việt và vai trò tích cực của chính trị đối với sự phát triển kinh tế – xã hội. Z. Thể hiện đúng đắn và đầy đủ hơn bản chất XHCN của chế độ chính trị được kiến lập sau Cách mạng Tháng Tám. AA. Xây dựng nền dân chủ xã hội chủ nghĩa. BB. Làm cho chế độ chính trị đã được kiến lập sau Cách mạng Tháng Tám ngày càng bền vững hơn. Câu8 6. Trong cao trào dân chủ 1936-1939, Đảng chủ trương tập hợp những lực lượng:",
+      "options": {
+        "a": "Công nhân và nông dân.",
+        "b": "Cả dân tộc Việt Nam.",
+        "c": "Công nhân, nông dân, tiểu tư sản, tư sản, địa chủ.",
+        "d": "Mọi lực lượng dân tộc có nhu cầu dân chủ, dân sinh và một bộ phận người Pháp ở Đông Dương chống phát-xít, chống chiến tranh."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 355,
+      "source_question_number": 110,
+      "question": "Nguyễn Ái Quốc lựa chọn con đường giải phóng dân tộc là con đường cách mạng vô sản vào năm:",
+      "options": {
+        "a": "1917.",
+        "b": "1918.",
+        "c": "1919.",
+        "d": "1920."
+      },
+      "correct_answer": "d",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 356,
+      "source_question_number": 12,
+      "question": "Văn kiện nào của Đảng đánh dấu bước đột phá quan trọng trong đổi mới tư duy đối ngoại của Đảng những năm 1986 đến nay? GG. Nghị quyết Đại hội lần thứ VI (12-1986) của Đảng. HH. Nghị quyết 13 Bộ Chính trị (5- 1988). II. Nghị quyết Đại hội lần thứ VII (6-1991) của Đảng. JJ. Nghị quyết Hội nghị đại biểu toàn quốc giữa nhiệm kỳ (khóa VII, 1-1994). Câu1 13. Ban Thường vụ Trung ương Đảng ra Quyết định chấp nhận Đông Dương cộng sản liên đoàn là bộ phận của ĐCSVN vào ngày:",
+      "options": {
+        "a": "22-2-1930.",
+        "b": "20-2-1930",
+        "c": "24-2-1930.",
+        "d": "22-3-1930."
+      },
+      "correct_answer": "c",
+      "answer_detection": "ai_inferred_or_external_check"
+    },
+    {
+      "id": 357,
+      "source_question_number": 720,
+      "question": "Nền tảng và động lực của CNH, HĐH ở nước ta thời kỳ đổi mới là: X. Nguồn nhân lực. Y. Khoa học và công nghệ. Z. Kinh tế thị trường định hướng XHCN. E. Hội nhập kinh tế quốc tế Chương 1 Văn kiện nào dưới đây đã giúp Nguyễn Ái Quốc tìm thấy con đường cứu nước:",
+      "options": {
+        "a": "Đại hội VI",
+        "b": "Đại hội VII",
+        "c": "Đại hội VIII",
+        "d": "Đại hội IX"
+      },
+      "correct_answer": "b",
+      "answer_detection": "ai_inferred_or_external_check"
+    }
+  ]
+}
