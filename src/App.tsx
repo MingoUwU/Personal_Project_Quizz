@@ -230,7 +230,18 @@ function App() {
             }
           />
           <Route path="/exam" element={<ExamPage deck={selectedDeck} />} />
-          {state.settings.showLibrary && <Route path="/library" element={<LibraryPage />} />}
+          {state.settings.showLibrary && (
+            <Route
+              path="/library"
+              element={
+                <LibraryPage
+                  state={state}
+                  onSelectDeck={selectDeck}
+                  selectedDeckId={selectedDeck?.id ?? ''}
+                />
+              }
+            />
+          )}
           <Route path="/stats" element={<StatsPage state={state} />} />
           <Route
             path="/settings"
@@ -1282,7 +1293,7 @@ function ExamPage({ deck }: { deck?: Deck }) {
                   onClick={() => chooseAnswer(label)}
                 >
                   <span className="exam-option-index">{option.label}</span>
-                  <span>{option.text}</span>
+                  <span><InlineCodeText text={option.text} /></span>
                 </button>
               )
             })}
@@ -1314,28 +1325,97 @@ function ExamPage({ deck }: { deck?: Deck }) {
   )
 }
 
-function LibraryPage() {
+function LibraryPage({
+  state,
+  onSelectDeck,
+  selectedDeckId,
+}: {
+  state: AppState
+  onSelectDeck: (deckId: string) => void
+  selectedDeckId: string
+}) {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+  const totalCards = state.decks.reduce((sum, deck) => sum + deck.cards.length, 0)
+  const dueCards = totalDueCards(state.decks)
+
+  const openDeck = (deckId: string, destination: '/study' | '/exam') => {
+    onSelectDeck(deckId)
+    navigate(destination)
+  }
 
   return (
-    <section className="page-grid">
+    <section className="page-grid library-page">
       <div className="section-head">
         <div>
           <h2>{t('library.title')}</h2>
           <p>{t('library.subtitle')}</p>
         </div>
       </div>
-      <div className="option-list">
-        <article className="panel">
-          <p>{t('library.option1')}</p>
-        </article>
-        <article className="panel">
-          <p>{t('library.option2')}</p>
-        </article>
-        <article className="panel">
-          <p>{t('library.option3')}</p>
-        </article>
+
+      <div className="library-summary">
+        <MetricCard label={t('library.totalSubjects')} value={String(state.decks.length)} />
+        <MetricCard label={t('library.totalCards')} value={String(totalCards)} />
+        <MetricCard label={t('library.dueCards')} value={String(dueCards)} />
       </div>
+
+      {state.decks.length === 0 ? (
+        <article className="panel empty-state">
+          <h3>{t('library.emptyTitle')}</h3>
+          <p>{t('library.emptyText')}</p>
+        </article>
+      ) : (
+        <div className="library-grid">
+          {state.decks.map((deck) => {
+            const isActive = deck.id === selectedDeckId
+            const deckDueCards = getDueCards(deck).length
+
+            return (
+              <article key={deck.id} className={`library-deck-card ${isActive ? 'active' : ''}`}>
+                <div className="library-deck-header">
+                  <div className="library-deck-badges">
+                    <span className="pill">{deck.category}</span>
+                    <span>{deck.language}</span>
+                  </div>
+                  {isActive && <span className="selected-label">{t('decks.selected')}</span>}
+                </div>
+
+                <div className="library-deck-copy">
+                  <h3>{deck.name}</h3>
+                  <p>{deck.description}</p>
+                </div>
+
+                <div className="library-deck-stats">
+                  <div>
+                    <strong>{deck.cards.length}</strong>
+                    <span>{t('decks.cards')}</span>
+                  </div>
+                  <div>
+                    <strong>{deckDueCards}</strong>
+                    <span>{t('decks.due')}</span>
+                  </div>
+                </div>
+
+                <div className="library-deck-actions">
+                  {!isActive && (
+                    <button className="ghost-button small" onClick={() => onSelectDeck(deck.id)}>
+                      {t('actions.selectDeck')}
+                    </button>
+                  )}
+                  <button className="primary-button small" onClick={() => openDeck(deck.id, '/study')}>
+                    <BookOpen size={15} />
+                    {t('actions.studyDeck')}
+                  </button>
+                  <button className="ghost-button small" onClick={() => openDeck(deck.id, '/exam')}>
+                    <ClipboardCheck size={15} />
+                    {t('actions.examDeck')}
+                  </button>
+                </div>
+              </article>
+            )
+          })}
+        </div>
+      )}
     </section>
   )
 }
@@ -1617,7 +1697,9 @@ function QuestionPreview({
 
   return (
     <div className={`question-preview ${paper ? 'paper' : ''}`}>
-      <div className="question-stem">{formatted.stem}</div>
+      <div className="question-stem">
+        <QuestionStemText text={formatted.stem} />
+      </div>
       {formatted.options.length > 0 && (
         <div className="question-options">
           {formatted.options.map((option) => (
@@ -1626,7 +1708,7 @@ function QuestionPreview({
               className={`question-option ${labelsToHighlight.has(option.label.replace('.', '')) ? 'correct' : ''}`}
             >
               <span className="question-option-label">{option.label}</span>
-              <span>{option.text}</span>
+              <span><InlineCodeText text={option.text} /></span>
             </div>
           ))}
         </div>
@@ -1649,7 +1731,128 @@ function AnswerPreview({ formatted }: { formatted: AnswerContent }) {
       {formatted.content.options.length > 0 ? (
         <QuestionPreview formatted={formatted.content} paper highlightLabels={formatted.correctLabels} />
       ) : (
-        <p className="answer-text">{plainAnswerText}</p>
+        <p className="answer-text"><InlineCodeText text={plainAnswerText} /></p>
+      )}
+    </div>
+  )
+}
+
+type QuestionStemSegment = {
+  kind: 'prose' | 'code'
+  text: string
+}
+
+function isLikelyCodeStart(line: string) {
+  const text = line.trim()
+
+  return /^(?:(?:import|export|library|part)\b|(?:abstract\s+)?class\s+\w+|(?:mixin|enum|extension)\b|@override\b|(?:void|var|final|const|late|dynamic|bool|int|double|String\??|Widget|Future(?:<[^>]+>)?|Stream(?:<[^>]+>)?|List<[^>]+>|Map<[^>]+>)\s+[\w_]+|[A-Z_][\w<>,?.]*\s*\()/u.test(text)
+}
+
+function isProseAfterCode(line: string) {
+  const text = line.trim()
+
+  if (!text) return false
+  if (text.endsWith('?') && !isLikelyCodeStart(text)) return true
+
+  return /^(?:What|Which|Why|How|When|Where|If|Given|Suppose|After|Before|According|With|Does|Do|Is|Are|Will|Would|Can)\b/u.test(text)
+}
+
+function appendStemSegment(segments: QuestionStemSegment[], kind: QuestionStemSegment['kind'], text: string) {
+  const normalized = text.trim()
+  if (!normalized) return
+
+  const previous = segments.at(-1)
+  if (previous?.kind === kind) {
+    previous.text = `${previous.text}\n${normalized}`
+    return
+  }
+
+  segments.push({ kind, text: normalized })
+}
+
+function splitQuestionStem(text: string) {
+  const lines = text.replace(/\r/gu, '').split('\n')
+  const segments: QuestionStemSegment[] = []
+  let proseLines: string[] = []
+  let codeLines: string[] = []
+  let insideFence = false
+  let inferredCodeBlock = false
+
+  const flushProse = () => {
+    appendStemSegment(segments, 'prose', proseLines.join('\n'))
+    proseLines = []
+  }
+
+  const flushCode = () => {
+    appendStemSegment(segments, 'code', codeLines.join('\n'))
+    codeLines = []
+  }
+
+  lines.forEach((line) => {
+    if (/^\s*```/u.test(line)) {
+      if (insideFence) {
+        flushCode()
+        insideFence = false
+      } else {
+        flushProse()
+        insideFence = true
+      }
+      return
+    }
+
+    if (insideFence) {
+      codeLines.push(line)
+      return
+    }
+
+    if (!inferredCodeBlock && isLikelyCodeStart(line)) {
+      flushProse()
+      inferredCodeBlock = true
+    }
+
+    if (inferredCodeBlock && isProseAfterCode(line)) {
+      flushCode()
+      inferredCodeBlock = false
+    }
+
+    if (inferredCodeBlock) {
+      codeLines.push(line)
+    } else {
+      proseLines.push(line)
+    }
+  })
+
+  flushCode()
+  flushProse()
+
+  return segments
+}
+
+function InlineCodeText({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(/(`[^`\n]+`)/gu).map((part, index) =>
+        /^`[^`\n]+`$/u.test(part) ? (
+          <code key={`${part}-${index}`} className="inline-code">{part.slice(1, -1)}</code>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  )
+}
+
+function QuestionStemText({ text }: { text: string }) {
+  const segments = useMemo(() => splitQuestionStem(text), [text])
+
+  return (
+    <div className="question-stem-content">
+      {segments.map((segment, index) =>
+        segment.kind === 'code' ? (
+          <pre key={`${segment.kind}-${index}`} className="question-code"><code>{segment.text}</code></pre>
+        ) : (
+          <p key={`${segment.kind}-${index}`} className="question-prose"><InlineCodeText text={segment.text} /></p>
+        ),
       )}
     </div>
   )

@@ -523,6 +523,117 @@ button:disabled {
   gap: 14px;
 }
 
+.library-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.library-deck-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 20px;
+  min-height: 300px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.library-deck-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: color-mix(in srgb, var(--accent) 32%, var(--border));
+}
+
+.library-deck-card.active {
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--border));
+  background: color-mix(in srgb, var(--surface) 88%, var(--accent));
+}
+
+.library-deck-card.active::before {
+  background: var(--accent);
+}
+
+.library-deck-header,
+.library-deck-badges,
+.library-deck-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.library-deck-header {
+  justify-content: space-between;
+}
+
+.library-deck-badges {
+  flex-wrap: wrap;
+  color: var(--muted);
+}
+
+.library-deck-copy {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.library-deck-copy h3 {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  letter-spacing: -0.045em;
+}
+
+.library-deck-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.library-deck-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.library-deck-stats > div {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface-2);
+}
+
+.library-deck-stats strong {
+  font-size: 1.35rem;
+}
+
+.library-deck-stats span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.library-deck-actions {
+  flex-wrap: wrap;
+}
+
+.library-deck-actions .primary-button,
+.library-deck-actions .ghost-button {
+  justify-content: center;
+}
+
 .empty-state {
   display: grid;
   gap: 12px;
@@ -750,6 +861,69 @@ button:disabled {
   font-size: 1.02rem;
   line-height: 1.7;
   font-weight: 700;
+}
+
+.question-stem-content {
+  display: grid;
+  gap: 16px;
+}
+
+.question-prose {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.question-code {
+  width: min(100%, 860px);
+  margin: 2px auto;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-2);
+  color: var(--text);
+  overflow-x: auto;
+  text-align: left;
+  white-space: pre;
+  tab-size: 2;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.question-code code {
+  font: inherit;
+}
+
+.inline-code,
+.rich-html code {
+  padding: 0.08em 0.34em;
+  border-radius: 6px;
+  background: color-mix(in srgb, currentColor 9%, transparent);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.question-preview.paper .question-code {
+  border-color: var(--paper-border);
+  background: #ecece8;
+  color: var(--paper-text);
+}
+
+.rich-html pre {
+  max-width: 100%;
+  margin: 14px 0;
+  padding: 18px 20px;
+  border: 1px solid var(--paper-border);
+  border-radius: 14px;
+  background: #ecece8;
+  overflow-x: auto;
+  text-align: left;
+  white-space: pre;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  line-height: 1.65;
 }
 
 .study-card.expanded .question-stem {
@@ -1276,6 +1450,10 @@ select:focus-visible,
     grid-template-columns: 1fr;
   }
 
+  .library-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
   .deck-card,
   .deck-card-main {
     grid-template-columns: 1fr;
@@ -1511,6 +1689,22 @@ select:focus-visible,
     gap: 10px;
   }
 
+  .library-summary,
+  .library-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .library-deck-card {
+    min-height: 0;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .library-deck-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .exam-stats {
     grid-template-columns: 1fr 1fr;
   }
@@ -1643,6 +1837,12 @@ select:focus-visible,
   .question-stem {
     font-size: 1rem;
     line-height: 1.62;
+  }
+
+  .question-code,
+  .rich-html pre {
+    padding: 14px;
+    font-size: 0.82em;
   }
 
   .question-options {
