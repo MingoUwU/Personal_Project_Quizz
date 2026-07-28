@@ -77,10 +77,6 @@ Question 15. How does DartPad differ from VS Code/Android Studio when developing
 Answer: B. DartPad is an online environment requiring no installation. A is wrong because DartPad needs no full SDK; C is wrong because DartPad supports Text, Column; D is wrong because this is Dart/Flutter, not Kotlin.
 
 
-Question 16. Consider the following code running in main.dart: ⏎ import 'package:flutter/material.dart'; ⏎ void main() => runApp(const MaterialApp( ⏎ home: Scaffold( ⏎ body: Center( ⏎ child: Text('Hello, World', ⏎ style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)), ⏎ ), ⏎ ), ⏎ )); ⏎ If the `const` keyword before `MaterialApp` is removed, what happens to the app's behavior? ⏎ A. The app will fail to compile immediately ⏎ B. The app still runs correctly, only losing the performance optimization benefit since Flutter can no longer reuse the same immutable widget instance ⏎ C. The Text will fail to display "Hello, World" ⏎ D. The Scaffold will no longer be able to have an AppBar later
-Answer: B. `const` helps Flutter optimize tree-diffing; removing it still runs correctly but loses that performance benefit. A is wrong since it doesn't cause a compile error; C is wrong since the Text still displays normally; D is unrelated.
-
-
 Question 17. According to Flutter's architecture, which statement best describes the concept of a 'Widget'? ⏎ A. Widgets are only components that display images ⏎ B. In Flutter, everything on screen (layout, style, interaction) is built through Widgets ⏎ C. Widgets only exist in the Engine Layer ⏎ D. Widget is an Android-only concept, not used in Flutter
 Answer: B. 'Everything is a Widget' — everything on screen is a widget. A wrongly limits the scope; C, D are wrong about where/what a widget is.
 
@@ -121,56 +117,12 @@ Question 26. In Dart, what is the basic difference between `final` and `const`? 
 Answer: C. `final` is assigned once at runtime; `const` is a value known ahead of time at compile-time. B reverses the definitions; D is wrong since neither is limited to a specific data type.
 
 
-Question 27. Consider: ⏎ dynamic x = 10; ⏎ x = "Hello"; ⏎ print(x); ⏎ What happens when this code runs? ⏎ A. Compile error because a String cannot be assigned to a variable already typed as int ⏎ B. Prints "Hello" because `dynamic` allows the data type to change at runtime ⏎ C. Prints 10 because the original data type is preserved ⏎ D. Throws a TypeError exception at runtime
-Answer: B. `dynamic` allows the data type to change at runtime, so it prints "Hello". A is wrong since this is valid `dynamic` behavior; C, D are wrong since there's no error and the final value is "Hello".
-
-
-Question 28. Given: ⏎ List<int> nums = [1, 2, 3, 4, 5]; ⏎ var result = nums.map((e) => e * 2).where((e) => e > 4).toList(); ⏎ print(result); ⏎ What is printed? ⏎ A. [2, 4, 6, 8, 10] ⏎ B. [6, 8, 10] ⏎ C. [3, 4, 5] ⏎ D. [1, 2, 3, 4, 5]
-Answer: B. `[1,2,3,4,5].map(x*2) = [2,4,6,8,10]`, then `.where(e>4) = [6,8,10]`. A only shows the map step; C, D do not match the transformation.
-
-
-Question 29. In Dart, `Set<int> s = {1, 2, 2, 3};` — after initialization, what is `s.length`? ⏎ A. 4 ⏎ B. 3 ⏎ C. 2 ⏎ D. Compile error because Set doesn't allow duplicate elements in a declaration
-Answer: B. Set removes duplicates: `{1,2,2,3}` becomes `{1,2,3}` → length = 3. A wrongly counts the duplicate; C is missing an element; D is wrong since Set allows duplicates in the declaration, it only auto-removes them when stored.
-
-
-Question 30. Consider this named constructor code: ⏎ class Point { ⏎ int x, y; ⏎ Point(this.x, this.y); ⏎ Point.origin() : x = 0, y = 0; ⏎ } ⏎ void main() { ⏎ var p1 = Point(3, 4); ⏎ var p2 = Point.origin(); ⏎ print('${p1.x},${p1.y} - ${p2.x},${p2.y}'); ⏎ } ⏎ What is printed? ⏎ A. 0,0 - 3,4 ⏎ B. 3,4 - 0,0 ⏎ C. Error because Dart doesn't support multiple constructors in the same class ⏎ D. null,null - 0,0
-Answer: B. `Point(3,4)` assigns x=3,y=4; `Point.origin()` assigns x=0,y=0 via the initializer list — prints "3,4 - 0,0". A reverses the output; C is wrong since Dart supports named constructors; D is wrong since the values are correctly assigned, not null.
-
-
 Question 31. What does the `??` operator do in Dart? ⏎ A. Type equality comparison ⏎ B. Returns the left-hand value if it's not null, otherwise returns the right-hand value ⏎ C. Forces a non-null cast, throwing an error if null ⏎ D. Logical XOR operator
 Answer: B. `??` returns the left side if non-null, otherwise the right side (null-coalescing). A, C, D misdescribe this operator's function.
 
 
-Question 32. Given: ⏎ String? name; ⏎ print(name ?? "Guest"); ⏎ name = "Minh"; ⏎ print(name!.length); ⏎ What is printed, in order? ⏎ A. null, 4 ⏎ B. Guest, 4 ⏎ C. Guest, 5 ⏎ D. Compile error because `!` cannot be used with a String? variable
-Answer: B. `name` is initially null, so it prints "Guest"; after assigning "Minh" (4 characters: M-i-n-h), `name!.length` = 4 → result "Guest, 4". A has the wrong first value; C has the wrong length (should be 4, not 5); D is wrong since `!` is syntactically valid when the variable is guaranteed non-null at that point.
-
-
-Question 33. In the following code, what is printed to the console? ⏎ void main() { ⏎ try { ⏎ int result = 10 ~/ 0; ⏎ print(result); ⏎ } catch (e) { ⏎ print("Error: $e"); ⏎ } finally { ⏎ print("Done"); ⏎ } ⏎ } ⏎ A. Error: ... then Done (integer division by zero throws IntegerDivisionByZeroException) ⏎ B. 10, without printing Done ⏎ C. Infinity, Done ⏎ D. The program crashes completely with no output
-Answer: A. Integer division by 0 with `~/` throws `IntegerDivisionByZeroException`, caught by `catch`, printing "Error: ..." then "Done" (finally always runs). B, C are wrong since an exception occurs; D is wrong since catch handles the error, the program doesn't fully crash.
-
-
 Question 34. What is the difference between `for-in` and `forEach` when iterating a List in Dart? ⏎ A. `for-in` cannot be used with a List ⏎ B. `forEach` is the classic index-based loop syntax, while `for-in` is a higher-order function ⏎ C. `for-in` is syntax for iterating each element of a collection, while `forEach` calls a callback function in a functional programming style for each element ⏎ D. The two syntaxes are entirely identical in performance and syntax, with no difference
 Answer: C. `for-in` iterates each collection element; `forEach` is a higher-order function taking a callback in a functional style. A is wrong since for-in works with List; B reverses the description; D is wrong since there is a stylistic difference.
-
-
-Question 35. Given this function: ⏎ void greet({String name = "Guest", int age = 18}) { ⏎ print("$name is $age"); ⏎ } ⏎ What does calling `greet(name: "Lan");` print? ⏎ A. Error due to missing age parameter ⏎ B. Lan is 18 ⏎ C. Guest is 18 ⏎ D. Lan is null
-Answer: B. `greet(name: "Lan")` only passes name; age uses its default value of 18 → "Lan is 18". A is wrong since age has a default; C is wrong since name was passed; D is wrong since age clearly has a default.
-
-
-Question 36. Consider this OOP code: ⏎ class Animal { ⏎ String sound() => "Some sound"; ⏎ } ⏎ class Dog extends Animal { ⏎ @override ⏎ String sound() => "Woof"; ⏎ } ⏎ void main() { ⏎ Animal a = Dog(); ⏎ print(a.sound()); ⏎ } ⏎ What is printed, and which OOP concept does it illustrate? ⏎ A. "Some sound" — illustrates Encapsulation ⏎ B. "Woof" — illustrates Polymorphism via method override ⏎ C. Compile error because Dog cannot be assigned to an Animal-typed variable ⏎ D. "Woof Some sound" — both functions are called
-Answer: B. This illustrates Polymorphism: a variable typed as Animal calls Dog's overridden method at runtime, printing "Woof". A mislabels the concept; C is wrong since upcasting is valid; D is wrong since only one method is called.
-
-
-Question 37. Given `Map<String, int> scores = {"Anna": 95};`, what happens when accessing `scores["Ben"]` (a nonexistent key)? ⏎ A. Throws an exception immediately ⏎ B. Returns 0 ⏎ C. Returns null ⏎ D. Returns an empty string ""
-Answer: C. Accessing a Map with a nonexistent key returns null in Dart. A, B, D do not match Map's default behavior in Dart.
-
-
-Question 38. Consider this code illustrating Dart's Event Loop: ⏎ import 'dart:async'; ⏎ void main() { ⏎ print("A"); ⏎ scheduleMicrotask(() => print("micro")); ⏎ Future(() => print("future")); ⏎ print("B"); ⏎ } ⏎ What is the correct output order? ⏎ A. A, B, micro, future ⏎ B. A, micro, future, B ⏎ C. A, B, future, micro ⏎ D. micro, A, B, future
-Answer: A. Microtasks have higher priority than the Event queue but still run after currently executing synchronous code: prints "A", "B" (sync first), then microtask "micro" runs before Future "future". Correct answer: A, B, micro, future.
-
-
-Question 39. Given this Stream code: ⏎ Stream<int> countUp() async { ⏎ for (int i = 1; i <= 3; i++) { ⏎ yield i; ⏎ } ⏎ } ⏎ void main() async { ⏎ await for (var value in countUp()) { ⏎ print(value); ⏎ } ⏎ } ⏎ What is printed? ⏎ A. 1 ⏎ B. 1 2 3 (each number on its own line) ⏎ C. 3 2 1 ⏎ D. Error because `async` is not allowed for a function returning a Stream
-Answer: B. The `async`/`yield` loop generates 1, 2, 3 in order, each printed on its own line via `await for`. A only lists one value; C reverses the order; D is wrong since Dart fully supports `async`.
 
 
 Question 40. In Dart's try/catch, what does the `catch (e, s)` syntax allow a developer to do? ⏎ A. Catch two different exception types at once ⏎ B. Catch the error object and its corresponding stack trace ⏎ C. Catch errors on two different threads ⏎ D. Only applicable to String-type errors
@@ -181,10 +133,6 @@ Question 41. Which statement is correct about the differences between `List`, `S
 Answer: B. List is ordered; Set is a collection of unique, unordered elements; Map stores key-value pairs — the standard definition. A, C, D all misdescribe the basic characteristics.
 
 
-Question 42. Given this string interpolation code: ⏎ String name = "FPT University"; ⏎ print("Hello $name"); ⏎ print("Length: ${name.length}"); ⏎ print("Upper: ${name.toUpperCase()[0]}"); ⏎ What character does the third line print? ⏎ A. f ⏎ B. F ⏎ C. FPT ⏎ D. Error because you cannot index directly into a function result inside string interpolation
-Answer: B. `name.toUpperCase()` = "FPT UNIVERSITY", index [0] = 'F'. A has the wrong case; C is not a single character; D is wrong since Dart allows indexing a function result directly inside string interpolation.
-
-
 Question 43. In Dart, what is the `Never` type used for? ⏎ A. A variable that is never assigned a value ⏎ B. A function that never returns normally (always throws an exception or loops infinitely) ⏎ C. A data type equivalent to `void` ⏎ D. A type used for asynchronous functions
 Answer: B. `Never` is used for functions that never return normally (always throw or loop infinitely). A, C, D misdescribe the purpose of the Never type.
 
@@ -193,28 +141,12 @@ Question 44. In Dart, what is the role of the `main()` function? ⏎ A. It's a c
 Answer: B. `main()` is the entry point of execution for every Dart program. A, C, D misdescribe the role of the main function.
 
 
-Question 45. What is the difference between an arrow function (`=>`) and a function block (`{ return ...; }`) in Dart? ⏎ A. Arrow functions can only be used for async functions ⏎ B. An arrow function is shorthand for a function with a single return expression, while a function block allows multiple statements ⏎ C. The two syntaxes have completely different meanings regarding return type ⏎ D. Arrow functions are not allowed to take parameters
-Answer: B. Arrow function is shorthand for a single-expression return; function block allows multiple statements. A, C, D do not match this syntax's characteristics.
-
-
-Question 46. Consider this code, predict the result: ⏎ Future<String> fetchData() async { ⏎ await Future.delayed(Duration(seconds: 1)); ⏎ return "Data loaded"; ⏎ } ⏎ void main() { ⏎ print("Start"); ⏎ fetchData().then((value) => print(value)); ⏎ print("End"); ⏎ } ⏎ What order is printed to console? ⏎ A. Start, Data loaded, End ⏎ B. Start, End, Data loaded ⏎ C. Data loaded, Start, End ⏎ D. Start, End (never prints "Data loaded")
-Answer: B. Since `fetchData()` is not awaited in `main()`, it doesn't block subsequent code — `.then()` is non-blocking, so "Start", "End" print first, and after 1 second "Data loaded" prints. A, C have the wrong order; D is wrong since Data loaded is eventually printed.
-
-
 Question 47. In Dart's switch-case, why is `break` (or `return`) usually needed after each case? ⏎ A. Because Dart auto falls-through like C if there's no break, which can accidentally execute the next case ⏎ B. Because Dart requires this syntax to compile, unrelated to behavior ⏎ C. Because break is used to exit the main function ⏎ D. Dart doesn't support switch-case
 Answer: A. Dart falls through like C if break is missing, which can accidentally execute the following case. B, C, D misdescribe break's role in switch-case.
 
 
-Question 48. In `List<int> nums = [1,2,3]; for(var x in nums) print(x);`, what is the main purpose of using `var` instead of `int` for variable `x`? ⏎ A. `var` must be used because `int` would cause an error ⏎ B. Type inference — Dart automatically infers the data type (int) based on the List's elements, keeping code concise while still being strongly typed ⏎ C. `var` makes variable x fully dynamic with no type checking at all ⏎ D. No difference at all, it's just a coding habit
-Answer: B. `var` lets Dart infer the type (int) from the List's elements, keeping code concise while remaining strongly typed. A is wrong since int is equally valid; C is wrong since var differs from dynamic; D is wrong since there is a difference in type inference even if the runtime result looks the same.
-
-
 Question 49. According to the lecture, what common pitfall is emphasized for students new to Dart? ⏎ A. Forgetting to close a class's curly braces ⏎ B. Ignoring null-safety warnings and improperly mixing synchronous/asynchronous code ⏎ C. Using too many async functions causing incorrect parallel execution ⏎ D. Being unable to create a String-type variable
 Answer: B. The stated common pitfalls: ignoring null-safety warnings and improperly mixing sync/async code. A, C, D are not content emphasized in the lecture.
-
-
-Question 50. Consider the Student class and mini-lab: ⏎ class Student { ⏎ String name; ⏎ Student(this.name); ⏎ } ⏎ void main() async { ⏎ var list = [Student("An"), Student("Binh")]; ⏎ await Future.delayed(Duration(seconds: 1)); ⏎ list.forEach((s) => print(s.name)); ⏎ } ⏎ If the `await` keyword before `Future.delayed(...)` is removed, what happens? ⏎ A. The program will show a compile error due to missing await ⏎ B. `forEach` still prints student names in the correct order but may run before the 1-second delay finishes (since it no longer waits for the Future to complete), because `Future.delayed` without await is merely "started" without blocking execution ⏎ C. The program will crash because the Future is unhandled ⏎ D. The student list order will be reversed
-Answer: B. Not awaiting `Future.delayed` lets `main()` continue executing subsequent statements without waiting the full second — though `forEach` still executes names in the correct order, it may run before the "delay" completes (with no practical effect here since nothing depends on the delay). A is wrong since it's not a compile error; C is wrong since it doesn't crash; D is wrong since the name order is preserved.
 
 
 Question 51. What characterizes an abstract class in Dart? ⏎ A. It cannot have any methods with a body ⏎ B. It defines structure without full behavior, forcing subclasses to implement the bodiless methods ⏎ C. Only usable inside the Flutter Framework, not in pure Dart ⏎ D. Can be instantiated directly with the `new` keyword
@@ -229,44 +161,20 @@ Question 53. Given the comparison table of `extends`, `implements`, `with`, whic
 Answer: B. `implements` only takes the signature (interface), forcing you to write all the behavior yourself, used as a contract. A describes `extends`; C describes `mixin`; D is wrong since Dart fully supports implements.
 
 
-Question 54. Given this code, predict the result of calling `Eagle().fly()`: ⏎ class Bird { ⏎ void fly() => print("Bird flying"); ⏎ } ⏎ class Eagle implements Bird { ⏎ @override ⏎ void fly() => print("Eagle gliding"); ⏎ } ⏎ A. "Bird flying" because implements also inherits the method body ⏎ B. "Eagle gliding" — because implements only takes the interface (signature), Eagle must redefine fly() entirely itself ⏎ C. Compile error because Eagle has not defined a constructor ⏎ D. Both "Bird flying" and "Eagle gliding" are printed
-Answer: B. Since `implements` only takes the signature, Eagle must redefine fly() entirely → prints "Eagle gliding". A is wrong since implements does not inherit the method body; C is wrong since no constructor is needed here; D is wrong since only one method is called.
-
-
 Question 55. What is a mixin used for in Dart? ⏎ A. Fully replaces constructors ⏎ B. Sharing behavior across multiple classes without a traditional inheritance chain ⏎ C. Used exclusively for JSON handling ⏎ D. A special kind of variable in Dart
 Answer: B. A mixin shares behavior across multiple classes without a traditional inheritance chain. A, C, D misdescribe the purpose of a mixin.
-
-
-Question 56. Consider this constrained mixin code: ⏎ class Pet { ⏎ String name; ⏎ Pet(this.name); ⏎ } ⏎ mixin CanBark on Pet { ⏎ void bark() => print("$name says woof!"); ⏎ } ⏎ class Dog extends Pet with CanBark { ⏎ Dog() : super("Buddy"); ⏎ } ⏎ class Fish { ⏎ // want to apply "with CanBark" here ⏎ } ⏎ If class `Fish` (not extending `Pet`) tries to declare `class Fish with CanBark {}`, what happens? ⏎ A. Compiles successfully, Fish will have a working bark() method ⏎ B. Compile error, because mixin `CanBark` is constrained `on Pet`, only classes extending Pet can apply this mixin ⏎ C. Compiles but throws a runtime error when calling bark() ⏎ D. Dart will automatically make Fish implicitly extend Pet
-Answer: B. Mixin `CanBark on Pet` is constrained to only apply to classes extending Pet; since Fish doesn't extend Pet, it fails to compile. A, C, D don't match how mixin constraints work.
 
 
 Question 57. How does a factory constructor differ from a regular constructor in Dart? ⏎ A. A factory constructor always creates a completely new object, with no exceptions ⏎ B. A factory constructor allows control over instance creation — it can return an existing instance (cache/singleton) or parse data (JSON) instead of always returning a new object ⏎ C. A factory constructor cannot be named ⏎ D. A factory constructor can only be used with an abstract class
 Answer: B. A factory constructor controls instance creation — it can return an existing instance or parse data, instead of always creating new. A is wrong since this is the exact difference; C, D are incorrect about syntax/scope.
 
 
-Question 58. Given: ⏎ class User { ⏎ final String name; ⏎ factory User.fromJson(Map j) => User._(j['name']); ⏎ User._(this.name); ⏎ } ⏎ Why is the `User._` constructor made private (with `_`)? ⏎ A. Because Dart requires every factory constructor to have an accompanying private constructor ⏎ B. To prevent code outside the class from directly calling the regular constructor, forcing usage through `User.fromJson` — controlling how objects are created ⏎ C. Because `_` is a required naming convention for JSON parsing ⏎ D. No particular reason, just a coding style choice
-Answer: B. Making the constructor private prevents direct calls from outside, forcing usage through `fromJson` — controlling object creation. A, C, D are not the correct/precise reasons in this factory pattern.
-
-
 Question 59. What is the main benefit that generics (`List<T>`, `Future<T>`, `Map<K,V>`) bring in Dart? ⏎ A. Makes the program run faster on the CPU ⏎ B. Ensures compile-time type safety, avoiding errors from misusing the dynamic type ⏎ C. Allows completely skipping data type declarations ⏎ D. Only works with primitive types (int, double)
 Answer: B. Generics ensure compile-time type safety, avoiding dynamic-type misuse errors. A, C, D misdescribe the core benefit of generics.
 
 
-Question 60. Given this generic class code: ⏎ class Box<T> { ⏎ T value; ⏎ Box(this.value); ⏎ void show() => print("Value = $value"); ⏎ } ⏎ void main() => Box<int>(10).show(); ⏎ If `Box<int>(10)` is replaced with `Box<String>(10)`, what happens? ⏎ A. Runs normally, prints "Value = 10" ⏎ B. Compile error because 10 is not a String, violating the generic type constraint ⏎ C. Dart automatically converts 10 to "10" ⏎ D. The program throws a runtime exception but still compiles
-Answer: B. `Box<String>(10)` fails to compile since 10 (int) doesn't match the declared String type, violating the strict generic type check. A, C, D don't match Dart's strict generic type checking.
-
-
-Question 61. Given this generic constraint: ⏎ abstract class Animal { String sound(); } ⏎ class Cat extends Animal { sound() => "Meow"; } ⏎ class Box<T extends Animal> { ⏎ T pet; ⏎ Box(this.pet); ⏎ void play() => print(pet.sound()); ⏎ } ⏎ What does the `<T extends Animal>` syntax mean? ⏎ A. Box can only hold the exact Animal type, no subclasses accepted ⏎ B. Restricts the generic type T to be Animal or a subclass of Animal, guaranteeing T always has a sound() method ⏎ C. This is invalid syntax, Dart doesn't support generic constraints ⏎ D. `extends` here means Box inherits from Animal
-Answer: B. `<T extends Animal>` restricts generic T to Animal or its subclasses, guaranteeing T has a sound() method. A is wrong since subclasses are still accepted; C is wrong since this is valid syntax; D confuses generic constraint `extends` with class inheritance.
-
-
 Question 62. What does collection-if / collection-for syntax allow in Dart? ⏎ A. Only usable in a regular for loop, not in a List declaration ⏎ B. Flexibly building a List/Set/Map by inserting conditional elements (`if`) or generating elements from a loop (`for`) directly inside the collection declaration ⏎ C. Fully replaces the `var` keyword ⏎ D. Only applies to Map, not to List
 Answer: B. Collection-if/for lets you flexibly build collections with conditional insertion or loop-generated elements right inside the declaration. A, C, D misdescribe the scope of application.
-
-
-Question 63. Given: ⏎ var base = [1, 2, 3]; ⏎ var list = [ ⏎ ...base, ⏎ if (true) 99, ⏎ for (var x in base) x * 10 ⏎ ]; ⏎ print(list); ⏎ What is printed? ⏎ A. [1, 2, 3, 99, 10, 20, 30] ⏎ B. [1, 2, 3, 10, 20, 30, 99] ⏎ C. [99, 1, 2, 3, 10, 20, 30] ⏎ D. Compile error because you cannot mix spread, if, and for in the same List
-Answer: A. `[...base, if(true) 99, for(x in base) x*10]` = [1,2,3, 99, 10,20,30]. B, C have the wrong order; D is wrong since Dart allows mixing these syntaxes.
 
 
 Question 64. What benefit does a Custom Exception in Dart (e.g. `class LoginException implements Exception`) offer over throwing an ordinary error string? ⏎ A. No benefit, it just adds code complexity ⏎ B. Provides specific business-domain error context, making it easier to debug and handle logic at the UI/Repository layer ⏎ C. Custom Exceptions run faster than plain Strings ⏎ D. Custom Exceptions can only be used with external APIs, not internally
@@ -277,10 +185,6 @@ Question 65. In Dart, which queue has HIGHER priority between the Microtask queu
 Answer: B. The Microtask queue has higher priority — all microtasks run before Dart proceeds to the Event queue. A reverses this; C, D don't match Dart's event loop mechanism.
 
 
-Question 66. Given this Future chaining code: ⏎ Future(() => 1) ⏎ .then((v) => v + 1) ⏎ .then((v) => print(v)); ⏎ What value is printed? ⏎ A. 1 ⏎ B. 2 ⏎ C. 0 ⏎ D. Nothing is printed because await is missing
-Answer: B. `Future(()=>1).then((v)=>v+1).then((v)=>print(v))` → 1+1 = 2, prints 2. A, C have the wrong value; D is wrong since the code still executes without an explicit await at main.
-
-
 Question 67. Comparing Future chaining (`.then()`) with `async/await`, which statement is most accurate? ⏎ A. `.then()` and `async/await` are entirely incompatible, cannot be used together in a project ⏎ B. `.then()` suits simple async chains without needing intermediate variables; `async/await` makes async code read linearly, easier to follow when there are multiple dependent steps ⏎ C. `async/await` runs fully synchronously, no longer asynchronous ⏎ D. `.then()` is always faster than `async/await` in terms of performance
 Answer: B. `.then()` suits simple chains; `async/await` helps code read linearly when steps depend on each other. A is wrong since they can be used together; C is wrong since async/await is still asynchronous; D has no basis regarding absolute performance.
 
@@ -289,16 +193,8 @@ Question 68. How does `StreamController.broadcast()` differ from the default sin
 Answer: B. Broadcast allows multiple listeners to receive shared events; single-subscription allows only one. A reverses this; C, D don't match the actual characteristics of the two Stream types.
 
 
-Question 69. Given this StreamController.broadcast() code: ⏎ var c = StreamController<int>.broadcast(); ⏎ c.stream.listen((v) => print("A:$v")); ⏎ c.stream.listen((v) => print("B:$v")); ⏎ c..add(1)..add(2); ⏎ What is printed, in order? ⏎ A. A:1, A:2, B:1, B:2 ⏎ B. A:1, B:1, A:2, B:2 ⏎ C. Only A:1, A:2 are printed because listener B doesn't work ⏎ D. Error because StreamController.broadcast() doesn't support multiple listeners
-Answer: B. With `c..add(1)..add(2)`, each add triggers both listeners A and B before the next add: A:1, B:1, A:2, B:2. A has the wrong grouping order; C is wrong since both listeners work; D is wrong since broadcast fully supports multiple listeners.
-
-
 Question 70. What is the main purpose behind introducing the Repository Pattern in Module 3? ⏎ A. Fully replaces Widgets in Flutter ⏎ B. Separates data-fetching logic from the presentation/UI layer, making code easier to test and maintain, and forming the foundation for Bloc/Provider/Riverpod ⏎ C. Only used for apps with no UI ⏎ D. A replacement for SQLite
 Answer: B. The Repository Pattern separates data fetching from UI, aiding testability/maintainability, and forms the foundation for Bloc/Provider/Riverpod. A, C, D misdescribe its purpose.
-
-
-Question 71. Given this repository code using a Stream: ⏎ Stream<int> counter() async { ⏎ for (int i = 1; i <= 3; i++) { ⏎ await Future.delayed(Duration(milliseconds: 300)); ⏎ yield i; ⏎ } ⏎ } ⏎ When this Stream is bound to `StreamBuilder(stream: repo.counter(), ...)`, how will the UI behave? ⏎ A. The UI only builds once, after the entire loop finishes ⏎ B. The UI automatically rebuilds each time a new value is `yield`-ed, creating a real-time update effect ⏎ C. StreamBuilder doesn't support Streams generated from `async` ⏎ D. The app will freeze (block the UI thread) for a full 900ms
-Answer: B. The UI automatically rebuilds each time a new value is yielded, creating a real-time update effect. A is wrong since StreamBuilder rebuilds per event; C is wrong since StreamBuilder fully supports async*; D is wrong since the delay doesn't block the whole UI thread thanks to the async mechanism.
 
 
 Question 72. According to the "Performance Best Practices" section of Module 3, which practice is NOT recommended? ⏎ A. Using const widgets to reduce rebuild cost ⏎ B. Running a heavy loop directly on the main isolate while building the UI ⏎ C. Using async functions for I/O operations ⏎ D. Using Isolates for heavy CPU tasks
@@ -313,10 +209,6 @@ Question 74. In the example `AnimationController implements Listenable` mentione
 Answer: B. `implements` means AnimationController only follows the contract and implements its own behavior, without inheriting existing implementation from Listenable. A is wrong since implements doesn't copy code; C is wrong since there's a clear relationship via implements; D is wrong since this is valid Dart syntax.
 
 
-Question 75. A student writes this Repository: ⏎ class Repo { ⏎ Future<String> getUser() async { ⏎ await Future.delayed(Duration(milliseconds: 300)); ⏎ return "Anna"; ⏎ } ⏎ } ⏎ and calls `var name = repo.getUser();` (without using `await`). What type and value will variable `name` have at the moment of assignment? ⏎ A. Type String, value "Anna" immediately ⏎ B. Type Future<String>, a Future object still "pending" completion, not yet the actual String value ⏎ C. Type dynamic, value null ⏎ D. Compile error due to missing await
-Answer: B. Without await, `name` has type `Future<String>` — a pending Future object, not yet the actual String value. A, C, D don't match Future's behavior in Dart.
-
-
 Question 76. In Flutter, which widget acts as the "backbone" of a Material screen, providing AppBar, body, and FloatingActionButton? ⏎ A. Container ⏎ B. Scaffold ⏎ C. MaterialApp ⏎ D. Column
 Answer: B. Scaffold is the backbone of a Material screen, providing AppBar/body/FAB. A, C, D don't correctly describe this structural role.
 
@@ -329,10 +221,6 @@ Question 78. In RadioListTile, what is the role of the `groupValue` property? �
 Answer: B. `groupValue` holds the currently selected value for the whole group, compared with each item's `value`. A, C, D misdescribe its function.
 
 
-Question 79. Given: ⏎ class _RadioScreenState extends State<RadioScreen> { ⏎ String? quality = 'HD'; ⏎ @override ⏎ Widget build(BuildContext context) { ⏎ return Column(children: [ ⏎ RadioListTile<String>( ⏎ title: const Text('SD'), value: 'SD', ⏎ groupValue: quality, ⏎ onChanged: (v) => setState(() => quality = v), ⏎ ), ⏎ RadioListTile<String>( ⏎ title: const Text('HD'), value: 'HD', ⏎ groupValue: quality, ⏎ onChanged: (v) => setState(() => quality = v), ⏎ ), ⏎ ]); ⏎ } ⏎ } ⏎ If `setState()` is removed from `onChanged` (keeping only `quality = v`), what happens when the user taps 'SD'? ⏎ A. Variable `quality` is still updated to 'SD' but the UI doesn't rebuild to reflect the change, the radio still displays as before ⏎ B. The app throws a runtime error immediately ⏎ C. The radio button automatically rebuilds because Flutter always tracks every variable in State ⏎ D. The value of quality won't change because setState i
-Answer: A. Without setState, `quality` still updates in memory but Flutter doesn't know to rebuild — the UI shows no change. B is wrong since there's no runtime error; C is wrong since Flutter doesn't auto-track every variable; D is wrong since quality does change, only the UI doesn't.
-
-
 Question 80. What is the difference between `Slider` and `Switch` in Flutter? ⏎ A. Slider selects a continuous value within a range, Switch only toggles a boolean value ⏎ B. Both are used for boolean values ⏎ C. Switch is for real numbers, Slider is for boolean ⏎ D. No functional difference
 Answer: A. Slider selects a continuous value, Switch only toggles boolean. B, C, D misdescribe/reverse the two widgets' functions.
 
@@ -341,40 +229,20 @@ Question 81. What does `ThemeMode.system` mean in `MaterialApp`? ⏎ A. Forces t
 Answer: C. `ThemeMode.system` makes the app follow the device OS's light/dark setting automatically. A, B fix one mode, contradicting "system"; D is wrong since themeMode still has meaning but full effect needs darkTheme declared.
 
 
-Question 82. Given: ⏎ return MaterialApp( ⏎ theme: ThemeData.light(useMaterial3: true), ⏎ darkTheme: ThemeData.dark(useMaterial3: true), ⏎ themeMode: ThemeMode.dark, ⏎ home: const DemoTheme(), ⏎ ); ⏎ Inside a child widget, what is the correct syntax to access the current theme's style (e.g. `titleLarge`)? ⏎ A. `ThemeData.of(context).textTheme.titleLarge` ⏎ B. `Theme.of(context).textTheme.titleLarge` ⏎ C. `context.theme.titleLarge` ⏎ D. `MaterialApp.theme(context).titleLarge`
-Answer: B. `Theme.of(context).textTheme.titleLarge` is the correct syntax for accessing the current theme. A, C, D are not valid Flutter APIs.
-
-
 Question 83. How does `ListView.separated` differ from `ListView.builder`? ⏎ A. `ListView.separated` doesn't support itemBuilder ⏎ B. `ListView.separated` allows inserting a separator widget between items via `separatorBuilder`, which `ListView.builder` lacks ⏎ C. `ListView.builder` only displays up to 10 items ⏎ D. The two are entirely identical in API
 Answer: B. `ListView.separated` allows inserting a separator between items via `separatorBuilder`. A is wrong since it still has itemBuilder; C is wrong since there's no 10-item limit; D is wrong since the two APIs differ.
-
-
-Question 84. In the ListTile + CircleAvatar example: ⏎ ListTile( ⏎ leading: CircleAvatar(child: Text(m['title']![0])), ⏎ title: Text(m['title']!), ⏎ subtitle: Text(m['year']!), ⏎ trailing: const Icon(Icons.chevron_right), ⏎ onTap: () => debugPrint('Selected ${m['title']}'), ⏎ ); ⏎ What does the `!` after `m['title']` mean in the context of Dart's null-safety? ⏎ A. Logical negation (NOT) operator ⏎ B. The "null assertion" operator — asserting to the compiler that the value is definitely non-null; if wrong, it throws a runtime error ⏎ C. This operator is purely decorative, no effect on logic ⏎ D. Converts a String type to int
-Answer: B. `!` is the null assertion operator, asserting non-null to the compiler, throwing a runtime error if wrong. A, C, D misdescribe this operator's meaning in null-safety.
 
 
 Question 85. In the `showDatePicker` example, what are the `firstDate` and `lastDate` parameters used for? ⏎ A. Determine the default current date ⏎ B. Restrict the valid date range the user can select on the calendar ⏎ C. No real effect, purely a required syntax parameter ⏎ D. Determine the date display format (dd/mm/yyyy or mm/dd/yyyy)
 Answer: B. `firstDate`/`lastDate` restrict the valid selectable date range on the calendar. A, C, D misdescribe these two parameters' function.
 
 
-Question 86. This code is used to pick a date: ⏎ Future<void> pickDate() async { ⏎ final date = await showDatePicker( ⏎ context: context, ⏎ initialDate: DateTime.now(), ⏎ firstDate: DateTime(2000), ⏎ lastDate: DateTime(2100), ⏎ ); ⏎ if (date != null) setState(() => selectedDate = date); ⏎ } ⏎ Why is checking `if (date != null)` needed before calling `setState`? ⏎ A. Because `showDatePicker` always returns null when working correctly ⏎ B. Because the user might cancel/dismiss the date-picker dialog, in which case the Future returns null, and you shouldn't setState with an unwanted null value ⏎ C. Because this is required Dart syntax for every async function ⏎ D. Because DateTime is never allowed to be null in Flutter
-Answer: B. The null check is needed since the user can cancel the dialog, causing the Future to return null, and you shouldn't setState with an unwanted null. A, C, D don't match the actual reason.
-
-
 Question 87. How does the `Wrap` widget differ from `Row`, and why does it suit a genre chip list? ⏎ A. Wrap is identical to Row, no difference ⏎ B. Wrap automatically wraps child elements to a new line when there isn't enough horizontal space, avoiding the overflow error Row would encounter with too many elements ⏎ C. Wrap only allows a maximum of 2 child elements ⏎ D. Row auto-wraps but Wrap doesn't
 Answer: B. Wrap automatically wraps children to a new line when out of horizontal space, avoiding the overflow Row would suffer. A, C, D misdescribe/reverse the two widgets' characteristics.
 
 
-Question 88. The lecture has this snippet: ⏎ Widget tile(String t, String s) => Card( ⏎ margin: const EdgeInsets.symmetric(vertical: 6), ⏎ child: ListTile(title: Text(t), subtitle: Text(s)), ⏎ ); ⏎ What is the main benefit of extracting repeated UI into a separate function/widget like `tile()`, in the spirit of "Everything is a Widget"? ⏎ A. Makes Flutter run faster in absolute CPU terms ⏎ B. Reuse and organize UI into blocks (LEGO blocks), making code more readable, maintainable, and consistent in spacing ⏎ C. It's mandatory or Flutter will throw an error ⏎ D. No real benefit, just a coding style
-Answer: B. Extracting repeated UI blocks aids reuse, organization, readability, maintainability, and spacing consistency. A, C, D don't match the actual benefit stated.
-
-
 Question 89. According to general recommendations, `BottomNavigationBar` best fits apps with how many main navigation tabs? ⏎ A. 1 tab ⏎ B. 2-5 tabs ⏎ C. 10-15 tabs ⏎ D. No limit on the number
 Answer: B. BottomNavigationBar best suits 2-5 tabs per general recommendation. A, C, D don't match the recommended number.
-
-
-Question 90. In the `HomeTabs` example: ⏎ class _HomeTabsState extends State<HomeTabs> { ⏎ int index = 0; ⏎ final screens = const [Center(child: Text('Home')), ...]; ⏎ @override ⏎ Widget build(BuildContext context) { ⏎ return Scaffold( ⏎ body: screens[index], ⏎ bottomNavigationBar: BottomNavigationBar( ⏎ currentIndex: index, ⏎ onTap: (i) => setState(() => index = i), ⏎ items: const [...], ⏎ ), ⏎ ); ⏎ } ⏎ } ⏎ If the `index` variable were not held inside a `StatefulWidget` (e.g. declared in a StatelessWidget), what would happen when the user taps a tab? ⏎ A. The app still works normally because StatelessWidget also supports setState ⏎ B. `setState` cannot be called, and the UI cannot automatically update the corresponding screen when the user switches tabs, because StatelessWidget has no mechanism for mutable internal state ⏎ C. The program will automatically switch to using InheritedWidget ⏎ D. There's no difference b
-Answer: B. StatelessWidget has no setState, so it can't store and update the `index` state when the user taps a tab. A, C, D misdescribe StatelessWidget's characteristics.
 
 
 Question 91. What is the difference between `Image.network` and `Image.asset`? ⏎ A. `Image.network` loads an image from an internet URL, `Image.asset` loads an image bundled within the project (declared in pubspec.yaml) ⏎ B. Both only load images from local storage ⏎ C. `Image.asset` only works on Web ⏎ D. `Image.network` doesn't support BoxFit
@@ -383,10 +251,6 @@ Answer: A. `Image.network` loads from a URL, `Image.asset` loads bundled project
 
 Question 92. In Module 4's "Common Errors & Fixes" list, what is the common cause of the UI "not updating" after data changes? ⏎ A. Network error ⏎ B. Forgetting to call `setState()` after changing a variable's value in a StatefulWidget ⏎ C. Missing Scaffold ⏎ D. Incorrect import syntax
 Answer: B. Forgetting to call `setState()` is the common cause of a UI not updating, per the "Common Errors & Fixes" checklist. A, C, D are not the cause stated in the lecture.
-
-
-Question 93. In the Sectioned Home Screen code: ⏎ body: ListView( ⏎ padding: const EdgeInsets.all(12), ⏎ children: [ ⏎ section('Now Playing'), const Placeholder(fallbackHeight: 120), ⏎ section('Trending'), const Placeholder(fallbackHeight: 120), ⏎ ], ⏎ ), ⏎ Why use `ListView` (instead of `Column`) as the root widget for an entire screen containing multiple sections? ⏎ A. Because ListView is mandatory inside every Scaffold ⏎ B. Because ListView automatically allows scrolling when content exceeds screen height, while Column by default cannot scroll and easily causes overflow ⏎ C. Because Column doesn't support padding ⏎ D. No technical reason, it's a random choice
-Answer: B. ListView allows scrolling when content exceeds screen height, while Column doesn't scroll by default and easily overflows. A, C, D don't match the actual technical reason.
 
 
 Question 94. According to the lecture, what are Material Icons in Flutter commonly used for? ⏎ A. Purely decorative, no function ⏎ B. Navigation buttons, action buttons (add, delete), and status indicators ⏎ C. Only used as a Scaffold background ⏎ D. Completely replaces the Text widget
@@ -405,10 +269,6 @@ Question 97. In a basic Scaffold example, where is `floatingActionButton` typica
 Answer: B. floatingActionButton typically floats bottom-right, used for a prominent primary action. A, C, D misdescribe its position/role.
 
 
-Question 98. A student writes: ⏎ class DemoTheme extends StatelessWidget { ⏎ @override ⏎ Widget build(BuildContext context) { ⏎ return Scaffold( ⏎ body: Center(child: Text('Current theme', style: Theme.of(context).textTheme.titleLarge)), ⏎ ); ⏎ } ⏎ } ⏎ What role does `BuildContext context` in the `build` function play when calling `Theme.of(context)`? ⏎ A. A parameter with no real effect, purely formal ⏎ B. Represents the widget's position in the widget tree, allowing it to look up the nearest InheritedWidget data (like Theme) above it in the tree ⏎ C. A global variable storing app state ⏎ D. Only used to pass API data
-Answer: B. `BuildContext` represents the widget's tree position, allowing lookup of the nearest InheritedWidget (like Theme) above it. A, C, D misdescribe BuildContext's role.
-
-
 Question 99. According to Module 4, when should `SingleChildScrollView` or `Flexible` be used to fix overflow on small screens? ⏎ A. Never needed, Flutter automatically handles overflow ⏎ B. When UI content exceeds the available screen size (especially on small screens), you need scrolling or flexible resizing to avoid layout overflow ⏎ C. Only used for apps running on Desktop ⏎ D. Only applicable to the Text widget
 Answer: B. Use them when content exceeds the available screen size, to allow scrolling or flexible resizing and avoid overflow. A is wrong since Flutter doesn't auto-handle every overflow case; C, D wrongly restrict the scope of use.
 
@@ -423,10 +283,6 @@ Answer: B. `Navigator.push()` pushes a new route onto the top of the navigation 
 
 Question 102. What does the `Navigator.pop(context)` method do? ⏎ A. Pushes another new screen onto the stack ⏎ B. Removes (pops) the screen currently at the top of the stack, revealing the screen below it ⏎ C. Replaces the entire stack with a new route ⏎ D. Restarts the app from scratch
 Answer: B. `Navigator.pop(context)` removes the top screen from the stack, showing the one below. A, C, D misdescribe this behavior.
-
-
-Question 103. Given: ⏎ ElevatedButton( ⏎ onPressed: () { ⏎ Navigator.push( ⏎ context, ⏎ MaterialPageRoute(builder: (_) => SecondPage()), ⏎ ); ⏎ }, ⏎ child: Text('Go to Second Page'), ⏎ ) ⏎ According to the lecture's explanation of why this original code doesn't run directly on DartPad, what is the main cause? ⏎ A. DartPad doesn't support ElevatedButton ⏎ B. Missing a complete program structure: DartPad requires `main()`, `runApp()`, and a root `MaterialApp`; providing only a lone widget like this without a valid Navigator context (e.g. SecondPage undefined, or missing the surrounding MaterialApp) causes an error ⏎ C. Navigator.push only works on real devices, not on DartPad ⏎ D. MaterialPageRoute is an API that has been removed from Flutter
-Answer: B. DartPad needs a complete structure (main, runApp, MaterialApp); missing these or undefined referenced classes (like SecondPage) causes errors. A, C, D don't match the lecture's explanation.
 
 
 Question 104. What is the difference between `Navigator.push()` and `Navigator.pushReplacement()`? ⏎ A. No difference ⏎ B. `push()` adds a new route on top of the current one (the old route stays in the stack), while `pushReplacement()` replaces the current route with a new one (the old route is removed from the stack) ⏎ C. `pushReplacement()` can only be used with named routes ⏎ D. `push()` doesn't allow going back with the back button
@@ -453,10 +309,6 @@ Question 109. What does deep linking in Flutter allow? ⏎ A. Increases app buil
 Answer: B. Deep linking lets users open a specific screen directly via a URL/external source. A, C, D misdescribe deep linking's purpose.
 
 
-Question 110. In an Android deep link configuration, where does the following XML snippet belong and what does it mean? ⏎ <intent-filter> ⏎ <action android:name="android.intent.action.VIEW" /> ⏎ <category android:name="android.intent.category.DEFAULT" /> ⏎ <category android:name="android.intent.category.BROWSABLE" /> ⏎ <data android:scheme="movieapps" android:host="movies" /> ⏎ </intent-filter> ⏎ A. In `pubspec.yaml`, used to declare a dependency ⏎ B. In `AndroidManifest.xml`, declaring an intent-filter so the Android OS recognizes and routes links like `movieapps://movies` to the correct app ⏎ C. In `main.dart`, used to define a Flutter route ⏎ D. In `Info.plist`, only applicable to iOS
-Answer: B. This snippet belongs in `AndroidManifest.xml`, declaring an intent-filter so Android routes matching links to this app. A, C, D are the wrong file location.
-
-
 Question 111. On iOS, to support a custom URL scheme (e.g. `movieapps://`), where does the configuration need to be added? ⏎ A. AndroidManifest.xml ⏎ B. build.gradle ⏎ C. Info.plist (add URL Types → URL Schemes) ⏎ D. pubspec.yaml
 Answer: C. Custom URL scheme config on iOS goes in Info.plist (URL Types → URL Schemes). A, B, D are not the correct location for this configuration.
 
@@ -465,40 +317,16 @@ Question 112. What is the basic difference between `StatelessWidget` and `Statef
 Answer: B. StatelessWidget has no mutable state and doesn't rebuild on its own; StatefulWidget holds a State object and rebuilds via setState(). A, C, D misdescribe the basic characteristics of the two widget types.
 
 
-Question 113. Given this CounterPage code using `setState`: ⏎ class _CounterPageState extends State<CounterPage> { ⏎ int count = 0; ⏎ void increment() { ⏎ setState(() { count++; }); ⏎ } ⏎ ... ⏎ } ⏎ If replaced with just `count++;` WITHOUT calling `setState()`, what happens? ⏎ A. `count`'s value still correctly increases in memory, but Flutter won't know to rebuild the widget, so the UI's displayed count doesn't change ⏎ B. The app throws an immediate compile error ⏎ C. The UI still automatically updates because Flutter always tracks every variable in State ⏎ D. The count value resets to 0 every time it rebuilds
-Answer: A. Without setState, count still increases in memory, but Flutter doesn't know to rebuild — the UI shows an unchanged count. B is wrong since there's no compile error; C is wrong since Flutter doesn't auto-track every variable; D is wrong since count isn't reset.
-
-
 Question 114. What does "Lifting State Up" mean in Flutter? ⏎ A. Removing all state from the app ⏎ B. Moving shared state up to a common ancestor widget so child widgets can access and sync data, reducing duplicated logic ⏎ C. Moving all UI logic to the server side ⏎ D. Only applicable when using Provider
 Answer: B. Lifting State Up moves shared state to a common ancestor to reduce duplicated logic and improve data flow. A, C, D misdescribe this concept.
-
-
-Question 115. Given this `InheritedWidget` code: ⏎ class AppData extends InheritedWidget { ⏎ final String theme; ⏎ const AppData({required this.theme, required Widget child, Key? key}) ⏎ : super(key: key, child: child); ⏎ static AppData of(BuildContext context) => ⏎ context.dependOnInheritedWidgetOfExactType<AppData>()!; ⏎ } ⏎ What is the main purpose of `InheritedWidget` in this example? ⏎ A. Only used to define navigation routes ⏎ B. Efficiently passing data down to all child widgets in the widget tree without manually passing parameters through every intermediate constructor ⏎ C. Fully replaces Scaffold ⏎ D. Only used for storing offline data
-Answer: B. InheritedWidget efficiently passes data down the widget tree without manually passing through every constructor level. A, C, D misdescribe its purpose.
 
 
 Question 116. What foundation does `Provider` (ChangeNotifierProvider + Consumer) build on in Flutter, and what benefit does it bring over plain InheritedWidget? ⏎ A. Built on SQLite, helps store offline data ⏎ B. Built on top of InheritedWidget but reduces boilerplate code, making state sharing and listening much easier ⏎ C. Unrelated to InheritedWidget at all ⏎ D. Provider only works with the String data type
 Answer: B. Provider is built on InheritedWidget but reduces boilerplate for state sharing/listening. A, C, D don't match Provider's actual technical foundation.
 
 
-Question 117. Given this Provider code: ⏎ class CounterModel with ChangeNotifier { ⏎ int count = 0; ⏎ void increment() { count++; notifyListeners(); } ⏎ } ⏎ If the `notifyListeners();` line is removed from `increment()`, what happens? ⏎ A. The program shows a compile error ⏎ B. `count` still increases in memory, but `Consumer<CounterModel>` widgets won't be notified to rebuild, so the UI doesn't show the new value ⏎ C. `notifyListeners()` has no effect on the UI, it's just an internal log ⏎ D. The app automatically calls notifyListeners() silently every second
-Answer: B. Without notifyListeners(), count still increases in memory but Consumer widgets aren't notified to rebuild — the UI doesn't update. A, C, D misdescribe this behavior.
-
-
-Question 118. In this code combining Navigation and State: ⏎ if (appState.loggedIn) ⏎ Navigator.pushNamed(context, '/dashboard'); ⏎ else ⏎ Navigator.pushNamed(context, '/login'); ⏎ What principle does this code illustrate? ⏎ A. State is completely separate and unrelated to navigation ⏎ B. App state determines the navigation flow — combining state management logic with the decision of which route to display ⏎ C. This is incorrect code because if/else cannot be used with Navigator ⏎ D. Only works when using Navigator 2.0
-Answer: B. This illustrates state determining the navigation flow, combining state logic with route decisions. A, C, D misdescribe the meaning/validity of this code.
-
-
 Question 119. In the Stateless/Stateful comparison table, which usage example fits StatelessWidget? ⏎ A. An input form with validation ⏎ B. A counter that increases/decreases with user interaction ⏎ C. A static logo, unchanging text ⏎ D. A list where items can be added/removed
 Answer: C. A static logo/unchanging text fits StatelessWidget since there's no rebuild needed. A, B, D all require StatefulWidget due to changing state.
-
-
-Question 120. In Navigator 2.0, which component's role does the following code illustrate? ⏎ class AppRouterDelegate extends RouterDelegate<AppRoute> ⏎ with ChangeNotifier, PopNavigatorRouterDelegateMixin<AppRoute> { ⏎ @override ⏎ Widget build(BuildContext context) { ⏎ return Navigator( ⏎ pages: [MaterialPage(child: HomePage())], ⏎ onPopPage: (route, result) => route.didPop(result), ⏎ ); ⏎ } ⏎ } ⏎ A. RouteInformationParser — responsible for parsing the URL ⏎ B. RouterDelegate — responsible for building the current page stack (`pages`) and handling pop events, reflecting the desired navigation state ⏎ C. BackButtonDispatcher — only handles the Android physical back button ⏎ D. This is just a regular StatelessWidget unrelated to navigation
-Answer: B. This code illustrates RouterDelegate — building the current page stack and handling pop events. A, C, D wrongly assign the role to a different Navigator 2.0 component.
-
-
-Question 121. In the MovieDetailPage Hero Banner example: ⏎ Stack( ⏎ children: [ ⏎ Image.network(movie.posterUrl, fit: BoxFit.cover), ⏎ Positioned(bottom: 0, child: Container(height: 80, decoration: gradient)), ⏎ ], ⏎ ) ⏎ Why is `Stack` used instead of `Column` here? ⏎ A. Because Stack runs faster than Column ⏎ B. Because Stack allows child widgets to overlap at the same position, needed to place a gradient layer over the poster image ⏎ C. Because Column doesn't support Image.network ⏎ D. No difference, the two widgets are entirely equivalent
-Answer: B. Stack allows overlapping children, needed to layer a gradient over the poster image. A, C, D don't match the technical reason for this choice.
 
 
 Question 122. In the deep link handling flow via `onGenerateRoute`, what is the main purpose of this callback in `MaterialApp`? ⏎ A. Only handles network errors ⏎ B. Allows the app to parse the route name (and parameters) coming from an external link, then dynamically return the corresponding route/screen, commonly used to handle deep links ⏎ C. Fully replaces Scaffold ⏎ D. Only works when the app is offline
@@ -507,10 +335,6 @@ Answer: B. `onGenerateRoute` parses the route name/parameters from an external l
 
 Question 123. What does the `Route` class in Flutter represent? ⏎ A. An API endpoint from a server ⏎ B. A screen/page in the app, usually implemented via `MaterialPageRoute` ⏎ C. A type of animation ⏎ D. A JSON data structure
 Answer: B. `Route` represents a screen/page in the app, typically implemented via MaterialPageRoute. A, C, D misdescribe the Route concept.
-
-
-Question 124. In the "Managing App State" section with `ChangeNotifier`: ⏎ class AppState extends ChangeNotifier { ⏎ bool loggedIn = false; ⏎ void login() { loggedIn = true; notifyListeners(); } ⏎ } ⏎ Why is separating state (login/logout) into its own class away from the UI considered good practice (per the instructor's note)? ⏎ A. Because Flutter requires this to compile ⏎ B. Because separation increases testability and clarifies the app's architecture; the UI only needs to listen for changes instead of managing business logic itself ⏎ C. Because doing so makes the app run twice as fast ⏎ D. No specific reason, just the instructor's personal preference
-Answer: B. Separating state improves testability and architecture clarity, letting the UI just listen instead of managing business logic. A, C, D are not the correct/valid reason.
 
 
 Question 125. According to Module 5's Summary, which state management techniques are covered, in order from basic to more advanced? ⏎ A. Provider → InheritedWidget → setState ⏎ B. setState → InheritedWidget → Provider ⏎ C. Only setState is covered, no other technique is mentioned ⏎ D. BLoC → Riverpod → GetX
@@ -525,16 +349,8 @@ Question 127. What information does `MediaQuery.of(context).size.width` retrieve
 Answer: B. `MediaQuery.of(context).size.width` gets the current device's full screen width. A, C, D misdescribe the scope of the returned value.
 
 
-Question 128. Given: ⏎ Widget build(BuildContext context) { ⏎ final w = MediaQuery.of(context).size.width; ⏎ return Scaffold( ⏎ body: Center( ⏎ child: Text(w < 600 ? "Mobile Layout" : "Tablet Layout"), ⏎ ), ⏎ ); ⏎ } ⏎ When the device is rotated from portrait to landscape, making the width exceed 600px, what happens to the displayed text? ⏎ A. Nothing changes because MediaQuery only reads the value once at app startup ⏎ B. Flutter automatically rebuilds the widget when the screen size changes (e.g. due to rotation), so the text switches from "Mobile Layout" to "Tablet Layout" ⏎ C. The app crashes because MediaQuery doesn't support screen rotation ⏎ D. Only the Text is completely hidden until the app restarts
-Answer: B. Flutter automatically rebuilds when screen size changes (e.g. rotation), so MediaQuery reflects it in real time. A, C, D don't match MediaQuery/Flutter's actual behavior.
-
-
 Question 129. What is the core difference between `LayoutBuilder` and `MediaQuery`? ⏎ A. LayoutBuilder provides information about the direct parent widget's constraints, while MediaQuery provides the entire device screen's info ⏎ B. Both are entirely identical in function ⏎ C. LayoutBuilder only works on Web ⏎ D. MediaQuery only provides the parent widget's constraints, not the full screen
 Answer: A. LayoutBuilder gives the direct parent's constraints; MediaQuery gives full-screen device info. B, C, D reverse/misstate the characteristics of the two tools.
-
-
-Question 130. Given: ⏎ LayoutBuilder( ⏎ builder: (context, c) { ⏎ return c.maxWidth > 500 ? WideCard() : NarrowCard(); ⏎ }, ⏎ ); ⏎ If this `LayoutBuilder` is placed inside a `Container` with a fixed width of 300px (while the device screen is 800px wide), which widget is displayed? ⏎ A. WideCard(), because the device screen is wider than 500px ⏎ B. NarrowCard(), because `c.maxWidth` reflects the constraint from the direct parent widget (300px), not the full device screen ⏎ C. Both widgets will be displayed at the same time ⏎ D. This will cause an error because LayoutBuilder cannot be placed inside a fixed-size Container
-Answer: B. `c.maxWidth` reflects the direct parent's constraint (300px), not the full screen, so NarrowCard() is shown. A ignores the local constraint's role; C, D don't match how LayoutBuilder actually works.
 
 
 Question 131. What is `OrientationBuilder` used for? ⏎ A. Detecting device rotation (portrait/landscape) and changing the UI accordingly ⏎ B. Only used to change the app's background color ⏎ C. Checking the device's network connection ⏎ D. Fully replaces MediaQuery in every case
@@ -543,10 +359,6 @@ Answer: A. OrientationBuilder detects device rotation and lets the UI change acc
 
 Question 132. In the "Responsive Widgets Overview" list, which widget helps avoid overflow by letting a child take up the remaining space in a Row/Column? ⏎ A. Wrap ⏎ B. Expanded ⏎ C. AspectRatio ⏎ D. FractionallySizedBox
 Answer: B. Expanded lets a child take the remaining space in a Row/Column, avoiding overflow. A, C, D serve other purposes, not specifically this one.
-
-
-Question 133. Given this GridView code: ⏎ GridView.count( ⏎ crossAxisCount: width < 600 ? 2 : 4, ⏎ ); ⏎ If the `width` variable is read ONCE in `initState()` instead of in `build()` (from MediaQuery), what problem could arise when the user rotates the screen afterward? ⏎ A. No problem at all because Flutter automatically syncs initState with build ⏎ B. `crossAxisCount` won't be updated when the screen size changes (due to rotation), because initState only runs once when the widget is created, causing the layout to no longer reflect the current size ⏎ C. GridView will automatically hide completely ⏎ D. The app will show a compile error
-Answer: B. Reading width only in initState() means crossAxisCount isn't updated on rotation, since initState runs only once at widget creation. A, C, D don't match the actual technical consequence.
 
 
 Question 134. What problem does `SafeArea` in Flutter solve on modern devices? ⏎ A. Increases the app's rendering speed ⏎ B. Avoids UI content being obscured by unusable areas like notches, Dynamic Island, or curved screens ⏎ C. Encrypts user data ⏎ D. Automatically translates the UI language
@@ -563,10 +375,6 @@ Answer: A. Proposed breakpoint rule: <400px Small, 400-800px Medium, >800px Larg
 
 Question 137. In the Genre Chips example (Wrap-based chip list), the lecture emphasizes: "This behavior is achieved automatically by using Wrap, without conditional logic." What does this mean technically? ⏎ A. You need many `if` statements to check screen size then decide chips per row ⏎ B. The `Wrap` widget automatically calculates and wraps elements to a new line based on available space, without the developer writing manual conditional logic for responsiveness ⏎ C. Wrap only works correctly when combined with LayoutBuilder ⏎ D. This description is wrong, Wrap always needs accompanying conditional logic
 Answer: B. `Wrap` automatically calculates and wraps elements based on available space without manual conditional logic. A, C, D don't match the intended meaning of the quoted statement.
-
-
-Question 138. In the Responsive Movie Card example: ⏎ LayoutBuilder( ⏎ builder: (context, c) { ⏎ final isWide = c.maxWidth > 600; ⏎ return Row(children: [ ⏎ Image.network(poster, width: isWide ? 150 : 100), ⏎ SizedBox(width: 16), ⏎ Expanded(child: Text(title)) ⏎ ]); ⏎ }, ⏎ ) ⏎ What is the role of `Expanded` wrapping `Text(title)` in this Row? ⏎ A. Makes the Text automatically bold ⏎ B. Lets the Text take up all remaining horizontal space after the image, while avoiding horizontal overflow when the title is long ⏎ C. Expanded is purely cosmetic, unrelated to layout ⏎ D. Expanded causes the image to shrink to match the Text's size
-Answer: B. Expanded lets Text take remaining horizontal space and avoids horizontal overflow for long titles. A, C, D misdescribe Expanded's technical role here.
 
 
 Question 139. What is the difference between `Flexible` and `Expanded` in a Row/Column? ⏎ A. No difference, the two widgets are entirely equivalent ⏎ B. `Expanded` forces a child to occupy the entire allocated space by flex ratio, while `Flexible` allows a child to be smaller than the allocated space if it doesn't need it all (depending on `fit: FlexFit.loose`) ⏎ C. Flexible can only be used inside GridView, not in Row/Column ⏎ D. Expanded only works with the Text widget
@@ -601,20 +409,12 @@ Question 146. For an app running on small phones, large phones, tablets, and des
 Answer: B. Fixed values don't adapt to diverse screen sizes, easily causing overflow or wasted space. A, C, D don't match the actual technical reason.
 
 
-Question 147. In the context of the responsive search bar: ⏎ Container( ⏎ padding: EdgeInsets.symmetric(horizontal: 16), ⏎ child: TextField(...), ⏎ ) ⏎ The lecture notes "Students often forget SafeArea here." If this is the first element in the Scaffold's `body` and has no SafeArea, what specific risk is most likely on a device with a notch? ⏎ A. The TextField will be automatically disabled ⏎ B. The top of the search bar may be overlapped by the status bar/notch, making it hard for the user to tap the TextField accurately ⏎ C. The virtual keyboard will never appear ⏎ D. The app won't compile
-Answer: B. Missing SafeArea risks the search bar's top being overlapped by the status bar/notch, making the TextField hard to tap accurately. A, C, D don't reflect the realistic risk.
-
-
 Question 148. What is `FractionallySizedBox` in the responsive widget list used for? ⏎ A. Sizing a widget as a percentage relative to its parent widget, instead of a fixed pixel value ⏎ B. Only used for animations ⏎ C. Cropping rounded corners on a widget ⏎ D. Has no real function, purely illustrative in the slide
 Answer: A. FractionallySizedBox sizes a widget as a percentage of its parent, instead of fixed pixels. B, C, D misdescribe its function.
 
 
 Question 149. Why does the lecture encourage testing responsive UI across multiple device sizes (e.g. Pixel 2 → Pixel 7 → iPad) instead of just one single emulator? ⏎ A. Because Flutter requires testing on at least 3 devices to submit an assignment ⏎ B. Because layout behavior (especially breakpoints, Wrap, GridView) can vary significantly across screen sizes, and overflow/misalignment bugs often only appear at specific sizes ⏎ C. Because each device runs a different version of Dart ⏎ D. No real reason, it's just an optional suggestion
 Answer: B. Layout behavior can vary significantly across screen sizes, and bugs often only surface at specific sizes, hence the need for varied device testing. A, C, D don't match the actual technical reason.
-
-
-Question 150. Given: ⏎ if (width < 600) return MobileView(); ⏎ return TabletView(); ⏎ If this breakpoint logic is placed in the `build()` function of a deeply nested child widget inside multiple constrained `Padding`/`Container` layers, but `width` is taken from `MediaQuery.of(context).size.width` (full screen width) instead of `LayoutBuilder`, what is the potential consequence? ⏎ A. No consequence at all because Flutter automatically syncs ⏎ B. The responsive decision could be wrong: the widget might incorrectly choose `TabletView` even though the actual local space it has is very narrow (because parent widgets have constrained the space), leading to overflow or an unsuitable layout ⏎ C. The app will always correctly show MobileView regardless of screen size ⏎ D. This is the only recommended way to write this in every case
-Answer: B. Using full-screen MediaQuery width instead of local LayoutBuilder constraints can lead to a wrong responsive decision and overflow/unsuitable layout in nested contexts. A, C, D don't match the realistic consequence.
 
 
 Question 151. When should you use `TextFormField` instead of a plain `TextField`? ⏎ A. When you don't need any special functionality ⏎ B. When the input needs to be inside a `Form` and needs validation functionality ⏎ C. `TextFormField` can only be used for Web ⏎ D. There's no difference between the two widgets
@@ -625,24 +425,12 @@ Question 152. What is `GlobalKey<FormState>` used for in a `Form`? ⏎ A. Only u
 Answer: B. GlobalKey<FormState> allows accessing/controlling the Form's state externally via validate()/save()/reset(). A, C, D misdescribe its role.
 
 
-Question 153. Given: ⏎ void _submit() { ⏎ final isValid = _formKey.currentState!.validate(); ⏎ if (!isValid) return; ⏎ _formKey.currentState!.save(); ⏎ ScaffoldMessenger.of(context).showSnackBar( ⏎ SnackBar(content: Text('Signed up as $_name ($_email)')), ⏎ ); ⏎ } ⏎ If the order is swapped, calling `_formKey.currentState!.save();` BEFORE calling `validate()`, what could happen? ⏎ A. No difference, the call order doesn't matter ⏎ B. Invalid data could still be saved into state variables (`_name`, `_email`...) via `onSaved`, because save() doesn't itself check validity before saving — validate() must be called first to ensure only checked data gets saved ⏎ C. The app will show a compile error ⏎ D. save() will automatically call validate() implicitly before saving
-Answer: B. Calling save() before validate() risks saving unvalidated data via onSaved, since save() doesn't check validity itself. A is wrong since order matters; C is wrong since it's not a compile error; D is wrong since save() doesn't auto-call validate().
-
-
 Question 154. What is the standard signature of a validator function in `TextFormField`? ⏎ A. `void Function(String value)` ⏎ B. `String? Function(String? value)` ⏎ C. `bool Function(String value)` ⏎ D. `Future<String> Function(String? value)`
 Answer: B. The standard validator signature is `String? Function(String? value)`. A, C, D are not the correct standard Flutter Form validator signature.
 
 
 Question 155. If a validator function returns `null`, what does that mean? ⏎ A. The field is invalid, showing the error "null" ⏎ B. The field is valid, no error shown ⏎ C. The field has not been filled in by the user yet ⏎ D. The Form will automatically reset to its initial value
 Answer: B. Returning null means the field is valid, no error shown. A, C, D misdescribe the meaning of a null return value.
-
-
-Question 156. Given this password validator: ⏎ String? _validatePassword(String? value) { ⏎ final text = value ?? ''; ⏎ if (text.isEmpty) return "Password is required"; ⏎ if (text.length < 8) return "Use at least 8 characters"; ⏎ if (!text.contains(RegExp(r"[0-9]"))) return "Include a number"; ⏎ return null; ⏎ } ⏎ With input `"abcdefgh"` (8 letters, no digits), what does the validator return? ⏎ A. null (valid) ⏎ B. "Password is required" ⏎ C. "Use at least 8 characters" ⏎ D. "Include a number"
-Answer: D. With an 8-character, all-letter input, it satisfies the first two conditions (not empty, at least 8 chars) but lacks a digit, so it returns "Include a number". A is wrong since it's invalid; B, C are wrong since those conditions are already satisfied.
-
-
-Question 157. In this confirm-password code: ⏎ String? _validateConfirmPassword(String? value) { ⏎ if (value == null || value.isEmpty) return "Please confirm password"; ⏎ if (value != _password) return "Passwords do not match"; ⏎ return null; ⏎ } ⏎ The lecture (per the instructor's note) recommends comparing confirm password against which variable, instead of comparing directly against another controller? ⏎ A. Compare against the state variable `_password` already stored in State (instead of directly comparing two TextEditingControllers) to keep the code clean ⏎ B. Compare against the default value "123456" ⏎ C. No comparison needed at all, just check the length ⏎ D. Compare against the entered email
-Answer: A. The lecture recommends comparing against the `_password` state variable rather than directly comparing controllers, for cleaner code. B, C, D don't match the recommendation.
 
 
 Question 158. `AutovalidateMode` has three modes: `disabled`, `always`, and `onUserInteraction`. According to the lecture, which mode is recommended and why? ⏎ A. `always` — because showing errors right away helps users be more careful ⏎ B. `disabled` — because never showing errors keeps the UI always clean ⏎ C. `onUserInteraction` — because it avoids showing red errors right from the start (annoying) while still responding promptly once the user starts interacting with that field, balancing "too early" and "too late" ⏎ D. No mode is recommended, it's arbitrary
@@ -663,10 +451,6 @@ Answer: B. Wrapping the form with GestureDetector calling FocusScope.of(context)
 
 Question 162. Why should a long form be wrapped in `ListView` or `SingleChildScrollView`? ⏎ A. To increase the app's loading speed ⏎ B. To avoid layout overflow errors when the virtual keyboard appears and covers part of the form on a small screen, while allowing scrolling to view all fields ⏎ C. Because Form is syntactically required to be inside a ListView ⏎ D. No specific reason
 Answer: B. Wrapping in ListView/SingleChildScrollView avoids overflow when the keyboard covers part of the form on small screens, while allowing scrolling. A, C, D don't match the actual reason.
-
-
-Question 163. Given this Async Email Check code: ⏎ Future<void> _submit() async { ⏎ if (!_formKey.currentState!.validate()) return; ⏎ setState(() => _isChecking = true); ⏎ await Future.delayed(const Duration(seconds: 2)); ⏎ final isTaken = _email.toLowerCase().startsWith("taken"); ⏎ setState(() => _isChecking = false); ⏎ if (isTaken) { ⏎ ScaffoldMessenger.of(context).showSnackBar( ⏎ const SnackBar(content: Text("This email is already taken"))); ⏎ return; ⏎ } ⏎ ScaffoldMessenger.of(context).showSnackBar( ⏎ SnackBar(content: Text("Account created for $_email"))); ⏎ } ⏎ The submit button here is configured with `onPressed: _isChecking ? null : _submit`. What is the main purpose of this? ⏎ A. No specific purpose ⏎ B. Prevent the user from tapping the button multiple times in a row (double-submit) while the async email check is running, avoiding sending multiple duplicate requests ⏎ C. Automatically re-validates the form
-Answer: B. Disabling the button while `_isChecking` is true prevents double-submit while the async check runs. A, C, D don't match the actual purpose.
 
 
 Question 164. In the example above, if the user enters the email `"taken123@test.com"`, what message does the app show after 2 seconds? ⏎ A. "Account created for taken123@test.com" ⏎ B. "This email is already taken" ⏎ C. No message is shown ⏎ D. The app will throw an exception because the email is invalid
@@ -697,10 +481,6 @@ Question 170. What is the "Multi-step wizard" mentioned in "Form Layout Patterns
 Answer: B. A multi-step wizard splits a long form into smaller steps/screens, reducing overwhelm. A, C, D misdescribe this concept.
 
 
-Question 171. Consider this code illustrating a common bug: ⏎ TextFormField( ⏎ validator: (value) { ⏎ if (value.isEmpty) return "Required"; // potential bug ⏎ return null; ⏎ }, ⏎ ), ⏎ What is the potential (null-safety) issue in this code? ⏎ A. No issue at all, the code is entirely correct ⏎ B. The `value` parameter in the validator has type `String?` (nullable); calling `value.isEmpty` directly without a null check first can cause a runtime error if `value` is null ⏎ C. The validator's return type must be bool, not String ⏎ D. `isEmpty` doesn't exist in Dart, you must use `length == 0`
-Answer: B. `value` is nullable (String?), so calling `.isEmpty` directly without a null check can throw a runtime error if null. A is wrong since there's a real issue; C, D are incorrect about Dart's API/return type.
-
-
 Question 172. Per Demo 1 (Basic Signup Form), which fields are required and what are each field's specific validity conditions? ⏎ A. Only a valid Email is needed, other fields aren't required ⏎ B. Name (not empty), Email (contains @ and .), Password (at least 6 characters) — all required ⏎ C. Only Password with a minimum of 6 characters is needed ⏎ D. There are no specific constraints, just not being empty
 Answer: B. Demo 1 requires: Name (not empty), Email (contains @ and .), Password (at least 6 chars) — all mandatory. A, C, D are incomplete/incorrect about the stated requirements.
 
@@ -729,32 +509,12 @@ Question 178. When JSON is received from an API in Flutter, what corresponding D
 Answer: B. JSON object → `Map<String, dynamic>`, JSON array → `List<dynamic>` after decoding. A, C, D misdescribe the resulting data types.
 
 
-Question 179. Given: ⏎ Future<void> fetchPosts() async { ⏎ final url = Uri.parse('https://jsonplaceholder.typicode.com/posts'); ⏎ final response = await http.get(url); ⏎ if (response.statusCode == 200) { ⏎ print('Response body: ${response.body}'); ⏎ } else { ⏎ print('Request failed: ${response.statusCode}'); ⏎ } ⏎ } ⏎ Why does this function need to be declared `async` and use `await` before `http.get(url)`? ⏎ A. Because `http.get()` always runs synchronously so async is mandatory ⏎ B. Because `http.get()` returns a `Future<Response>` — the network operation doesn't complete immediately, `await` pauses function execution until a response arrives, avoiding blocking the UI thread while waiting ⏎ C. `async`/`await` is purely decorative syntax with no effect on behavior ⏎ D. Because Dart doesn't support calling an asynchronous function without async
-Answer: B. `http.get()` returns a Future<Response>; await pauses execution until it completes, avoiding blocking the UI thread. A, C, D misdescribe the real technical reason.
-
-
 Question 180. What is `FutureBuilder` in Flutter used for? ⏎ A. Building static UI that never changes ⏎ B. Integrating a `Future` (async operation) into the widget tree, automatically rebuilding the UI based on states: waiting, error, or data ⏎ C. Only used to display images from the network ⏎ D. Fully replaces ListView
 Answer: B. FutureBuilder integrates a Future into the widget tree, rebuilding automatically based on waiting/error/data states. A, C, D misdescribe its function.
 
 
-Question 181. Given this FutureBuilder code: ⏎ FutureBuilder<List<Post>>( ⏎ future: _futurePosts, ⏎ builder: (context, snapshot) { ⏎ if (snapshot.connectionState == ConnectionState.waiting) { ⏎ return const Center(child: CircularProgressIndicator()); ⏎ } else if (snapshot.hasError) { ⏎ return Center(child: Text('Error: ${snapshot.error}')); ⏎ } else if (!snapshot.hasData || snapshot.data!.isEmpty) { ⏎ return const Center(child: Text('No posts')); ⏎ } ⏎ final posts = snapshot.data!; ⏎ return ListView.builder(...); ⏎ }, ⏎ ) ⏎ If the API returns an empty JSON array `[]` (no network error), which branch in this code executes? ⏎ A. The `ConnectionState.waiting` branch ⏎ B. The `snapshot.hasError` branch ⏎ C. The `!snapshot.hasData || snapshot.data!.isEmpty` branch — showing "No posts" ⏎ D. The final branch shows a ListView with an empty list but no message
-Answer: C. An empty array is neither an error nor still waiting, but `data!.isEmpty` is true → the "No posts" branch executes. A, B are wrong since neither applies; D is wrong since the final branch only runs when data actually has content.
-
-
 Question 182. Why should you create a model class (e.g. `Post` with `fromJson`) instead of directly manipulating `Map<String, dynamic>` throughout the app? ⏎ A. Because Dart doesn't allow using Map directly in the UI ⏎ B. Model classes provide type safety, clear structure, and are easier to maintain and reuse than accessing directly via string keys, which is error-prone at runtime ⏎ C. Model classes make the app run twice as fast ⏎ D. No clear benefit, it just increases the number of files
 Answer: B. Model classes provide type safety, clear structure, and easier maintenance/reuse than raw Map access. A, C, D don't match the real benefit stated.
-
-
-Question 183. Given this code converting a JSON List to List<Model>: ⏎ final List<dynamic> jsonList = json.decode(response.body); ⏎ return jsonList.map((e) => Post.fromJson(e)).toList(); ⏎ If `.toList()` is removed at the end, what type would the returned variable have, and would that cause an issue when used with `FutureBuilder<List<Post>>`? ⏎ A. The return type is still `List<Post>`, no issue ⏎ B. The return type becomes `Iterable<Post>` (since `.map()` returns a "lazy" Iterable), not matching the declared `List<Post>` return type, causing a type mismatch error ⏎ C. The program automatically converts Iterable to List silently, no warning ⏎ D. `.map()` cannot be applied to List<dynamic>
-Answer: B. Without `.toList()`, the result is `Iterable<Post>` (lazy), which mismatches the declared `List<Post>` return type, causing a compile error. A, C, D don't match Dart's actual behavior with `.map()`.
-
-
-Question 184. In the Demo 8.3 (POST Request) example, what does this code do? ⏎ body: json.encode({ ⏎ 'title': titleController.text, ⏎ 'body': bodyController.text, ⏎ 'userId': 1, ⏎ }), ⏎ A. Decodes JSON data received from the server ⏎ B. Encodes a Dart Map into a JSON string to send in the body of a POST request ⏎ C. Only used to format UI display ⏎ D. Encrypts the user's password before saving locally
-Answer: B. `json.encode()` encodes a Dart Map into a JSON string to send in the POST request body. A, C, D misdescribe this function.
-
-
-Question 185. In Demo 8.3, the `try/catch/finally` block is used as follows: ⏎ try { ⏎ final response = await http.post(...); ⏎ if (response.statusCode == 201) { setState(() => result = response.body); } ⏎ else { throw Exception('Failed with status: ${response.statusCode}'); } ⏎ } catch (e) { ⏎ setState(() => errorMessage = e.toString()); ⏎ } finally { ⏎ setState(() => isLoading = false); ⏎ } ⏎ Why is `setState(() => isLoading = false);` placed in the `finally` block instead of just in the `try` block? ⏎ A. No difference between placing it in try or finally ⏎ B. To ensure the loading state is always turned off whether the request succeeds or fails (throws an exception), avoiding the button getting "stuck" in loading state permanently on error ⏎ C. `finally` runs before `try`, so it must be placed there to run earlier ⏎ D. Placing it in finally causes isLoading to never become false
-Answer: B. finally ensures isLoading is always turned off regardless of success or failure, avoiding a permanently stuck loading state. A, C, D don't match finally's actual role/execution order.
 
 
 Question 186. Which HTTP method is most suitable for sending new data to the server in order to create a new resource? ⏎ A. GET ⏎ B. POST ⏎ C. DELETE ⏎ D. HEAD
@@ -767,10 +527,6 @@ Answer: B. Calling an API inside build() is a pitfall to avoid since build() can
 
 Question 188. What is the main benefit of the "Service Layer Pattern" design (like `ApiService` in Demo 8.4)? ⏎ A. Helps Flutter automatically generate the user interface ⏎ B. Encapsulates all API-calling logic in a separate class, keeping UI (widget) code focused on display, while allowing the same service to be reused across multiple screens ⏎ C. Fully replaces FutureBuilder ⏎ D. Only has the effect of reducing app size
 Answer: B. The Service Layer Pattern encapsulates API logic separately, keeps UI focused on display, and allows service reuse across screens. A, C, D don't match the real benefit.
-
-
-Question 189. In `ApiService`, what technique does the constructor parameter `ApiService({http.Client? client}) : client = client ?? http.Client();` illustrate? ⏎ A. Forces always using the same single global HTTP Client instance ⏎ B. Allows "injecting" a custom `http.Client` from outside (useful for testing with a mock client); if none is passed, a default client is used ⏎ C. This is invalid Dart syntax ⏎ D. No clear purpose, just to shorten the code
-Answer: B. This illustrates dependency injection — allowing a custom http.Client to be injected (useful for mock testing), defaulting otherwise. A, C, D don't match the real purpose.
 
 
 Question 190. In the "From API to UI: Putting It All Together" flow, after the user successfully submits a form to create a new post (createPost), what does the lecture suggest for updating the displayed list? ⏎ A. The whole app must be restarted ⏎ B. Re-fetch (call the list API again) or optimistically update directly on the existing list ⏎ C. Nothing needs to be done, the list will automatically update with no intervention ⏎ D. Clear the entire device cache
@@ -789,16 +545,8 @@ Question 193. According to the lecture, what are the three typical API data grou
 Answer: A. The three typical groups: realtime, media, mock APIs — matching the "What is an API? What is HTTP?" slide. B, C, D don't match the stated content.
 
 
-Question 194. Given this model: ⏎ factory Post.fromJson(Map<String, dynamic> json) { ⏎ return Post( ⏎ id: json['id'] as int, ⏎ title: json['title'] as String, ⏎ body: json['body'] as String, ⏎ ); ⏎ } ⏎ If the server returns the `"id"` field as a string (`"id": "5"`) instead of a number (`"id": 5`), what happens when calling `Post.fromJson`? ⏎ A. Dart automatically converts the String "5" to int 5 without error ⏎ B. Throws a runtime error (type cast error) because `json['id'] as int` cannot directly cast a String to int ⏎ C. The `id` field will have a default value of 0 ⏎ D. No effect at all because Dart doesn't check types at runtime
-Answer: B. `json['id'] as int` throws a runtime type cast error since a String can't be directly cast to int. A, C, D don't match Dart's actual type-casting behavior with `as`.
-
-
 Question 195. In the lecture's "Steps to call an API in Flutter" process, which step happens RIGHT AFTER receiving the JSON response? ⏎ A. Immediately update the UI with no further processing ⏎ B. Decode JSON → convert into a Dart model ⏎ C. Re-send the request once more to confirm ⏎ D. Delete all old data on the device
 Answer: B. Right after receiving the JSON response, the next step is decoding JSON → converting to a Dart model, per the stated process. A, C, D don't match the correct sequence.
-
-
-Question 196. In this error-handling code combined with Retry: ⏎ if (errorMessage != null) ...[ ⏎ Text('Error: $errorMessage', style: const TextStyle(color: Colors.red)), ⏎ TextButton(onPressed: () => setState(() {}), child: const Text('Retry')), ⏎ ], ⏎ The "Retry" button here calls `setState(() {})` with an empty body. Per the FutureBuilder/retry pattern logic in the lecture, what effect does calling `setState(() {})` (with no data change) have in the real context of retrying a Future stored in a state variable? ⏎ A. No effect at all since the body is empty, retry won't work in any form ⏎ B. In the real retry pattern (used with FutureBuilder), calling `setState()` again triggers a widget rebuild; combined with reassigning the Future variable (e.g. calling the fetch function again inside setState), this makes FutureBuilder rerun the request — the key point is reassigning a new Future inside setState for retry to work
-Answer: B. In the full pattern, setState triggers a rebuild and must be combined with reassigning the Future (calling fetch again) inside setState for retry to actually rerun the request. A, C, D misdescribe how retry actually works with setState/FutureBuilder.
 
 
 Question 197. In the HTTP status code table, which range indicates a SERVER-SIDE error? ⏎ A. 200-299 ⏎ B. 300-399 ⏎ C. 400-499 ⏎ D. 500-599
@@ -817,10 +565,6 @@ Question 200. In Demo 8.2, when the user taps an item in the post list to open t
 Answer: B. The Post object is passed directly through PostDetailScreen's constructor during navigation via MaterialPageRoute, per the Demo 8.2 code. A, C, D don't match the demo's actual implementation.
 
 
-Question 201. Suppose a student writes: ⏎ Future<List<Post>> fetchPosts() async { ⏎ final response = await http.get(url); ⏎ final List<dynamic> jsonList = json.decode(response.body); ⏎ return jsonList.map((e) => Post.fromJson(e)).toList(); ⏎ } ⏎ but does NOT check `response.statusCode` before decoding. If the server returns a 500 error with non-valid-JSON content (e.g. an HTML error page), what is most likely to happen? ⏎ A. The app still displays the post list normally ⏎ B. `json.decode()` will throw a `FormatException` because the returned content isn't valid JSON, causing the `Future` to error out, which needs handling via `catch` or `snapshot.hasError` in FutureBuilder ⏎ C. The server will automatically resend a correctly formatted response ⏎ D. Dart will automatically ignore the error and return an empty list
-Answer: B. json.decode() throws a FormatException on non-JSON content, erroring the Future, requiring catch/snapshot.hasError handling. A, C, D don't match json.decode()'s actual behavior on invalid input.
-
-
 Question 202. What kind of data does `SharedPreferences` best suit? ⏎ A. Complex relational data with many linked tables ⏎ B. Simple key-value data like flags or settings ⏎ C. Large image files ⏎ D. Long-duration video
 Answer: B. SharedPreferences best suits simple key-value data like flags or settings. A, C, D are not suitable cases for SharedPreferences.
 
@@ -837,20 +581,12 @@ Question 205. On Flutter Web, `SharedPreferences` operates based on which browse
 Answer: C. On Flutter Web, SharedPreferences maps to the browser's `localStorage`. A, B, D don't match the mechanism stated in the comparison table.
 
 
-Question 206. Given this FakePrefs code simulating SharedPreferences in DartPad: ⏎ class FakePrefs { ⏎ static final Map<String, Object> _store = {}; ⏎ Future<void> setBool(String key, bool value) async { _store[key] = value; } ⏎ bool getBool(String key) { ⏎ final value = _store[key]; ⏎ if (value is bool) return value; ⏎ return false; ⏎ } ⏎ } ⏎ Why is `_store` declared `static`? ⏎ A. To limit the app to only one FakePrefs object existing ⏎ B. So the stored data is shared across all instances of FakePrefs (mimicking the singleton-ish behavior of real SharedPreferences), instead of each instance having its own separate data copy ⏎ C. `static` has no effect in this context ⏎ D. To automatically save data permanently even after the app is closed
-Answer: B. `static` makes the stored data shared across all FakePrefs instances, mimicking real SharedPreferences' singleton-ish behavior. A, C, D don't match static's actual role here.
-
-
 Question 207. The slide note "Note: data resets on reload (not persistent)" when using FakePrefs on DartPad hints at what limitation? ⏎ A. Data stored in FakePrefs persists forever even after reloading the page ⏎ B. Since FakePrefs only stores data in the RAM of the current session, the data is lost on hot-restart or page reload — unlike real SharedPreferences, which persists durably on the device ⏎ C. FakePrefs only works with the String data type ⏎ D. This is a Flutter bug that needs to be patched
 Answer: B. FakePrefs only stores data in-memory for the current session, so it's lost on hot-restart/reload, unlike real durable SharedPreferences. A, C, D don't match this stated limitation.
 
 
 Question 208. Which package is mentioned for determining the app's storage directory when working with local JSON files? ⏎ A. shared_preferences ⏎ B. path_provider ⏎ C. sqflite ⏎ D. http
 Answer: B. `path_provider` is used to determine app storage directories for local JSON files. A, C, D are not the package for this purpose.
-
-
-Question 209. Given this file read/write code: ⏎ final file = File(path); ⏎ await file.writeAsString(jsonString); ⏎ final content = await file.readAsString(); ⏎ If `file.readAsString()` is called IMMEDIATELY after `writeAsString()` WITHOUT awaiting `writeAsString()`, what is the potential risk? ⏎ A. No risk at all because both operations are completely synchronous ⏎ B. Since `writeAsString()` is asynchronous (returns a Future), if not awaited, the subsequent read operation could run before the write finishes, leading to reading stale data or an incomplete file (a race condition) ⏎ C. Dart automatically synchronizes the two calls in order regardless of whether await is used ⏎ D. The app will show an immediate compile error
-Answer: B. Without awaiting the async write, the read could run before the write completes, risking a race condition (reading stale/incomplete data). A, C, D don't match the async nature of these I/O operations.
 
 
 Question 210. How does SQFlite differ from SQLite, per the "Why not name it SQLite?" explanation? ⏎ A. SQFlite and SQLite are two different names for the exact same concept, no technical difference ⏎ B. SQLite is the actual storage engine, while SQFlite is a Flutter plugin/wrapper (written in Dart + native code) that lets Flutter communicate with SQLite — SQFlite is not a standalone database ⏎ C. SQFlite runs 10 times faster than SQLite ⏎ D. SQFlite only works on Web, SQLite only works on mobile
@@ -1033,16 +769,8 @@ Question 254. In the testing pyramid, how many Integration Tests are recommended
 Answer: B. Integration Tests should be used sparingly since they're slow/costly — reserved for critical user flows. A, C, D don't match the Testing Pyramid's principle.
 
 
-Question 255. Given this Unit Test: ⏎ test('toggle() should switch completed state', () { ⏎ final task = Task(id: '1', title: 'Demo task'); ⏎ expect(task.completed, false); ⏎ task.toggle(); ⏎ expect(task.completed, true); ⏎ task.toggle(); ⏎ expect(task.completed, false); ⏎ }); ⏎ What common test structuring pattern does this test apply (even though not explicitly labeled with comments)? ⏎ A. Model-View-Controller (MVC) ⏎ B. Arrange - Act - Assert (prepare data, perform an action, verify the result) ⏎ C. Singleton Pattern ⏎ D. Observer Pattern
-Answer: B. This test follows the Arrange - Act - Assert pattern. A, C, D are unrelated design/architecture patterns, not test structuring.
-
-
 Question 256. How does a Widget Test in Flutter differ from a Unit Test? ⏎ A. Widget Test only checks pure logic unrelated to UI, exactly like a Unit Test ⏎ B. Widget Test checks UI rendering and interaction (e.g. entering text, tapping buttons) on a widget or small widget tree, while Unit Test only checks logic/functions unrelated to UI ⏎ C. Widget Test always runs slower than Integration Test ⏎ D. Widget Test cannot simulate typing text or tapping
 Answer: B. Widget Test checks UI rendering/interaction on a widget tree; Unit Test checks pure UI-unrelated logic. A, C, D misdescribe the two test types' characteristics.
-
-
-Question 257. Given this Widget Test: ⏎ testWidgets('adding a task should display it in the list', ⏎ (WidgetTester tester) async { ⏎ await tester.pumpWidget(createTaskListTestApp()); ⏎ expect(find.text('No tasks yet. Add one!'), findsOneWidget); ⏎ await tester.enterText(find.byKey(const Key('taskTextField')), 'Buy milk'); ⏎ await tester.tap(find.byKey(const Key('addTaskButton'))); ⏎ await tester.pump(); ⏎ expect(find.text('Buy milk'), findsOneWidget); ⏎ expect(find.text('No tasks yet. Add one!'), findsNothing); ⏎ }); ⏎ If the line `await tester.pump();` after `tap()` is removed, what could happen to the assertion `expect(find.text('Buy milk'), findsOneWidget);`? ⏎ A. The assertion always still passes normally because tap() automatically rebuilds the UI instantly without needing pump() ⏎ B. The assertion could fail, because `pump()` is responsible for triggering a new frame for Flutter to rebuild the UI after a state
-Answer: B. Without pump() after tap(), the test widget tree might not yet reflect the latest state, risking assertion failure. A, C, D don't match pump()'s actual role in flutter_test.
 
 
 Question 258. In a Navigation Test, how does `pumpAndSettle()` differ from a plain `pump()`? ⏎ A. No difference at all, the two functions are entirely equivalent ⏎ B. `pumpAndSettle()` continuously "pumps" frames until no animation/transition is still running (fully settled), very useful for waiting for a screen-transition effect to finish before asserting ⏎ C. `pumpAndSettle()` can only be used for Unit Test ⏎ D. `pump()` always waits longer than `pumpAndSettle()`
@@ -1077,10 +805,6 @@ Question 265. What debugging aspects does DevTools in Flutter support, per Modul
 Answer: B. DevTools supports layout issues, failed state updates, performance, unnecessary rebuilds, and navigation issues, per "Debugging Goals in Flutter." A, C, D don't cover its full scope.
 
 
-Question 266. In the issue-to-test-type mapping table: ⏎ | Flutter Issue | Recommended Test | ⏎ |---|---| ⏎ | Logic failure | Unit test | ⏎ | UI not updating | Widget test | ⏎ | Wrong navigation | Navigation test | ⏎ | Entire feature broken | Integration test | ⏎ If a bug occurs because a Provider doesn't call `notifyListeners()` after updating data (causing the UI to not update even though the data changed in memory), which test type can most directly detect this issue? ⏎ A. A Unit Test checking just the data-update function alone, since it's unrelated to UI ⏎ B. Widget Test — because it needs to verify that after the action occurs, the UI actually re-renders with the new data (something a pure-logic Unit Test cannot check) ⏎ C. No test type can detect this bug ⏎ D. Only Integration Test can detect it, Widget Test is entirely unsuitable
-Answer: B. A Widget Test is most direct since it verifies the UI actually re-renders with new data, unlike a pure-logic Unit Test. A, C, D don't match the appropriate detection method.
-
-
 Question 267. What is `expect()` in flutter_test used for? ⏎ A. Initializing the widget tree for the test ⏎ B. Comparing the actual value with the expected value, and failing if they don't match — this is the "Assert" step in the testing process ⏎ C. Waiting for an animation to finish ⏎ D. Generating random mock data
 Answer: B. expect() compares actual vs. expected values, failing on mismatch — the Assert step. A, C, D misdescribe expect()'s function.
 
@@ -1095,10 +819,6 @@ Answer: B. Assigning a Key aids accurate widget location in tests, avoiding conf
 
 Question 270. What characteristic of the UI Overflow bug described in Module 11 makes it hard to detect if you only rely on running the app normally? ⏎ A. Overflow always makes the app crash instantly, so it's very easy to spot ⏎ B. Overflow bugs typically don't crash the app (no exception stopping the program), so tools like tests or DevTools are needed to detect them, rather than just relying on the app "still running" ⏎ C. Overflow only occurs on iOS devices ⏎ D. Overflow is always automatically fixed by Dart at compile time
 Answer: B. Overflow bugs usually don't crash the app, requiring tests/DevTools for detection rather than just observing that it "still runs." A, C, D don't match the actual characteristic of overflow bugs.
-
-
-Question 271. In the test file `test/widget/demo_11_3_navigation_to_detail_test.dart`, suppose the final assertion is: ⏎ expect(find.text('Task Detail'), findsOneWidget); ⏎ but the detail screen actually displays the title as "Task Details" (with an extra "s"). What is the test's result? ⏎ A. The test still passes because Flutter automatically does fuzzy text matching ⏎ B. The test fails (findsOneWidget errors since no widget with the exact text "Task Detail" is found), because `find.text()` requires an exact string match ⏎ C. The test automatically skips this assertion ⏎ D. The test passes but prints a warning, not treated as a failure
-Answer: B. find.text() requires an exact string match, so a mismatched "Task Detail" vs "Task Details" causes the test to fail. A, C, D don't match find.text()'s actual matching behavior.
 
 
 Question 272. Per Module 11's Summary, which skill is NOT listed as a learning objective of this module? ⏎ A. Writing Unit Tests to check model logic and behavior ⏎ B. Writing Widget Tests to check UI rendering and interaction ⏎ C. Building and signing a release APK file for publishing to Google Play ⏎ D. Using DevTools to diagnose layout, rebuild, and navigation issues
@@ -1133,10 +853,6 @@ Question 279. Per "How Flutter Builds the UI (Render Pipeline)," what are the re
 Answer: A. Widget = immutable blueprint, Element = lifecycle/state manager, RenderObject = performs layout/painting/compositing. B, C, D misdescribe the roles of these three components.
 
 
-Question 280. Given this "before optimization" code from Demo 12.1: ⏎ Widget build(BuildContext context) { ⏎ final tasks = context.watch<TaskProvider>().tasks; ⏎ return Column( ⏎ children: [ ⏎ InputRow(), // static ⏎ Expanded( ⏎ child: ListView.builder( ⏎ itemCount: tasks.length, ⏎ itemBuilder: (_, i) => ListTile( ⏎ title: Text(tasks[i].title), ⏎ trailing: Checkbox(...), ⏎ ), ⏎ ), ⏎ ), ⏎ ], ⏎ ); ⏎ } ⏎ Why does using `context.watch<TaskProvider>()` right at the top-level widget (including the static `InputRow`) cause a performance problem? ⏎ A. No problem at all, this is the recommended way to write it ⏎ B. Any change in `TaskProvider` (even a small change to one task) causes the entire parent widget (including the unrelated static `InputRow`) to rebuild, wasting resources unnecessarily ⏎ C. `context.watch` can only be used in a StatelessWidget, causing a compile error here ⏎ D. The only problem is misplacing Expanded
-Answer: B. Watching at the top level causes even unrelated static widgets like InputRow to rebuild on any provider change, wasting resources. A, C, D don't match the actual performance problem.
-
-
 Question 281. What benefit does the "Use Selector to rebuild ONLY the list" solution in Demo 12.1 bring over a plain `context.watch<T>()`? ⏎ A. Selector allows fine-grained rebuilding — only the UI portion actually dependent on the changed data rebuilds, instead of the entire parent widget as with a broad-scope watch ⏎ B. Selector and watch behave entirely identically regarding rebuilds ⏎ C. Selector only works with the String data type ⏎ D. Selector causes the entire app to always rebuild regardless of whether anything changed
 Answer: A. Selector enables fine-grained rebuilds, only rebuilding the part actually dependent on changed data. B, C, D don't match Selector's real behavior/benefit.
 
@@ -1147,10 +863,6 @@ Answer: B. const widgets are compile-time immutable, letting Flutter skip rebuil
 
 Question 283. Per "Optimization Technique 3: Avoid Heavy Work in build()," which of the following should NOT be done directly inside the `build()` function? ⏎ A. Returning a simple `Text` widget ⏎ B. Calling an API, parsing JSON, sorting a list, or doing complex calculations ⏎ C. Returning a `Column` containing a few static child widgets ⏎ D. Reading a value from MediaQuery
 Answer: B. Calling APIs, parsing JSON, sorting, or complex calculations should NOT be done inside build(). A, C, D are normal, low-cost operations that don't cause significant performance issues in build().
-
-
-Question 284. Given this "anti-pattern" code from the lecture: ⏎ Widget build(context) { ⏎ final sorted = tasks..sort(); // NO ⏎ return ListView(...); ⏎ } ⏎ What is the main problem with this code, especially when the widget rebuilds frequently (e.g. due to an animation or an unrelated state update)? ⏎ A. No problem at all since sort() always runs very fast in every case ⏎ B. The `sort()` operation gets re-executed EVERY TIME `build()` is called (which could be dozens of times per second), wasting CPU unnecessarily — you should sort once and cache the result, only updating when the data actually changes ⏎ C. `sort()` is automatically cached by Flutter, so there's no repeated cost ⏎ D. This is the required way to write code to ensure the list is always correctly ordered
-Answer: B. sort() re-executes on every build() call (possibly dozens of times per second), wasting CPU; sorting once and caching is preferred. A, C, D don't match the real performance problem.
 
 
 Question 285. Per "Optimization Technique 4: Using Keys Properly," why is using `UniqueKey()` for each list item considered "Bad"? ⏎ A. `UniqueKey()` is syntactically invalid in Dart ⏎ B. `UniqueKey()` generates an entirely NEW Key on every build, making Flutter always treat the widget as a "new widget" and forcing a full rebuild instead of reusing/updating the old widget — the exact opposite of Key's performance-optimization purpose ⏎ C. `UniqueKey()` only works with the int data type ⏎ D. `UniqueKey()` causes the app to crash immediately
@@ -1229,10 +941,6 @@ Question 303. What required parameter does `AnimationController` need to work, i
 Answer: B. `vsync` (typically from TickerProviderStateMixin) syncs the animation with display frames, avoiding wasted resources when not visible. A, C, D are not AnimationController's required parameter.
 
 
-Question 304. Given: ⏎ class _MyWidgetState extends State<MyWidget> with SingleTickerProviderStateMixin { ⏎ late AnimationController _controller; ⏎ @override ⏎ void initState() { ⏎ super.initState(); ⏎ _controller = AnimationController( ⏎ duration: const Duration(seconds: 2), ⏎ vsync: this, ⏎ )..repeat(); ⏎ } ⏎ @override ⏎ void dispose() { ⏎ _controller.dispose(); ⏎ super.dispose(); ⏎ } ⏎ } ⏎ If a developer forgets to call `_controller.dispose()` in `dispose()`, what is the most likely consequence? ⏎ A. No consequence at all because Dart automatically garbage-collects every object ⏎ B. The `AnimationController` (especially while `repeat()`-ing) keeps running even after the widget is removed from the tree, causing a memory leak and wasting CPU resources ⏎ C. The app crashes immediately when the widget is disposed ⏎ D. The animation automatically stops because Flutter always tracks widget lifecycle
-Answer: B. Forgetting dispose() leaves a repeating AnimationController running after widget removal, causing a memory leak and wasted CPU. A is wrong since Dart's GC can't collect an object still referenced by an active Ticker; C, D don't match Flutter's actual behavior.
-
-
 Question 305. What is `CurvedAnimation` in Flutter used for? ⏎ A. Drawing a geometric curve shape on screen ⏎ B. Applying an easing curve (e.g. `Curves.easeIn`) onto an existing linear Animation, changing how the animation's value varies over time (uneven fast/slow) instead of linearly ⏎ C. Fully replacing AnimationController ⏎ D. Only usable with SliverAppBar
 Answer: B. CurvedAnimation applies an easing curve onto a linear Animation, making its value change non-linearly over time. A, C, D misdescribe its function.
 
@@ -1251,10 +959,6 @@ Answer: B. The correct flow: UI sends Event → Bloc processes/maps to new State
 
 Question 309. How does `Cubit` in the `flutter_bloc` package differ from a traditional `Bloc`? ⏎ A. Cubit cannot manage state, only Bloc can ⏎ B. Cubit is a simplified version of Bloc — it doesn't need a separate Event class defined, instead directly calling methods to emit new States, reducing boilerplate compared to a full Bloc ⏎ C. Cubit only works with int data ⏎ D. Cubit and Bloc are entirely identical in API, no difference
 Answer: B. Cubit is a simplified Bloc — no separate Event class needed, methods directly emit new State, reducing boilerplate. A, C, D misdescribe Cubit's characteristics.
-
-
-Question 310. Given this simple Cubit code: ⏎ class CounterCubit extends Cubit<int> { ⏎ CounterCubit() : super(0); ⏎ void increment() => emit(state + 1); ⏎ } ⏎ Which widget in `flutter_bloc` best listens to `CounterCubit` and automatically rebuilds the UI whenever the `state` value changes? ⏎ A. `FutureBuilder` ⏎ B. `BlocBuilder<CounterCubit, int>` ⏎ C. `StreamController` ⏎ D. `InheritedWidget` (used directly, without the library)
-Answer: B. `BlocBuilder<CounterCubit, int>` is the correct flutter_bloc API for listening to a Cubit and auto-rebuilding on state changes. A, C, D are not the appropriate widget/API for this purpose.
 
 
 Question 311. Per BLoC pattern's design philosophy, why should business logic be entirely separated from the UI widget? ⏎ A. Because Flutter doesn't allow writing logic inside a widget ⏎ B. To increase testability (testing logic independently without building the UI), reuse logic across different platforms/screens, and keep the widget focused on display ⏎ C. Because BLoC runs faster if the logic is inside the widget ⏎ D. No clear reason, it's just a naming convention

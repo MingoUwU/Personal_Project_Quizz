@@ -936,3 +936,23 @@ A. Whether widget is currently in tree
 
 Why check mounted before setState after async call? A. To avoid updating disposed state B. To improve image quality C. To enable routing D. To fetch dependencies
 A. To avoid updating disposed state
+
+
+Why is secure authentication critical in mobile apps? A. UI quality B. Protect user data C. Reduce code D. Improve speed
+B. Protect user data
+
+
+Which Flutter tool helps debug network requests? A. DevTools B. Inspector C. Emulator D. Hot reload
+A. DevTools
+
+
+Why is Chapter 13 considered optional (Plus)? A. It replaces core concepts B. Apps can work without deep optimization C. It manages navigation D. It handles authentication
+B. Apps can work without deep optimization
+
+
+Which Flutter widget reacts to authentication state changes? A. FutureBuilder B. StreamBuilder C. ListView D. Form
+B. StreamBuilder
+
+
+Which method retrieves data from SharedPreferences? A. get() B. read() C. fetch() D. load()
+A. get()

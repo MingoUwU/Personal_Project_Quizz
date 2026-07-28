@@ -473,8 +473,8 @@ const parseDetailedQuizSource = (source: string): NumberedQuizItem[] => {
     ...normalizedSource.matchAll(/Question\s+(\d+)\.\s*([\s\S]*?)(?=\n\s*Question\s+\d+\.|$)/gu),
   ]
 
-  if (sections.length !== 326) {
-    throw new Error(`Expected 326 detailed PRM393 questions, found ${sections.length}.`)
+  if (sections.length !== 252) {
+    throw new Error(`Expected 252 detailed PRM393 questions, found ${sections.length}.`)
   }
 
   return sections.flatMap((section) => {
@@ -528,6 +528,18 @@ const normalizeQuestion = (question: string) =>
     .replace(/^\[m\d+\]\s*/u, '')
     .replace(/[^a-z0-9]+/gu, '')
 
+const isCodeLogicQuestion = (question: string) => {
+  if (question.includes('\n')) return true
+
+  const inlineCodeSamples = [...question.matchAll(/`([^`]+)`/gu)].map((match) => match[1])
+
+  return inlineCodeSamples.some((sample) =>
+    /(?:=>|[;{}]|\b(?:var|final|const|late|dynamic|bool|int|double|String)\s+\w+\s*=|\bfor\s*\()/u.test(
+      sample,
+    ),
+  )
+}
+
 // These blocks ask for facts already covered by the existing PRM393 bank,
 // even when their wording or answer choices differ.
 const duplicateModuleQuizBlocks = new Set([
@@ -555,10 +567,12 @@ const quizItems = [
   ...parseQuizSource(prm393QuizSource),
   ...moduleQuizItems,
   ...detailedQuizItems,
-].filter(
-  (item, index, items) =>
-    items.findIndex((candidate) => normalizeQuestion(candidate.question) === normalizeQuestion(item.question)) === index,
-)
+]
+  .filter((item) => !isCodeLogicQuestion(item.question))
+  .filter(
+    (item, index, items) =>
+      items.findIndex((candidate) => normalizeQuestion(candidate.question) === normalizeQuestion(item.question)) === index,
+  )
 
 export const prm393Deck: Deck = {
   id: PRM393_DECK_ID,
