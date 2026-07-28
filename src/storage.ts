@@ -4,7 +4,7 @@ import type { AppState, Deck, ReviewRating } from './types'
 import { VNR_DECK_ID, vnrDeck } from './vnrDeck'
 
 const STORAGE_KEY = 'memu-local-app-state'
-const PRM393_MIGRATION_KEY = 'memu-content-prm393-v4'
+const PRM393_MIGRATION_KEY = 'memu-content-prm393-v5'
 const VNR_MIGRATION_KEY = 'memu-content-vnr-v2'
 const starterDeckIds = new Set<string>(STARTER_DECK_IDS)
 

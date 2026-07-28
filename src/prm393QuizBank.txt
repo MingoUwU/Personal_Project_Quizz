@@ -323,7 +323,7 @@ A. ClipRRect
 
 
 Which widget adds decoration like color or border? A. Box B. DecoratedBox C. Container D. Card
-C. Container
+B. DecoratedBox
 
 
 Container can combine? A. Padding, margin, decoration, constraints B. Only color C. Only alignment D. Only size
