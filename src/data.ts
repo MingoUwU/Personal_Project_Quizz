@@ -1,6 +1,5 @@
 import type { AppState } from './types'
 import { PRM393_DECK_ID, prm393Deck } from './prm393Deck'
-import { vnrDeck } from './vnrDeck'
 
 export const STARTER_DECK_IDS = ['deck-ux', 'deck-jp', 'deck-dev'] as const
 
@@ -17,7 +16,7 @@ export const defaultState: AppState = {
       model: 'gpt-4o-mini',
     },
   },
-  decks: [prm393Deck, vnrDeck],
+  decks: [prm393Deck],
   selectedDeckId: PRM393_DECK_ID,
   stats: {
     streakDays: 0,
